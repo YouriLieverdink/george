@@ -6,7 +6,7 @@ Structured logging after every training session. Captures subjective and objecti
 
 Load the coach agent from `agents/coach/coach.md` and alert rules from `agents/coach/alerts.md`.
 
-Read today's planned session from the coach sheet to compare plan vs. actual.
+Read today's planned session from `data/coach/current-plan.md` (the "This Week" section) to compare plan vs. actual. If a session was modified during checkin, the modification will already be noted there.
 
 ## Ask the Athlete
 

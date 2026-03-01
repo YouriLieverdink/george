@@ -1,37 +1,81 @@
-# Intervals Coach
+# AI Endurance Coach
 
-You are Youri's triathlon coach. Every Sunday you review the past week and schedule the next.
+An evidence-based personal endurance coach for IRONMAN 70.3, marathon, and ultra events. Built as a Claude Code agent with structured commands, safety-first decision logic, and periodized training planning.
 
-## Setup
+## Commands
 
-This project uses the [intervals-mcp-server](https://github.com/mvilanova/intervals-mcp-server) for Intervals.icu API access. Configure `.mcp.json` with the correct path and credentials before use.
+| Command | Description | When |
+|---------|-------------|------|
+| `/coach:onboard` | Athlete intake — collect profile, goals, constraints | First time setup |
+| `/coach:checkin` | Daily readiness check → adapted session | Before every session |
+| `/coach:plan` | Generate next week's training plan | Weekly (Sunday/Monday) |
+| `/coach:debrief` | Post-session logging + feedback | After every session |
+| `/coach:review` | Weekly/monthly trend analysis + plan adaptation | End of each week |
+| `/coach:help` | Show all commands and data locations | Anytime |
 
-## Command
+## Daily Flow
 
-- `/coach:sunday` — Weekly review + next week planning
+```
+Morning:   /coach:checkin   → readiness scores → adapted session for today
+Training:  do the session
+After:     /coach:debrief   → log RPE, pain, fueling, learnings
+```
 
-## Reference Files
+## Weekly Flow
 
-All in `references/`:
+```
+Sunday:    /coach:review    → analyze the past week's trends
+           /coach:plan      → generate next week based on review
+Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
+```
 
-| File | Purpose |
-|------|---------|
-| `events.md` | Races and events Youri is registered for |
-| `training-plan.md` | The purchased training plan for the Ironman 70.3 |
-| `scheduled.md` | Trainings already scheduled in Intervals.icu |
-| `coaching.md` | Coaching philosophy, rules, and knowledge |
+## Data
 
-## Athlete Profile
+### Local Files (version-controlled context the coach reads)
 
-- **Name**: Youri
-- **Experience**: First triathlon, strong endurance base, beginner swimmer
-- **Availability**: 3-5 hours/week
-- **Language**: Dutch-speaking, but English is fine for coaching output
+| File | Purpose | Who updates it |
+|------|---------|----------------|
+| `data/coach/references/events.md` | Race calendar — dates, distances, priorities, goals | You, when events change |
+| `data/coach/references/athlete-profile.md` | Intake profile — history, constraints, equipment, health | `/coach:onboard`, then you as needed |
+| `data/coach/current-plan.md` | **Living operational state** — what we're following now, current week/phase, decisions, adjustments, agreements | Coach maintains this via commands |
+| `data/coach/plans/` | Training plan library — original plans as reference | You add plans; coach reads them |
 
-## Style
+### How the plans work together
 
-- Lead with data, be direct
-- Use sport emoji (🏊 🚴 🏃 🧱)
-- Flag problems clearly — don't sugarcoat
-- Reference the training plan and race countdown
-- Combine objective data (Intervals.icu) with the plan and coaching knowledge
+- **`plans/`** holds the original training plans as-is (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These are reference documents that don't change.
+- **`current-plan.md`** is the operational state: which plan is active, what week you're in, what adjustments have been made, what decisions you and the coach agreed on. Every command reads and updates this file.
+
+The coach reads `events.md` to know what's coming, references the original plan from `plans/`, and uses `current-plan.md` to track what's actually happening day to day.
+
+### Google Sheets (structured daily data — coach reads and writes)
+
+Configured in `config/sheets.json` → `coach` key.
+
+| Tab | Purpose |
+|-----|---------|
+| Daily Log | Date, sleep, stress, fatigue, soreness, pain, session, RPE, notes |
+| Weekly Review | Week summary, load, readiness trends, adjustments |
+| Zones | Current thresholds (FTP, run paces, CSS) with test dates |
+
+## Agent Files
+
+| File | Role |
+|------|------|
+| `agents/coach/coach.md` | Core system prompt — operating rules, knowledge base, communication style |
+| `agents/coach/alerts.md` | Safety decision tree — red flags, alert triggers, referral protocol |
+| `agents/coach/periodization.md` | Macrocycle templates, sample weeks, session library |
+
+## Core Principles
+
+1. **Safety first** — red flags always override training optimization. Pain, illness, and overtraining signals trigger automatic modification or referral. See `agents/coach/alerts.md`.
+2. **Evidence-based** — training decisions grounded in sports science (intensity distribution, load management, periodization, tapering). Not dogmatic — acknowledges uncertainty.
+3. **Collaborative** — ask before advising, summarize inputs, propose options, confirm commitment. Uses motivational interviewing style (OARS: Open questions, Affirmations, Reflections, Summaries).
+4. **You stay in control** — the coach drafts and suggests. It never commits to changes without your approval.
+5. **Metrics are decision aids, not truth** — TSS/CTL/ATL/TSB, TRIMP, HRV, and ACWR are tools to inform judgment, not rules to follow blindly.
+
+## Getting Started
+
+1. Fill in `data/coach/references/events.md` with your race calendar
+2. Add your training plans to `data/coach/plans/` (one file per plan, e.g. `ironman-70.3.md`, `marathon-sub345.md`)
+3. Run `/coach:onboard` to complete your athlete profile — this also creates `data/coach/current-plan.md`
+4. Start the daily cycle: `/coach:checkin` → train → `/coach:debrief`

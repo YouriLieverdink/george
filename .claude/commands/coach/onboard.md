@@ -38,9 +38,18 @@ Ask one group at a time, confirm understanding, then move on:
 1. Summarize the athlete profile back to them for confirmation.
 2. Write the profile to `data/coach/references/athlete-profile.md`.
 3. Check `data/coach/references/events.md` for the race calendar — confirm events are up to date.
-4. Set up initial zones in the "Zones" tab of the coach Google Sheet (from previous bests or schedule a baseline test).
-5. Propose the macrocycle structure based on event date and current fitness, and write it to `data/coach/plans/current-plan.md`.
-6. Establish the goal stack: outcome, performance, process, and identity/values goals (store in the athlete profile).
+4. Check `data/coach/plans/` for existing training plans — if plans already exist, review them and confirm they align with the athlete's profile and goals.
+5. Set up initial zones in the "Zones" tab of the coach Google Sheet (from previous bests or schedule a baseline test).
+6. If no plans exist yet, propose macrocycle structures based on events and current fitness.
+7. Establish the goal stack: outcome, performance, process, and identity/values goals (store in the athlete profile).
+8. **Create `data/coach/current-plan.md`** — the living operational state file. Initialize it with:
+   - Which plan(s) from `plans/` are active and for which event
+   - The current week and phase
+   - Any immediate adjustments based on the intake (e.g., if the athlete is joining mid-plan, note where they're picking up)
+   - Agreed goals and priorities
+   - The "Decisions & Agreements" log (empty, ready for entries)
+
+See the current-plan.md structure below for the expected format.
 
 ## Minimum Viable Data
 

@@ -6,7 +6,9 @@ Quick daily check-in (<30 seconds for the athlete) to determine today's session 
 
 Load the coach agent from `agents/coach/coach.md` and alert rules from `agents/coach/alerts.md`.
 
-Read the athlete's profile from `data/coach/references/athlete-profile.md` and today's planned session from `data/coach/plans/current-plan.md`. Check `data/coach/references/events.md` for any upcoming race context (e.g., taper awareness, race week adjustments).
+Read the athlete's profile from `data/coach/references/athlete-profile.md`. Read `data/coach/current-plan.md` to determine the current week, phase, active plan, and today's planned session. Reference the original plan from `data/coach/plans/` if needed for session details. Check `data/coach/references/events.md` for race proximity (e.g., taper awareness, race week adjustments).
+
+If the session is modified based on readiness, log the modification and reason in the "This Week" section of `current-plan.md`.
 
 ## Ask the Athlete (keep it quick)
 

@@ -7,9 +7,10 @@ Analyze training trends, assess progress, and adapt the plan. Write summary to t
 Load the coach agent from `agents/coach/coach.md` and alert rules from `agents/coach/alerts.md`.
 
 Read from local files:
+- `data/coach/current-plan.md` → current operational state, recent decisions, this week's plan and modifications
 - `data/coach/references/events.md` → race calendar, event countdown
 - `data/coach/references/athlete-profile.md` → goals and constraints
-- `data/coach/plans/current-plan.md` → active macrocycle, expected phase and targets
+- `data/coach/plans/` → original plan(s) as reference for what was prescribed vs. what happened
 
 Read from the coach Google Sheet:
 - "Daily Log" tab → all entries from the review period
@@ -102,7 +103,7 @@ In addition to the weekly review, the monthly review adds:
    - Did this mesocycle achieve its objectives?
    - Is the athlete on track for the macrocycle timeline? Cross-check `data/coach/references/events.md`.
    - Do phases need to shift (extend base, compress build, etc.)?
-   - If plan needs structural changes: update `data/coach/plans/current-plan.md` (archive the old version to `data/coach/plans/archive/` first).
+   - Record any structural changes or phase shifts in `data/coach/current-plan.md` under "Decisions & Agreements".
 
 4. **Goal stack check:**
    - Revisit outcome, performance, process, and identity goals.
@@ -111,3 +112,12 @@ In addition to the weekly review, the monthly review adds:
 5. **Forward plan:**
    - Outline the next mesocycle's focus and targets.
    - Identify any upcoming scheduling conflicts (travel, work, life events).
+
+## After Every Review
+
+Update `data/coach/current-plan.md`:
+- Move completed week summary to the "Previous Weeks" section
+- Update current week/phase if advancing
+- Log any new decisions or agreements
+- Record any plan deviations and their rationale
+- For monthly reviews: update the phase overview if mesocycle targets shifted

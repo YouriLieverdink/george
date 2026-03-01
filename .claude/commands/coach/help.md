@@ -31,15 +31,15 @@ Mon–Sat:  /coach:checkin  → /coach:debrief (daily cycle)
 ## Data
 
 **Local files (repo):**
+- `data/coach/current-plan.md` — **Living operational state:** active plan, current week/phase, decisions, adjustments
 - `data/coach/references/events.md` — Race calendar with dates, distances, goals
 - `data/coach/references/athlete-profile.md` — Your intake profile
-- `data/coach/plans/current-plan.md` — Active macrocycle / training plan
-- `data/coach/plans/archive/` — Past plans
+- `data/coach/plans/` — Training plan library: original plans as reference (e.g. `ironman-70.3.md`, `marathon-sub345.md`)
 
 **Google Sheet** (configured in `config/sheets.json` → `coach`):
 - Tabs: Daily Log, Weekly Review, Zones
 
-Edit `events.md` and `current-plan.md` directly when things change — the coach reads them before every decision.
+The coach reads `current-plan.md` before every decision. Edit `events.md` when races change. Original plans in `plans/` stay unchanged — all modifications are tracked in `current-plan.md`.
 
 ## Safety
 

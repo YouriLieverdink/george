@@ -7,9 +7,10 @@ Generate the next week's training plan based on the athlete's profile, current p
 Load the coach agent from `agents/coach/coach.md` and periodization templates from `agents/coach/periodization.md`.
 
 Read from local files:
+- `data/coach/current-plan.md` → current operational state: active plan, current week/phase, recent decisions and adjustments
 - `data/coach/references/events.md` → race calendar, upcoming events, countdown
 - `data/coach/references/athlete-profile.md` → goals, constraints, equipment, health
-- `data/coach/plans/current-plan.md` → active macrocycle, current phase, week targets
+- `data/coach/plans/` → original training plans as reference for prescribed sessions
 
 Read from the coach Google Sheet:
 - "Daily Log" tab → last week's sessions, RPE, pain, readiness trends
@@ -18,7 +19,7 @@ Read from the coach Google Sheet:
 
 ## Planning Process
 
-1. **Determine current phase** (base / build / peak / taper) from `data/coach/plans/current-plan.md`. Cross-reference with `data/coach/references/events.md` for event countdown — adjust if events have changed.
+1. **Determine current phase** from `data/coach/current-plan.md`. Cross-reference with the original plan in `data/coach/plans/` and `data/coach/references/events.md` for event countdown. If multiple plans are active, check which event takes priority for this week.
 
 2. **Review last week:**
    - Total volume and intensity minutes
@@ -76,3 +77,11 @@ Read from the coach Google Sheet:
 - Every 3rd or 4th week: deload (reduce volume 30–50%, maintain some intensity).
 - If athlete missed significant time: rebuild conservatively, don't jump back to previous load.
 - If readiness trending down across the week: consider early deload.
+
+## After Generating the Plan
+
+Update `data/coach/current-plan.md`:
+- Advance the current week number
+- Update the "This Week" section with the new plan
+- Note any deviations from the original plan and why
+- Record any decisions or agreements made with the athlete
