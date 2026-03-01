@@ -21,12 +21,12 @@ Read from the coach Google Sheet:
 
 1. **Determine current phase** from `data/coach/current-plan.md`. Cross-reference with the original plan in `data/coach/plans/` and `data/coach/references/events.md` for event countdown. If multiple plans are active, check which event takes priority for this week.
 
-2. **Review last week:**
-   - Total volume and intensity minutes
-   - Key workout outcomes (hit targets? missed? why?)
-   - Readiness trend (sleep, fatigue, soreness patterns)
-   - Any injury signals or alerts
-   - Plan adherence (completed / modified / skipped and why)
+2. **Review last week** (pull from intervals.icu API — see `services/intervals-icu.md`):
+   - Total volume and intensity distribution from completed activities
+   - Training load trend and current CTL/ATL/TSB from athlete summary
+   - Readiness trend from wellness data (sleep, HRV, fatigue, soreness)
+   - Any injury signals or alerts from `current-plan.md`
+   - Plan adherence: compare completed activities vs. what was planned
 
 3. **Choose 2–3 key sessions max** for the week. Everything else is easy/recovery/skill.
 

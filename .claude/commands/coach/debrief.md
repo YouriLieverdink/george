@@ -8,14 +8,27 @@ Load the coach agent from `agents/coach/coach.md` and alert rules from `agents/c
 
 Read today's planned session from `data/coach/current-plan.md` (the "This Week" section) to compare plan vs. actual. If a session was modified during checkin, the modification will already be noted there.
 
-## Ask the Athlete
+### Pull activity data from intervals.icu first
 
-Collect these data points after the session:
+Before asking the athlete anything, pull today's completed activity from the API (see `services/intervals-icu.md`):
+
+1. **Get today's activities** — find the most recent one matching the expected type (Run, Ride, Swim, etc.)
+2. **Extract key metrics:** duration, distance, avg HR, max HR, avg pace/power, TSS/training load, zone distribution
+3. **Compare plan vs. actual:** was the prescribed distance/duration roughly hit? Was intensity in the right zone?
+
+Present a summary:
+> "Session recorded: 11.2 km easy run in 67 min, avg HR 138, avg pace 5:59/km, training load 58. The plan was 11.2 km Easy at 6:00/km — looks spot on."
+
+Then ask only for what the API can't tell you.
+
+## Ask the Athlete (only subjective data)
+
+The API already has distance, duration, HR, pace, power, and training load. Ask only for:
 
 1. **RPE (0–10)** + how it compared to the plan (easier / as expected / harder)
 2. **Pain or niggles (0–10):** where, when it started, how it changed during the session
-3. **Fueling:** what and how much (carbs/h, fluids/h), GI response (good / mild issues / problems)
-4. **For key sessions:** did you hit pacing/power targets? If not, why?
+3. **Fueling** (for sessions >75 min): what and how much, GI response (good / mild issues / problems)
+4. **For key sessions:** did you hit pacing/power targets? If not, why? (cross-reference with API data)
 5. **One sentence: "What did you learn?"**
 
 ## Processing

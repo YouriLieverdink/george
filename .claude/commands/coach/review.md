@@ -19,23 +19,35 @@ Read from the coach Google Sheet:
 
 ## Weekly Review (run every week)
 
+### Pull data from intervals.icu
+
+Before analysis, pull the week's data from the API (see `services/intervals-icu.md`):
+
+1. **Activities for the past 7 days** — all completed workouts with duration, distance, HR, pace/power, training load
+2. **Wellness for the past 7 days** — sleep, HRV, resting HR, fatigue, soreness, stress (device + subjective)
+3. **Athlete summary** — current CTL (fitness), ATL (fatigue), TSB (form)
+
+This gives you hard data for the analysis rather than relying on memory or self-reports.
+
 ### Analyze
 
-1. **Load trend:**
-   - Total volume this week vs. previous weeks
-   - Intensity distribution (how much easy vs. moderate vs. hard)
-   - TSS/ATL changes if available from device data
-   - Compare to plan: did load land where intended?
+1. **Load trend** (from intervals.icu activities):
+   - Total volume this week vs. previous weeks (km, hours)
+   - Intensity distribution: zone time from activities (how much easy vs. moderate vs. hard)
+   - Total training load (icu_training_load sum) and CTL/ATL/TSB trend
+   - Compare to plan: did load land where intended? Cross-reference `current-plan.md`.
 
-2. **Readiness trend:**
-   - Sleep quality/duration pattern across the week
-   - Fatigue and soreness trajectory (rising, stable, falling?)
-   - Stress levels and any life events impacting training
+2. **Readiness trend** (from intervals.icu wellness):
+   - Sleep duration and quality pattern across the week
+   - HRV trend (stable, declining, improving vs. baseline)
+   - Resting HR trend (rising resting HR = fatigue accumulation)
+   - Fatigue and soreness trajectory from subjective scores
 
-3. **Key workout outcomes:**
+3. **Key workout outcomes** (from intervals.icu activity details + current-plan.md):
    - Did the athlete hit process goals (pacing, fueling, technique)?
+   - Planned vs. actual: compare prescribed paces/intensities with what the API shows
    - Where did sessions go better or worse than expected?
-   - Any sessions modified or skipped? Why?
+   - Any sessions modified or skipped? Why? (check current-plan.md modifications)
 
 4. **Injury/health signals:**
    - New pain or worsening trends across the week

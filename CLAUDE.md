@@ -47,7 +47,19 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 
 The coach reads `events.md` to know what's coming, references the original plan from `plans/`, and uses `current-plan.md` to track what's actually happening day to day.
 
-### Google Sheets (structured daily data — coach reads and writes)
+### Intervals.icu API (objective training data — coach reads and writes)
+
+Configured in `config/intervals-icu.json` with your athlete ID and API key. See `.claude/services/coach/intervals-icu.md` for full API reference.
+
+| Data | What the coach pulls | Used by |
+|------|---------------------|---------|
+| Activities | Completed workouts: distance, duration, HR, pace, power, training load, zones | `/coach:debrief`, `/coach:review` |
+| Wellness | Sleep, HRV, resting HR, weight (from wearable sync) | `/coach:checkin`, `/coach:review` |
+| Athlete summary | Current CTL (fitness), ATL (fatigue), TSB (form) | `/coach:review`, `/coach:plan` |
+
+The coach pulls objective data from intervals.icu first, then asks you only for what the API can't provide (RPE feel, pain location, fueling details, learnings).
+
+### Google Sheets (optional structured logging — coach reads and writes)
 
 Configured in `config/sheets.json` → `coach` key.
 
@@ -57,13 +69,14 @@ Configured in `config/sheets.json` → `coach` key.
 | Weekly Review | Week summary, load, readiness trends, adjustments |
 | Zones | Current thresholds (FTP, run paces, CSS) with test dates |
 
-## Agent Files
+## Agent & Service Files
 
 | File | Role |
 |------|------|
 | `agents/coach/coach.md` | Core system prompt — operating rules, knowledge base, communication style |
 | `agents/coach/alerts.md` | Safety decision tree — red flags, alert triggers, referral protocol |
 | `agents/coach/periodization.md` | Macrocycle templates, sample weeks, session library |
+| `services/intervals-icu.md` | Intervals.icu API reference — endpoints, curl patterns, per-command usage |
 
 ## Core Principles
 
@@ -77,5 +90,6 @@ Configured in `config/sheets.json` → `coach` key.
 
 1. Fill in `data/coach/references/events.md` with your race calendar
 2. Add your training plans to `data/coach/plans/` (one file per plan, e.g. `ironman-70.3.md`, `marathon-sub345.md`)
-3. Run `/coach:onboard` to complete your athlete profile — this also creates `data/coach/current-plan.md`
-4. Start the daily cycle: `/coach:checkin` → train → `/coach:debrief`
+3. Set up intervals.icu API access: go to https://intervals.icu/settings → "Developer Settings" → generate API key. Add your athlete ID and key to `config/intervals-icu.json`
+4. Run `/coach:onboard` to complete your athlete profile — this also creates `data/coach/current-plan.md`
+5. Start the daily cycle: `/coach:checkin` → train → `/coach:debrief`

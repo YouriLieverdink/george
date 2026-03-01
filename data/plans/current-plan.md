@@ -13,7 +13,7 @@
 - **Target event:** IRONMAN 70.3 Greece
 - **Event date:** 2026-10-25
 - **Plan start date:** 2026-05-11 (original) — pre-base work starts now (March 1)
-- **Current week:** Pre-plan / rebuild phase (Week 0)
+- **Current week:** Week 1 (Mar 2–8)
 - **Current phase:** Rebuild & Base Foundation
 
 ### Secondary: Marathon of Groningen
@@ -51,22 +51,88 @@
 
 ## This Week
 
-**Week 1 — Rebuild — Mar 2–8, 2026**
+### Week 1 — Rebuild — Mar 2–8, 2026
+
+#### Rationale
+
+Coming off illness and inconsistent training with very low weekly volume. Groningen marathon is 13 weeks out (B race, no time target), IRONMAN 70.3 Greece is 34 weeks out (A race). This week is about rebuilding the habit of showing up. All running is easy/conversational — no pace targets. Targeting 4 sessions (not 6) to keep the barrier low. Swim course on Wednesday is locked in. Strength is a light reintroduction — movement patterns only, no load chasing.
+
+#### Schedule
+
+**Monday — Easy Run (20–25 min)**
+- Warm-up: 5 min walk
+- Main: 15–20 min easy running, fully conversational (RPE 2–3). Walk breaks are fine and encouraged.
+- Cool-down: 2–3 min walk
+- Target: Z1–Z2 HR. If you can't hold a conversation, slow down or walk.
+- Log after: duration, avg HR if wearing strap, how it felt (1 sentence)
+
+**Tuesday — Strength: Full Body Reintroduction (30–40 min)**
+- Warm-up: 5 min light cardio (walk, easy bike, jump rope)
+- Main circuit (2 rounds, light load — focus on form, not fatigue):
+  - Goblet squat × 10
+  - Romanian deadlift × 10
+  - Push-ups × 8–10
+  - Dumbbell row × 10/side
+  - Farmer carry × 30 sec
+  - Calf raises × 15
+  - Dead bug × 10/side
+- Cool-down: light stretch, 5 min
+- Target: RPE 3–4. You should feel like you could do more. That's correct — we're reintroducing, not testing.
+- Log after: exercises completed, any movement restrictions or soreness spots
+
+**Wednesday — Swim Course 08:30–09:30 (Lesson 3)**
+- Follow the instructor (Bosch control method)
+- Log after: what you worked on, how the water felt, any technique cues to remember
+
+**Thursday — Easy Run (25–30 min)**
+- Warm-up: 5 min walk
+- Main: 20–25 min easy running, same rules as Monday — conversational, walk breaks welcome
+- Cool-down: 3–5 min walk
+- Target: Z1–Z2 HR, RPE 2–3
+- Log after: duration, avg HR, comparison to Monday (easier/harder/same?)
+
+**Friday — Rest**
+- Full rest. Walk, stretch, or light mobility if you feel like it. No obligation.
+
+**Saturday — Easy Run 30–35 min OR Easy Bike 45 min (your choice)**
+- If running: warm-up walk 5 min → 25–30 min easy → cool-down walk
+- If cycling: 45 min easy spin, Z1–Z2 HR, flat terrain or trainer
+- Choose based on how you feel and what sounds enjoyable. No wrong answer.
+- Log after: what you chose and why, duration, how the legs felt
+
+**Sunday — Rest or Light Walk/Stretch**
+- Recovery day. Optional 20–30 min walk or gentle yoga/stretching.
+
+#### Tracking
 
 | Day | Planned Session | Actual | RPE | Notes |
 |-----|----------------|--------|-----|-------|
-| Mon | Easy run 20–25 min (conversational) | | | |
-| Tue | Strength (full body, light — reintroduction) | | | |
-| Wed | Swim course 08:30–09:30 (lesson 3) | | | |
+| Mon | Easy run 20–25 min | | | |
+| Tue | Strength (full body reintro) | | | |
+| Wed | Swim course (lesson 3) | | | |
 | Thu | Easy run 25–30 min | | | |
 | Fri | Rest | | | |
 | Sat | Easy run 30–35 min OR easy bike 45 min | | | |
 | Sun | Rest or light walk/stretch | | | |
 
-**Key focus:** Just show up. Rebuild the habit. All running is easy/conversational — no pace targets. If you feel rough from recent illness, scale down further. 4 sessions is the goal, not 6.
+#### Key Sessions
+
+1. **Monday easy run** — The first session back. It sets the tone. Showing up matters more than the run itself. Walk breaks are success, not failure.
+2. **Tuesday strength** — Reintroducing movement patterns at low load. We'll build from here — this baseline tells us where things stand.
+
+#### Fueling Focus
+
+No specific fueling practice needed at these durations. General goals: hydrate well throughout the day, eat a meal or snack 1–2 hours before sessions, notice energy levels before/during — start building awareness.
+
+#### Check-In Questions (answer midweek)
+
+1. How did Monday's run feel — could you genuinely hold a conversation the whole time?
+2. Any residual effects from the recent illness (fatigue, congestion, reduced capacity)?
+3. How's sleep been this week — roughly how many hours, and are you getting to bed at a reasonable time?
 
 **Modifications from original plan:**
 - Not following either reference plan yet — this is a custom rebuild phase to get back to baseline before starting structured training.
+- Synced to Intervals.icu calendar on 2026-03-01.
 
 ## Decisions & Agreements
 
