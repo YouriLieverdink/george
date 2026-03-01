@@ -232,7 +232,7 @@ These are templates — always adapt to athlete constraints, fatigue, time, and 
 
 ## Intervals.icu Structured Workout Descriptions
 
-ICU syntax templates for each session type. Use these as starting points when generating the `description` field for calendar events (see `services/intervals-icu.md` Section 7–8). Adapt durations, intensities, and repeats to the athlete's current phase, fitness, and zones.
+ICU syntax templates for each session type. Use these as starting points when generating the `description` field for calendar events (see `.claude/services/coach/intervals-icu.md` Section 7–8). Adapt durations, intensities, and repeats to the athlete's current phase, fitness, and zones.
 
 ### Swim: Technique + Aerobic
 

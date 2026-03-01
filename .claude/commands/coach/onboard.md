@@ -4,7 +4,7 @@ Collect the athlete's profile to personalize all future coaching. Store answers 
 
 ## Instructions
 
-Load the coach agent from `agents/coach/coach.md`. Then walk the athlete through the following intake form conversationally — don't dump all questions at once. Group them naturally (event → history → constraints → health).
+Load the coach agent from `.claude/agents/coach.md`. Then walk the athlete through the following intake form conversationally — don't dump all questions at once. Group them naturally (event → history → constraints → health).
 
 ## Intake Questions
 

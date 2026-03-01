@@ -4,7 +4,7 @@ Analyze training trends, assess progress, and adapt the plan. Write summary to t
 
 ## Instructions
 
-Load the coach agent from `agents/coach/coach.md` and alert rules from `agents/coach/alerts.md`.
+Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
 Read from local files:
 - `data/current-plan.md` → current operational state, recent decisions, this week's plan and modifications
@@ -21,7 +21,7 @@ Read from the coach Google Sheet:
 
 ### Pull data from intervals.icu
 
-Before analysis, pull the week's data from the API (see `services/intervals-icu.md`):
+Before analysis, pull the week's data from the API (see `.claude/services/coach/intervals-icu.md`):
 
 1. **Activities for the past 7 days** — all completed workouts with duration, distance, HR, pace/power, training load
 2. **Wellness for the past 7 days** — sleep, HRV, resting HR, fatigue, soreness, stress (device + subjective)

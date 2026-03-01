@@ -4,13 +4,13 @@ Structured logging after every training session. Captures subjective and objecti
 
 ## Instructions
 
-Load the coach agent from `agents/coach/coach.md` and alert rules from `agents/coach/alerts.md`.
+Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
 Read today's planned session from `data/current-plan.md` (the "This Week" section) to compare plan vs. actual. If a session was modified during checkin, the modification will already be noted there.
 
 ### Pull activity data from intervals.icu first
 
-Before asking the athlete anything, pull today's completed activity from the API (see `services/intervals-icu.md`):
+Before asking the athlete anything, pull today's completed activity from the API (see `.claude/services/coach/intervals-icu.md`):
 
 1. **Get today's activities** — find the most recent one matching the expected type (Run, Ride, Swim, etc.)
 2. **Extract key metrics:** duration, distance, avg HR, max HR, avg pace/power, TSS/training load, zone distribution
@@ -35,7 +35,7 @@ The API already has distance, duration, HR, pace, power, and training load. Ask 
 
 After collecting the data:
 
-1. **Check alerts:** Apply alert rules from `agents/coach/alerts.md`:
+1. **Check alerts:** Apply alert rules from `.claude/agents/alerts.md`:
    - Pain ≥ 4/10 or worsening trend? → Flag and recommend modification tomorrow.
    - RPE much higher than expected for the prescribed intensity? → Note potential fatigue accumulation.
    - GI issues during fueling practice? → Adjust fueling plan for next long session.

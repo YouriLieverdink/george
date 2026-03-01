@@ -1,10 +1,10 @@
 # /coach:plan — Generate Weekly Training Plan
 
-Generate the next week's training plan based on the athlete's profile, current phase, and recent training data. Reference macrocycle templates and session library from `agents/coach/periodization.md`.
+Generate the next week's training plan based on the athlete's profile, current phase, and recent training data. Reference macrocycle templates and session library from `.claude/.claude/agents/periodization.md`.
 
 ## Instructions
 
-Load the coach agent from `agents/coach/coach.md`, periodization templates from `agents/coach/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `services/intervals-icu.md` (Sections 7–8 for event creation and workout syntax).
+Load the coach agent from `.claude/agents/coach.md`, periodization templates from `.claude/.claude/agents/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `.claude/services/coach/intervals-icu.md` (Sections 7–8 for event creation and workout syntax).
 
 Read from local files:
 - `data/current-plan.md` → current operational state: active plan, current week/phase, recent decisions and adjustments
@@ -21,7 +21,7 @@ Read from the coach Google Sheet:
 
 1. **Determine current phase** from `data/current-plan.md`. Cross-reference with the original plan in `data/plans/` and `data/references/events.md` for event countdown. If multiple plans are active, check which event takes priority for this week.
 
-2. **Review last week** (pull from intervals.icu API — see `services/intervals-icu.md`):
+2. **Review last week** (pull from intervals.icu API — see `.claude/services/coach/intervals-icu.md`):
    - Total volume and intensity distribution from completed activities
    - Training load trend and current CTL/ATL/TSB from athlete summary
    - Readiness trend from wellness data (sleep, HRV, fatigue, soreness)
@@ -41,7 +41,7 @@ Read from the coach Google Sheet:
 6. **For each session, provide:**
    - Warm-up / main / cool-down structure
    - Target intensities (zone, RPE range, pace/power if applicable)
-   - ICU workout description using the syntax from `services/intervals-icu.md` Section 8, adapted from the templates in `agents/periodization.md` "Intervals.icu Structured Workout Descriptions"
+   - ICU workout description using the syntax from `.claude/services/coach/intervals-icu.md` Section 8, adapted from the templates in `.claude/agents/periodization.md` "Intervals.icu Structured Workout Descriptions"
    - Fueling notes for sessions >75–90 min
    - What to log after
 
@@ -91,7 +91,7 @@ Update `data/current-plan.md`:
 
 After the athlete approves the plan, create structured workout events on the intervals.icu calendar so they sync to Garmin:
 
-1. **Build POST payload per session** using the intervals.icu API (Section 7 of `services/intervals-icu.md`):
+1. **Build POST payload per session** using the intervals.icu API (Section 7 of `.claude/services/coach/intervals-icu.md`):
    - `start_date_local`: the scheduled date
    - `category`: `"WORKOUT"`
    - `name`: session title
@@ -102,7 +102,7 @@ After the athlete approves the plan, create structured workout events on the int
 2. **Handle special cases:**
    - **Brick sessions** → create two separate events (one `Ride`, one `Run`) on the same date
    - **Rest days** → skip, do not create events
-   - **Strength** → create event with plain text description (no structured syntax). Calculate `moving_time` from the exercise list using the formula in `agents/periodization.md` (warmup + exercises × 3 min + cooldown) rather than a fixed value. Include `"icu_training_load"` in the payload using the strength load estimation table from `agents/periodization.md`.
+   - **Strength** → create event with plain text description (no structured syntax). Calculate `moving_time` from the exercise list using the formula in `.claude/agents/periodization.md` (warmup + exercises × 3 min + cooldown) rather than a fixed value. Include `"icu_training_load"` in the payload using the strength load estimation table from `.claude/agents/periodization.md`.
 
 3. **POST each event** and store the returned event `id` in `current-plan.md` alongside each session (enables mid-week PUT/DELETE updates)
 

@@ -44,4 +44,4 @@ The coach reads `current-plan.md` before every decision. Edit `events.md` when r
 
 ## Safety
 
-The coach will automatically flag red flags and recommend modification or medical referral. It will never push through pain, illness, or overtraining signals. See `agents/coach/alerts.md` for the full decision tree.
+The coach will automatically flag red flags and recommend modification or medical referral. It will never push through pain, illness, or overtraining signals. See `.claude/agents/alerts.md` for the full decision tree.

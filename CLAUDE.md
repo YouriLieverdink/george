@@ -74,14 +74,14 @@ Configured in `config/sheets.json` → `coach` key.
 
 | File | Role |
 |------|------|
-| `agents/coach/coach.md` | Core system prompt — operating rules, knowledge base, communication style |
-| `agents/coach/alerts.md` | Safety decision tree — red flags, alert triggers, referral protocol |
-| `agents/coach/periodization.md` | Macrocycle templates, sample weeks, session library |
-| `services/intervals-icu.md` | Intervals.icu API reference — endpoints, curl patterns, per-command usage |
+| `.claude/agents/coach.md` | Core system prompt — operating rules, knowledge base, communication style |
+| `.claude/agents/alerts.md` | Safety decision tree — red flags, alert triggers, referral protocol |
+| `.claude/agents/periodization.md` | Macrocycle templates, sample weeks, session library |
+| `.claude/services/coach/intervals-icu.md` | Intervals.icu API reference — endpoints, curl patterns, per-command usage |
 
 ## Core Principles
 
-1. **Safety first** — red flags always override training optimization. Pain, illness, and overtraining signals trigger automatic modification or referral. See `agents/coach/alerts.md`.
+1. **Safety first** — red flags always override training optimization. Pain, illness, and overtraining signals trigger automatic modification or referral. See `.claude/agents/alerts.md`.
 2. **Evidence-based** — training decisions grounded in sports science (intensity distribution, load management, periodization, tapering). Not dogmatic — acknowledges uncertainty.
 3. **Collaborative** — ask before advising, summarize inputs, propose options, confirm commitment. Uses motivational interviewing style (OARS: Open questions, Affirmations, Reflections, Summaries).
 4. **You stay in control** — the coach drafts and suggests. It never commits to changes without your approval.
