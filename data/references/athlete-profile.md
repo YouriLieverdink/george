@@ -11,13 +11,15 @@
   - Goal: finish and enjoy every moment
   - Target: 5:30–6:00
 - **B Race:** Marathon of Groningen — May 31, 2026
-  - Very flat course
-  - Target: 3:45–4:00
+  - Very flat course, hometown race (lives in Groningen)
+  - Goal: finish and enjoy — no time target. Use as training run + race experience.
 
-## Current Training
-- **Status:** Coming off a low-volume period, rebuilding from basics
-- **Weekly volume:** minimal recent training
+## Current Training (updated 2026-03-01)
+- **Status:** Rebuilding. Sporadic running and strength sessions over last few weeks, no consistency yet. Sick on and off recently.
+- **Weekly volume:** very low / inconsistent
 - **Longest recent session per discipline:** limited — needs gradual ramp
+- **Swimming:** Pool time on recent vacation. Currently taking Bosch control method swim course (lesson 3 of 8, Wednesdays 08:30–09:30)
+- **Strength:** Attempting to restart, a few sessions here and there
 
 ## Previous Bests
 - **Marathon:** ~4:12 (April 2025, first marathon)
@@ -56,7 +58,7 @@
 
 ## Goal Stack
 - **Outcome goal:** Finish IRONMAN 70.3 Greece and enjoy every moment
-- **Performance goal:** 5:30–6:00 at 70.3; 3:45–4:00 at Groningen marathon
+- **Performance goal:** 5:30–6:00 at 70.3; finish Groningen marathon comfortably
 - **Process goals:**
   - Rebuild consistency: train 5–6 days/week
   - Practice race fueling on all long sessions (60–90g carbs/h target)
