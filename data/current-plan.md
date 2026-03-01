@@ -62,25 +62,39 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 **Monday — Easy Run (25 min)** `[ICU event: 95923826]`
 - Structured workout loaded to Garmin:
   ```
-  Warmup: Walk 5m Z1 Pace
-  Main: Easy jog 17m Z2 Pace
-  Cooldown: Walk 3m Z1 Pace
+  Warmup
+  - Walk 5m Z1 Pace
+
+  Main set
+  - Easy jog 17m Z2 Pace
+
+  Cooldown
+  - Walk 3m Z1 Pace
   ```
 - Walk breaks during the jog are fine and encouraged. If you can't hold a conversation, slow down or walk.
 - Log after: duration, avg HR, how it felt (1 sentence)
 
 **Tuesday — Strength: Full Body Reintroduction (40 min)** `[ICU event: 95923841]`
-- Warm-up: 5 min mobility + activation
-- Main (2 rounds, light load — focus on form, not fatigue):
-  - Goblet squat × 10
-  - Romanian deadlift × 10
-  - Push-ups × 8–10
-  - Dumbbell row × 10/side
-  - Farmer carry × 30 sec
-  - Calf raises × 15
-  - Dead bug × 10/side
-- Cool-down: 5 min stretching
+- Structured workout on ICU calendar (plain text — no Garmin structured steps):
+  ```
+  Warmup
+  - 5m mobility + activation
+
+  Main set
+  - Goblet squat 2x10
+  - Romanian deadlift 2x10
+  - Push-ups 2x8-10
+  - Dumbbell row 2x10 each side
+  - Farmer carry 2x30sec
+  - Calf raises 2x15
+  - Dead bug 2x10 each side
+
+  Cooldown
+  - 5m stretching
+  ```
+- 2 rounds, light load — focus on form, not fatigue.
 - Target: RPE 3–4. You should feel like you could do more.
+- Estimated load: ~25 (Anatomical Adaptation phase)
 - Log after: exercises completed, any movement restrictions or soreness spots
 
 **Wednesday — Swim Course 08:30–09:30 (Lesson 3)** `[ICU event: 90265900]`
@@ -91,9 +105,14 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 **Thursday — Easy Run (30 min)** `[ICU event: 95923844]`
 - Structured workout loaded to Garmin:
   ```
-  Warmup: Walk 5m Z1 Pace
-  Main: Easy jog 20m Z2 Pace
-  Cooldown: Walk 5m Z1 Pace
+  Warmup
+  - Walk 5m Z1 Pace
+
+  Main set
+  - Easy jog 20m Z2 Pace
+
+  Cooldown
+  - Walk 5m Z1 Pace
   ```
 - Same rules as Monday — conversational, walk breaks welcome.
 - Log after: duration, avg HR, comparison to Monday (easier/harder/same?)
@@ -104,9 +123,14 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 **Saturday — Easy Run (35 min)** `[ICU event: 95923853]`
 - Structured workout loaded to Garmin:
   ```
-  Warmup: Walk 5m Z1 Pace
-  Main: Easy jog 25m Z2 Pace
-  Cooldown: Walk 5m Z1 Pace
+  Warmup
+  - Walk 5m Z1 Pace
+
+  Main set
+  - Easy jog 25m Z2 Pace
+
+  Cooldown
+  - Walk 5m Z1 Pace
   ```
 - Longest run of the week — keep it truly easy. No pace targets beyond "conversational."
 - Log after: duration, avg HR, how the legs felt
@@ -145,6 +169,7 @@ No specific fueling practice needed at these durations. General goals: hydrate w
 - Not following either reference plan yet — this is a custom rebuild phase to get back to baseline before starting structured training.
 - Synced to Intervals.icu calendar on 2026-03-01.
 - Updated 2026-03-01: converted all run workouts to structured ICU syntax (Warmup/Main/Cooldown with pace zone targets) so they load as on-wrist targets on Garmin. Saturday changed from run/bike choice to structured easy run. Event IDs stored for mid-week updates.
+- Updated 2026-03-01: standardized plan format — workout code blocks now use proper ICU section headers (`Warmup` / `Main set` / `Cooldown` on own lines, steps prefixed with `-`). Strength event fixed: `moving_time` corrected from 60 min to 40 min, added `icu_training_load: 25` (Anatomical Adaptation phase). Added estimated load to strength session description.
 
 ## Decisions & Agreements
 
