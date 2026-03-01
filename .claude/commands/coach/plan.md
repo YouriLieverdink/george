@@ -4,7 +4,7 @@ Generate the next week's training plan based on the athlete's profile, current p
 
 ## Instructions
 
-Load the coach agent from `agents/coach/coach.md` and periodization templates from `agents/coach/periodization.md`.
+Load the coach agent from `agents/coach/coach.md`, periodization templates from `agents/coach/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `services/intervals-icu.md` (Sections 7–8 for event creation and workout syntax).
 
 Read from local files:
 - `data/coach/current-plan.md` → current operational state: active plan, current week/phase, recent decisions and adjustments
@@ -41,6 +41,7 @@ Read from the coach Google Sheet:
 6. **For each session, provide:**
    - Warm-up / main / cool-down structure
    - Target intensities (zone, RPE range, pace/power if applicable)
+   - ICU workout description using the syntax from `services/intervals-icu.md` Section 8, adapted from the templates in `agents/coach/periodization.md` "Intervals.icu Structured Workout Descriptions"
    - Fueling notes for sessions >75–90 min
    - What to log after
 
@@ -85,3 +86,35 @@ Update `data/coach/current-plan.md`:
 - Update the "This Week" section with the new plan
 - Note any deviations from the original plan and why
 - Record any decisions or agreements made with the athlete
+
+## Sync to Intervals.icu Calendar
+
+After the athlete approves the plan, create structured workout events on the intervals.icu calendar so they sync to Garmin:
+
+1. **Build POST payload per session** using the intervals.icu API (Section 7 of `services/intervals-icu.md`):
+   - `start_date_local`: the scheduled date
+   - `category`: `"WORKOUT"`
+   - `name`: session title
+   - `type`: sport type (`Run`, `Ride`, `Swim`, `WeightTraining`)
+   - `description`: ICU workout syntax with warmup/main/cooldown, targets, and repeats
+   - `moving_time`: planned duration in seconds
+
+2. **Handle special cases:**
+   - **Brick sessions** → create two separate events (one `Ride`, one `Run`) on the same date
+   - **Rest days** → skip, do not create events
+   - **Strength** → create event with plain text description (no structured syntax)
+
+3. **POST each event** and store the returned event `id` in `current-plan.md` alongside each session (enables mid-week PUT/DELETE updates)
+
+4. **Report sync result** to the athlete: confirm how many events were created, the date range, and remind them to check "Upload planned workouts" is enabled in Intervals.icu settings (Settings → Garmin)
+
+5. **Note sync date range** in `current-plan.md` (e.g., "Synced to intervals.icu: 2026-03-02 to 2026-03-08")
+
+6. **Error handling:**
+   - If a single event POST fails (400/409): log the error, continue with the remaining events, report which session failed
+   - If the API is unreachable: skip sync entirely, note in `current-plan.md` that sync was skipped, the athlete can still follow the plan from markdown
+
+7. **Mid-week updates** (from `/coach:checkin` modifying a planned session):
+   - Use PUT with the stored event `id` to update the workout description/duration
+   - Use DELETE if a session is cancelled entirely
+   - Create a new POST if a replacement session is added

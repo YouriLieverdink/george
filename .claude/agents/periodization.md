@@ -221,3 +221,155 @@ These are templates — always adapt to athlete constraints, fatigue, time, and 
 - **Example exercises:** trap-bar deadlift or RDL; split squat; calf raises; rows; push-ups; loaded carries; anti-rotation press
 - **Volume:** base phase 2–4 sets; peak phase 1–2 sets
 - **Safety:** NSCA-style mindset — progression, technique, monitoring
+
+---
+
+## Intervals.icu Structured Workout Descriptions
+
+ICU syntax templates for each session type. Use these as starting points when generating the `description` field for calendar events (see `services/intervals-icu.md` Section 7–8). Adapt durations, intensities, and repeats to the athlete's current phase, fitness, and zones.
+
+### Swim: Technique + Aerobic
+
+**name:** `Swim: Technique + Aerobic`
+**type:** `Swim`
+**moving_time:** `3600` (60 min)
+
+```
+Warmup
+- 300mtr Z1
+- 4x 50mtr drills intensity=rest
+Main set
+8x
+- 100mtr Z2
+- 20s intensity=rest
+Cooldown
+- 200mtr Z1
+```
+
+### Bike: Threshold Development
+
+**name:** `Bike: Threshold`
+**type:** `Ride`
+**moving_time:** `4500` (75 min)
+
+```
+Warmup
+- 15m Z2
+- 3x 1m 95rpm Z2
+Cooldown after warmup spins
+Main set
+3x
+- 12m 95% 90rpm
+- 5m Z1
+Cooldown
+- 10m Z1
+```
+
+### Run: Tempo
+
+**name:** `Run: Tempo`
+**type:** `Run`
+**moving_time:** `3600` (60 min)
+
+```
+Warmup
+- 15m Z1 Pace
+- 4x 20s strides 95% Pace
+Main set
+2x
+- 15m 85% Pace
+- 3m Z1 Pace
+Cooldown
+- 10m Z1 Pace
+```
+
+### Brick: Bike (separate Ride event)
+
+**name:** `Brick Bike: Race-Pace Blocks`
+**type:** `Ride`
+**moving_time:** `10800` (3 h)
+
+```
+Warmup
+- 20m Z2
+Main set
+- 30m 85%
+- 10m Z2
+- 30m 85%
+- 10m Z2
+- 60m Z2
+Cooldown
+- 20m Z1
+```
+
+### Brick: Run (separate Run event)
+
+**name:** `Brick Run: Easy-to-Steady`
+**type:** `Run`
+**moving_time:** `1800` (30 min)
+
+```
+Warmup
+- 5m Z1 Pace
+Main set
+- 15m Z2 Pace
+Cooldown
+- 10m Z1 Pace
+```
+
+### Strength: Endurance-Focused
+
+**name:** `Strength: Endurance-Focused`
+**type:** `WeightTraining`
+**moving_time:** `2700` (45 min)
+
+```
+Warmup
+- 10m mobility + activation
+Main set
+- Trap-bar deadlift 3x8
+- Split squat 3x10 each
+- Calf raises 3x15
+- Bent-over row 3x10
+- Push-ups 3x12
+- Loaded carry 3x30m
+- Pallof press 3x10 each
+Cooldown
+- 5m stretching
+```
+
+Note: Strength workouts use plain text descriptions — they don't parse into structured steps on Garmin but still appear as planned events on the calendar.
+
+### Long Run: Easy
+
+**name:** `Long Run: Easy`
+**type:** `Run`
+**moving_time:** `5400` (90 min)
+
+```
+Warmup
+- 10m Z1 Pace
+Main set
+- 70m Z1-Z2 Pace
+Cooldown
+- 10m Z1 Pace
+```
+
+### Long Bike: Aerobic + Race-Pace Blocks
+
+**name:** `Long Bike: Aerobic + RP Blocks`
+**type:** `Ride`
+**moving_time:** `12600` (3.5 h)
+
+```
+Warmup
+- 20m Z2
+Main set
+- 40m Z2
+- 20m 85%
+- 10m Z2
+- 20m 85%
+- 40m Z2
+Cooldown
+- 20m Z1
+```

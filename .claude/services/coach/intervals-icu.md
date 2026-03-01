@@ -130,6 +130,138 @@ curl -s -u "API_KEY:$API_KEY" \
   "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events?oldest=$(date +%Y-%m-%d)&newest=$(date -d '7 days' +%Y-%m-%d)"
 ```
 
+### 7. Create Calendar Events (structured workouts)
+
+**Use in:** `/coach:plan` (push structured workouts to intervals.icu calendar → Garmin sync)
+
+```bash
+# Create a workout event
+ATHLETE_ID=$(jq -r .athleteId config/intervals-icu.json)
+API_KEY=$(jq -r .apiKey config/intervals-icu.json)
+
+curl -s -X POST -u "API_KEY:$API_KEY" \
+  -H 'Content-Type: application/json' \
+  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events" \
+  -d '{
+    "start_date_local": "2026-03-02",
+    "category": "WORKOUT",
+    "name": "Tempo Run",
+    "type": "Run",
+    "description": "Warmup\n- 15m Z1 Pace\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 Pace\nCooldown\n- 10m Z1 Pace",
+    "moving_time": 3600
+  }'
+```
+
+**Payload fields:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `start_date_local` | string | Date in `YYYY-MM-DD` format |
+| `category` | string | Always `"WORKOUT"` for planned workouts |
+| `name` | string | Session title shown on calendar |
+| `type` | string | Sport type (see mapping below) |
+| `description` | string | Workout steps in ICU syntax (see Section 8) |
+| `moving_time` | integer | Planned duration in seconds |
+
+**Sport type mapping:**
+
+| Session type | `type` value |
+|-------------|-------------|
+| Swim | `Swim` |
+| Bike | `Ride` |
+| Run | `Run` |
+| Strength | `WeightTraining` |
+| Brick (bike + run) | Split into two separate events: one `Ride`, one `Run` |
+
+**Update an existing event:**
+
+```bash
+curl -s -X PUT -u "API_KEY:$API_KEY" \
+  -H 'Content-Type: application/json' \
+  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events/$EVENT_ID" \
+  -d '{"name": "Updated Session", "description": "...", "moving_time": 3000}'
+```
+
+**Delete an event:**
+
+```bash
+curl -s -X DELETE -u "API_KEY:$API_KEY" \
+  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events/$EVENT_ID"
+```
+
+The API returns the created/updated event with its `id` — store this in `current-plan.md` so mid-week adjustments can use PUT/DELETE.
+
+### 8. Workout Description Syntax
+
+The `description` field in calendar events uses ICU workout syntax. When parsed correctly, these become structured workouts with targets that sync to Garmin watches.
+
+**Structure:** Section headers on their own line, steps prefixed with `-`
+
+```
+Warmup
+- 10m 60% Pace
+Main set
+3x
+- 5m 90% Pace
+- 2m Z1 Pace
+Cooldown
+- 10m 60% Pace
+```
+
+**Duration formats:**
+
+| Format | Meaning | Example |
+|--------|---------|---------|
+| `30s` | Seconds | `- 30s 90rpm` |
+| `5m` | Minutes | `- 5m Z2` |
+| `1m30` | Minutes + seconds | `- 1m30 95%` |
+| `400m` | Meters (distance) | `- 400m Z4` |
+| `1km` | Kilometers | `- 1km 85% Pace` |
+| `50mtr` | Meters (swim) | `- 50mtr Z1` |
+| `50yrd` | Yards (swim) | `- 50yrd Z2` |
+
+**Intensity targets:**
+
+| Type | Syntax | Example |
+|------|--------|---------|
+| Power (% FTP) | `80%` or `100w` | `- 10m 88%` |
+| Heart rate | `60% HR` or `100% LTHR` | `- 20m 75% HR` |
+| Running pace | `80% Pace` or `Z2 Pace` | `- 5m 85% Pace` |
+| Zone (generic) | `Z2` or `Z3 HR` | `- 10m Z2` |
+
+**Modifiers:**
+
+| Modifier | Syntax | Example |
+|----------|--------|---------|
+| Cadence | `90rpm` | `- 5m 88% 95rpm` |
+| Rest intensity | `intensity=rest` | `- 30s intensity=rest` |
+| Warmup tag | `intensity=warmup` | `- 10m intensity=warmup` |
+| Cooldown tag | `intensity=cooldown` | `- 10m intensity=cooldown` |
+| Ramp | `ramp 60-80%` | `- 10m ramp 60-80%` |
+
+**Repeats:** Put `Nx` on its own line before the steps to repeat:
+
+```
+4x
+- 4m 92%
+- 2m Z1
+```
+
+**Step naming:** Text before the duration becomes a Garmin on-wrist prompt:
+
+```
+- Build to tempo 5m 85% Pace
+- Recovery jog 2m Z1 Pace
+```
+
+On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
+
+**Garmin sync notes:**
+- Ramps become range targets on device (e.g., `ramp 60-80%` shows as 60–80% target range)
+- Distance-based steps are supported on Garmin
+- Step names display on the watch during the workout
+- Ensure "Upload planned workouts" is enabled in Intervals.icu settings (Settings → Garmin)
+
 ## How Each Command Should Use the API
 
 ### `/coach:checkin`
@@ -156,10 +288,13 @@ curl -s -u "API_KEY:$API_KEY" \
 2. Pull last 2–4 weeks of activity data for load trend context
 3. Reference the original plan from `plans/` for what's prescribed
 4. Adjust based on real data and write to `current-plan.md`
+5. After athlete approves the plan, POST each session as a structured workout event (Section 7) with ICU workout syntax (Section 8) so workouts sync to Garmin
 
 ## Error Handling
 
 - If the API returns 401: credentials are wrong — tell the athlete to check `config/intervals-icu.json`
+- If the API returns 400: bad workout syntax in description — check ICU syntax (Section 8) and fix
+- If the API returns 409: duplicate event on that date — use PUT to update the existing event instead
 - If the API returns empty data: the athlete may not have synced their device — fall back to manual input
 - If the API is unreachable: proceed with manual input, note that data is self-reported
 
