@@ -1,3 +1,9 @@
+---
+name: periodization
+description: Periodization templates and session library for building and adapting training plans
+tools: Read, Grep, Glob
+---
+
 # Periodization Templates & Session Library
 
 Reference material for the coach agent when building and adapting training plans.

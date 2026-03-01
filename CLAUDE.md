@@ -11,6 +11,7 @@ An evidence-based personal endurance coach for IRONMAN 70.3, marathon, and ultra
 | `/coach:plan` | Generate next week's training plan | Weekly (Sunday/Monday) |
 | `/coach:debrief` | Post-session logging + feedback | After every session |
 | `/coach:review` | Weekly/monthly trend analysis + plan adaptation | End of each week |
+| `/coach:chat` | Freeform conversation — ask anything training-related | Anytime |
 | `/coach:help` | Show all commands and data locations | Anytime |
 
 ## Daily Flow

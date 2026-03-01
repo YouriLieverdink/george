@@ -1,3 +1,9 @@
+---
+name: alerts
+description: Safety decision tree for training alerts, session modification, and medical referral
+tools: Read, Grep, Glob
+---
+
 # Coach Alert Rules & Safety Decision Tree
 
 This file defines when the coach MUST issue an alert, modify a session, or recommend referral. Safety always overrides training optimization.
