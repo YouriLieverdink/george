@@ -6,7 +6,7 @@ Quick daily check-in (<30 seconds for the athlete) to determine today's session 
 
 Load the coach agent from `agents/coach/coach.md` and alert rules from `agents/coach/alerts.md`.
 
-Read the athlete's profile from `data/coach/references/athlete-profile.md`. Read `data/coach/current-plan.md` to determine the current week, phase, active plan, and today's planned session. Reference the original plan from `data/coach/plans/` if needed for session details. Check `data/coach/references/events.md` for race proximity (e.g., taper awareness, race week adjustments).
+Read the athlete's profile from `data/references/athlete-profile.md`. Read `data/current-plan.md` to determine the current week, phase, active plan, and today's planned session. Reference the original plan from `data/plans/` if needed for session details. Check `data/references/events.md` for race proximity (e.g., taper awareness, race week adjustments).
 
 ### Pull data from intervals.icu first
 
@@ -35,7 +35,7 @@ Optionally write the subjective scores back to intervals.icu via the wellness PU
 
 ## Decision Logic
 
-Combine device data (HRV, resting HR, sleep) with subjective scores to assess readiness. Apply the decision tree from `agents/coach/alerts.md`:
+Combine device data (HRV, resting HR, sleep) with subjective scores to assess readiness. Apply the decision tree from `agents/alerts.md`:
 
 1. **Red flags?** (chest pain, fainting, severe SOB, systemic illness)
    → STOP. Rest only. Recommend medical evaluation.

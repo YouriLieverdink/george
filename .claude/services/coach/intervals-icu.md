@@ -16,10 +16,11 @@ Uses HTTP Basic Auth with API key. Credentials stored in `config/intervals-icu.j
 
 **Setup:** Go to https://intervals.icu/settings → scroll to "Developer Settings" → generate API key. Your athlete ID is shown in the URL when you're on your profile (e.g., `i12345`).
 
-All curl calls use:
+**Important — curl command format:** All curl commands MUST start with `curl` as the very first word. Do not use variable assignments, subshells, or pipes in the command. Read `config/intervals-icu.json` first with the Read tool, then inline the athlete ID and API key directly into the curl command. This ensures the command matches the `Bash(curl:*)` permission pattern.
+
 ```bash
-curl -s -u "API_KEY:$(jq -r .apiKey config/intervals-icu.json)" \
-  "https://intervals.icu/api/v1/athlete/$(jq -r .athleteId config/intervals-icu.json)/..."
+# Read config/intervals-icu.json first, then use values directly:
+curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/..."
 ```
 
 ## Available Endpoints
@@ -29,12 +30,8 @@ curl -s -u "API_KEY:$(jq -r .apiKey config/intervals-icu.json)" \
 **Use in:** `/coach:debrief` (auto-fill session data), `/coach:review` (weekly volume/load)
 
 ```bash
-# Last 7 days of activities
-ATHLETE_ID=$(jq -r .athleteId config/intervals-icu.json)
-API_KEY=$(jq -r .apiKey config/intervals-icu.json)
-
-curl -s -u "API_KEY:$API_KEY" \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/activities?oldest=$(date -d '7 days ago' +%Y-%m-%d)&newest=$(date +%Y-%m-%d)"
+# Last 7 days of activities (inline athlete ID and API key from config)
+curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/activities?oldest=YYYY-MM-DD&newest=YYYY-MM-DD"
 ```
 
 **Key fields returned per activity:**
@@ -58,8 +55,7 @@ curl -s -u "API_KEY:$API_KEY" \
 **Use in:** `/coach:debrief` (detailed interval analysis)
 
 ```bash
-curl -s -u "API_KEY:$API_KEY" \
-  "https://intervals.icu/api/v1/activity/$ACTIVITY_ID"
+curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/activity/<activityId>"
 ```
 
 Returns full activity with intervals detected, zone time distribution, and all metrics.
@@ -76,8 +72,7 @@ Returns full activity with intervals detected, zone time distribution, and all m
 
 ```bash
 # Last 7 days of wellness
-curl -s -u "API_KEY:$API_KEY" \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/wellness?oldest=$(date -d '7 days ago' +%Y-%m-%d)&newest=$(date +%Y-%m-%d)"
+curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/wellness?oldest=YYYY-MM-DD&newest=YYYY-MM-DD"
 ```
 
 **Key fields returned per day:**
@@ -102,10 +97,7 @@ curl -s -u "API_KEY:$API_KEY" \
 
 ```bash
 # Update today's wellness
-curl -s -X PUT -u "API_KEY:$API_KEY" \
-  -H 'Content-Type: application/json' \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/wellness/$TODAY" \
-  -d '{"soreness": 3, "fatigue": 4, "stress": 5, "mood": 7}'
+curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/wellness/YYYY-MM-DD" -d '{"soreness": 3, "fatigue": 4, "stress": 5, "mood": 7}'
 ```
 
 ### 5. Fitness / Fatigue Trends (CTL/ATL/TSB)
@@ -114,8 +106,7 @@ curl -s -X PUT -u "API_KEY:$API_KEY" \
 
 ```bash
 # Athlete summary with fitness data
-curl -s -u "API_KEY:$API_KEY" \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID"
+curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>"
 ```
 
 Returns athlete profile including current CTL (fitness), ATL (fatigue), TSB (form).
@@ -126,8 +117,7 @@ Returns athlete profile including current CTL (fitness), ATL (fatigue), TSB (for
 
 ```bash
 # Read planned events
-curl -s -u "API_KEY:$API_KEY" \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events?oldest=$(date +%Y-%m-%d)&newest=$(date -d '7 days' +%Y-%m-%d)"
+curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/events?oldest=YYYY-MM-DD&newest=YYYY-MM-DD"
 ```
 
 ### 7. Create Calendar Events (structured workouts)
@@ -136,20 +126,7 @@ curl -s -u "API_KEY:$API_KEY" \
 
 ```bash
 # Create a workout event
-ATHLETE_ID=$(jq -r .athleteId config/intervals-icu.json)
-API_KEY=$(jq -r .apiKey config/intervals-icu.json)
-
-curl -s -X POST -u "API_KEY:$API_KEY" \
-  -H 'Content-Type: application/json' \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events" \
-  -d '{
-    "start_date_local": "2026-03-02",
-    "category": "WORKOUT",
-    "name": "Tempo Run",
-    "type": "Run",
-    "description": "Warmup\n- 15m Z1 Pace\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 Pace\nCooldown\n- 10m Z1 Pace",
-    "moving_time": 3600
-  }'
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"WORKOUT","name":"Tempo Run","type":"Run","description":"Warmup\n- 15m Z1 Pace\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 Pace\nCooldown\n- 10m Z1 Pace","moving_time":3600}'
 ```
 
 **Payload fields:**
@@ -176,17 +153,13 @@ curl -s -X POST -u "API_KEY:$API_KEY" \
 **Update an existing event:**
 
 ```bash
-curl -s -X PUT -u "API_KEY:$API_KEY" \
-  -H 'Content-Type: application/json' \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events/$EVENT_ID" \
-  -d '{"name": "Updated Session", "description": "...", "moving_time": 3000}'
+curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events/<eventId>" -d '{"name":"Updated Session","description":"...","moving_time":3000}'
 ```
 
 **Delete an event:**
 
 ```bash
-curl -s -X DELETE -u "API_KEY:$API_KEY" \
-  "https://intervals.icu/api/v1/athlete/$ATHLETE_ID/events/$EVENT_ID"
+curl -s -X DELETE -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/events/<eventId>"
 ```
 
 The API returns the created/updated event with its `id` — store this in `current-plan.md` so mid-week adjustments can use PUT/DELETE.

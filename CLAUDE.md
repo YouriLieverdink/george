@@ -35,10 +35,10 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 
 | File | Purpose | Who updates it |
 |------|---------|----------------|
-| `data/coach/references/events.md` | Race calendar — dates, distances, priorities, goals | You, when events change |
-| `data/coach/references/athlete-profile.md` | Intake profile — history, constraints, equipment, health | `/coach:onboard`, then you as needed |
-| `data/coach/current-plan.md` | **Living operational state** — what we're following now, current week/phase, decisions, adjustments, agreements | Coach maintains this via commands |
-| `data/coach/plans/` | Training plan library — original plans as reference | You add plans; coach reads them |
+| `data/references/events.md` | Race calendar — dates, distances, priorities, goals | You, when events change |
+| `data/references/athlete-profile.md` | Intake profile — history, constraints, equipment, health | `/coach:onboard`, then you as needed |
+| `data/current-plan.md` | **Living operational state** — what we're following now, current week/phase, decisions, adjustments, agreements | Coach maintains this via commands |
+| `data/plans/` | Training plan library — original plans as reference | You add plans; coach reads them |
 
 ### How the plans work together
 
@@ -88,8 +88,8 @@ Configured in `config/sheets.json` → `coach` key.
 
 ## Getting Started
 
-1. Fill in `data/coach/references/events.md` with your race calendar
-2. Add your training plans to `data/coach/plans/` (one file per plan, e.g. `ironman-70.3.md`, `marathon-sub345.md`)
+1. Fill in `data/references/events.md` with your race calendar
+2. Add your training plans to `data/plans/` (one file per plan, e.g. `ironman-70.3.md`, `marathon-sub345.md`)
 3. Set up intervals.icu API access: go to https://intervals.icu/settings → "Developer Settings" → generate API key. Add your athlete ID and key to `config/intervals-icu.json`
-4. Run `/coach:onboard` to complete your athlete profile — this also creates `data/coach/current-plan.md`
+4. Run `/coach:onboard` to complete your athlete profile — this also creates `data/current-plan.md`
 5. Start the daily cycle: `/coach:checkin` → train → `/coach:debrief`

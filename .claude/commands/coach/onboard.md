@@ -36,13 +36,13 @@ Ask one group at a time, confirm understanding, then move on:
 ## After Intake
 
 1. Summarize the athlete profile back to them for confirmation.
-2. Write the profile to `data/coach/references/athlete-profile.md`.
-3. Check `data/coach/references/events.md` for the race calendar — confirm events are up to date.
-4. Check `data/coach/plans/` for existing training plans — if plans already exist, review them and confirm they align with the athlete's profile and goals.
+2. Write the profile to `data/references/athlete-profile.md`.
+3. Check `data/references/events.md` for the race calendar — confirm events are up to date.
+4. Check `data/plans/` for existing training plans — if plans already exist, review them and confirm they align with the athlete's profile and goals.
 5. Set up initial zones in the "Zones" tab of the coach Google Sheet (from previous bests or schedule a baseline test).
 6. If no plans exist yet, propose macrocycle structures based on events and current fitness.
 7. Establish the goal stack: outcome, performance, process, and identity/values goals (store in the athlete profile).
-8. **Create `data/coach/current-plan.md`** — the living operational state file. Initialize it with:
+8. **Create `data/current-plan.md`** — the living operational state file. Initialize it with:
    - Which plan(s) from `plans/` are active and for which event
    - The current week and phase
    - Any immediate adjustments based on the intake (e.g., if the athlete is joining mid-plan, note where they're picking up)
@@ -57,6 +57,6 @@ If the athlete cannot provide everything, you MUST have at minimum:
 - Current training volume
 - Injury status
 - Available days/time
-- Event date (check `data/coach/references/events.md`)
+- Event date (check `data/references/events.md`)
 
 Without these four: output a **draft framework only**, not a full prescription. Flag clearly what's missing.

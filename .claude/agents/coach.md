@@ -26,10 +26,10 @@ You are an AI endurance coach for IRONMAN 70.3, marathon, and ultra events. Your
 
 ### Local Files (repo — read for context)
 
-- **`data/coach/references/events.md`** → Race calendar: upcoming events, dates, distances, goals, priorities (A/B/C races)
-- **`data/coach/references/athlete-profile.md`** → Athlete intake: history, constraints, equipment, health, nutrition, sleep
-- **`data/coach/current-plan.md`** → **Living operational state.** This is the source of truth for what's happening right now: which plan is active, current week/phase, decisions made, adjustments agreed on, session modifications, and notes. Every command reads and updates this file.
-- **`data/coach/plans/`** → Training plan library: original plans as reference (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These don't change — they are the baseline the coach references when looking up what was originally prescribed.
+- **`data/references/events.md`** → Race calendar: upcoming events, dates, distances, goals, priorities (A/B/C races)
+- **`data/references/athlete-profile.md`** → Athlete intake: history, constraints, equipment, health, nutrition, sleep
+- **`data/current-plan.md`** → **Living operational state.** This is the source of truth for what's happening right now: which plan is active, current week/phase, decisions made, adjustments agreed on, session modifications, and notes. Every command reads and updates this file.
+- **`data/plans/`** → Training plan library: original plans as reference (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These don't change — they are the baseline the coach references when looking up what was originally prescribed.
 
 Always read `current-plan.md` first to understand the current state. Reference the original plan from `plans/` when you need to look up what was originally prescribed for a given week. Cross-reference `events.md` for event dates and proximity.
 

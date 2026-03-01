@@ -59,16 +59,19 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 
 #### Schedule
 
-**Monday — Easy Run (20–25 min)**
-- Warm-up: 5 min walk
-- Main: 15–20 min easy running, fully conversational (RPE 2–3). Walk breaks are fine and encouraged.
-- Cool-down: 2–3 min walk
-- Target: Z1–Z2 HR. If you can't hold a conversation, slow down or walk.
-- Log after: duration, avg HR if wearing strap, how it felt (1 sentence)
+**Monday — Easy Run (25 min)** `[ICU event: 95923826]`
+- Structured workout loaded to Garmin:
+  ```
+  Warmup: Walk 5m Z1 Pace
+  Main: Easy jog 17m Z2 Pace
+  Cooldown: Walk 3m Z1 Pace
+  ```
+- Walk breaks during the jog are fine and encouraged. If you can't hold a conversation, slow down or walk.
+- Log after: duration, avg HR, how it felt (1 sentence)
 
-**Tuesday — Strength: Full Body Reintroduction (30–40 min)**
-- Warm-up: 5 min light cardio (walk, easy bike, jump rope)
-- Main circuit (2 rounds, light load — focus on form, not fatigue):
+**Tuesday — Strength: Full Body Reintroduction (40 min)** `[ICU event: 95923841]`
+- Warm-up: 5 min mobility + activation
+- Main (2 rounds, light load — focus on form, not fatigue):
   - Goblet squat × 10
   - Romanian deadlift × 10
   - Push-ups × 8–10
@@ -76,29 +79,37 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
   - Farmer carry × 30 sec
   - Calf raises × 15
   - Dead bug × 10/side
-- Cool-down: light stretch, 5 min
-- Target: RPE 3–4. You should feel like you could do more. That's correct — we're reintroducing, not testing.
+- Cool-down: 5 min stretching
+- Target: RPE 3–4. You should feel like you could do more.
 - Log after: exercises completed, any movement restrictions or soreness spots
 
-**Wednesday — Swim Course 08:30–09:30 (Lesson 3)**
+**Wednesday — Swim Course 08:30–09:30 (Lesson 3)** `[ICU event: 90265900]`
 - Follow the instructor (Bosch control method)
+- Good news: your Hurghada vacation gave you solid water time (8 OW sessions, ~2.7 km total). You'll likely feel more comfortable than expected.
 - Log after: what you worked on, how the water felt, any technique cues to remember
 
-**Thursday — Easy Run (25–30 min)**
-- Warm-up: 5 min walk
-- Main: 20–25 min easy running, same rules as Monday — conversational, walk breaks welcome
-- Cool-down: 3–5 min walk
-- Target: Z1–Z2 HR, RPE 2–3
+**Thursday — Easy Run (30 min)** `[ICU event: 95923844]`
+- Structured workout loaded to Garmin:
+  ```
+  Warmup: Walk 5m Z1 Pace
+  Main: Easy jog 20m Z2 Pace
+  Cooldown: Walk 5m Z1 Pace
+  ```
+- Same rules as Monday — conversational, walk breaks welcome.
 - Log after: duration, avg HR, comparison to Monday (easier/harder/same?)
 
 **Friday — Rest**
 - Full rest. Walk, stretch, or light mobility if you feel like it. No obligation.
 
-**Saturday — Easy Run 30–35 min OR Easy Bike 45 min (your choice)**
-- If running: warm-up walk 5 min → 25–30 min easy → cool-down walk
-- If cycling: 45 min easy spin, Z1–Z2 HR, flat terrain or trainer
-- Choose based on how you feel and what sounds enjoyable. No wrong answer.
-- Log after: what you chose and why, duration, how the legs felt
+**Saturday — Easy Run (35 min)** `[ICU event: 95923853]`
+- Structured workout loaded to Garmin:
+  ```
+  Warmup: Walk 5m Z1 Pace
+  Main: Easy jog 25m Z2 Pace
+  Cooldown: Walk 5m Z1 Pace
+  ```
+- Longest run of the week — keep it truly easy. No pace targets beyond "conversational."
+- Log after: duration, avg HR, how the legs felt
 
 **Sunday — Rest or Light Walk/Stretch**
 - Recovery day. Optional 20–30 min walk or gentle yoga/stretching.
@@ -107,12 +118,12 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 
 | Day | Planned Session | Actual | RPE | Notes |
 |-----|----------------|--------|-----|-------|
-| Mon | Easy run 20–25 min | | | |
+| Mon | Easy run 25 min (structured) | | | |
 | Tue | Strength (full body reintro) | | | |
 | Wed | Swim course (lesson 3) | | | |
-| Thu | Easy run 25–30 min | | | |
+| Thu | Easy run 30 min (structured) | | | |
 | Fri | Rest | | | |
-| Sat | Easy run 30–35 min OR easy bike 45 min | | | |
+| Sat | Easy run 35 min (structured) | | | |
 | Sun | Rest or light walk/stretch | | | |
 
 #### Key Sessions
@@ -133,6 +144,7 @@ No specific fueling practice needed at these durations. General goals: hydrate w
 **Modifications from original plan:**
 - Not following either reference plan yet — this is a custom rebuild phase to get back to baseline before starting structured training.
 - Synced to Intervals.icu calendar on 2026-03-01.
+- Updated 2026-03-01: converted all run workouts to structured ICU syntax (Warmup/Main/Cooldown with pace zone targets) so they load as on-wrist targets on Garmin. Saturday changed from run/bike choice to structured easy run. Event IDs stored for mid-week updates.
 
 ## Decisions & Agreements
 

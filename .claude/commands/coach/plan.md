@@ -7,10 +7,10 @@ Generate the next week's training plan based on the athlete's profile, current p
 Load the coach agent from `agents/coach/coach.md`, periodization templates from `agents/coach/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `services/intervals-icu.md` (Sections 7–8 for event creation and workout syntax).
 
 Read from local files:
-- `data/coach/current-plan.md` → current operational state: active plan, current week/phase, recent decisions and adjustments
-- `data/coach/references/events.md` → race calendar, upcoming events, countdown
-- `data/coach/references/athlete-profile.md` → goals, constraints, equipment, health
-- `data/coach/plans/` → original training plans as reference for prescribed sessions
+- `data/current-plan.md` → current operational state: active plan, current week/phase, recent decisions and adjustments
+- `data/references/events.md` → race calendar, upcoming events, countdown
+- `data/references/athlete-profile.md` → goals, constraints, equipment, health
+- `data/plans/` → original training plans as reference for prescribed sessions
 
 Read from the coach Google Sheet:
 - "Daily Log" tab → last week's sessions, RPE, pain, readiness trends
@@ -19,7 +19,7 @@ Read from the coach Google Sheet:
 
 ## Planning Process
 
-1. **Determine current phase** from `data/coach/current-plan.md`. Cross-reference with the original plan in `data/coach/plans/` and `data/coach/references/events.md` for event countdown. If multiple plans are active, check which event takes priority for this week.
+1. **Determine current phase** from `data/current-plan.md`. Cross-reference with the original plan in `data/plans/` and `data/references/events.md` for event countdown. If multiple plans are active, check which event takes priority for this week.
 
 2. **Review last week** (pull from intervals.icu API — see `services/intervals-icu.md`):
    - Total volume and intensity distribution from completed activities
@@ -41,7 +41,7 @@ Read from the coach Google Sheet:
 6. **For each session, provide:**
    - Warm-up / main / cool-down structure
    - Target intensities (zone, RPE range, pace/power if applicable)
-   - ICU workout description using the syntax from `services/intervals-icu.md` Section 8, adapted from the templates in `agents/coach/periodization.md` "Intervals.icu Structured Workout Descriptions"
+   - ICU workout description using the syntax from `services/intervals-icu.md` Section 8, adapted from the templates in `agents/periodization.md` "Intervals.icu Structured Workout Descriptions"
    - Fueling notes for sessions >75–90 min
    - What to log after
 
@@ -81,7 +81,7 @@ Read from the coach Google Sheet:
 
 ## After Generating the Plan
 
-Update `data/coach/current-plan.md`:
+Update `data/current-plan.md`:
 - Advance the current week number
 - Update the "This Week" section with the new plan
 - Note any deviations from the original plan and why
