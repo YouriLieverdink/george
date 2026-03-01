@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": [
+    "intervals-icu"
+  ],
+  "enableAllProjectMcpServers": true
+}
