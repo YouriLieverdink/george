@@ -139,6 +139,7 @@ curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https
 | `type` | string | Sport type (see mapping below) |
 | `description` | string | Workout steps in ICU syntax (see Section 8) |
 | `moving_time` | integer | Planned duration in seconds |
+| `icu_training_load` | integer | Estimated training load (optional — use for strength sessions where load isn't auto-calculated from HR/power) |
 
 **Sport type mapping:**
 
@@ -173,10 +174,12 @@ The `description` field in calendar events uses ICU workout syntax. When parsed 
 ```
 Warmup
 - 10m 60% Pace
+
 Main set
 3x
 - 5m 90% Pace
 - 2m Z1 Pace
+
 Cooldown
 - 10m 60% Pace
 ```

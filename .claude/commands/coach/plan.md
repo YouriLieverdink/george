@@ -102,7 +102,7 @@ After the athlete approves the plan, create structured workout events on the int
 2. **Handle special cases:**
    - **Brick sessions** → create two separate events (one `Ride`, one `Run`) on the same date
    - **Rest days** → skip, do not create events
-   - **Strength** → create event with plain text description (no structured syntax)
+   - **Strength** → create event with plain text description (no structured syntax). Calculate `moving_time` from the exercise list using the formula in `agents/periodization.md` (warmup + exercises × 3 min + cooldown) rather than a fixed value. Include `"icu_training_load"` in the payload using the strength load estimation table from `agents/periodization.md`.
 
 3. **POST each event** and store the returned event `id` in `current-plan.md` alongside each session (enables mid-week PUT/DELETE updates)
 

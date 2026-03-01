@@ -238,10 +238,12 @@ ICU syntax templates for each session type. Use these as starting points when ge
 Warmup
 - 300mtr Z1
 - 4x 50mtr drills intensity=rest
+
 Main set
 8x
 - 100mtr Z2
 - 20s intensity=rest
+
 Cooldown
 - 200mtr Z1
 ```
@@ -257,10 +259,12 @@ Warmup
 - 15m Z2
 - 3x 1m 95rpm Z2
 Cooldown after warmup spins
+
 Main set
 3x
 - 12m 95% 90rpm
 - 5m Z1
+
 Cooldown
 - 10m Z1
 ```
@@ -275,10 +279,12 @@ Cooldown
 Warmup
 - 15m Z1 Pace
 - 4x 20s strides 95% Pace
+
 Main set
 2x
 - 15m 85% Pace
 - 3m Z1 Pace
+
 Cooldown
 - 10m Z1 Pace
 ```
@@ -292,12 +298,14 @@ Cooldown
 ```
 Warmup
 - 20m Z2
+
 Main set
 - 30m 85%
 - 10m Z2
 - 30m 85%
 - 10m Z2
 - 60m Z2
+
 Cooldown
 - 20m Z1
 ```
@@ -311,8 +319,10 @@ Cooldown
 ```
 Warmup
 - 5m Z1 Pace
+
 Main set
 - 15m Z2 Pace
+
 Cooldown
 - 10m Z1 Pace
 ```
@@ -326,6 +336,7 @@ Cooldown
 ```
 Warmup
 - 10m mobility + activation
+
 Main set
 - Trap-bar deadlift 3x8
 - Split squat 3x10 each
@@ -334,11 +345,33 @@ Main set
 - Push-ups 3x12
 - Loaded carry 3x30m
 - Pallof press 3x10 each
+
 Cooldown
 - 5m stretching
 ```
 
 Note: Strength workouts use plain text descriptions — they don't parse into structured steps on Garmin but still appear as planned events on the calendar.
+
+**Duration estimation:** Calculate `moving_time` from the exercise list rather than using a fixed value:
+- Warmup: use stated duration (e.g., 10 min)
+- Per exercise: ~3 min (accounts for set execution + rest between sets; roughly 1 min/set × 3 sets)
+- Cooldown: use stated duration (e.g., 5 min)
+- `moving_time` = (warmup min + exercises × 3 + cooldown min) × 60
+
+Example: 10 min warmup + 7 exercises × 3 min + 5 min cooldown = 36 min → `moving_time: 2160`
+
+### Strength Load Estimation
+
+Strength workouts don't produce power/HR-based training load via the API. Use this heuristic to estimate load per session:
+
+| Phase | Intensity | Sets × Reps profile | Estimated load |
+|-------|-----------|---------------------|----------------|
+| Anatomical Adaptation | Light–moderate | 2–3 sets × 12–15 reps | 20–30 |
+| Maximum Strength | Heavy | 3–4 sets × 6–10 reps | 35–50 |
+| Power Endurance | Explosive | 2–3 sets × sport-specific | 25–40 |
+| Maintenance | Light | 1–2 sets × activation | 10–20 |
+
+Include the estimated load in each strength session in `current-plan.md` (e.g., "Estimated load: ~25") and add `"icu_training_load": 25` to the POST payload when creating the ICU event.
 
 ### Long Run: Easy
 
@@ -349,8 +382,10 @@ Note: Strength workouts use plain text descriptions — they don't parse into st
 ```
 Warmup
 - 10m Z1 Pace
+
 Main set
 - 70m Z1-Z2 Pace
+
 Cooldown
 - 10m Z1 Pace
 ```
@@ -364,12 +399,14 @@ Cooldown
 ```
 Warmup
 - 20m Z2
+
 Main set
 - 40m Z2
 - 20m 85%
 - 10m Z2
 - 20m 85%
 - 40m Z2
+
 Cooldown
 - 20m Z1
 ```
