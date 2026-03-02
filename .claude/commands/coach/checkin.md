@@ -1,12 +1,12 @@
 # /coach:checkin — Daily Readiness Check
 
-Quick daily check-in (<30 seconds for the athlete) to determine today's session approach. Log results to the "Daily Log" tab of the coach Google Sheet.
+Quick daily check-in (<30 seconds for the athlete) to determine today's session approach.
 
 ## Instructions
 
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
-Read the athlete's profile from `data/references/athlete-profile.md`. Read `data/current-plan.md` to determine the current week, phase, active plan, and today's planned session. Reference the original plan from `data/plans/` if needed for session details. Check `data/references/events.md` for race proximity (e.g., taper awareness, race week adjustments).
+Read the athlete's profile from `data/references/athlete-profile.md`. Read `data/current-plan.md` to determine the current week, phase, active plan, and today's planned session. Reference the original plan from `data/plans/` if needed for session details. Check `data/references/events.md` for race proximity (e.g., taper awareness, race week adjustments). Read `data/memory/coach-memory.md` for accumulated context (patterns, open follow-ups, injury history, zones).
 
 ### Pull data from intervals.icu first
 
@@ -19,6 +19,16 @@ Present what you already know:
 > "Good morning! Your watch synced: 7.2h sleep (score 82, quality GOOD), HRV 48, resting HR 52, SpO2 97%, 8.4k steps. Yesterday's run: 8.1 km, 49 min, avg HR 142."
 
 Then ask only for what the API can't provide.
+
+### Pattern Check (proactive coaching)
+
+After pulling API data, before asking subjective questions, check `data/memory/coach-memory.md`:
+
+1. **Open follow-ups** — address the most important one first. Don't say "as noted in our records" — say it naturally: "Last time you mentioned your calf was bothering you — how's that going?" or "You had that doctor appointment — how did it go?"
+2. **Continuing patterns** — if today's data confirms a known pattern (e.g., poor sleep again after a late evening, HRV trending down for the third day), mention it: "I notice your sleep has been under 6.5h three days running now — that's becoming a pattern worth addressing."
+3. **Athlete commitments** — if the athlete committed to something (earlier bedtime, caffeine cutoff, stretching routine), gently check in on it.
+
+Lead the check-in with the most important finding before moving to the wellness summary and subjective questions.
 
 ## Ask the Athlete (only missing data)
 
@@ -77,4 +87,25 @@ If the session is >75–90 min, include fueling notes.
 
 ## Log
 
-Write the check-in data to the "Daily Log" tab: date, sleep (duration + score + quality), HRV, resting HR, weight, SpO2, soreness, fatigue, stress, mood, motivation, injury, hydration, alcohol, caffeine cutoff, time available, planned session, any modifications made.
+Append the check-in data to `data/logs/daily-log.md` under today's date:
+
+```
+## YYYY-MM-DD — [Day of Week]
+
+### Morning Check-in
+- Sleep: [duration]h (score [X], quality [X])
+- HRV: [X] | Resting HR: [X] | SpO2: [X]% | Weight: [X] kg
+- Steps: [X] | VO2 max: [X]
+- Soreness: [X] | Fatigue: [X] | Stress: [X]
+- Mood: [X] | Motivation: [X] | Injury: [X] | Hydration: [X]
+- Alcohol: [X] | Caffeine cutoff: [X]
+- Time available: [X]
+- Planned session: [session] | Modifications: [if any]
+```
+
+## Memory Updates
+
+After the check-in:
+- If a pattern is noticed (e.g., third consecutive morning with poor sleep + late caffeine), write an observation to `data/memory/coach-memory.md` → Athlete Patterns & Tendencies with a date stamp.
+- If injury ≥ NIGGLE(2), append to `data/memory/coach-memory.md` → Injury & Health History with date, location, severity, and context.
+- If following up on an open item and it's resolved, remove it from Open Follow-ups.

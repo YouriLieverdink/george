@@ -11,6 +11,8 @@ An evidence-based personal endurance coach for IRONMAN 70.3, marathon, and ultra
 | `/coach:plan` | Generate next week's training plan | Weekly (Sunday/Monday) |
 | `/coach:debrief` | Post-session logging + feedback | After every session |
 | `/coach:review` | Weekly/monthly trend analysis + plan adaptation | End of each week |
+| `/coach:raceweek` | Race week prep — schedule, logistics, pacing, mental prep | 7 days before a race |
+| `/coach:postrace` | Post-race debrief — race report, insights, recovery plan | After a race |
 | `/coach:chat` | Freeform conversation — ask anything training-related | Anytime |
 | `/coach:help` | Show all commands and data locations | Anytime |
 
@@ -40,13 +42,20 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 | `data/references/athlete-profile.md` | Intake profile — history, constraints, equipment, health | `/coach:onboard`, then you as needed |
 | `data/current-plan.md` | **Living operational state** — what we're following now, current week/phase, decisions, adjustments, agreements | Coach maintains this via commands |
 | `data/plans/` | Training plan library — original plans as reference | You add plans; coach reads them |
+| `data/memory/coach-memory.md` | **Coaching memory** — patterns, injury history, follow-ups, learnings, preferences, zones, fitness tests | Coach writes via commands; accumulates over time |
+| `data/logs/daily-log.md` | Daily check-in + debrief log | `/coach:checkin`, `/coach:debrief` |
+| `data/logs/weekly-reviews.md` | Weekly review summaries | `/coach:review` |
+| `data/archive/weekly/` | Completed week archives (one file per week) | `/coach:review` |
+| `data/archive/races/` | Race reports | `/coach:postrace` |
 
-### How the plans work together
+### How the data works together
 
 - **`plans/`** holds the original training plans as-is (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These are reference documents that don't change.
-- **`current-plan.md`** is the operational state: which plan is active, what week you're in, what adjustments have been made, what decisions you and the coach agreed on. Every command reads and updates this file.
+- **`current-plan.md`** is the operational state: which plan is active, what week you're in, what adjustments have been made. Only holds the current week — completed weeks are archived to `data/archive/weekly/`.
+- **`coach-memory.md`** is accumulated coaching intelligence: what the coach has learned about you over time. Every command reads it for context; checkin, debrief, review, and chat write to it.
+- **`daily-log.md`** and **`weekly-reviews.md`** are append-only logs replacing the Google Sheets tabs.
 
-The coach reads `events.md` to know what's coming, references the original plan from `plans/`, and uses `current-plan.md` to track what's actually happening day to day.
+The coach reads `current-plan.md` and `coach-memory.md` before every decision, references the original plan from `plans/`, and checks `events.md` for what's coming.
 
 ### Intervals.icu API (objective training data — coach reads and writes)
 
@@ -59,16 +68,6 @@ Configured in `config/intervals-icu.json` with your athlete ID and API key. See 
 | Athlete summary | Current CTL (fitness), ATL (fatigue), TSB (form) | `/coach:review`, `/coach:plan` |
 
 The coach pulls objective data from intervals.icu first, then asks you only for what the API can't provide (RPE feel, pain location, fueling details, learnings).
-
-### Google Sheets (optional structured logging — coach reads and writes)
-
-Configured in `config/sheets.json` → `coach` key.
-
-| Tab | Purpose |
-|-----|---------|
-| Daily Log | Date, sleep (duration + score + quality), HRV, resting HR, weight, SpO2, soreness, fatigue, stress, mood, motivation, injury, hydration, alcohol, caffeine cutoff, session, RPE, notes |
-| Weekly Review | Week summary, load, readiness trends, adjustments |
-| Zones | Current thresholds (FTP, run paces, CSS) with test dates |
 
 ## Agent & Service Files
 

@@ -1,6 +1,6 @@
 # /coach:onboard — Athlete Intake
 
-Collect the athlete's profile to personalize all future coaching. Store answers in the "Profile" tab of the coach Google Sheet.
+Collect the athlete's profile to personalize all future coaching.
 
 ## Instructions
 
@@ -39,7 +39,12 @@ Ask one group at a time, confirm understanding, then move on:
 2. Write the profile to `data/references/athlete-profile.md`.
 3. Check `data/references/events.md` for the race calendar — confirm events are up to date.
 4. Check `data/plans/` for existing training plans — if plans already exist, review them and confirm they align with the athlete's profile and goals.
-5. Set up initial zones in the "Zones" tab of the coach Google Sheet (from previous bests or schedule a baseline test).
+5. **Seed `data/memory/coach-memory.md`** — create the coaching memory file with initial data from the intake:
+   - **Injury & Health History:** any injury history from the intake (date, what happened, resolution)
+   - **Athlete Patterns & Tendencies:** known patterns (e.g., sleep habits, caffeine use, scheduling tendencies)
+   - **Preferences & Style:** motivation style, identity goals, communication preferences observed during intake
+   - **Current Zones:** set up initial zones from previous bests (or note that baseline tests are needed)
+   - **Fitness Test History:** any known benchmarks (race times, FTP, CSS)
 6. If no plans exist yet, propose macrocycle structures based on events and current fitness.
 7. Establish the goal stack: outcome, performance, process, and identity/values goals (store in the athlete profile).
 8. **Create `data/current-plan.md`** — the living operational state file. Initialize it with:

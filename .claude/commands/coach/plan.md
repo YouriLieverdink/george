@@ -11,11 +11,9 @@ Read from local files:
 - `data/references/events.md` → race calendar, upcoming events, countdown
 - `data/references/athlete-profile.md` → goals, constraints, equipment, health
 - `data/plans/` → original training plans as reference for prescribed sessions
-
-Read from the coach Google Sheet:
-- "Daily Log" tab → last week's sessions, RPE, pain, readiness trends
-- "Weekly Review" tab → recent weekly summaries and load trends
-- "Zones" tab → current thresholds and zone mappings
+- `data/memory/coach-memory.md` → current zones and thresholds, fitness test history, injury history, athlete patterns, open follow-ups
+- `data/logs/daily-log.md` → last week's check-in and debrief entries (readiness, RPE, pain trends)
+- `data/logs/weekly-reviews.md` → recent weekly summaries and load trends
 
 ## Planning Process
 

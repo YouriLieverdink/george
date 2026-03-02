@@ -1,6 +1,6 @@
 # /coach:review — Weekly & Monthly Review
 
-Analyze training trends, assess progress, and adapt the plan. Write summary to the "Weekly Review" tab.
+Analyze training trends, assess progress, and adapt the plan.
 
 ## Instructions
 
@@ -11,11 +11,9 @@ Read from local files:
 - `data/references/events.md` → race calendar, event countdown
 - `data/references/athlete-profile.md` → goals and constraints
 - `data/plans/` → original plan(s) as reference for what was prescribed vs. what happened
-
-Read from the coach Google Sheet:
-- "Daily Log" tab → all entries from the review period
-- "Weekly Review" tab → previous review summaries for trend comparison
-- "Zones" tab → current thresholds
+- `data/memory/coach-memory.md` → accumulated context: patterns, injury history, open follow-ups, zones, fitness tests
+- `data/logs/daily-log.md` → daily check-in and debrief entries from the review period
+- `data/logs/weekly-reviews.md` → previous review summaries for trend comparison
 
 ## Weekly Review (run every week)
 
@@ -106,7 +104,7 @@ Based on the analysis, determine:
 2. [Question about goals/motivation/barriers]
 ```
 
-Write the review to the "Weekly Review" tab.
+Append the review to `data/logs/weekly-reviews.md`.
 
 ## Monthly Review (run every 4 weeks)
 
@@ -117,7 +115,7 @@ In addition to the weekly review, the monthly review adds:
    - Compare current performance indicators to the start of the mesocycle.
 
 2. **Zone update:**
-   - If re-test was done: update thresholds and zones in the "Zones" tab.
+   - If re-test was done: update thresholds and zones in `data/memory/coach-memory.md` → Current Zones and Fitness Test History sections.
    - Flag that load metrics (TSS etc.) will shift with new thresholds.
 
 3. **Mesocycle evaluation:**
@@ -136,9 +134,28 @@ In addition to the weekly review, the monthly review adds:
 
 ## After Every Review
 
-Update `data/current-plan.md`:
-- Move completed week summary to the "Previous Weeks" section
+### Archive the completed week
+
+Write the completed week to `data/archive/weekly/YYYY-WNN.md` (e.g., `2026-W09.md`). Include the full week section from `current-plan.md`: schedule, tracking table, modifications, and key sessions.
+
+Then update `data/current-plan.md`:
+- Remove the completed week's detail from "This Week" (replace with the new week or leave empty for `/coach:plan`)
+- Update `## Previous Weeks` to reference the archive file instead of holding inline content:
+  ```
+  ## Previous Weeks
+  - Week 1 (Mar 2–8): `data/archive/weekly/2026-W09.md`
+  ```
 - Update current week/phase if advancing
 - Log any new decisions or agreements
 - Record any plan deviations and their rationale
 - For monthly reviews: update the phase overview if mesocycle targets shifted
+
+### Memory maintenance
+
+Update `data/memory/coach-memory.md`:
+
+1. **Synthesize the week's observations** — if patterns emerged from daily check-ins (e.g., sleep consistently poor mid-week, fatigue spiking after long runs), write them to Athlete Patterns & Tendencies.
+2. **Check open follow-ups** — resolve any that were addressed this week, add new ones if needed.
+3. **Update injury history** — if an injury signal appeared, progressed, or resolved this week, update the entry.
+4. **Prune stale entries** — entries in Athlete Patterns & Tendencies older than 12 weeks that haven't been reobserved should be archived to `data/memory/archive/YYYY-MM.md` and removed from the main file. Keep Injury & Health History entries permanently (they're date-stamped and compact). Keep Fitness Test History and Current Zones permanently.
+5. **Update preferences** — if the athlete responded particularly well (or poorly) to a coaching approach this week, note it.
