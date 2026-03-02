@@ -142,12 +142,12 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 
 | Day | Planned Session | Actual | RPE | Notes |
 |-----|----------------|--------|-----|-------|
-| Mon | Easy run 25 min (structured) | Rest (illness) | — | GI issues post-Egypt travel. Stomach pain, poor intake 2–3 days. Skipped run — rest + hydration + doctor advised. |
-| Tue | Strength (full body reintro) | | | |
-| Wed | Swim course (lesson 3) | | | |
-| Thu | Easy run 30 min (structured) | | | |
-| Fri | Rest | | | |
-| Sat | Easy run 35 min (structured) | | | |
+| Mon | ~~Easy run 25 min~~ | Rest (illness) | — | GI issues post-Egypt travel. Stomach pain, poor intake 2–3 days. |
+| Tue | ~~Strength (full body reintro)~~ | Rest (illness) | — | Week paused — ongoing GI illness, unable to eat. Doctor appointment pending. |
+| Wed | Swim course (lesson 3) | | | Decision day-of based on how stomach is. Event kept on ICU calendar. |
+| Thu | ~~Easy run 30 min~~ | Rest (illness) | — | |
+| Fri | Rest | Rest | — | |
+| Sat | ~~Easy run 35 min~~ | Rest (illness) | — | |
 | Sun | Rest or light walk/stretch | | | |
 
 #### Key Sessions
@@ -166,7 +166,8 @@ No specific fueling practice needed at these durations. General goals: hydrate w
 3. How's sleep been this week — roughly how many hours, and are you getting to bed at a reasonable time?
 
 **Modifications this week:**
-- 2026-03-02 (Mon): Easy run skipped → rest day. Athlete reporting persistent GI issues (stomach pain) since returning from Egypt, poor food intake for 2–3 days. Advised rest, hydration, bland foods, and doctor visit. Training paused until stomach settles and eating normalizes. Will reassess before Tuesday strength.
+- 2026-03-02 (Mon): Easy run skipped → rest day. Athlete reporting persistent GI issues (stomach pain) since returning from Egypt, poor food intake for 2–3 days. Advised rest, hydration, bland foods, and doctor visit.
+- 2026-03-02: **Full week paused.** Illness ongoing — acute onset vomiting + diarrhea on last day in Egypt (Feb 27/28), now shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. All run and strength events removed from ICU calendar. Swim course (Wed) left on calendar — athlete decides day-of. Doctor appointment to be made Tuesday morning. Training resumes only after: (1) doctor visit done, (2) eating normally without pain, (3) athlete feels ready. No catch-up — we restart the rebuild from wherever we are.
 
 **Modifications from original plan:**
 - Not following either reference plan yet — this is a custom rebuild phase to get back to baseline before starting structured training.
