@@ -55,7 +55,7 @@ Configured in `config/intervals-icu.json` with your athlete ID and API key. See 
 | Data | What the coach pulls | Used by |
 |------|---------------------|---------|
 | Activities | Completed workouts: distance, duration, HR, pace, power, training load, zones | `/coach:debrief`, `/coach:review` |
-| Wellness | Sleep, HRV, resting HR, weight (from wearable sync) | `/coach:checkin`, `/coach:review` |
+| Wellness | Garmin-synced: sleep (duration, score, quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective (1–4 scale): soreness, fatigue, stress, mood, motivation, injury, hydration | `/coach:checkin`, `/coach:review` |
 | Athlete summary | Current CTL (fitness), ATL (fatigue), TSB (form) | `/coach:review`, `/coach:plan` |
 
 The coach pulls objective data from intervals.icu first, then asks you only for what the API can't provide (RPE feel, pain location, fueling details, learnings).
@@ -66,7 +66,7 @@ Configured in `config/sheets.json` → `coach` key.
 
 | Tab | Purpose |
 |-----|---------|
-| Daily Log | Date, sleep, stress, fatigue, soreness, pain, session, RPE, notes |
+| Daily Log | Date, sleep (duration + score + quality), HRV, resting HR, weight, SpO2, soreness, fatigue, stress, mood, motivation, injury, hydration, alcohol, caffeine cutoff, session, RPE, notes |
 | Weekly Review | Week summary, load, readiness trends, adjustments |
 | Zones | Current thresholds (FTP, run paces, CSS) with test dates |
 

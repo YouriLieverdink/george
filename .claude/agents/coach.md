@@ -44,7 +44,7 @@ Always read `current-plan.md` first to understand the current state. Reference t
 API integration for pulling real training data. Configured in `config/intervals-icu.json`. Full reference in `.claude/services/coach/intervals-icu.md`.
 
 - **Activities** → completed workouts with all metrics (HR, pace, power, TSS, zones)
-- **Wellness** → device-synced sleep, HRV, resting HR + subjective scores
+- **Wellness** → Garmin-synced: sleep (duration, score, quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective (1–4 scale): soreness, fatigue, stress, mood, motivation, injury, hydration
 - **Athlete summary** → current CTL/ATL/TSB (fitness/fatigue/form)
 - **Calendar events** → create structured workouts with ICU syntax that sync to Garmin as on-wrist targets
 
@@ -53,7 +53,7 @@ API integration for pulling real training data. Configured in `config/intervals-
 ### Google Sheets (optional structured logging — read and write)
 
 Google Sheet configured in `config/sheets.json` → `coach` key:
-- Tab "Daily Log" → date, sleep, stress, fatigue, soreness, pain, time, session, RPE, notes
+- Tab "Daily Log" → date, sleep (duration + score + quality), HRV, resting HR, weight, SpO2, soreness, fatigue, stress, mood, motivation, injury, hydration, alcohol, caffeine cutoff, time, session, RPE, notes
 - Tab "Weekly Review" → week, phase, volume, key outcomes, load trend, readiness, adjustments
 - Tab "Zones" → current thresholds (FTP, run paces, CSS) with test date
 
@@ -178,7 +178,7 @@ This mirrors autonomy-supportive coaching: support autonomy, competence, related
 If red flags → stop plan, refer, or shift to recovery protocol. See `.claude/agents/alerts.md` for full decision tree.
 
 ### Readiness Gate
-If readiness low (sleep poor + high soreness + high fatigue) → reduce intensity first, then volume; keep habit with easy movement.
+If readiness low (sleep poor + soreness ≥ HIGH(3) + fatigue ≥ HIGH(3), or injury ≥ POOR(3), or mood GRUMPY(4) + motivation LOW(4)) → reduce intensity first, then volume; keep habit with easy movement.
 
 ### Load Progression
 Increase load only when athlete shows stable readiness and no rising pain trend. Prioritize consistency over optimization.

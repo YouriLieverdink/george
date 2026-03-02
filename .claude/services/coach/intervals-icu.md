@@ -68,7 +68,7 @@ Returns full activity with intervals detected, zone time distribution, and all m
 
 ### 3. Wellness Data (readiness metrics)
 
-**Use in:** `/coach:checkin` (auto-populate sleep, HRV, resting HR), `/coach:review` (trends)
+**Use in:** `/coach:checkin` (auto-populate Garmin-synced fields + write subjective scores), `/coach:review` (trends)
 
 ```bash
 # Last 7 days of wellness
@@ -76,20 +76,29 @@ curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/
 ```
 
 **Key fields returned per day:**
+
+Auto-synced from Garmin (numeric — don't ask the athlete for these):
 - `id` — date (YYYY-MM-DD)
-- `restingHR` — resting heart rate
-- `hrv` — heart rate variability
-- `hrvSDNN` — HRV SDNN value
-- `sleep` — sleep duration (hours, decimal)
-- `sleepQuality` — sleep quality score
-- `fatigue` — fatigue rating
-- `soreness` — soreness rating
-- `stress` — stress rating
-- `mood` — mood rating
-- `motivation` — motivation rating
 - `weight` — body weight (kg)
+- `bodyFat` — body fat %
+- `restingHR` — resting heart rate
+- `sleep` — sleep duration (hours, decimal)
+- `sleepScore` — Garmin sleep score
+- `sleepQuality` — subjective sleep quality (1–4: GREAT/GOOD/AVG/POOR) — auto from Garmin
+- `hrv` — HRV rMSSD
+- `vo2Max` — VO2 max estimate
+- `spO2` — blood oxygen saturation
 - `steps` — daily steps
-- `spO2` — blood oxygen
+- `kcalConsumed` — daily kCal
+
+Subjective fields (athlete fills in, coach writes via PUT — 1–4 scale, 1=best, 4=worst):
+- `soreness` — LOW(1) / AVG(2) / HIGH(3) / EXTREME(4)
+- `fatigue` — LOW(1) / AVG(2) / HIGH(3) / EXTREME(4)
+- `stress` — LOW(1) / AVG(2) / HIGH(3) / EXTREME(4)
+- `mood` — GREAT(1) / GOOD(2) / OK(3) / GRUMPY(4)
+- `motivation` — EXTREME(1) / HIGH(2) / AVG(3) / LOW(4)
+- `injury` — NONE(1) / NIGGLE(2) / POOR(3) / INJURED(4)
+- `hydration` — GOOD(1) / OK(2) / POOR(3) / BAD(4)
 
 ### 4. Write Wellness Data (push subjective scores)
 
@@ -97,7 +106,7 @@ curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/
 
 ```bash
 # Update today's wellness
-curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/wellness/YYYY-MM-DD" -d '{"soreness": 3, "fatigue": 4, "stress": 5, "mood": 7}'
+curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/wellness/YYYY-MM-DD" -d '{"soreness": 2, "fatigue": 3, "stress": 2, "mood": 2, "motivation": 2, "injury": 1, "hydration": 1}'
 ```
 
 ### 5. Fitness / Fatigue Trends (CTL/ATL/TSB)
@@ -241,9 +250,9 @@ On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
 ## How Each Command Should Use the API
 
 ### `/coach:checkin`
-1. Pull today's wellness data (sleep, HRV, resting HR from device sync)
-2. Show athlete what's already recorded — ask only for missing fields (subjective stress, soreness, pain)
-3. Optionally write subjective scores back to intervals.icu
+1. Pull today's wellness data — Garmin-synced fields: sleep duration, sleep score, sleep quality, HRV, resting HR, weight, SpO2, steps, VO2 max
+2. Show athlete what's already recorded — ask only for subjective fields: soreness, fatigue, stress, mood, motivation, injury, hydration
+3. Write subjective scores back to intervals.icu via wellness PUT (1–4 scale)
 4. Pull yesterday's activity if not yet debriefed
 
 ### `/coach:debrief`
@@ -254,7 +263,7 @@ On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
 
 ### `/coach:review`
 1. Pull last 7 days of activities — compute weekly volume, intensity distribution, load
-2. Pull last 7 days of wellness — trend sleep, fatigue, soreness, HRV
+2. Pull last 7 days of wellness — trend sleep (duration + score + quality), HRV, resting HR, fatigue, soreness, stress, mood, motivation, injury, weight, SpO2, VO2 max
 3. Pull athlete summary for current CTL/ATL/TSB
 4. Compare planned vs. actual from `current-plan.md`
 5. Use all of this to write the weekly review

@@ -24,7 +24,7 @@ Read from the coach Google Sheet:
 2. **Review last week** (pull from intervals.icu API — see `.claude/services/coach/intervals-icu.md`):
    - Total volume and intensity distribution from completed activities
    - Training load trend and current CTL/ATL/TSB from athlete summary
-   - Readiness trend from wellness data (sleep, HRV, fatigue, soreness)
+   - Readiness trend from wellness data (sleep, HRV, resting HR, fatigue, soreness, mood, motivation, weight, injury status)
    - Any injury signals or alerts from `current-plan.md`
    - Plan adherence: compare completed activities vs. what was planned
 

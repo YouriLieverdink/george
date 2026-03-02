@@ -142,7 +142,7 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 
 | Day | Planned Session | Actual | RPE | Notes |
 |-----|----------------|--------|-----|-------|
-| Mon | Easy run 25 min (structured) | | | |
+| Mon | Easy run 25 min (structured) | Rest (illness) | — | GI issues post-Egypt travel. Stomach pain, poor intake 2–3 days. Skipped run — rest + hydration + doctor advised. |
 | Tue | Strength (full body reintro) | | | |
 | Wed | Swim course (lesson 3) | | | |
 | Thu | Easy run 30 min (structured) | | | |
@@ -164,6 +164,9 @@ No specific fueling practice needed at these durations. General goals: hydrate w
 1. How did Monday's run feel — could you genuinely hold a conversation the whole time?
 2. Any residual effects from the recent illness (fatigue, congestion, reduced capacity)?
 3. How's sleep been this week — roughly how many hours, and are you getting to bed at a reasonable time?
+
+**Modifications this week:**
+- 2026-03-02 (Mon): Easy run skipped → rest day. Athlete reporting persistent GI issues (stomach pain) since returning from Egypt, poor food intake for 2–3 days. Advised rest, hydration, bland foods, and doctor visit. Training paused until stomach settles and eating normalizes. Will reassess before Tuesday strength.
 
 **Modifications from original plan:**
 - Not following either reference plan yet — this is a custom rebuild phase to get back to baseline before starting structured training.

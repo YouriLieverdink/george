@@ -24,7 +24,7 @@ Read from the coach Google Sheet:
 Before analysis, pull the week's data from the API (see `.claude/services/coach/intervals-icu.md`):
 
 1. **Activities for the past 7 days** — all completed workouts with duration, distance, HR, pace/power, training load
-2. **Wellness for the past 7 days** — sleep, HRV, resting HR, fatigue, soreness, stress (device + subjective)
+2. **Wellness for the past 7 days** — Garmin-synced: sleep (duration + score + quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective: soreness, fatigue, stress, mood, motivation, injury, hydration
 3. **Athlete summary** — current CTL (fitness), ATL (fatigue), TSB (form)
 
 This gives you hard data for the analysis rather than relying on memory or self-reports.
@@ -38,10 +38,15 @@ This gives you hard data for the analysis rather than relying on memory or self-
    - Compare to plan: did load land where intended? Cross-reference `current-plan.md`.
 
 2. **Readiness trend** (from intervals.icu wellness):
-   - Sleep duration and quality pattern across the week
+   - Sleep duration, score, and quality pattern across the week
    - HRV trend (stable, declining, improving vs. baseline)
    - Resting HR trend (rising resting HR = fatigue accumulation)
    - Fatigue and soreness trajectory from subjective scores
+   - Weight trend (flag rapid unintended loss/gain — RED-S indicator)
+   - VO2 max trend (improvement indicator over mesocycle)
+   - Mood and motivation trajectory (overtraining signals — GRUMPY + LOW motivation + declining performance)
+   - SpO2 trend (sustained low = illness indicator)
+   - Injury status trend (niggle progressing? resolving?)
 
 3. **Key workout outcomes** (from intervals.icu activity details + current-plan.md):
    - Did the athlete hit process goals (pacing, fueling, technique)?
@@ -79,9 +84,13 @@ Based on the analysis, determine:
 - Intensity distribution: [approximately X% easy, Y% moderate, Z% hard]
 
 ### Readiness
-- Sleep: [trend]
+- Sleep: [trend — duration, score, quality]
 - Fatigue: [trend]
 - Soreness: [trend]
+- Mood / Motivation: [trend]
+- Weight: [trend]
+- VO2 max: [trend]
+- Injury: [status]
 
 ### Wins
 - [What went well — specific]

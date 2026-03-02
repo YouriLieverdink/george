@@ -11,15 +11,16 @@ This file defines when the coach MUST issue an alert, modify a session, or recom
 ## Daily Adaptation Flowchart
 
 ```
-Daily check-in: sleep, stress, fatigue, soreness, pain, time available
+Daily check-in: sleep, HRV, resting HR, weight, SpO2, soreness, fatigue, stress, mood, motivation, injury, hydration, time available
 │
 ├─ Red flags? (chest pain, fainting, severe SOB, illness with systemic symptoms)
 │  └─ YES → STOP. Replace with rest/easy walk. Recommend medical evaluation.
 │
-├─ Pain ≥ 4/10 OR pain changes mechanics?
+├─ Injury ≥ POOR(3) OR injury changes mechanics?
 │  └─ YES → Replace run with low-impact. Reduce intensity. Flag for follow-up.
+│  Injury = NIGGLE(2) → flag for monitoring, proceed with caution.
 │
-├─ Readiness low? (2+ of: poor sleep, high fatigue ≥7, high soreness ≥7)
+├─ Readiness low? (2+ of: poor sleep, fatigue ≥ HIGH(3), soreness ≥ HIGH(3), low SpO2)
 │  └─ YES → Keep session but downshift: easy aerobic only, or shorten 30–50%.
 │
 ├─ Key session day?
@@ -34,16 +35,16 @@ Daily check-in: sleep, stress, fatigue, soreness, pain, time available
 The coach must issue an **ALERT** and recommend modification/referral when ANY of these are true:
 
 ### Injury Signals
-- Pain ≥ 4/10 during run OR pain changes gait/mechanics OR pain worsens across ≥ 3 sessions
+- Injury ≥ POOR(3) during run OR injury changes gait/mechanics OR injury status worsens across ≥ 3 sessions
 - New swelling, sharp localized bone pain, numbness/tingling, or night pain → **refer to physio/doctor**
 
 ### Illness / Overtraining Signals
-- Resting fatigue high (≥ 7/10) for ≥ 3 days + declining performance
-- Mood/sleep disruption with persistent underperformance → consider overreaching/overtraining risk
-- If persistent performance decrement + fatigue + mood/sleep disruption → high-priority alert requiring deload and possibly medical evaluation
+- Fatigue ≥ HIGH(3) for ≥ 3 days + declining performance
+- Mood GRUMPY(4) + motivation LOW(4) + sleep disruption with persistent underperformance → consider overreaching/overtraining risk
+- If persistent performance decrement + fatigue ≥ HIGH(3) + mood/motivation deteriorating → high-priority alert requiring deload and possibly medical evaluation
 
 ### RED-S / Energy Availability Risk
-- Rapid unintended weight loss
+- Rapid unintended weight loss (track via wellness weight trend)
 - Persistent low energy
 - Recurrent injuries
 - Menstrual dysfunction concerns (if applicable)
