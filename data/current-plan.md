@@ -40,7 +40,7 @@
 - **Process:**
   - Rebuild consistency: build to 5–6 sessions/week by end of March
   - Practice race fueling on all sessions >75 min (target 60–90g carbs/h)
-  - Gradually improve sleep habits on key training nights
+  - Sleep: fixed 7:00 wake-up daily, in bed by 23:00 on 5+ nights/week (target ~7.5h sleep)
   - Complete swim course (Bosch method, 8 lessons through April)
   - Strength 2x/week through base, maintain 1x/week in build/peak
 - **Identity:** "I show up for myself consistently — training is my time to invest in me"

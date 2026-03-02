@@ -56,7 +56,7 @@
 ## Nutrition & Recovery
 - **GI issues / allergies / preferences:** Acute GI illness Feb 27–28, 2026 (Egypt travel). Under investigation — doctor visit Mar 3. No known food allergies.
 - **Caffeine tolerance:** heavy user (~8 cups/day, lifelong habit). Revisit as process goal — potential sleep/recovery impact.
-- **Sleep:** consistently <8 hours/night. Late social evenings (often past midnight) with early work mornings. Key area to address for recovery and adaptation.
+- **Sleep:** consistently <8 hours/night. Late social evenings (often past midnight) with early work mornings. Key area to address for recovery and adaptation. Working toward fixed 7:00 wake-up and 23:00 bedtime on 5+ nights/week.
 
 ## Goal Stack
 - **Outcome goal:** Finish IRONMAN 70.3 Greece and enjoy every moment
@@ -64,6 +64,6 @@
 - **Process goals:**
   - Rebuild consistency: train 5–6 days/week
   - Practice race fueling on all long sessions (60–90g carbs/h target)
-  - Gradually improve sleep habits on key training nights
-  - Moderate caffeine intake over time
+  - Sleep: fixed 7:00 wake-up daily, in bed by 23:00 on 5+ nights/week (target ~7.5h sleep)
+  - Moderate caffeine intake over time (next step: no caffeine after 14:00)
 - **Identity/values goal:** "I show up for myself consistently — training is my time to invest in me"
