@@ -11,33 +11,58 @@
 
 ## Athlete Patterns & Tendencies
 
-<!-- Observations confirmed across multiple sessions. Date-stamp when first noticed. -->
+<!--
+  Schema: - **Pattern name** (YYYY-MM-DD first observed): description + evidence
+  When to add: Pattern confirmed across ≥2 sessions or explicitly reported by athlete
+  When to update: New evidence reinforces or contradicts the pattern — update date + evidence
+  Retention: Archive entries older than 12 weeks that haven't been reobserved (review.md handles this)
+-->
 
 - **Sleep & social evenings** (2026-03-01): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter.
 - **Caffeine** (2026-03-01): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time.
 
 ## Injury & Health History
 
-<!-- Date-stamped log of every injury signal, alert, and resolution. -->
+<!--
+  Schema: - **YYYY-MM-DD — Description:** context, severity, resolution status
+  When to add: Any injury ≥ NIGGLE(2), illness affecting training, or alert trigger
+  When to update: Status changes (worsening, improving, resolved) — append update with date
+  Retention: Permanent — entries are compact and date-stamped
+-->
 
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
 - **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. Doctor appointment made 2026-03-03.
 
 ## Open Follow-ups
 
-<!-- Things the coach committed to checking on next time. Remove when resolved. -->
+<!--
+  Schema: - **YYYY-MM-DD:** What to follow up on — specific question or check
+  When to add: Coach commits to checking on something (injury, doctor visit, commitment, concern)
+  When to update: Remove when resolved; update if context changes
+  Retention: Active items only — remove once resolved
+-->
 
 - **2026-03-02:** Follow up on GI illness — doctor visit outcome, eating status, readiness to resume training.
 
 ## Key Learnings
 
-<!-- Insights from debrief "what did you learn?" responses worth preserving. -->
+<!--
+  Schema: - **YYYY-MM-DD — Topic:** insight from athlete or coach observation
+  When to add: Debrief "what did you learn?" contains a preservable insight, or race/review reveals something new
+  When to update: If a learning is reinforced or revised — append date + update
+  Retention: Permanent unless superseded
+-->
 
 <!-- No entries yet — will populate from debrief sessions. -->
 
 ## Preferences & Style
 
-<!-- What feedback lands well, what motivates the athlete, communication preferences. -->
+<!--
+  Schema: - Description of preference or style observation
+  When to add: Coach observes what motivates the athlete, what communication style works, or athlete explicitly states a preference
+  When to update: If preference changes or new evidence emerges
+  Retention: Permanent unless athlete preference changes
+-->
 
 - Responds well to collaborative, low-pressure coaching style
 - Identity-driven motivation: "I show up for myself consistently — training is my time to invest in me"
@@ -45,7 +70,12 @@
 
 ## Fitness Test History
 
-<!-- All threshold tests with date, protocol, result, conditions. -->
+<!--
+  Schema: | Date | Discipline | Protocol | Result | Conditions | Notes |
+  When to add: Any threshold test, time trial, or race result used as a fitness marker
+  When to update: New test supersedes old — keep both rows for trend tracking
+  Retention: Permanent
+-->
 
 | Date | Discipline | Protocol | Result | Conditions | Notes |
 |------|-----------|----------|--------|------------|-------|
@@ -55,7 +85,12 @@
 
 ## Current Zones
 
-<!-- Running, cycling, swimming zone tables. Updated when thresholds change. -->
+<!--
+  Schema: Zone tables per discipline (running, cycling, swimming) with pace/power/HR ranges + RPE anchors
+  When to add: After any threshold test or zone recalculation
+  When to update: When a new test produces updated thresholds — replace the table, note the date
+  Retention: Permanent — always reflects current zones
+-->
 
 ### Running
 

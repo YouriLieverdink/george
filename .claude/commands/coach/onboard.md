@@ -45,9 +45,10 @@ Ask one group at a time, confirm understanding, then move on:
    - **Preferences & Style:** motivation style, identity goals, communication preferences observed during intake
    - **Current Zones:** set up initial zones from previous bests (or note that baseline tests are needed)
    - **Fitness Test History:** any known benchmarks (race times, FTP, CSS)
-6. If no plans exist yet, propose macrocycle structures based on events and current fitness.
-7. Establish the goal stack: outcome, performance, process, and identity/values goals (store in the athlete profile).
-8. **Create `data/current-plan.md`** — the living operational state file. Initialize it with:
+6. **Establish HRV baseline:** Pull the last 30 days of wellness data from Intervals.icu (see `.claude/services/coach/intervals-icu.md`). If HRV data exists → compute the 30-day HRV average and store it in `data/memory/coach-memory.md` → Athlete Patterns & Tendencies as "HRV baseline: X ms (30-day avg as of YYYY-MM-DD)". If no data or <7 days of data → note in coach-memory that baseline will establish over the first 2 weeks of check-ins.
+7. If no plans exist yet, propose macrocycle structures based on events and current fitness.
+8. Establish the goal stack: outcome, performance, process, and identity/values goals (store in the athlete profile).
+9. **Create `data/current-plan.md`** — the living operational state file. Initialize it with:
    - Which plan(s) from `plans/` are active and for which event
    - The current week and phase
    - Any immediate adjustments based on the intake (e.g., if the athlete is joining mid-plan, note where they're picking up)

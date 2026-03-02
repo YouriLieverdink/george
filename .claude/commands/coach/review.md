@@ -4,6 +4,9 @@ Analyze training trends, assess progress, and adapt the plan.
 
 ## Instructions
 
+### Pre-flight check
+Before proceeding, verify that `data/references/athlete-profile.md` and `data/current-plan.md` exist and contain populated content (not just headers). If either is missing or empty → stop and tell the athlete: "It looks like onboarding hasn't been completed yet. Run `/coach:onboard` first to set up your profile and plan."
+
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
 Read from local files:
@@ -124,11 +127,15 @@ In addition to the weekly review, the monthly review adds:
    - Do phases need to shift (extend base, compress build, etc.)?
    - Record any structural changes or phase shifts in `data/current-plan.md` under "Decisions & Agreements".
 
-4. **Goal stack check:**
+4. **Profile freshness check:**
+   - Read `data/references/athlete-profile.md` — check the `## Last Updated` date.
+   - If >4 weeks old: review health, current training status, equipment, and constraints. Update any stale fields and set the date to today.
+
+5. **Goal stack check:**
    - Revisit outcome, performance, process, and identity goals.
    - Are they still relevant? Need updating?
 
-5. **Forward plan:**
+6. **Forward plan:**
    - Outline the next mesocycle's focus and targets.
    - Identify any upcoming scheduling conflicts (travel, work, life events).
 

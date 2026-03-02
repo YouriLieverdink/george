@@ -4,6 +4,9 @@ Structured logging after every training session. Captures subjective and objecti
 
 ## Instructions
 
+### Pre-flight check
+Before proceeding, verify that `data/references/athlete-profile.md` and `data/current-plan.md` exist and contain populated content (not just headers). If either is missing or empty → stop and tell the athlete: "It looks like onboarding hasn't been completed yet. Run `/coach:onboard` first to set up your profile and plan."
+
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
 Read today's planned session from `data/current-plan.md` (the "This Week" section) to compare plan vs. actual. If a session was modified during checkin, the modification will already be noted there. Read `data/memory/coach-memory.md` for context (injury history, open follow-ups, patterns).

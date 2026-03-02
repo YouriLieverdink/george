@@ -104,7 +104,3 @@ Update `data/current-plan.md`:
 - Record any athlete decisions about pacing, nutrition, or logistics
 
 Write any significant athlete inputs to `data/memory/coach-memory.md` (e.g., race-day fears, mental preparation notes, specific equipment decisions).
-
-## Prompt
-
-$ARGUMENTS

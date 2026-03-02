@@ -4,6 +4,9 @@ Quick daily check-in (<30 seconds for the athlete) to determine today's session 
 
 ## Instructions
 
+### Pre-flight check
+Before proceeding, verify that `data/references/athlete-profile.md` and `data/current-plan.md` exist and contain populated content (not just headers). If either is missing or empty → stop and tell the athlete: "It looks like onboarding hasn't been completed yet. Run `/coach:onboard` first to set up your profile and plan."
+
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
 Read the athlete's profile from `data/references/athlete-profile.md`. Read `data/current-plan.md` to determine the current week, phase, active plan, and today's planned session. Reference the original plan from `data/plans/` if needed for session details. Check `data/references/events.md` for race proximity (e.g., taper awareness, race week adjustments). Read `data/memory/coach-memory.md` for accumulated context (patterns, open follow-ups, injury history, zones).
@@ -24,9 +27,10 @@ Then ask only for what the API can't provide.
 
 After pulling API data, before asking subjective questions, check `data/memory/coach-memory.md`:
 
-1. **Open follow-ups** — address the most important one first. Don't say "as noted in our records" — say it naturally: "Last time you mentioned your calf was bothering you — how's that going?" or "You had that doctor appointment — how did it go?"
-2. **Continuing patterns** — if today's data confirms a known pattern (e.g., poor sleep again after a late evening, HRV trending down for the third day), mention it: "I notice your sleep has been under 6.5h three days running now — that's becoming a pattern worth addressing."
-3. **Athlete commitments** — if the athlete committed to something (earlier bedtime, caffeine cutoff, stretching routine), gently check in on it.
+1. **Recent memory** — if `coach-memory.md` has entries added in the last 24h (especially Open Follow-ups or recent chat observations), lead with those naturally before asking subjective scores. This bridges informal conversations into the structured check-in.
+2. **Open follow-ups** — address the most important one first. Don't say "as noted in our records" — say it naturally: "Last time you mentioned your calf was bothering you — how's that going?" or "You had that doctor appointment — how did it go?"
+3. **Continuing patterns** — if today's data confirms a known pattern (e.g., poor sleep again after a late evening, HRV trending down for the third day), mention it: "I notice your sleep has been under 6.5h three days running now — that's becoming a pattern worth addressing."
+4. **Athlete commitments** — if the athlete committed to something (earlier bedtime, caffeine cutoff, stretching routine), gently check in on it.
 
 Lead the check-in with the most important finding before moving to the wellness summary and subjective questions.
 
@@ -60,7 +64,7 @@ Combine device data (HRV, resting HR, sleep) with subjective scores to assess re
    → Replace run with low-impact. Reduce intensity. Flag for follow-up.
    Injury = NIGGLE(2) → flag for monitoring, proceed with caution.
 
-3. **Readiness low?** (2+ of: poor sleep, fatigue ≥ HIGH(3), soreness ≥ HIGH(3), HRV significantly below baseline, alcohol ≥ 3 drinks, low SpO2)
+3. **Readiness low?** (2+ of: poor sleep, fatigue ≥ HIGH(3), soreness ≥ HIGH(3), HRV ≥10% below 7-day rolling average (compute from Intervals.icu wellness data), alcohol ≥ 3 drinks, low SpO2)
    → Keep session but downshift: easy aerobic only, or shorten 30–50%.
    Note: alcohol the previous evening lowers the threshold for downshifting — even 1–2 drinks with poor sleep warrants caution. Late caffeine cutoff (after ~15:00) combined with poor sleep is a pattern to flag over time.
    Low SpO2 (below athlete's baseline) → flag as possible illness indicator.

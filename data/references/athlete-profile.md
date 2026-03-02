@@ -1,5 +1,7 @@
 # Athlete Profile
 
+## Last Updated: 2026-03-02
+
 ## Personal
 - **Name:** Youri Lieverdink
 - **Age:** 24, (25 by march 23rd 2026)
@@ -47,12 +49,12 @@
 
 ## Health & Safety
 - **Injury history (past 12 months):** Left knee pain during Amsterdam-Paris cycling tour (July 2025) — likely overload from insufficient preparation. Resolved on its own.
-- **Current pain/injury:** 0/10, no current pain
+- **Current pain/injury:** 0/10 musculoskeletal, but recovering from GI illness (Feb 27–28 onset — vomiting, diarrhea, now nausea + stomach pain after eating + constipation). Doctor appointment 2026-03-03.
 - **Medical conditions / medications:** none
-- **Clinician clearance needed:** no
+- **Clinician clearance needed:** pending doctor visit (2026-03-03) for GI illness before resuming training
 
 ## Nutrition & Recovery
-- **GI issues / allergies / preferences:** none known
+- **GI issues / allergies / preferences:** Acute GI illness Feb 27–28, 2026 (Egypt travel). Under investigation — doctor visit Mar 3. No known food allergies.
 - **Caffeine tolerance:** heavy user (~8 cups/day, lifelong habit). Revisit as process goal — potential sleep/recovery impact.
 - **Sleep:** consistently <8 hours/night. Late social evenings (often past midnight) with early work mornings. Key area to address for recovery and adaptation.
 

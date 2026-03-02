@@ -18,6 +18,6 @@
 - **Date**: May 31, 2026
 - **Location**: Groningen, Netherlands
 - **Distances**: 42.2 km run
-- **Target time**: 3:45–4:00
-- **Target splits**:
-  - Run: 3:45–4:00 (5:20–5:41/km)
+- **Priority**: B race
+- **Goal**: Finish comfortably and enjoy — no time target. Use as training run + race experience.
+- **Pacing**: Easy/comfortable effort, practice fueling strategy

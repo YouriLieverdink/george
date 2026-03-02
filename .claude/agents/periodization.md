@@ -196,6 +196,38 @@ These are templates — always adapt to athlete constraints, fatigue, time, and 
 
 ---
 
+## Deload Week Pattern
+
+All blueprints reference "3:1 load:deload" — here's what a deload week actually looks like:
+
+### Volume & Intensity
+- **Volume reduction:** 30–50% from the peak week of the mesocycle (not from the average)
+- **Keep one intensity touch:** One shorter key session at race-relevant intensity (e.g., 2×8 min tempo instead of 3×15 min). This preserves neuromuscular adaptations without adding fatigue.
+- **Drop one key session:** Replace the second hard session with easy aerobic work
+- **Strength:** Reduce to 1×/week at light load (1–2 sets, familiar movements only)
+- **Long session:** Shorten by 30–40% — still go long-ish, just shorter
+
+### What It Looks Like in Practice
+- Easy sessions stay easy but get shorter
+- Total weekly hours drop noticeably — the athlete should feel "too fresh"
+- No new stimuli — nothing unfamiliar or exploratory
+- Sleep and nutrition become the priority
+
+### Signs the Deload Is Working (expect within 3–5 days)
+- HRV stabilizes or rises toward baseline
+- Resting HR drops back toward baseline
+- Mood and motivation improve
+- Soreness resolves
+- Athlete feels restless or eager to train hard again
+
+### Signs It's Not Enough
+- HRV still suppressed after 5 days
+- Fatigue persists into the second half of the week
+- Mood remains flat or worsening
+- → Consider extending the deload by 2–3 days, or flag for overtraining screening
+
+---
+
 ## Session Library ("Recipes")
 
 ### Swim: Technique + Aerobic (triathlon)

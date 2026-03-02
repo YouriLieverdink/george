@@ -1,10 +1,13 @@
 # /coach:plan — Generate Weekly Training Plan
 
-Generate the next week's training plan based on the athlete's profile, current phase, and recent training data. Reference macrocycle templates and session library from `.claude/.claude/agents/periodization.md`.
+Generate the next week's training plan based on the athlete's profile, current phase, and recent training data. Reference macrocycle templates and session library from `.claude/agents/periodization.md`.
 
 ## Instructions
 
-Load the coach agent from `.claude/agents/coach.md`, periodization templates from `.claude/.claude/agents/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `.claude/services/coach/intervals-icu.md` (Sections 7–8 for event creation and workout syntax).
+### Pre-flight check
+Before proceeding, verify that `data/references/athlete-profile.md` and `data/current-plan.md` exist and contain populated content (not just headers). If either is missing or empty → stop and tell the athlete: "It looks like onboarding hasn't been completed yet. Run `/coach:onboard` first to set up your profile and plan."
+
+Load the coach agent from `.claude/agents/coach.md`, periodization templates from `.claude/agents/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `.claude/services/coach/intervals-icu.md` (Sections 7–8 for event creation and workout syntax).
 
 Read from local files:
 - `data/current-plan.md` → current operational state: active plan, current week/phase, recent decisions and adjustments

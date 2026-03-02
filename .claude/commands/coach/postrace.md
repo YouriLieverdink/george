@@ -11,6 +11,14 @@ Read from local files:
 - `data/references/events.md` → race details (target splits, goals)
 - `data/memory/coach-memory.md` → pre-race state, injury history, zones, patterns
 
+### Check race completion
+
+Before pulling data, ask: **"Did you complete the race?"**
+
+- **DNS (Did Not Start):** Skip data pull entirely. Explore what happened — injury, illness, logistics, mental state. Document in the race report as a DNS with context. No recovery protocol needed beyond addressing the root cause. Write insights to memory. Keep tone supportive — DNS decisions are often the right call.
+- **DNF (Did Not Finish):** Pull partial race data (whatever activity was recorded). Treat the completed portion as a hard workout for recovery purposes. Adapt recovery proportionally to what was completed. Explore what happened at the point of withdrawal. Document as DNF with splits up to that point.
+- **Finished:** Continue with the full postrace flow below.
+
 ### Pull race data from intervals.icu
 
 Before asking the athlete anything, pull the race activity from the API (see `.claude/services/coach/intervals-icu.md`):
@@ -127,7 +135,3 @@ Update `data/current-plan.md`:
 5. **What's next** — brief look ahead at the next training phase or event
 
 Keep the tone celebratory and forward-looking. The athlete just accomplished something significant — lead with that.
-
-## Prompt
-
-$ARGUMENTS
