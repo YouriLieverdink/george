@@ -18,7 +18,7 @@
   Retention: Archive entries older than 12 weeks that haven't been reobserved (review.md handles this)
 -->
 
-- **Sleep & social evenings** (2026-03-01): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter.
+- **Sleep & social evenings** (2026-03-01, updated 2026-03-02): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter. Committed to fixed 7:00 wake-up daily + in bed by 23:00 on 5+ nights/week. Recognizes some late nights are habit rather than quality social time. Wants to become a morning person again.
 - **Caffeine** (2026-03-01): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time.
 
 ## Injury & Health History
@@ -67,6 +67,8 @@
 - Responds well to collaborative, low-pressure coaching style
 - Identity-driven motivation: "I show up for myself consistently — training is my time to invest in me"
 - Enjoys the process — A-race goal is to "finish and enjoy every moment"
+- Values relationship time — explicitly doesn't want training to take away from time with girlfriend on trips. Prefers minimal, opportunistic training during vacations.
+- Prefers flexible training timing over rigid schedule — morning when sleep was good, evening when it wasn't
 
 ## Fitness Test History
 
