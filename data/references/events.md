@@ -38,6 +38,15 @@
 - **Goal**: Finish comfortably and enjoy — no time target. Use as training run + race experience.
 - **Pacing**: Easy/comfortable effort, practice fueling strategy
 
+### Sub-4:00 Marathon
+- **Date**: Mid-December 2026 (TBD — race or solo effort)
+- **Location**: TBD — find a race, or self-supported solo run on a flat route
+- **Distances**: 42.2 km run
+- **Priority**: A race (run-specific)
+- **Goal**: Break 4 hours (sub-3:59:59)
+- **Target pace**: ~5:40/km or faster
+- **Note**: Scheduled post-70.3. Leverages aerobic base from triathlon block. 4–6 week marathon-specific sharpening block after 70.3 recovery. Previous best: ~4:12 (April 2025).
+
 ## Vacations
 
 ### Madeira Hiking Trip

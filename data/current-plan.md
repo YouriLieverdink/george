@@ -32,11 +32,14 @@
 | **70.3 Base** (Jun 15 – Aug 2) | 16–22 | 70.3 plan weeks 1–7 (adapted). Tri-specific base: swim/bike/run balance. Strength shifts to 2x/week full-body maintenance (2 sets per exercise). |
 | **70.3 Build** (Aug 3 – Sep 20) | 23–29 | 70.3 plan weeks 8–15. Threshold work, brick sessions, race-pace blocks. Strength 1–2x/week maintenance. |
 | **70.3 Peak + Taper** (Sep 21 – Oct 25) | 30–34 | 70.3 plan weeks 16–24 (compressed). Race simulation, volume reduction, race week. Strength 1x/week light maintenance only. |
+| **70.3 Recovery** (Oct 26 – Nov 8) | 35–36 | Post-70.3 recovery. Easy running only, rebuild legs. No intensity. |
+| **Marathon sharpening** (Nov 9 – Dec 6) | 37–40 | Run-specific block: tempo runs, marathon-pace long runs, goal-pace rehearsal. Leverage 70.3 aerobic base. |
+| **Marathon taper + race** (Dec 7 – ~Dec 14) | 41 | Volume reduction, race week. Sub-4:00 marathon attempt (race or solo). |
 
 ## Goals
 
 - **Outcome:** Finish IRONMAN 70.3 Greece and enjoy every moment
-- **Performance:** 5:30–6:00 at 70.3; finish Groningen marathon comfortably
+- **Performance:** 5:30–6:00 at 70.3; finish Groningen marathon comfortably; sub-4:00 marathon in December
 - **Process:**
   - Rebuild consistency: build to 5–6 sessions/week by end of March
   - Practice race fueling on all sessions >75 min (target 60–90g carbs/h)
@@ -183,6 +186,7 @@ No specific fueling practice needed at these durations. General goals: hydrate w
 | 2026-03-01 | Marathon Groningen downgraded to B race, no time target | Only 13 weeks out with minimal training base; sub-3:45 not realistic or safe. Use as training run and race experience. Protects health for 70.3 A-race. |
 | 2026-03-01 | Custom rebuild phase (weeks 1–6) before following reference plans | Coming off illness and inconsistent training. Need to establish consistency and base fitness before structured plan work. |
 | 2026-03-01 | Swim course locked in as fixed Wednesday commitment | Bosch control method, 8 lessons. Lessons 3–8 remaining (through ~mid-April). |
+| 2026-03-03 | Sub-4:00 marathon added as A-race (run) for mid-December 2026 | Post-70.3 timing leverages aerobic base from tri block. 2-week recovery → 4-week marathon sharpening → taper → race/solo attempt ~Dec 14. Previous best 4:12; 12-min improvement realistic with 8+ months of training. Race or solo — athlete doesn't need a race to chase the time. |
 | 2026-03-03 | Hypertrophy-focused strength training added to plan | Athlete wants to rebuild muscle mass and improve body composition. Upper/lower split 2x/week during rebuild + marathon prep (best window — low endurance volume). Compress to 2x full-body maintenance when endurance volume climbs. Exercises: squat, RDL, split squat, bench, row, OHP, pull-ups, carries, core. Progressive overload: 3x8–12, add weight when reps feel easy. Protein target 1.6–2.0g/kg/day. |
 
 ## Previous Weeks
