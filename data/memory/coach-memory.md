@@ -31,7 +31,7 @@
 -->
 
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
-- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. Doctor appointment made 2026-03-03.
+- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed.
 
 ## Open Follow-ups
 
@@ -42,7 +42,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-02:** Follow up on GI illness — doctor visit outcome, eating status, readiness to resume training.
+- **2026-03-03:** Doctor visit done — no acute findings. Monitor return to eating and energy. Follow up on readiness to resume easy movement (walk first, then run) once eating small meals without pain for 2+ days.
 
 ## Key Learnings
 
