@@ -26,12 +26,12 @@
 
 | Period | Weeks | Focus |
 |--------|-------|-------|
-| **Rebuild** (Mar 1 – Apr 12) | 1–6 | Consistency, base running, swim technique, restart strength. Build to 4–5 sessions/week. |
-| **Marathon prep** (Apr 13 – May 31) | 7–13 | Long run progression toward 30–35 km, easy pacing practice, fueling rehearsal. Marathon on May 31. |
+| **Rebuild** (Mar 1 – Apr 12) | 1–6 | Consistency, base running, swim technique, hypertrophy-focused strength 2x/week (upper/lower split). Build to 4–5 sessions/week. |
+| **Marathon prep** (Apr 13 – May 31) | 7–13 | Long run progression toward 30–35 km, easy pacing practice, fueling rehearsal. Strength continues 2x/week (upper/lower) but volume drops as run volume climbs. Marathon on May 31. |
 | **Recovery + transition** (Jun 1 – Jun 14) | 14–15 | Post-marathon recovery. Reintroduce cycling volume. Continue swim. |
-| **70.3 Base** (Jun 15 – Aug 2) | 16–22 | 70.3 plan weeks 1–7 (adapted). Tri-specific base: swim/bike/run balance + strength. |
-| **70.3 Build** (Aug 3 – Sep 20) | 23–29 | 70.3 plan weeks 8–15. Threshold work, brick sessions, race-pace blocks. |
-| **70.3 Peak + Taper** (Sep 21 – Oct 25) | 30–34 | 70.3 plan weeks 16–24 (compressed). Race simulation, volume reduction, race week. |
+| **70.3 Base** (Jun 15 – Aug 2) | 16–22 | 70.3 plan weeks 1–7 (adapted). Tri-specific base: swim/bike/run balance. Strength shifts to 2x/week full-body maintenance (2 sets per exercise). |
+| **70.3 Build** (Aug 3 – Sep 20) | 23–29 | 70.3 plan weeks 8–15. Threshold work, brick sessions, race-pace blocks. Strength 1–2x/week maintenance. |
+| **70.3 Peak + Taper** (Sep 21 – Oct 25) | 30–34 | 70.3 plan weeks 16–24 (compressed). Race simulation, volume reduction, race week. Strength 1x/week light maintenance only. |
 
 ## Goals
 
@@ -42,7 +42,8 @@
   - Practice race fueling on all sessions >75 min (target 60–90g carbs/h)
   - Sleep: fixed 7:00 wake-up daily, in bed by 23:00 on 5+ nights/week (target ~7.5h sleep)
   - Complete swim course (Bosch method, 8 lessons through April)
-  - Strength 2x/week through base, maintain 1x/week in build/peak
+  - Strength 2x/week (upper/lower hypertrophy split) through rebuild + marathon prep; compress to 2x full-body maintenance in build/peak
+  - Protein intake: target 1.6–2.0g/kg bodyweight daily to support muscle growth
 - **Identity:** "I show up for myself consistently — training is my time to invest in me"
 
 ## Fixed Weekly Commitments
@@ -182,6 +183,7 @@ No specific fueling practice needed at these durations. General goals: hydrate w
 | 2026-03-01 | Marathon Groningen downgraded to B race, no time target | Only 13 weeks out with minimal training base; sub-3:45 not realistic or safe. Use as training run and race experience. Protects health for 70.3 A-race. |
 | 2026-03-01 | Custom rebuild phase (weeks 1–6) before following reference plans | Coming off illness and inconsistent training. Need to establish consistency and base fitness before structured plan work. |
 | 2026-03-01 | Swim course locked in as fixed Wednesday commitment | Bosch control method, 8 lessons. Lessons 3–8 remaining (through ~mid-April). |
+| 2026-03-03 | Hypertrophy-focused strength training added to plan | Athlete wants to rebuild muscle mass and improve body composition. Upper/lower split 2x/week during rebuild + marathon prep (best window — low endurance volume). Compress to 2x full-body maintenance when endurance volume climbs. Exercises: squat, RDL, split squat, bench, row, OHP, pull-ups, carries, core. Progressive overload: 3x8–12, add weight when reps feel easy. Protein target 1.6–2.0g/kg/day. |
 
 ## Previous Weeks
 

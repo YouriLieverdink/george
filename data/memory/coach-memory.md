@@ -69,6 +69,7 @@
 - Enjoys the process — A-race goal is to "finish and enjoy every moment"
 - Values relationship time — explicitly doesn't want training to take away from time with girlfriend on trips. Prefers minimal, opportunistic training during vacations.
 - Prefers flexible training timing over rigid schedule — morning when sleep was good, evening when it wasn't
+- **Strength & body composition goal** (2026-03-03): Wants to rebuild muscle mass — had more muscle from previous strength training and misses it. Also interested in visible abs / better body composition. Enjoys lifting. Agreed to hypertrophy-focused upper/lower split 2x/week. Has access to a local gym (full equipment: barbells, dumbbells, cables).
 
 ## Intervals.icu
 
