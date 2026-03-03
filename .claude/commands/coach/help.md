@@ -13,6 +13,7 @@ An evidence-based AI endurance coach for IRONMAN 70.3, marathon, and ultra event
 | `/coach:review` | Weekly/monthly trend analysis + plan adaptation | End of each week; monthly for deeper review |
 | `/coach:raceweek` | Race week prep — schedule, logistics, pacing, mental prep | 7 days before a race |
 | `/coach:postrace` | Post-race debrief — race report, insights, recovery plan | After a race |
+| `/coach:status` | Quick dashboard — week, phase, fitness, next session, countdown | Anytime (no logging) |
 | `/coach:chat` | Freeform conversation — ask anything training-related | Anytime |
 
 ## Typical Daily Flow

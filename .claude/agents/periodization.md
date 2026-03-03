@@ -390,6 +390,76 @@ Cooldown
 
 Note: Strength workouts use plain text descriptions — they don't parse into structured steps on Garmin but still appear as planned events on the calendar.
 
+---
+
+## Travel & Disruption Protocol
+
+When the athlete has travel periods, vacations, or life disruptions that interrupt normal training:
+
+### Pre-travel (week before departure)
+
+- **Front-load key sessions** earlier in the week before travel begins
+- Complete any threshold or key workout at least 2 days before departure
+- Last session before travel: easy, short, confidence-building
+- No new stimuli — nothing unfamiliar that could cause soreness during travel
+
+### During travel
+
+- **Minimum viable movement:** 20–30 min easy activity (walk, jog, bodyweight) to maintain habit and mobility
+- **Opportunistic training:** use what's available — hotel gym, running from accommodation, open-water swimming if at the coast. No rigid schedule.
+- **Respect the vacation:** if the athlete values relationship time or exploration over training (check Preferences & Style in memory), keep suggestions minimal. A 30-min morning jog before the day starts is the sweet spot.
+- **What counts:** hiking, walking tours, swimming, cycling tours — log as cross-training. It's not nothing.
+- **What doesn't count toward plan:** don't try to hit prescribed intervals or key sessions. Travel training is maintenance, not progression.
+
+### Post-travel (return)
+
+- **Days 1–2:** Easy movement only — walk, light jog, swim. Reestablish routine.
+- **Day 3:** First normal easy session. Assess: how does the body feel?
+- **Days 4–5:** Resume normal training load if readiness is good. If jetlagged, fatigued, or ill → extend easy days.
+- **No catch-up:** missed training is gone. Resume the plan from where the calendar says, not from where you left off. Adjust the week's total load downward if needed.
+
+### Time zone changes (>3 hours)
+
+- Shift training time by ~1 hour per day toward the destination schedule
+- First 2–3 days in new zone: easy sessions only, prioritize sleep adaptation
+- Expect HRV disruption for 2–5 days — don't react to it with training changes
+- Melatonin timing and light exposure matter more than training for jet lag recovery
+
+---
+
+## Heat Acclimation Protocol
+
+For warm-weather races (e.g., IRONMAN 70.3 Greece in late October — Mediterranean climate).
+
+### When to start
+
+- **6–8 weeks before race day** for full acclimation
+- **Minimum 10–14 days** for meaningful partial acclimation
+- Benefits: lower core temperature, earlier sweating onset, expanded plasma volume, reduced HR at given intensity
+
+### Protocol options (choose based on availability)
+
+1. **Passive heat exposure (sauna):** 20–30 min post-training sauna, 3–4×/week for 3–4 weeks. Start at 15 min, build gradually. Hydrate before and after.
+2. **Overdressing for easy sessions:** Extra layers during easy runs/rides in cool weather. Only on easy sessions — never during key workouts.
+3. **Hot bath protocol:** 30–40 min hot bath (40°C) post-training. Similar effect to sauna.
+
+### Integration with training load
+
+- Heat exposure adds physiological stress — treat it as training load
+- Never combine heat protocol with key sessions or hard days
+- Reduce easy session intensity slightly when adding heat exposure
+- If fatigue scores rise, reduce heat exposure frequency before reducing training
+- Stop heat protocol 5–7 days before race day (acclimation is retained for ~2 weeks)
+
+### Race-day heat strategy seeds
+
+Track and refine during build/peak phase:
+- **Pre-cooling:** ice slurry or cold towel before start
+- **Hydration plan:** sodium loading 24h before; electrolyte-heavy during race; aim for individualized fluid intake (not "drink as much as possible")
+- **Pacing adjustment:** if race-day temp >28°C, plan for 3–5% slower pace targets
+- **Cooling opportunities:** ice in cap/suit at aid stations, cold sponges, water dousing
+- **Warning signs:** stop if: confusion, stopping sweating, severe headache, nausea + dizziness (heat illness — see alerts.md)
+
 **Duration estimation:** Calculate `moving_time` from the exercise list rather than using a fixed value:
 - Warmup: use stated duration (e.g., 10 min)
 - Per exercise: ~3 min (accounts for set execution + rest between sets; roughly 1 min/set × 3 sets)

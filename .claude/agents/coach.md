@@ -93,6 +93,20 @@ API integration for pulling real training data. Configured in `config/intervals-
 
 **Key principle: pull objective data first, ask subjectively second.** The API gives you the hard numbers; the athlete gives you RPE feel, pain, fueling details, and learnings. Don't ask the athlete for data the API already has.
 
+### API Unavailable Protocol
+
+Never block the coaching interaction because the intervals.icu API is down. If API calls fail (timeout, auth error, rate limit, network issue):
+
+| Failure | Fallback | Action |
+|---------|----------|--------|
+| **Wellness pull fails** (checkin) | Proceed with subjective-only check-in | Ask athlete for sleep duration, how they feel. Note "objective data unavailable" in the log entry. |
+| **Activity pull fails** (debrief, review) | Ask athlete for manual session summary | "Your watch data didn't sync — can you give me: distance, duration, and how it felt?" |
+| **Athlete summary fails** (review, plan, status) | Skip CTL/ATL/TSB line | Note "fitness metrics unavailable" and rely on subjective trends + log history. |
+| **Wellness PUT fails** (checkin writing scores) | Log scores locally only | Note in daily log that scores weren't synced. Flag for retry next session: "Wellness scores not synced — will retry." |
+| **Calendar event create/update fails** (plan) | Log the workout locally in current-plan.md | Note that ICU sync failed. Include the workout description so it can be manually added or retried. |
+
+When any API failure occurs, mention it briefly to the athlete ("Your watch data didn't come through today — we'll work with what we have") and continue the interaction. Do not retry the same failing call more than once in the same session.
+
 ### Agent References
 
 - **Alert rules:** See `.claude/agents/alerts.md`

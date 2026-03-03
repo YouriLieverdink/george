@@ -13,6 +13,7 @@ An evidence-based personal endurance coach for IRONMAN 70.3, marathon, and ultra
 | `/coach:review` | Weekly/monthly trend analysis + plan adaptation | End of each week |
 | `/coach:raceweek` | Race week prep — schedule, logistics, pacing, mental prep | 7 days before a race |
 | `/coach:postrace` | Post-race debrief — race report, insights, recovery plan | After a race |
+| `/coach:status` | Quick dashboard — week, phase, fitness, next session, race countdown | Anytime |
 | `/coach:chat` | Freeform conversation — ask anything training-related | Anytime |
 | `/coach:help` | Show all commands and data locations | Anytime |
 
@@ -47,6 +48,7 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 | `data/logs/weekly-reviews.md` | Weekly review summaries | `/coach:review` |
 | `data/archive/weekly/` | Completed week archives (one file per week) | `/coach:review` |
 | `data/archive/races/` | Race reports | `/coach:postrace` |
+| `data/archive/logs/` | Monthly daily-log archives (one file per month, e.g. `2026-02.md`) | `/coach:review` (auto-rotates when new month starts) |
 
 ### How the data works together
 

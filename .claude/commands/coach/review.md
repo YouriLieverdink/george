@@ -141,6 +141,17 @@ In addition to the weekly review, the monthly review adds:
 
 ## After Every Review
 
+### Daily log rotation (monthly)
+
+At the start of every review, check whether the current month differs from the earliest entries in `data/logs/daily-log.md`. If the log contains entries from a previous month:
+
+1. Extract all entries from the previous month(s)
+2. Write them to `data/archive/logs/YYYY-MM.md` (e.g., `2026-02.md`)
+3. Remove those entries from `daily-log.md`, keeping only the current month's entries
+4. Preserve the file header in `daily-log.md`
+
+This prevents the daily log from growing indefinitely. The archived logs remain available for historical analysis.
+
 ### Archive the completed week
 
 Write the completed week to `data/archive/weekly/YYYY-WNN.md` (e.g., `2026-W09.md`). Include the full week section from `current-plan.md`: schedule, tracking table, modifications, and key sessions.

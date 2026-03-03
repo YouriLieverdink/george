@@ -10,7 +10,7 @@ Read from local files:
 - `data/current-plan.md` → current operational state, taper status
 - `data/references/events.md` → target event details (course, distances, conditions, target splits)
 - `data/references/athlete-profile.md` → equipment, nutrition, health
-- `data/memory/coach-memory.md` → injury history, fitness test results, current zones, athlete patterns, preferences
+- `data/memory/coach-memory.md` → injury history, fitness test results, current zones, athlete patterns, preferences, **race rehearsal log** (nutrition products tested + GI outcomes, kit decisions, transition practice, OW swim sessions), **swim development** (lesson progress, technique cues, CSS results, OW readiness)
 - `data/logs/daily-log.md` → recent readiness trend (last 7–10 days)
 
 ### Pull data from intervals.icu
@@ -55,9 +55,9 @@ Generate a race-specific checklist based on the event type:
 - [ ] Flat kit (tube, CO2, tire levers) — for triathlon
 - [ ] Race number, timing chip collected
 
-**Nutrition (race day):**
+**Nutrition (race day):** *(Use Race Rehearsal Log from `coach-memory.md` — reference tested products and GI outcomes)*
 - [ ] Pre-race meal planned (2–3h before start, familiar foods)
-- [ ] On-course fueling plan: what products, how many, at what intervals
+- [ ] On-course fueling plan: what products, how many, at what intervals — based on what's been tested
 - [ ] Backup fuel (in case aid stations don't have what you expect)
 - [ ] Hydration plan (bottles, electrolytes)
 - [ ] Post-race recovery food

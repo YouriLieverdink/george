@@ -16,10 +16,26 @@ Read the athlete's profile from `data/references/athlete-profile.md`. Read `data
 Before asking the athlete anything, pull today's data from the API (see `.claude/services/coach/intervals-icu.md`):
 
 1. **Wellness data** for today — all Garmin-synced fields: sleep duration, sleep score, sleep quality, HRV, resting HR, weight, SpO2, steps, VO2 max
-2. **Yesterday's activity** if not yet debriefed — check if there's a completed workout to acknowledge
+2. **Yesterday's activity** (and today's if any) — check for completed workouts
+
+### Check for undebriefed sessions
+
+Check `data/logs/daily-log.md` for whether yesterday's activity has a "Session Debrief" entry. Also check the tracking table in `current-plan.md` — if "Actual" column is empty for a completed session visible in the API, it's undebriefed.
+
+If an undebriefed session is detected:
+1. Acknowledge it naturally: "I see you did a 45 min easy run yesterday that we didn't debrief. Quick catch-up before we get to today —"
+2. **Mini-debrief** (3 questions only): RPE (0–10), any pain or niggles (0–10 + location if yes), and one-line "how did it feel?"
+3. Log the mini-debrief to `data/logs/daily-log.md` under the session's date as a `### Session Debrief (mini)` entry
+4. Update the tracking table in `current-plan.md` with the actual session data from the API
+5. Update `data/memory/coach-memory.md` if pain was reported (Injury & Health History)
+6. Then proceed to today's readiness check
+
+This prevents data loss from forgotten debriefs without requiring the full debrief workflow.
+
+### Present wellness data
 
 Present what you already know:
-> "Good morning! Your watch synced: 7.2h sleep (score 82, quality GOOD), HRV 48, resting HR 52, SpO2 97%, 8.4k steps. Yesterday's run: 8.1 km, 49 min, avg HR 142."
+> "Good morning! Your watch synced: 7.2h sleep (score 82, quality GOOD), HRV 48, resting HR 52, SpO2 97%, 8.4k steps."
 
 Then ask only for what the API can't provide.
 
