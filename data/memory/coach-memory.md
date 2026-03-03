@@ -70,6 +70,15 @@
 - Values relationship time — explicitly doesn't want training to take away from time with girlfriend on trips. Prefers minimal, opportunistic training during vacations.
 - Prefers flexible training timing over rigid schedule — morning when sleep was good, evening when it wasn't
 
+## Intervals.icu
+
+<!--
+  Persistent API integration state. Updated by /coach:plan when folder is first created.
+  Retention: Permanent — only recreate folder_id if the folder is deleted from intervals.icu.
+-->
+
+- Workout library folder: "George's Plan" (folder_id: _pending first /coach:plan run_)
+
 ## Fitness Test History
 
 <!--

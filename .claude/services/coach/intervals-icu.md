@@ -146,7 +146,7 @@ curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https
 | `category` | string | Always `"WORKOUT"` for planned workouts |
 | `name` | string | Session title shown on calendar |
 | `type` | string | Sport type (see mapping below) |
-| `description` | string | Workout steps in ICU syntax (see Section 8) |
+| `description` | string | Workout steps in ICU syntax (see Section 11) |
 | `moving_time` | integer | Planned duration in seconds |
 | `icu_training_load` | integer | Estimated training load (optional — use for strength sessions where load isn't auto-calculated from HR/power) |
 
@@ -174,7 +174,73 @@ curl -s -X DELETE -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<a
 
 The API returns the created/updated event with its `id` — store this in `current-plan.md` so mid-week adjustments can use PUT/DELETE.
 
-### 8. Workout Description Syntax
+### 8. Create Workout Library Folder
+
+**Use in:** `/coach:plan` (one-time setup — create a persistent folder for coach-generated workouts)
+
+```bash
+# Create a folder in the workout library
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/folders" -d '{"name": "George'\''s Plan"}'
+```
+
+Returns the created folder with its `id`. Store this `folder_id` in `data/memory/coach-memory.md` — it persists across weeks and plan cycles. Only recreate if the folder is deleted.
+
+### 9. Manage Workouts in a Folder
+
+**Use in:** `/coach:plan` (clear old workouts, add new week's workouts to the library folder)
+
+**List workouts in a folder:**
+
+```bash
+curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/workouts?folder_id=<folderId>"
+```
+
+Returns an array of workout objects. Use the `id` field from each to delete old workouts before adding new ones.
+
+**Create a workout in a folder:**
+
+```bash
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/workouts" -d '{"folder_id": <folderId>, "name": "Tempo Run", "day": 2, "description": "Warmup\n- 15m Z1 Pace\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 Pace\nCooldown\n- 10m Z1 Pace", "type": "Run", "moving_time": 3600}'
+```
+
+**Workout payload fields:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `folder_id` | integer | ID of the library folder (from Section 8) |
+| `name` | string | Session title |
+| `day` | integer | Day within the plan week: 1=Monday, 2=Tuesday, ..., 7=Sunday |
+| `description` | string | ICU workout syntax (see Section 11) |
+| `type` | string | Sport type (`Run`, `Ride`, `Swim`, `WeightTraining`) |
+| `moving_time` | integer | Planned duration in seconds |
+| `icu_training_load` | integer | Estimated training load (use for strength sessions where load isn't auto-calculated) |
+
+**Brick sessions:** Create two separate workouts on the same `day` value (one `Ride`, one `Run`).
+**Strength:** Use plain text description + `icu_training_load`.
+**Rest days:** Skip — do not create workouts.
+
+**Delete a workout from a folder:**
+
+```bash
+curl -s -X DELETE -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/workouts/<workoutId>"
+```
+
+### 10. Apply Plan to Calendar
+
+**Use in:** `/coach:plan` (apply the folder's workouts to the calendar as events, triggering Garmin sync)
+
+```bash
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events/apply-plan" -d '{"folder_id": <folderId>, "start_date_local": "YYYY-MM-DDT00:00:00"}'
+```
+
+- `folder_id`: the library folder ID
+- `start_date_local`: Monday of the target week (ISO format with `T00:00:00`)
+
+Returns an array of calendar event objects. Each has an `id` field — store these in `current-plan.md` so mid-week adjustments can use PUT/DELETE on the calendar events (Section 7).
+
+Match returned events to sessions by date + type to correctly associate event IDs.
+
+### 11. Workout Description Syntax
 
 The `description` field in calendar events uses ICU workout syntax. When parsed correctly, these become structured workouts with targets that sync to Garmin watches.
 
@@ -273,12 +339,17 @@ On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
 2. Pull last 2–4 weeks of activity data for load trend context
 3. Reference the original plan from `plans/` for what's prescribed
 4. Adjust based on real data and write to `current-plan.md`
-5. After athlete approves the plan, POST each session as a structured workout event (Section 7) with ICU workout syntax (Section 8) so workouts sync to Garmin
+5. After athlete approves the plan, sync to intervals.icu via the workout library:
+   - Read `folder_id` from `data/memory/coach-memory.md`. If none exists, create folder via Section 8 and store the ID.
+   - Clear existing workouts from the folder: GET workouts (Section 9), DELETE each one
+   - POST each session as a workout in the folder (Section 9) with ICU workout syntax (Section 11)
+   - Apply plan to calendar via Section 10 (start_date = Monday of the week)
+   - Store returned calendar event IDs in `current-plan.md` for mid-week PUT/DELETE
 
 ## Error Handling
 
 - If the API returns 401: credentials are wrong — tell the athlete to check `config/intervals-icu.json`
-- If the API returns 400: bad workout syntax in description — check ICU syntax (Section 8) and fix
+- If the API returns 400: bad workout syntax in description — check ICU syntax (Section 11) and fix
 - If the API returns 409: duplicate event on that date — use PUT to update the existing event instead
 - If the API returns empty data: the athlete may not have synced their device — fall back to manual input
 - If the API is unreachable: proceed with manual input, note that data is self-reported

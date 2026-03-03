@@ -7,7 +7,7 @@ Generate the next week's training plan based on the athlete's profile, current p
 ### Pre-flight check
 Before proceeding, verify that `data/references/athlete-profile.md` and `data/current-plan.md` exist and contain populated content (not just headers). If either is missing or empty → stop and tell the athlete: "It looks like onboarding hasn't been completed yet. Run `/coach:onboard` first to set up your profile and plan."
 
-Load the coach agent from `.claude/agents/coach.md`, periodization templates from `.claude/agents/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `.claude/services/coach/intervals-icu.md` (Sections 7–8 for event creation and workout syntax).
+Load the coach agent from `.claude/agents/coach.md`, periodization templates from `.claude/agents/periodization.md` (including ICU structured workout templates), and the intervals.icu API reference from `.claude/services/coach/intervals-icu.md` (Sections 7–11 for event creation, workout library, and workout syntax).
 
 Read from local files:
 - `data/current-plan.md` → current operational state: active plan, current week/phase, recent decisions and adjustments
@@ -42,7 +42,7 @@ Read from local files:
 6. **For each session, provide:**
    - Warm-up / main / cool-down structure
    - Target intensities (zone, RPE range, pace/power if applicable)
-   - ICU workout description using the syntax from `.claude/services/coach/intervals-icu.md` Section 8, adapted from the templates in `.claude/agents/periodization.md` "Intervals.icu Structured Workout Descriptions"
+   - ICU workout description using the syntax from `.claude/services/coach/intervals-icu.md` Section 11, adapted from the templates in `.claude/agents/periodization.md` "Intervals.icu Structured Workout Descriptions"
    - Fueling notes for sessions >75–90 min
    - What to log after
 
@@ -90,32 +90,52 @@ Update `data/current-plan.md`:
 
 ## Sync to Intervals.icu Calendar
 
-After the athlete approves the plan, create structured workout events on the intervals.icu calendar so they sync to Garmin:
+After the athlete approves the plan, sync workouts to the intervals.icu workout library and calendar so they sync to Garmin. Uses a persistent library folder ("George's Plan") that gets cleared and refilled each week.
 
-1. **Build POST payload per session** using the intervals.icu API (Section 7 of `.claude/services/coach/intervals-icu.md`):
-   - `start_date_local`: the scheduled date
-   - `category`: `"WORKOUT"`
+### Workflow
+
+1. **Read credentials:** Load `config/intervals-icu.json` for athlete ID and API key.
+
+2. **Ensure folder exists:** Read `data/memory/coach-memory.md` for `folder_id`.
+   - If no `folder_id` found: POST to create folder "George's Plan" (Section 8 of `.claude/services/coach/intervals-icu.md`), store the returned `id` in `data/memory/coach-memory.md` under `## Intervals.icu`.
+
+3. **Clear existing workouts from folder:** GET workouts filtered by `folder_id` (Section 9), then DELETE each one. This ensures the folder only contains the current week.
+
+4. **Create workouts in the folder:** For each training session this week, POST to `/workouts` (Section 9) with:
+   - `folder_id`: the persistent folder ID
    - `name`: session title
+   - `day`: day within the week (1=Monday, 2=Tuesday, ..., 7=Sunday)
+   - `description`: ICU workout syntax (Section 11) with warmup/main/cooldown, targets, and repeats
    - `type`: sport type (`Run`, `Ride`, `Swim`, `WeightTraining`)
-   - `description`: ICU workout syntax with warmup/main/cooldown, targets, and repeats
    - `moving_time`: planned duration in seconds
 
-2. **Handle special cases:**
-   - **Brick sessions** → create two separate events (one `Ride`, one `Run`) on the same date
-   - **Rest days** → skip, do not create events
-   - **Strength** → create event with plain text description (no structured syntax). Calculate `moving_time` from the exercise list using the formula in `.claude/agents/periodization.md` (warmup + exercises × 3 min + cooldown) rather than a fixed value. Include `"icu_training_load"` in the payload using the strength load estimation table from `.claude/agents/periodization.md`.
+   **Special cases:**
+   - **Rest days** → skip, do not create workouts
+   - **Brick sessions** → two POSTs on the same `day` value (one `Ride`, one `Run`)
+   - **Strength** → plain text description (no structured syntax). Calculate `moving_time` from the exercise list using the formula in `.claude/agents/periodization.md` (warmup + exercises × 3 min + cooldown). Include `icu_training_load` using the strength load estimation table from `.claude/agents/periodization.md`.
 
-3. **POST each event** and store the returned event `id` in `current-plan.md` alongside each session (enables mid-week PUT/DELETE updates)
+5. **Apply plan to calendar:** POST to `/events/apply-plan` (Section 10) with `folder_id` and `start_date_local` set to Monday of the target week.
 
-4. **Report sync result** to the athlete: confirm how many events were created, the date range, and remind them to check "Upload planned workouts" is enabled in Intervals.icu settings (Settings → Garmin)
+6. **Store event IDs:** Match returned calendar events to sessions by date + type, store event IDs in `current-plan.md` alongside each session as `[ICU event: XXXXXXXX]` (enables mid-week PUT/DELETE).
 
-5. **Note sync date range** in `current-plan.md` (e.g., "Synced to intervals.icu: 2026-03-02 to 2026-03-08")
+7. **Report to athlete:** Confirm how many events were created, the date range, the folder name ("George's Plan"), and remind them to check "Upload planned workouts" is enabled in Intervals.icu settings (Settings → Garmin).
 
-6. **Error handling:**
-   - If a single event POST fails (400/409): log the error, continue with the remaining events, report which session failed
-   - If the API is unreachable: skip sync entirely, note in `current-plan.md` that sync was skipped, the athlete can still follow the plan from markdown
+8. **Record sync metadata** in `current-plan.md` (e.g., "Synced to intervals.icu: 2026-03-02 to 2026-03-08, folder: George's Plan")
 
-7. **Mid-week updates** (from `/coach:checkin` modifying a planned session):
-   - Use PUT with the stored event `id` to update the workout description/duration
-   - Use DELETE if a session is cancelled entirely
-   - Create a new POST if a replacement session is added
+### Error Handling
+
+| Step | Failure | Action |
+|------|---------|--------|
+| Folder creation | 400/500 | Abort sync, report error to athlete |
+| Clear old workouts | DELETE fails | Log warning, continue — stale workouts may remain |
+| Workout creation | Individual 400 | Log, skip that workout, continue with rest |
+| Apply-plan | 400/500 | Report error; workouts are in library, can retry apply-plan |
+| API unreachable | — | Skip sync entirely; athlete follows markdown plan; note in `current-plan.md` |
+
+### Mid-week Updates
+
+Mid-week adjustments (from `/coach:checkin` modifying a planned session) operate directly on calendar events, not the library folder:
+
+- **Update:** PUT with the stored event `id` to update the workout description/duration (Section 7)
+- **Cancel:** DELETE with the stored event `id` to remove a session (Section 7)
+- **Replace:** POST to `/events` (not `/workouts`) for ad-hoc replacement sessions (Section 7)
