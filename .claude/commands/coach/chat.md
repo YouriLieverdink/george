@@ -10,7 +10,14 @@ Open-ended conversation with your coach. Ask anything about training, nutrition,
 
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
-Read the athlete's profile from `data/references/athlete-profile.md`. Read `data/current-plan.md` to understand the current week, phase, and active plan. Check `data/references/events.md` for upcoming races. Read `data/memory/coach-memory.md` for accumulated context — patterns, injury history, open follow-ups, learnings, preferences, zones.
+**Before responding to the athlete, you MUST read these files — no exceptions:**
+
+1. `data/memory/coach-memory.md` — Pay close attention to **Injury & Health History** and **Open Follow-ups**. These contain the latest health status and resolved/pending items. Never contradict what's recorded here.
+2. `data/current-plan.md` — Current week, phase, modifications, and decisions.
+3. `data/references/events.md` — Upcoming races and proximity.
+4. `data/references/athlete-profile.md` — Profile, constraints, equipment.
+
+Do NOT respond from memory or prior conversation context alone. The files are the source of truth — read them first, then respond.
 
 Use this context to personalize your answers (e.g., reference the athlete's current training phase, known limiters, upcoming events, past conversations) but keep the conversation casual and responsive.
 

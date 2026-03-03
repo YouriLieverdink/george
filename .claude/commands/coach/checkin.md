@@ -13,7 +13,14 @@ Before proceeding, verify that `data/references/athlete-profile.md` and `data/cu
 
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
-Read the athlete's profile from `data/references/athlete-profile.md`. Read `data/current-plan.md` to determine the current week, phase, active plan, and today's planned session. Reference the original plan from `data/plans/` if needed for session details. Check `data/references/events.md` for race proximity (e.g., taper awareness, race week adjustments). Read `data/memory/coach-memory.md` for accumulated context (patterns, open follow-ups, injury history, zones).
+**Before proceeding, you MUST read these files — no exceptions:**
+
+1. `data/memory/coach-memory.md` — Pay close attention to **Injury & Health History** and **Open Follow-ups**. These contain the latest health status and resolved/pending items. Never contradict what's recorded here.
+2. `data/current-plan.md` — Current week, phase, active plan, and today's planned session. Reference the original plan from `data/plans/` if needed for session details.
+3. `data/references/events.md` — Race proximity (taper awareness, race week adjustments).
+4. `data/references/athlete-profile.md` — Profile, constraints, equipment.
+
+Do NOT rely on prior conversation context for athlete state. The files are the source of truth — read them first, then proceed.
 
 ### Pull data from intervals.icu first
 
