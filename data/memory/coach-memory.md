@@ -64,6 +64,7 @@
   Retention: Permanent unless athlete preference changes
 -->
 
+- **Full Ironman ambition** (2026-03-03): Interested in a full Ironman in late 2027. No specific race yet. Revisit after 70.3 Greece (Oct 2026) — use that race experience to decide if/when to commit. Prerequisites: power meter for bike pacing, sustained training consistency through 2026–2027 winter base.
 - Responds well to collaborative, low-pressure coaching style
 - Identity-driven motivation: "I show up for myself consistently — training is my time to invest in me"
 - Enjoys the process — A-race goal is to "finish and enjoy every moment"
