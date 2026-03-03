@@ -79,6 +79,76 @@
 
 - Workout library folder: "George's Plan" (folder_id: _pending first /coach:plan run_)
 
+## Race Rehearsal Log
+
+<!--
+  Schema: Track what's been tested and decided for race day — nutrition, kit, transitions.
+  When to add: Debrief after long sessions (>75 min) with fueling practice, race simulation days,
+  or chat when athlete reports a gear/nutrition decision.
+  When to update: New test supersedes or confirms previous — update outcome.
+  Retention: Permanent per race cycle — archive after race is complete.
+-->
+
+### Nutrition Products Tested
+
+| Date | Product | Context | GI Outcome | Notes |
+|------|---------|---------|------------|-------|
+| — | — | — | — | No fueling sessions yet — will populate as sessions >75 min begin |
+
+### Kit Decisions
+
+<!-- Gear that's been tested or decided for race day. Update as decisions are made. -->
+
+- No kit decisions yet — will populate during build/peak phase.
+
+### Transition Practice
+
+<!-- Track T1/T2 rehearsals for triathlon. -->
+
+- No transition practice yet — begins with brick sessions in 70.3 build phase.
+
+### Open Water Swimming
+
+<!-- Track OW swim sessions — comfort level, sighting, wetsuit use. -->
+
+- 2026-02 (Hurghada): 8 OW sessions, ~2.7 km total. First meaningful OW experience. Comfort level: growing.
+
+## Swim Development
+
+<!--
+  Schema: Track swim-specific skill progression through structured lessons and beyond.
+  When to add: Debrief after swim course sessions, or when technique cues/test results emerge.
+  When to update: New lesson content, technique breakthroughs, or test results.
+  Retention: Permanent — compact and valuable for long-term development.
+-->
+
+### Lesson Progress (Bosch Control Method)
+
+| Date | Lesson # | Content / Skills | Key Cues | Notes |
+|------|----------|-----------------|----------|-------|
+| — | 1–2 | Completed before coaching started | — | No details available |
+
+### Technique Cues That Work
+
+<!-- Cues the athlete responds to — use in session descriptions and reminders. -->
+
+- No cues captured yet — will populate from swim course debriefs.
+
+### CSS Test Results
+
+| Date | 400m Time | 200m Time | CSS Pace | Notes |
+|------|-----------|-----------|----------|-------|
+| — | — | — | — | To be tested after swim course progresses (est. April/May) |
+
+### Open Water Readiness
+
+- [ ] Comfortable with continuous 750m+ in pool
+- [ ] Sighting technique practiced
+- [ ] Bilateral breathing or reliable one-side breathing
+- [ ] Wetsuit swimming practiced (if applicable)
+- [ ] Mass start / drafting comfort
+- [ ] OW navigation (buoy turns)
+
 ## Fitness Test History
 
 <!--
