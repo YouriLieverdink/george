@@ -1,3 +1,7 @@
+---
+model: sonnet
+---
+
 # /coach:chat — Freeform Coach Conversation
 
 Open-ended conversation with your coach. Ask anything about training, nutrition, recovery, race strategy, gear, or general endurance sports questions — no structured workflow, no mandatory logging.

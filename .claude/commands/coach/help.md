@@ -1,3 +1,7 @@
+---
+model: haiku
+---
+
 # /coach:help — Coach Commands
 
 An evidence-based AI endurance coach for IRONMAN 70.3, marathon, and ultra events.

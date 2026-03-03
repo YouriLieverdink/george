@@ -1,3 +1,7 @@
+---
+model: haiku
+---
+
 # /coach:status — Quick Status Dashboard
 
 Lightweight snapshot of where you are. No logging, no modifications, no subjective questions.

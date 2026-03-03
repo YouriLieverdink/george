@@ -1,3 +1,7 @@
+---
+model: sonnet
+---
+
 # /coach:checkin — Daily Readiness Check
 
 Quick daily check-in (<30 seconds for the athlete) to determine today's session approach.

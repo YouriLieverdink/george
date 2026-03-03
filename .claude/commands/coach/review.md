@@ -1,3 +1,7 @@
+---
+model: opus
+---
+
 # /coach:review — Weekly & Monthly Review
 
 Analyze training trends, assess progress, and adapt the plan.

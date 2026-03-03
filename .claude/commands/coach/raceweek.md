@@ -1,3 +1,7 @@
+---
+model: opus
+---
+
 # /coach:raceweek — Race Week Preparation
 
 Race week support: session schedule, logistics, nutrition plan, mental prep, and race-day pacing strategy. Triggers when an event is within 7 days, or run manually anytime.

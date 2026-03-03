@@ -1,3 +1,7 @@
+---
+model: sonnet
+---
+
 # /coach:debrief — Post-Session Debrief
 
 Structured logging after every training session. Captures subjective and objective data, flags issues, and provides brief feedback.

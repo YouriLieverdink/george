@@ -1,3 +1,7 @@
+---
+model: opus
+---
+
 # /coach:onboard — Athlete Intake
 
 Collect the athlete's profile to personalize all future coaching.

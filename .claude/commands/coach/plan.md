@@ -1,3 +1,7 @@
+---
+model: opus
+---
+
 # /coach:plan — Generate Weekly Training Plan
 
 Generate the next week's training plan based on the athlete's profile, current phase, and recent training data. Reference macrocycle templates and session library from `.claude/agents/periodization.md`.

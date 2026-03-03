@@ -1,3 +1,7 @@
+---
+model: sonnet
+---
+
 # /coach:postrace — Post-Race Debrief & Recovery
 
 Structured post-race debrief: pull race data, capture the experience, write a race report, generate a recovery protocol, and update the training plan.
