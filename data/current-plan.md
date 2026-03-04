@@ -148,7 +148,7 @@ Coming off illness and inconsistent training with very low weekly volume. Gronin
 |-----|----------------|--------|-----|-------|
 | Mon | ~~Easy run 25 min~~ | Rest (illness) | — | GI issues post-Egypt travel. Stomach pain, poor intake 2–3 days. |
 | Tue | ~~Strength (full body reintro)~~ | Rest (illness) | — | Week paused — ongoing GI illness, unable to eat. Doctor appointment pending. |
-| Wed | Swim course (lesson 3) | | | Decision day-of based on how stomach is. Event kept on ICU calendar. |
+| Wed | ~~Swim course (lesson 3)~~ | Rest (illness) | — | Stomach still painful this morning. Does not meet return criteria. |
 | Thu | ~~Easy run 30 min~~ | Rest (illness) | — | |
 | Fri | Rest | Rest | — | |
 | Sat | ~~Easy run 35 min~~ | Rest (illness) | — | |
