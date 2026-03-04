@@ -31,7 +31,7 @@
 -->
 
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
-- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed. **2026-03-03:** Athlete reports stomach "getting a lot better" but still not eating full meals — made pasta but froze it instead of eating it. Trending toward recovery but not there yet. Resume movement once eating normally without pain for 2+ days. **2026-03-04:** Still symptomatic — painful stomach this morning (eased but not resolved). Day 5 since onset. Not eating full meals. Return criteria still not met. Coach recommended skipping swim — athlete chose to attend (Lesson 3) due to financial commitment. Given safety guidelines: stay easy, exit if symptoms worsen, tell instructor.
+- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed. **2026-03-03:** Athlete reports stomach "getting a lot better" but still not eating full meals — made pasta but froze it instead of eating it. Trending toward recovery but not there yet. Resume movement once eating normally without pain for 2+ days. **2026-03-04:** Still symptomatic — painful stomach this morning (eased but not resolved). Day 5 since onset. Not eating full meals. Return criteria still not met. Coach recommended skipping swim — athlete chose to attend (Lesson 3) due to financial commitment. Given safety guidelines: stay easy, exit if symptoms worsen, tell instructor. **2026-03-04 post-swim:** Diarrhea after breakfast (change from constipation pattern of recent days). GI noticeable during swim but manageable — did not have to stop. This is a fluctuation in recovery, not a new acute episode. Continue monitoring. Return criteria still not met for unrestricted training.
 
 ## Open Follow-ups
 
@@ -42,7 +42,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-04:** GI illness still active — stomach pain this morning, not eating full meals. Continue monitoring. Follow up tomorrow on: (1) can you eat a small meal without pain? (2) caffeine cutoff — was it earlier today?
+- **2026-03-04:** GI illness still active — diarrhea today (change from constipation), stomach pain this morning. Not eating full meals. Continue monitoring. Follow up tomorrow on: (1) can you eat a small meal without pain? (2) any more diarrhea or is it settling? (3) caffeine cutoff — was it earlier today?
 
 ## Key Learnings
 
@@ -130,12 +130,13 @@
 | Date | Lesson # | Content / Skills | Key Cues | Notes |
 |------|----------|-----------------|----------|-------|
 | — | 1–2 | Completed before coaching started | — | No details available |
+| 2026-03-04 | 3 | Correct arm use, breathing technique | — | 1425m, 59 min pool (28 active). Avg HR 135, max 195. RPE 4/10. GI illness active but manageable during session. First session back after 5-day pause. |
 
 ### Technique Cues That Work
 
 <!-- Cues the athlete responds to — use in session descriptions and reminders. -->
 
-- No cues captured yet — will populate from swim course debriefs.
+- **Trouble swimming slowly** (2026-03-04): Feels like sinking at low effort, so defaults to swimming fast during exercises. This drives HR spikes (195 max on a 4/10 RPE session). As technique and body position improve, slow swimming should become possible. Until then, expect spiky swim HR — don't alarm on it.
 
 ### CSS Test Results
 
