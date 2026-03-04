@@ -31,7 +31,7 @@
 -->
 
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
-- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed. **2026-03-03:** Athlete reports stomach "getting a lot better" but still not eating full meals — made pasta but froze it instead of eating it. Trending toward recovery but not there yet. Resume movement once eating normally without pain for 2+ days. **2026-03-04:** Still symptomatic — painful stomach this morning (eased but not resolved). Day 5 since onset. Not eating full meals. Swim course skipped. Return criteria still not met.
+- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed. **2026-03-03:** Athlete reports stomach "getting a lot better" but still not eating full meals — made pasta but froze it instead of eating it. Trending toward recovery but not there yet. Resume movement once eating normally without pain for 2+ days. **2026-03-04:** Still symptomatic — painful stomach this morning (eased but not resolved). Day 5 since onset. Not eating full meals. Return criteria still not met. Coach recommended skipping swim — athlete chose to attend (Lesson 3) due to financial commitment. Given safety guidelines: stay easy, exit if symptoms worsen, tell instructor.
 
 ## Open Follow-ups
 
@@ -70,6 +70,7 @@
 - Enjoys the process — A-race goal is to "finish and enjoy every moment"
 - Values relationship time — explicitly doesn't want training to take away from time with girlfriend on trips. Prefers minimal, opportunistic training during vacations.
 - Prefers flexible training timing over rigid schedule — morning when sleep was good, evening when it wasn't
+- **Paid commitments override caution** (2026-03-04): Will push through illness/discomfort for sessions with financial commitment (swim course). Respect this but ensure safety guardrails are clear when it happens.
 - **Strength & body composition goal** (2026-03-03): Wants to rebuild muscle mass — had more muscle from previous strength training and misses it. Also interested in visible abs / better body composition. Enjoys lifting. Agreed to hypertrophy-focused upper/lower split 2x/week. Has access to a local gym (full equipment: barbells, dumbbells, cables).
 
 ## Intervals.icu
