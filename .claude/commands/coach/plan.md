@@ -87,9 +87,9 @@ Read from local files:
 ## After Generating the Plan
 
 Update `data/current-plan.md`:
-- Advance the current week number
-- Update the "This Week" section with the new plan
-- Note any deviations from the original plan and why
+- Advance the current week number and phase if needed
+- Update the "This Week" section with **rationale only** — why this week looks the way it does, key focus areas, any deviations from the original plan
+- Do NOT write per-day session details, tracking tables, or key sessions lists to `current-plan.md` — those live on the ICU calendar
 - Record any decisions or agreements made with the athlete
 
 ## Sync to Intervals.icu Calendar
@@ -120,7 +120,7 @@ After the athlete approves the plan, sync workouts to the intervals.icu workout 
 
 5. **Apply plan to calendar:** POST to `/events/apply-plan` (Section 10) with `folder_id` and `start_date_local` set to Monday of the target week.
 
-6. **Store event IDs:** Match returned calendar events to sessions by date + type, store event IDs in `current-plan.md` alongside each session as `[ICU event: XXXXXXXX]` (enables mid-week PUT/DELETE).
+6. **Post week rationale NOTE:** POST a `NOTE` event on Monday (Section 6) with the week rationale, key session notes, and fueling focus. This makes the coaching context visible on the ICU calendar.
 
 7. **Report to athlete:** Confirm how many events were created, the date range, the folder name ("George's Plan"), and remind them to check "Upload planned workouts" is enabled in Intervals.icu settings (Settings → Garmin).
 
@@ -134,12 +134,12 @@ After the athlete approves the plan, sync workouts to the intervals.icu workout 
 | Clear old workouts | DELETE fails | Log warning, continue — stale workouts may remain |
 | Workout creation | Individual 400 | Log, skip that workout, continue with rest |
 | Apply-plan | 400/500 | Report error; workouts are in library, can retry apply-plan |
-| API unreachable | — | Skip sync entirely; athlete follows markdown plan; note in `current-plan.md` |
+| API unreachable | — | Output the full plan in the conversation so the athlete has it. Skip sync entirely. Note in `current-plan.md` that ICU sync is pending. Retry sync on next command. |
 
 ### Mid-week Updates
 
-Mid-week adjustments (from `/coach:checkin` modifying a planned session) operate directly on calendar events, not the library folder:
+Mid-week adjustments (from `/coach:checkin` modifying a planned session) operate directly on calendar events, not the library folder. Query events by date range (Section 6) to find the event to modify:
 
-- **Update:** PUT with the stored event `id` to update the workout description/duration (Section 7)
-- **Cancel:** DELETE with the stored event `id` to remove a session (Section 7)
+- **Update:** GET events for the date, find the matching event by type/name, then PUT to update the workout description/duration (Section 7)
+- **Cancel:** GET events for the date, find the matching event, then DELETE to remove it. POST a `NOTE` event with the cancellation reason.
 - **Replace:** POST to `/events` (not `/workouts`) for ad-hoc replacement sessions (Section 7)

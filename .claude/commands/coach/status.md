@@ -11,20 +11,18 @@ Lightweight snapshot of where you are. No logging, no modifications, no subjecti
 Load the coach agent from `.claude/agents/coach.md`.
 
 Read from local files:
-- `data/current-plan.md` → current week, phase, today's planned session
+- `data/current-plan.md` → current week, phase, rationale (does NOT contain the session schedule)
 - `data/references/events.md` → race calendar for countdowns
 - `data/memory/coach-memory.md` → open follow-ups, injury status
 
 ### Pull from intervals.icu
 
-Pull the athlete summary from the API (see `.claude/services/coach/intervals-icu.md`):
+Pull from the API (see `.claude/services/coach/intervals-icu.md`):
+- **Today's calendar events** (Section 6) → today's planned session (source of truth for the schedule)
 - **Athlete summary** → current CTL (fitness), ATL (fatigue), TSB (form)
+- **Most recent activity** → last completed session
 
-If the API is unavailable, skip it and note "API unavailable" in the fitness line.
-
-### Pull last activity
-
-Pull the most recent activity from the API to show the last completed session.
+If the API is unavailable, note "API unavailable" in the fitness and session lines. Ask the athlete what's planned if they need session info.
 
 ## Output
 

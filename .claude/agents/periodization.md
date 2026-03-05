@@ -479,7 +479,7 @@ Strength workouts don't produce power/HR-based training load via the API. Use th
 | Power Endurance | Explosive | 2–3 sets × sport-specific | 25–40 |
 | Maintenance | Light | 1–2 sets × activation | 10–20 |
 
-Include the estimated load in each strength session in `current-plan.md` (e.g., "Estimated load: ~25") and add `"icu_training_load": 25` to the POST payload when creating the ICU event.
+Include the estimated load in the ICU event payload as `"icu_training_load": 25` when creating the calendar event (Section 7 of `.claude/services/coach/intervals-icu.md`).
 
 ### Long Run: Easy
 

@@ -13,7 +13,7 @@ Before proceeding, verify that `data/references/athlete-profile.md` and `data/cu
 
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
-Read today's planned session from `data/current-plan.md` (the "This Week" section) to compare plan vs. actual. If a session was modified during checkin, the modification will already be noted there. Read `data/memory/coach-memory.md` for context (injury history, open follow-ups, patterns).
+Read today's planned session from the intervals.icu calendar (see `.claude/services/coach/intervals-icu.md` Section 6 — query today's events). The calendar is the source of truth for planned workouts, including any modifications made during checkin. Read `data/current-plan.md` for context (phase, rationale, decisions) and `data/memory/coach-memory.md` for context (injury history, open follow-ups, patterns).
 
 ### Identify the session to debrief
 
@@ -32,7 +32,7 @@ This handles the common case of training in the evening and debriefing the next 
 Once the session is identified, extract from the API:
 
 1. **Key metrics:** duration, distance, avg HR, max HR, avg pace/power, TSS/training load, zone distribution
-2. **Compare plan vs. actual:** was the prescribed distance/duration roughly hit? Was intensity in the right zone? Cross-reference `current-plan.md`.
+2. **Compare plan vs. actual:** was the prescribed distance/duration roughly hit? Was intensity in the right zone? Cross-reference the ICU calendar event for today.
 
 Present a summary:
 > "Session recorded: 11.2 km easy run in 67 min, avg HR 138, avg pace 5:59/km, training load 58. The plan was 11.2 km Easy at 6:00/km — looks spot on."

@@ -120,13 +120,46 @@ curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>"
 
 Returns athlete profile including current CTL (fitness), ATL (fatigue), TSB (form).
 
-### 6. Calendar Events (planned workouts)
+### 6. Calendar Events (planned workouts, notes, sickness)
 
-**Use in:** `/coach:plan` (sync planned workouts to intervals.icu calendar)
+**Use in:** `/coach:checkin` (read today's planned session), `/coach:debrief` (compare plan vs actual), `/coach:plan` (sync planned workouts), `/coach:review` (week's planned vs actual), `/coach:status` (today's session)
+
+**Reading the schedule (single source of truth for all planned sessions):**
 
 ```bash
-# Read planned events
+# Get all events for a date range — returns WORKOUT, NOTE, and SICKNESS events
 curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/events?oldest=YYYY-MM-DD&newest=YYYY-MM-DD"
+```
+
+Every command that needs to know "what's planned today/this week" reads from this endpoint — NOT from `current-plan.md`. The calendar is the single source of truth for the session schedule.
+
+**Event categories:**
+
+| Category | Purpose | Example |
+|----------|---------|---------|
+| `WORKOUT` | Planned training session | Tempo run, swim technique, strength |
+| `NOTE` | Coaching notes — session modifications, week rationale, key session notes | "Session modified: easy run → rest (GI illness)" |
+| `SICKNESS` | Illness period marker | "GI illness — unable to train" |
+
+**Creating a NOTE event:**
+
+```bash
+# Note on a specific date (e.g., session modification rationale)
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"NOTE","name":"Session modified","description":"Easy run cancelled — GI illness, unable to eat for 3 days"}'
+```
+
+**Creating a SICKNESS event:**
+
+```bash
+# Mark a sickness period
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"SICKNESS","name":"GI illness","description":"Acute onset vomiting + diarrhea post-Egypt travel. Nausea, stomach pain, poor intake."}'
+```
+
+**Week rationale NOTE (posted on Monday by `/coach:plan`):**
+
+```bash
+# Week overview note on Monday — contains rationale, key sessions, fueling focus
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-09","category":"NOTE","name":"Week 2 — Rebuild","description":"Rationale: ...\n\nKey sessions:\n1. ...\n2. ...\n\nFueling focus: ..."}'
 ```
 
 ### 7. Create Calendar Events (structured workouts)
@@ -135,7 +168,7 @@ curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/
 
 ```bash
 # Create a workout event
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"WORKOUT","name":"Tempo Run","type":"Run","description":"Warmup\n- 15m Z1 Pace\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 Pace\nCooldown\n- 10m Z1 Pace","moving_time":3600}'
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"WORKOUT","name":"Tempo Run","type":"Run","description":"Warmup\n- 15m Z1 HR\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 HR\nCooldown\n- 10m Z1 HR","moving_time":3600}'
 ```
 
 **Payload fields:**
@@ -172,7 +205,7 @@ curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https:
 curl -s -X DELETE -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/events/<eventId>"
 ```
 
-The API returns the created/updated event with its `id` — store this in `current-plan.md` so mid-week adjustments can use PUT/DELETE.
+The API returns the created/updated event with its `id`. Mid-week adjustments query events by date range to find the event to update — no need to store IDs locally.
 
 ### 8. Create Workout Library Folder
 
@@ -200,7 +233,7 @@ Returns an array of workout objects. Use the `id` field from each to delete old 
 **Create a workout in a folder:**
 
 ```bash
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/workouts" -d '{"folder_id": <folderId>, "name": "Tempo Run", "day": 2, "description": "Warmup\n- 15m Z1 Pace\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 Pace\nCooldown\n- 10m Z1 Pace", "type": "Run", "moving_time": 3600}'
+curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/workouts" -d '{"folder_id": <folderId>, "name": "Tempo Run", "day": 2, "description": "Warmup\n- 15m Z1 HR\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 HR\nCooldown\n- 10m Z1 HR", "type": "Run", "moving_time": 3600}'
 ```
 
 **Workout payload fields:**
@@ -236,9 +269,7 @@ curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https
 - `folder_id`: the library folder ID
 - `start_date_local`: Monday of the target week (ISO format with `T00:00:00`)
 
-Returns an array of calendar event objects. Each has an `id` field — store these in `current-plan.md` so mid-week adjustments can use PUT/DELETE on the calendar events (Section 7).
-
-Match returned events to sessions by date + type to correctly associate event IDs.
+Returns an array of calendar event objects. Mid-week adjustments query events by date range (Section 6) to find specific events — no need to store IDs locally.
 
 ### 11. Workout Description Syntax
 
@@ -280,6 +311,19 @@ Cooldown
 | Running pace | `80% Pace` or `Z2 Pace` | `- 5m 85% Pace` |
 | Zone (generic) | `Z2` or `Z3 HR` | `- 10m Z2` |
 
+**Target selection by discipline and readiness:**
+
+| Discipline | Condition | Target type | ICU syntax |
+|------------|-----------|-------------|------------|
+| Running | Zones uncalibrated or returning from break | HR | `Z2 HR` |
+| Running | Zones calibrated, stable fitness | Pace | `Z2 Pace` or `85% Pace` |
+| Cycling | Power meter available | Power | `88%` or `Z3` |
+| Cycling | No power meter | HR | `Z2 HR` |
+| Swimming | No CSS test | Generic zone + RPE | `Z2` |
+| Swimming | CSS tested | Pace | `Z2 Pace` |
+
+Check `data/memory/coach-memory.md` → Current Zones before generating workouts. If a zone section says "estimated" or "needs calibration," use the uncalibrated column.
+
 **Modifiers:**
 
 | Modifier | Syntax | Example |
@@ -317,34 +361,43 @@ On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
 
 ### `/coach:checkin`
 1. Pull today's wellness data — Garmin-synced fields: sleep duration, sleep score, sleep quality, HRV, resting HR, weight, SpO2, steps, VO2 max
-2. Show athlete what's already recorded — ask only for subjective fields: soreness, fatigue, stress, mood, motivation, injury, hydration
-3. Write subjective scores back to intervals.icu via wellness PUT (1–4 scale)
-4. Pull yesterday's activity if not yet debriefed
+2. Pull today's calendar events (Section 6) — get the planned workout for today
+3. Show athlete what's already recorded — ask only for subjective fields: soreness, fatigue, stress, mood, motivation, injury, hydration
+4. Write subjective scores back to intervals.icu via wellness PUT (1–4 scale)
+5. Pull yesterday's activity if not yet debriefed
+6. After session prescription:
+   - Session proceeds as planned → no calendar change needed
+   - Session modified → PUT to update the event description/duration
+   - Session cancelled → DELETE the event, POST a `NOTE` event with reason
+   - No event exists but session prescribed → POST new `WORKOUT` event
 
 ### `/coach:debrief`
-1. Pull today's most recent activity — auto-fill duration, distance, HR, TSS, pace/power
-2. Show the athlete a summary: "You ran 10.2 km in 58 min, avg HR 148, TSS 72"
-3. Ask only for subjective data the API can't provide: RPE feel, pain, fueling details, learnings
-4. Compare against the planned session from `current-plan.md`
+1. Pull today's calendar events (Section 6) — get the planned workout to compare against
+2. Pull today's most recent activity — auto-fill duration, distance, HR, TSS, pace/power
+3. Show the athlete a summary: "You ran 10.2 km in 58 min, avg HR 148, TSS 72"
+4. Ask only for subjective data the API can't provide: RPE feel, pain, fueling details, learnings
+5. Compare against the planned session from the ICU calendar event
 
 ### `/coach:review`
-1. Pull last 7 days of activities — compute weekly volume, intensity distribution, load
-2. Pull last 7 days of wellness — trend sleep (duration + score + quality), HRV, resting HR, fatigue, soreness, stress, mood, motivation, injury, weight, SpO2, VO2 max
-3. Pull athlete summary for current CTL/ATL/TSB
-4. Compare planned vs. actual from `current-plan.md`
-5. Use all of this to write the weekly review
+1. Pull this week's calendar events (Section 6) — planned workouts, notes, sickness markers
+2. Pull last 7 days of activities — compute weekly volume, intensity distribution, load
+3. Pull last 7 days of wellness — trend sleep (duration + score + quality), HRV, resting HR, fatigue, soreness, stress, mood, motivation, injury, weight, SpO2, VO2 max
+4. Pull athlete summary for current CTL/ATL/TSB
+5. Compare planned events vs. actual activities for the week
+6. Use all of this to write the weekly review
 
 ### `/coach:plan`
 1. Pull current CTL/ATL/TSB to gauge fitness/fatigue state
 2. Pull last 2–4 weeks of activity data for load trend context
 3. Reference the original plan from `plans/` for what's prescribed
-4. Adjust based on real data and write to `current-plan.md`
+4. Adjust based on real data and write rationale/phase/decisions to `current-plan.md`
 5. After athlete approves the plan, sync to intervals.icu via the workout library:
    - Read `folder_id` from `data/memory/coach-memory.md`. If none exists, create folder via Section 8 and store the ID.
    - Clear existing workouts from the folder: GET workouts (Section 9), DELETE each one
    - POST each session as a workout in the folder (Section 9) with ICU workout syntax (Section 11)
    - Apply plan to calendar via Section 10 (start_date = Monday of the week)
-   - Store returned calendar event IDs in `current-plan.md` for mid-week PUT/DELETE
+   - POST a `NOTE` event on Monday with week rationale and key session notes
+6. If API is unreachable: output the plan in the conversation, note that ICU sync is pending in `current-plan.md`
 
 ## Error Handling
 

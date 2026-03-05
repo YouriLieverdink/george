@@ -41,7 +41,7 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 |------|---------|----------------|
 | `data/references/events.md` | Race calendar — dates, distances, priorities, goals | You, when events change |
 | `data/references/athlete-profile.md` | Intake profile — history, constraints, equipment, health | `/coach:onboard`, then you as needed |
-| `data/current-plan.md` | **Living operational state** — what we're following now, current week/phase, decisions, adjustments, agreements | Coach maintains this via commands |
+| `data/current-plan.md` | **Operational state** — current week/phase, rationale, goals, decisions, agreements. Does NOT contain the session schedule (that's on the intervals.icu calendar) | Coach maintains this via commands |
 | `data/plans/` | Training plan library — original plans as reference | You add plans; coach reads them |
 | `data/memory/coach-memory.md` | **Coaching memory** — patterns, injury history, follow-ups, learnings, preferences, zones, fitness tests | Coach writes via commands; accumulates over time |
 | `data/logs/daily-log.md` | Daily check-in + debrief log | `/coach:checkin`, `/coach:debrief` |
@@ -53,11 +53,11 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 ### How the data works together
 
 - **`plans/`** holds the original training plans as-is (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These are reference documents that don't change.
-- **`current-plan.md`** is the operational state: which plan is active, what week you're in, what adjustments have been made. Only holds the current week — completed weeks are archived to `data/archive/weekly/`.
+- **`current-plan.md`** is the operational state: which plan is active, what week you're in, rationale, goals, and decisions. Does NOT contain the session schedule — that lives on the intervals.icu calendar as the single source of truth. Completed weeks are archived to `data/archive/weekly/`.
 - **`coach-memory.md`** is accumulated coaching intelligence: what the coach has learned about you over time. Every command reads it for context; checkin, debrief, review, and chat write to it.
 - **`daily-log.md`** and **`weekly-reviews.md`** are append-only logs replacing the Google Sheets tabs.
 
-The coach reads `current-plan.md` and `coach-memory.md` before every decision, references the original plan from `plans/`, and checks `events.md` for what's coming.
+The coach reads `current-plan.md` for phase/context and `coach-memory.md` for accumulated intelligence before every decision. For today's planned session, it reads from the intervals.icu calendar. It references the original plan from `plans/` and checks `events.md` for what's coming.
 
 ### Intervals.icu API (objective training data — coach reads and writes)
 
@@ -65,6 +65,7 @@ Configured in `config/intervals-icu.json` with your athlete ID and API key. See 
 
 | Data | What the coach pulls | Used by |
 |------|---------------------|---------|
+| Calendar events | **Single source of truth for the session schedule.** Planned workouts (WORKOUT), coaching notes (NOTE), illness markers (SICKNESS) | `/coach:checkin`, `/coach:debrief`, `/coach:plan`, `/coach:review`, `/coach:status` |
 | Activities | Completed workouts: distance, duration, HR, pace, power, training load, zones | `/coach:debrief`, `/coach:review` |
 | Wellness | Garmin-synced: sleep (duration, score, quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective (1–4 scale): soreness, fatigue, stress, mood, motivation, injury, hydration | `/coach:checkin`, `/coach:review` |
 | Athlete summary | Current CTL (fitness), ATL (fatigue), TSB (form) | `/coach:review`, `/coach:plan` |

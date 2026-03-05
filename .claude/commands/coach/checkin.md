@@ -16,7 +16,7 @@ Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claud
 **Before proceeding, you MUST read these files — no exceptions:**
 
 1. `data/memory/coach-memory.md` — Pay close attention to **Injury & Health History** and **Open Follow-ups**. These contain the latest health status and resolved/pending items. Never contradict what's recorded here.
-2. `data/current-plan.md` — Current week, phase, active plan, and today's planned session. Reference the original plan from `data/plans/` if needed for session details.
+2. `data/current-plan.md` — Current week, phase, active plan, and rationale. Does NOT contain the session schedule — that's on the intervals.icu calendar.
 3. `data/references/events.md` — Race proximity (taper awareness, race week adjustments).
 4. `data/references/athlete-profile.md` — Profile, constraints, equipment.
 
@@ -27,43 +27,53 @@ Do NOT rely on prior conversation context for athlete state. The files are the s
 Before asking the athlete anything, pull today's data from the API (see `.claude/services/coach/intervals-icu.md`):
 
 1. **Wellness data** for today — all Garmin-synced fields: sleep duration, sleep score, sleep quality, HRV, resting HR, weight, SpO2, steps, VO2 max
-2. **Yesterday's activity** (and today's if any) — check for completed workouts
+2. **Today's calendar events** (Section 6) — get the planned workout for today (this is the source of truth for the schedule, not `current-plan.md`)
+3. **Yesterday's activity** (and today's if any) — check for completed workouts
 
 ### Check for undebriefed sessions
 
-Check `data/logs/daily-log.md` for whether yesterday's activity has a "Session Debrief" entry. Also check the tracking table in `current-plan.md` — if "Actual" column is empty for a completed session visible in the API, it's undebriefed.
+Check `data/logs/daily-log.md` for whether yesterday's activity has a "Session Debrief" entry. Cross-reference with yesterday's ICU calendar events and activities — if an activity exists without a corresponding debrief log entry, it's undebriefed.
 
 If an undebriefed session is detected:
 1. Acknowledge it naturally: "I see you did a 45 min easy run yesterday that we didn't debrief. Quick catch-up before we get to today —"
 2. **Mini-debrief** (3 questions only): RPE (0–10), any pain or niggles (0–10 + location if yes), and one-line "how did it feel?"
 3. Log the mini-debrief to `data/logs/daily-log.md` under the session's date as a `### Session Debrief (mini)` entry
-4. Update the tracking table in `current-plan.md` with the actual session data from the API
-5. Update `data/memory/coach-memory.md` if pain was reported (Injury & Health History)
+4. Update `data/memory/coach-memory.md` if pain was reported (Injury & Health History)
 6. Then proceed to today's readiness check
 
 This prevents data loss from forgotten debriefs without requiring the full debrief workflow.
 
-### Present wellness data
+### Conversation Structure — 2 turns only
 
-Present what you already know:
-> "Good morning! Your watch synced: 7.2h sleep (score 82, quality GOOD), HRV 48, resting HR 52, SpO2 97%, 8.4k steps."
+**This entire check-in must happen in exactly 2 athlete turns:**
 
-Then ask only for what the API can't provide.
+**Turn 1 (coach):** Present ALL of the following in ONE message:
+- Wellness data summary from API
+- Pattern check / follow-ups from memory (see below)
+- Today's planned session (from ICU calendar)
+- All 10 subjective questions (see below)
 
-### Pattern Check (proactive coaching)
+**Turn 2 (athlete):** Answers everything in one response.
 
-After pulling API data, before asking subjective questions, check `data/memory/coach-memory.md`:
+**Turn 3 (coach):** Readiness assessment + session prescription + sync to ICU + log.
+
+Do NOT split the wellness summary, pattern check, and questions across multiple messages. Combine them into a single, well-structured message.
+
+### Turn 1 content: Wellness + Patterns + Today's Session + Questions
+
+**Wellness summary** — present what you already know:
+> "Good morning. Your watch synced: 7.2h sleep (score 82, quality GOOD), HRV 48, resting HR 52, SpO2 97%, 8.4k steps."
+
+**Pattern check** (weave naturally into the message, before the questions):
 
 1. **Recent memory** — if `coach-memory.md` has entries added in the last 24h (especially Open Follow-ups or recent chat observations), lead with those naturally before asking subjective scores. This bridges informal conversations into the structured check-in.
 2. **Open follow-ups** — address the most important one first. Don't say "as noted in our records" — say it naturally: "Last time you mentioned your calf was bothering you — how's that going?" or "You had that doctor appointment — how did it go?"
 3. **Continuing patterns** — if today's data confirms a known pattern (e.g., poor sleep again after a late evening, HRV trending down for the third day), mention it: "I notice your sleep has been under 6.5h three days running now — that's becoming a pattern worth addressing."
 4. **Athlete commitments** — if the athlete committed to something (earlier bedtime, caffeine cutoff, stretching routine), gently check in on it.
 
-Lead the check-in with the most important finding before moving to the wellness summary and subjective questions.
+**Today's planned session** — show what's on the ICU calendar for today so the athlete knows what's coming.
 
-## Ask the Athlete (only missing data)
-
-From the wellness sync, you already have sleep, HRV, resting HR, weight, SpO2, steps, VO2 max, and sleep quality. Ask only for the subjective fields that Intervals.icu doesn't auto-populate.
+**All subjective questions** — ask all 10 in one go. From the wellness sync, you already have sleep, HRV, resting HR, weight, SpO2, steps, VO2 max, and sleep quality. Ask only for the subjective fields that Intervals.icu doesn't auto-populate.
 
 All subjective fields use the Intervals.icu 1–4 scale (1=best, 4=worst):
 
@@ -78,7 +88,7 @@ All subjective fields use the Intervals.icu 1–4 scale (1=best, 4=worst):
 9. **Caffeine cutoff** (what time was the last coffee/caffeine yesterday?) — relevant for sleep quality assessment
 10. **Time available today:**
 
-Write the subjective scores back to intervals.icu via the wellness PUT endpoint (soreness, fatigue, stress, mood, motivation, injury, hydration).
+After receiving answers: write the subjective scores back to intervals.icu via the wellness PUT endpoint (soreness, fatigue, stress, mood, motivation, injury, hydration).
 
 ## Decision Logic
 
@@ -104,7 +114,11 @@ Combine device data (HRV, resting HR, sleep) with subjective scores to assess re
 
 6. **Otherwise:** proceed with planned session.
 
-If the session is modified, log the modification and reason in the "This Week" section of `current-plan.md`.
+If the session is modified, sync the change to intervals.icu:
+- **Modified session:** PUT to update the calendar event with new description/duration
+- **Cancelled session:** DELETE the calendar event, POST a `NOTE` event on today's date with the reason
+- **Illness-related cancellation:** POST a `SICKNESS` event if appropriate
+- **New session prescribed (no existing event):** POST a new `WORKOUT` event
 
 ## Output
 

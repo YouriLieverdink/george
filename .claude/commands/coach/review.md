@@ -14,7 +14,7 @@ Before proceeding, verify that `data/references/athlete-profile.md` and `data/cu
 Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claude/agents/alerts.md`.
 
 Read from local files:
-- `data/current-plan.md` → current operational state, recent decisions, this week's plan and modifications
+- `data/current-plan.md` → current operational state, recent decisions, phase and rationale (session schedule is on ICU calendar)
 - `data/references/events.md` → race calendar, event countdown
 - `data/references/athlete-profile.md` → goals and constraints
 - `data/plans/` → original plan(s) as reference for what was prescribed vs. what happened
@@ -28,9 +28,10 @@ Read from local files:
 
 Before analysis, pull the week's data from the API (see `.claude/services/coach/intervals-icu.md`):
 
-1. **Activities for the past 7 days** — all completed workouts with duration, distance, HR, pace/power, training load
-2. **Wellness for the past 7 days** — Garmin-synced: sleep (duration + score + quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective: soreness, fatigue, stress, mood, motivation, injury, hydration
-3. **Athlete summary** — current CTL (fitness), ATL (fatigue), TSB (form)
+1. **Calendar events for the past 7 days** (Section 6) — planned workouts, notes, and sickness markers for the week
+2. **Activities for the past 7 days** — all completed workouts with duration, distance, HR, pace/power, training load
+3. **Wellness for the past 7 days** — Garmin-synced: sleep (duration + score + quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective: soreness, fatigue, stress, mood, motivation, injury, hydration
+4. **Athlete summary** — current CTL (fitness), ATL (fatigue), TSB (form)
 
 This gives you hard data for the analysis rather than relying on memory or self-reports.
 
@@ -40,7 +41,7 @@ This gives you hard data for the analysis rather than relying on memory or self-
    - Total volume this week vs. previous weeks (km, hours)
    - Intensity distribution: zone time from activities (how much easy vs. moderate vs. hard)
    - Total training load (icu_training_load sum) and CTL/ATL/TSB trend
-   - Compare to plan: did load land where intended? Cross-reference `current-plan.md`.
+   - Compare to plan: did load land where intended? Cross-reference ICU calendar events vs. activities.
 
 2. **Readiness trend** (from intervals.icu wellness):
    - Sleep duration, score, and quality pattern across the week
@@ -55,9 +56,9 @@ This gives you hard data for the analysis rather than relying on memory or self-
 
 3. **Key workout outcomes** (from intervals.icu activity details + current-plan.md):
    - Did the athlete hit process goals (pacing, fueling, technique)?
-   - Planned vs. actual: compare prescribed paces/intensities with what the API shows
+   - Planned vs. actual: compare ICU calendar events (planned) with activities (actual)
    - Where did sessions go better or worse than expected?
-   - Any sessions modified or skipped? Why? (check current-plan.md modifications)
+   - Any sessions modified or skipped? Why? (check NOTE/SICKNESS events on the ICU calendar)
 
 4. **Injury/health signals:**
    - New pain or worsening trends across the week
@@ -158,7 +159,7 @@ This prevents the daily log from growing indefinitely. The archived logs remain 
 
 ### Archive the completed week
 
-Write the completed week to `data/archive/weekly/YYYY-WNN.md` (e.g., `2026-W09.md`). Include the full week section from `current-plan.md`: schedule, tracking table, modifications, and key sessions.
+Write the completed week to `data/archive/weekly/YYYY-WNN.md` (e.g., `2026-W09.md`). Pull the week's events (planned workouts, notes, sickness) and activities from ICU to build the archive. Include the rationale from `current-plan.md` and the daily log entries from `data/logs/daily-log.md`.
 
 Then update `data/current-plan.md`:
 - Remove the completed week's detail from "This Week" (replace with the new week or leave empty for `/coach:plan`)
