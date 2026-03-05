@@ -47,3 +47,17 @@
   - GI: Single diarrhea episode after days of constipation = fluctuation in ongoing recovery, not new acute illness. Doctor consulted 2026-03-03, no acute concern. Session completed without GI distress. Continue monitoring — return criteria (eating normally without pain 2+ days) still not met.
   - HR 195: No red flags (no chest pain, dizziness, syncope, severe SOB). Mechanism consistent with beginner swim inefficiency + inability to swim slowly. Monitor in future sessions. If pattern persists once technique improves, flag for further evaluation.
 - **Coach notes:** First session back after 5-day illness pause. Low load (19), low RPE (4/10), no pain. A good re-entry. The "can't swim slowly" pattern is useful coaching intel — as technique improves, this should resolve naturally. For now, accept that swim HR will be spiky.
+
+## 2026-03-05 — Thursday
+
+### Morning Check-in
+- Sleep: 8.35h (score 91, quality GOOD)
+- HRV: 61 | Resting HR: 56 | SpO2: — | Weight: —
+- Steps: 15 | VO2 max: —
+- Soreness: NONE(1) | Fatigue: AVG(2) | Stress: NONE(1)
+- Mood: GOOD(2) | Motivation: AVG(2) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 0 | Caffeine cutoff: 14:00
+- Time available: 17:00–19:00
+- Planned session: Easy run 30 min | Modifications: none — green light
+- Readiness: GREEN. No red flags, no injury, excellent sleep, mild fatigue only. GI resolving — full carbonara dinner tolerated without pain, no diarrhea. Return criteria approaching met (eating normally without pain). First run back after illness pause.
+- Notes: GI trending strongly toward resolution. Full meal (carbonara) eaten and tolerated — significant improvement from earlier this week. Caffeine cutoff much earlier today (14:00 vs 19:00 yesterday). Wellness scores synced to intervals.icu.

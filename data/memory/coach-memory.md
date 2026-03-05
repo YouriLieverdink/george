@@ -19,7 +19,7 @@
 -->
 
 - **Sleep & social evenings** (2026-03-01, updated 2026-03-02): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter. Committed to fixed 7:00 wake-up daily + in bed by 23:00 on 5+ nights/week. Recognizes some late nights are habit rather than quality social time. Wants to become a morning person again.
-- **Caffeine** (2026-03-01, updated 2026-03-04): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time. **2026-03-04:** Caffeine back after illness pause. Cutoff ~19:00 — same night sleep dropped from 7.8h/86 to 6.7h/78 with AVG quality. Late cutoff + sleep quality correlation worth tracking.
+- **Caffeine** (2026-03-01, updated 2026-03-05): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time. **2026-03-04:** Caffeine back after illness pause. Cutoff ~19:00 — same night sleep dropped from 7.8h/86 to 6.7h/78 with AVG quality. **2026-03-05:** Cutoff 14:00 — sleep bounced back to 8.35h/91/GOOD. Two data points now: 19:00 cutoff → poor sleep, 14:00 cutoff → good sleep. Pattern strengthening.
 
 ## Injury & Health History
 
@@ -31,7 +31,7 @@
 -->
 
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
-- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed. **2026-03-03:** Athlete reports stomach "getting a lot better" but still not eating full meals — made pasta but froze it instead of eating it. Trending toward recovery but not there yet. Resume movement once eating normally without pain for 2+ days. **2026-03-04:** Still symptomatic — painful stomach this morning (eased but not resolved). Day 5 since onset. Not eating full meals. Return criteria still not met. Coach recommended skipping swim — athlete chose to attend (Lesson 3) due to financial commitment. Given safety guidelines: stay easy, exit if symptoms worsen, tell instructor. **2026-03-04 post-swim:** Diarrhea after breakfast (change from constipation pattern of recent days). GI noticeable during swim but manageable — did not have to stop. This is a fluctuation in recovery, not a new acute episode. Continue monitoring. Return criteria still not met for unrestricted training.
+- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed. **2026-03-03:** Athlete reports stomach "getting a lot better" but still not eating full meals — made pasta but froze it instead of eating it. Trending toward recovery but not there yet. Resume movement once eating normally without pain for 2+ days. **2026-03-04:** Still symptomatic — painful stomach this morning (eased but not resolved). Day 5 since onset. Not eating full meals. Return criteria still not met. Coach recommended skipping swim — athlete chose to attend (Lesson 3) due to financial commitment. Given safety guidelines: stay easy, exit if symptoms worsen, tell instructor. **2026-03-04 post-swim:** Diarrhea after breakfast (change from constipation pattern of recent days). GI noticeable during swim but manageable — did not have to stop. This is a fluctuation in recovery, not a new acute episode. Continue monitoring. Return criteria still not met for unrestricted training. **2026-03-05:** Significant improvement — ate full carbonara dinner without pain, no diarrhea. Return criteria approaching met. Cleared for first easy run (30 min). Caffeine cutoff improved to 14:00. Sleep excellent (8h21m, score 91).
 
 ## Open Follow-ups
 
@@ -42,7 +42,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-04:** GI illness still active — diarrhea today (change from constipation), stomach pain this morning. Not eating full meals. Continue monitoring. Follow up tomorrow on: (1) can you eat a small meal without pain? (2) any more diarrhea or is it settling? (3) caffeine cutoff — was it earlier today?
+- **2026-03-05:** GI return-to-training: first easy run today (30 min). Monitor for any GI symptoms during or after running. Follow up in debrief: (1) any gut discomfort during the run? (2) how did energy/legs feel on first run back?
 
 ## Key Learnings
 
