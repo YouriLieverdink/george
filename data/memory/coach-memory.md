@@ -19,7 +19,7 @@
 -->
 
 - **Sleep & social evenings** (2026-03-01, updated 2026-03-02): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter. Committed to fixed 7:00 wake-up daily + in bed by 23:00 on 5+ nights/week. Recognizes some late nights are habit rather than quality social time. Wants to become a morning person again.
-- **Caffeine** (2026-03-01, updated 2026-03-05): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time. **2026-03-04:** Caffeine back after illness pause. Cutoff ~19:00 — same night sleep dropped from 7.8h/86 to 6.7h/78 with AVG quality. **2026-03-05:** Cutoff 14:00 — sleep bounced back to 8.35h/91/GOOD. Two data points now: 19:00 cutoff → poor sleep, 14:00 cutoff → good sleep. Pattern strengthening.
+- **Caffeine** (2026-03-01, updated 2026-03-05): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time. **2026-03-04:** Caffeine back after illness pause. Cutoff ~19:00 — sleep that night 6.7h/78/AVG, but athlete went to bed late for a social event (shorter sleep explained by bedtime, not caffeine). **2026-03-05:** Cutoff 14:00 — sleep 8.35h/91/GOOD. No conclusive personal data yet on caffeine timing impact — too few data points and confounding variables. General recommendation: 14:00 cutoff based on sports science (6–8h buffer). Aiming to reduce from ~8 cups toward 3–4/day over time.
 
 ## Injury & Health History
 
