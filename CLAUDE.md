@@ -63,6 +63,10 @@ The coach reads `current-plan.md` for phase/context and `coach-memory.md` for ac
 
 Configured in `config/intervals-icu.json` with your athlete ID and API key. See `.claude/services/coach/intervals-icu.md` for full API reference.
 
+**All API calls must go through `./scripts/icu`.** Never use `curl` or raw HTTP requests. The CLI handles authentication, formatting, and error handling automatically. See the API reference for all available subcommands.
+
+**Before making any `./scripts/icu` calls, always read `.claude/services/coach/intervals-icu.md` first** to verify the correct resource, action, and flag syntax. Do not guess at CLI syntax from memory.
+
 | Data | What the coach pulls | Used by |
 |------|---------------------|---------|
 | Calendar events | **Single source of truth for the session schedule.** Planned workouts (WORKOUT), coaching notes (NOTE), illness markers (SICKNESS) | `/coach:checkin`, `/coach:debrief`, `/coach:plan`, `/coach:review`, `/coach:status` |
@@ -79,7 +83,7 @@ The coach pulls objective data from intervals.icu first, then asks you only for 
 | `.claude/agents/coach.md` | Core system prompt — operating rules, knowledge base, communication style |
 | `.claude/agents/alerts.md` | Safety decision tree — red flags, alert triggers, referral protocol |
 | `.claude/agents/periodization.md` | Macrocycle templates, sample weeks, session library |
-| `.claude/services/coach/intervals-icu.md` | Intervals.icu API reference — endpoints, curl patterns, per-command usage |
+| `.claude/services/coach/intervals-icu.md` | Intervals.icu API reference — CLI wrapper usage, endpoints, per-command patterns |
 
 ## Core Principles
 
