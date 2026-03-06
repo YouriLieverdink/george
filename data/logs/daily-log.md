@@ -61,3 +61,18 @@
 - Planned session: Easy run 30 min | Modifications: none — green light
 - Readiness: GREEN. No red flags, no injury, excellent sleep, mild fatigue only. GI resolving — full carbonara dinner tolerated without pain, no diarrhea. Return criteria approaching met (eating normally without pain). First run back after illness pause.
 - Notes: GI trending strongly toward resolution. Full meal (carbonara) eaten and tolerated — significant improvement from earlier this week. Caffeine cutoff much earlier today (14:00 vs 19:00 yesterday). Wellness scores synced to intervals.icu.
+- Run not completed — moved to Friday (2026-03-06).
+
+## 2026-03-06 — Friday
+
+### Morning Check-in
+- Sleep: 6h (score 47, quality POOR)
+- HRV: 31 | Resting HR: 59 | SpO2: — | Weight: —
+- Steps: 896 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: HIGH(3) | Stress: AVG(2)
+- Mood: GOOD(2) | Motivation: LOW(4) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: significant (multiple drinks previous evening) | Caffeine cutoff: ~16:00
+- Time available: ~6 hours (until 18:00)
+- Planned session: Easy Run 30 min | Modifications: **cancelled — rest day**
+- Readiness: RED. 4/6 low-readiness triggers: poor sleep (6h/47/POOR), fatigue HIGH(3), HRV 50% below 7-day avg (31 vs ~62), significant alcohol. First run back after GI illness moved to tomorrow (Saturday) — want recovery-positive conditions for return to running.
+- Notes: HRV 31 is the lowest reading since tracking began (lower than 41 during acute GI illness on Feb 28). Resting HR trending up (59 vs 52–56 recent range). Alcohol likely primary driver of today's poor recovery markers. Run moved to 2026-03-07 on ICU calendar. NOTE event posted. Wellness scores synced.

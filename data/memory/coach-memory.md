@@ -19,7 +19,8 @@
 -->
 
 - **Sleep & social evenings** (2026-03-01, updated 2026-03-02): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter. Committed to fixed 7:00 wake-up daily + in bed by 23:00 on 5+ nights/week. Recognizes some late nights are habit rather than quality social time. Wants to become a morning person again.
-- **Caffeine** (2026-03-01, updated 2026-03-05): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time. **2026-03-04:** Caffeine back after illness pause. Cutoff ~19:00 — same night sleep dropped from 7.8h/86 to 6.7h/78 with AVG quality. **2026-03-05:** Cutoff 14:00 — sleep bounced back to 8.35h/91/GOOD. Two data points now: 19:00 cutoff → poor sleep, 14:00 cutoff → good sleep. Pattern strengthening.
+- **Caffeine** (2026-03-01, updated 2026-03-06): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time. **2026-03-04:** Caffeine back after illness pause. Cutoff ~19:00 — same night sleep dropped from 7.8h/86 to 6.7h/78 with AVG quality. **2026-03-05:** Cutoff 14:00 — sleep bounced back to 8.35h/91/GOOD. **2026-03-06:** Cutoff ~16:00 + significant alcohol → sleep crashed to 6h/47/POOR, HRV 31. Caffeine cutoff and alcohol confounded — can't isolate caffeine effect this time, but combined impact is clear.
+- **Alcohol & recovery** (2026-03-06): "Quite a few drinks" on Thursday evening → HRV crashed from 61 to 31 (50% drop, lowest since tracking began), sleep 6h/score 47/POOR, fatigue HIGH(3), motivation LOW(4), resting HR up to 59. First data point — watch for pattern. Even a single heavy night erased a day of excellent recovery (previous night was 8.35h/91/GOOD).
 
 ## Injury & Health History
 
@@ -42,7 +43,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-05:** GI return-to-training: first easy run today (30 min). Monitor for any GI symptoms during or after running. Follow up in debrief: (1) any gut discomfort during the run? (2) how did energy/legs feel on first run back?
+- **2026-03-07:** GI return-to-training: first easy run (30 min) moved to Saturday after Friday rest day (alcohol + poor recovery). Monitor for any GI symptoms during or after running. Follow up in debrief: (1) any gut discomfort during the run? (2) how did energy/legs feel on first run back?
 
 ## Key Learnings
 
