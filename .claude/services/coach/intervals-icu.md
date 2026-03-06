@@ -4,7 +4,7 @@ API integration for pulling training data, wellness metrics, and fitness trends 
 
 ## Authentication
 
-Uses HTTP Basic Auth with API key. Credentials stored in `config/intervals-icu.json`:
+Handled automatically by the `./scripts/icu` CLI wrapper. Credentials stored in `config/intervals-icu.json`:
 
 ```json
 {
@@ -16,11 +16,14 @@ Uses HTTP Basic Auth with API key. Credentials stored in `config/intervals-icu.j
 
 **Setup:** Go to https://intervals.icu/settings → scroll to "Developer Settings" → generate API key. Your athlete ID is shown in the URL when you're on your profile (e.g., `i12345`).
 
-**Important — curl command format:** All curl commands MUST start with `curl` as the very first word. Do not use variable assignments, subshells, or pipes in the command. Read `config/intervals-icu.json` first with the Read tool, then inline the athlete ID and API key directly into the curl command. This ensures the command matches the `Bash(curl:*)` permission pattern.
+## CLI Invocation
+
+All API calls go through `./scripts/icu`. It reads config automatically, formats output for readability, and prints errors to stderr.
 
 ```bash
-# Read config/intervals-icu.json first, then use values directly:
-curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/..."
+# Any subcommand supports --json for raw JSON output
+./scripts/icu <resource> <action> [--flags]
+./scripts/icu <resource> <action> --json   # raw JSON
 ```
 
 ## Available Endpoints
@@ -30,11 +33,12 @@ curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/
 **Use in:** `/coach:debrief` (auto-fill session data), `/coach:review` (weekly volume/load)
 
 ```bash
-# Last 7 days of activities (inline athlete ID and API key from config)
-curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/activities?oldest=YYYY-MM-DD&newest=YYYY-MM-DD"
+./scripts/icu activities list --oldest YYYY-MM-DD --newest YYYY-MM-DD
 ```
 
-**Key fields returned per activity:**
+Output: one line per activity with date, type, name, duration, distance, HR, load, power.
+
+**Key fields (available via `--json`):**
 - `id` — activity ID (use for detail queries)
 - `start_date_local` — when it happened
 - `type` — Run, Ride, Swim, WeightTraining, etc.
@@ -55,12 +59,12 @@ curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/
 **Use in:** `/coach:debrief` (detailed interval analysis)
 
 ```bash
-curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/activity/<activityId>"
+./scripts/icu activities get --id <activityId>
 ```
 
-Returns full activity with intervals detected, zone time distribution, and all metrics.
+Output: multi-line detail with duration, distance, HR, pace, power, intervals, and zone times.
 
-**Additional useful fields:**
+**Additional useful fields (via `--json`):**
 - `icu_intervals` — detected intervals with avg HR, power, pace per interval
 - `icu_zone_times` — time spent in each HR/power zone
 - `pace` — formatted pace string
@@ -71,9 +75,10 @@ Returns full activity with intervals detected, zone time distribution, and all m
 **Use in:** `/coach:checkin` (auto-populate Garmin-synced fields + write subjective scores), `/coach:review` (trends)
 
 ```bash
-# Last 7 days of wellness
-curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/wellness?oldest=YYYY-MM-DD&newest=YYYY-MM-DD"
+./scripts/icu wellness get --oldest YYYY-MM-DD --newest YYYY-MM-DD
 ```
+
+Output: one line per day with sleep, HRV, rHR, weight, SpO2, steps, and subjective scores.
 
 **Key fields returned per day:**
 
@@ -105,8 +110,7 @@ Subjective fields (athlete fills in, coach writes via PUT — 1–4 scale, 1=bes
 **Use in:** `/coach:checkin` (write readiness scores to intervals.icu)
 
 ```bash
-# Update today's wellness
-curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/wellness/YYYY-MM-DD" -d '{"soreness": 2, "fatigue": 3, "stress": 2, "mood": 2, "motivation": 2, "injury": 1, "hydration": 1}'
+./scripts/icu wellness put --date YYYY-MM-DD --data '{"soreness": 2, "fatigue": 3, "stress": 2, "mood": 2, "motivation": 2, "injury": 1, "hydration": 1}'
 ```
 
 ### 5. Fitness / Fatigue Trends (CTL/ATL/TSB)
@@ -114,11 +118,10 @@ curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https:
 **Use in:** `/coach:review` (training load trends), `/coach:plan` (load targets)
 
 ```bash
-# Athlete summary with fitness data
-curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>"
+./scripts/icu athlete get
 ```
 
-Returns athlete profile including current CTL (fitness), ATL (fatigue), TSB (form).
+Output: current CTL (fitness), ATL (fatigue), TSB (form).
 
 ### 6. Calendar Events (planned workouts, notes, sickness)
 
@@ -127,9 +130,10 @@ Returns athlete profile including current CTL (fitness), ATL (fatigue), TSB (for
 **Reading the schedule (single source of truth for all planned sessions):**
 
 ```bash
-# Get all events for a date range — returns WORKOUT, NOTE, and SICKNESS events
-curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/events?oldest=YYYY-MM-DD&newest=YYYY-MM-DD"
+./scripts/icu events list --oldest YYYY-MM-DD --newest YYYY-MM-DD
 ```
+
+Output: one line per event with date, weekday, category, name, type, duration.
 
 Every command that needs to know "what's planned today/this week" reads from this endpoint — NOT from `current-plan.md`. The calendar is the single source of truth for the session schedule.
 
@@ -141,25 +145,17 @@ Every command that needs to know "what's planned today/this week" reads from thi
 | `NOTE` | Coaching notes — session modifications, week rationale, key session notes | "Session modified: easy run → rest (GI illness)" |
 | `SICKNESS` | Illness period marker | "GI illness — unable to train" |
 
-**Creating a NOTE event:**
+**Creating events (NOTE, SICKNESS, WORKOUT):**
 
 ```bash
-# Note on a specific date (e.g., session modification rationale)
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"NOTE","name":"Session modified","description":"Easy run cancelled — GI illness, unable to eat for 3 days"}'
-```
+# Note on a specific date
+./scripts/icu events create --data '{"start_date_local":"2026-03-02","category":"NOTE","name":"Session modified","description":"Easy run cancelled — GI illness"}'
 
-**Creating a SICKNESS event:**
+# Sickness marker
+./scripts/icu events create --data '{"start_date_local":"2026-03-02","category":"SICKNESS","name":"GI illness","description":"Acute onset vomiting + diarrhea"}'
 
-```bash
-# Mark a sickness period
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"SICKNESS","name":"GI illness","description":"Acute onset vomiting + diarrhea post-Egypt travel. Nausea, stomach pain, poor intake."}'
-```
-
-**Week rationale NOTE (posted on Monday by `/coach:plan`):**
-
-```bash
-# Week overview note on Monday — contains rationale, key sessions, fueling focus
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-09","category":"NOTE","name":"Week 2 — Rebuild","description":"Rationale: ...\n\nKey sessions:\n1. ...\n2. ...\n\nFueling focus: ..."}'
+# Week rationale NOTE (posted on Monday by /coach:plan)
+./scripts/icu events create --data '{"start_date_local":"2026-03-09","category":"NOTE","name":"Week 2 — Rebuild","description":"Rationale: ...\n\nKey sessions:\n1. ...\n2. ..."}'
 ```
 
 ### 7. Create Calendar Events (structured workouts)
@@ -167,8 +163,7 @@ curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https
 **Use in:** `/coach:plan` (push structured workouts to intervals.icu calendar → Garmin sync)
 
 ```bash
-# Create a workout event
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events" -d '{"start_date_local":"2026-03-02","category":"WORKOUT","name":"Tempo Run","type":"Run","description":"Warmup\n- 15m Z1 HR\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 HR\nCooldown\n- 10m Z1 HR","moving_time":3600}'
+./scripts/icu events create --data '{"start_date_local":"2026-03-02","category":"WORKOUT","name":"Tempo Run","type":"Run","description":"Warmup\n- 15m Z1 HR\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 HR\nCooldown\n- 10m Z1 HR","moving_time":3600}'
 ```
 
 **Payload fields:**
@@ -196,13 +191,13 @@ curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https
 **Update an existing event:**
 
 ```bash
-curl -s -X PUT -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events/<eventId>" -d '{"name":"Updated Session","description":"...","moving_time":3000}'
+./scripts/icu events update --id <eventId> --data '{"name":"Updated Session","description":"...","moving_time":3000}'
 ```
 
 **Delete an event:**
 
 ```bash
-curl -s -X DELETE -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/events/<eventId>"
+./scripts/icu events delete --id <eventId>
 ```
 
 The API returns the created/updated event with its `id`. Mid-week adjustments query events by date range to find the event to update — no need to store IDs locally.
@@ -212,8 +207,7 @@ The API returns the created/updated event with its `id`. Mid-week adjustments qu
 **Use in:** `/coach:plan` (one-time setup — create a persistent folder for coach-generated workouts)
 
 ```bash
-# Create a folder in the workout library
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/folders" -d '{"name": "George'\''s Plan"}'
+./scripts/icu folders create --name "George's Plan"
 ```
 
 Returns the created folder with its `id`. Store this `folder_id` in `data/memory/coach-memory.md` — it persists across weeks and plan cycles. Only recreate if the folder is deleted.
@@ -225,15 +219,15 @@ Returns the created folder with its `id`. Store this `folder_id` in `data/memory
 **List workouts in a folder:**
 
 ```bash
-curl -s -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/workouts?folder_id=<folderId>"
+./scripts/icu workouts list --folder-id <folderId>
 ```
 
-Returns an array of workout objects. Use the `id` field from each to delete old workouts before adding new ones.
+Returns one line per workout with day, id, name, type, duration. Use the `id` from each to delete old workouts before adding new ones.
 
 **Create a workout in a folder:**
 
 ```bash
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/workouts" -d '{"folder_id": <folderId>, "name": "Tempo Run", "day": 2, "description": "Warmup\n- 15m Z1 HR\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 HR\nCooldown\n- 10m Z1 HR", "type": "Run", "moving_time": 3600}'
+./scripts/icu workouts create --data '{"folder_id": 123, "name": "Tempo Run", "day": 2, "description": "Warmup\n- 15m Z1 HR\nMain set\n3x\n- 10m 85% Pace\n- 3m Z1 HR\nCooldown\n- 10m Z1 HR", "type": "Run", "moving_time": 3600}'
 ```
 
 **Workout payload fields:**
@@ -255,7 +249,7 @@ curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https
 **Delete a workout from a folder:**
 
 ```bash
-curl -s -X DELETE -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<athleteId>/workouts/<workoutId>"
+./scripts/icu workouts delete --id <workoutId>
 ```
 
 ### 10. Apply Plan to Calendar
@@ -263,13 +257,13 @@ curl -s -X DELETE -u "API_KEY:<apiKey>" "https://intervals.icu/api/v1/athlete/<a
 **Use in:** `/coach:plan` (apply the folder's workouts to the calendar as events, triggering Garmin sync)
 
 ```bash
-curl -s -X POST -u "API_KEY:<apiKey>" -H 'Content-Type: application/json' "https://intervals.icu/api/v1/athlete/<athleteId>/events/apply-plan" -d '{"folder_id": <folderId>, "start_date_local": "YYYY-MM-DDT00:00:00"}'
+./scripts/icu events apply-plan --folder-id <folderId> --start-date YYYY-MM-DD
 ```
 
-- `folder_id`: the library folder ID
-- `start_date_local`: Monday of the target week (ISO format with `T00:00:00`)
+- `folder-id`: the library folder ID
+- `start-date`: Monday of the target week
 
-Returns an array of calendar event objects. Mid-week adjustments query events by date range (Section 6) to find specific events — no need to store IDs locally.
+Returns a confirmation with the number of workouts applied and date range. Mid-week adjustments query events by date range (Section 6) to find specific events — no need to store IDs locally.
 
 ### 11. Workout Description Syntax
 
@@ -367,9 +361,9 @@ On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
 5. Pull yesterday's activity if not yet debriefed
 6. After session prescription:
    - Session proceeds as planned → no calendar change needed
-   - Session modified → PUT to update the event description/duration
-   - Session cancelled → DELETE the event, POST a `NOTE` event with reason
-   - No event exists but session prescribed → POST new `WORKOUT` event
+   - Session modified → update the event description/duration
+   - Session cancelled → delete the event, create a `NOTE` event with reason
+   - No event exists but session prescribed → create new `WORKOUT` event
 
 ### `/coach:debrief`
 1. Pull today's calendar events (Section 6) — get the planned workout to compare against
@@ -393,24 +387,24 @@ On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
 4. Adjust based on real data and write rationale/phase/decisions to `current-plan.md`
 5. After athlete approves the plan, sync to intervals.icu via the workout library:
    - Read `folder_id` from `data/memory/coach-memory.md`. If none exists, create folder via Section 8 and store the ID.
-   - Clear existing workouts from the folder: GET workouts (Section 9), DELETE each one
-   - POST each session as a workout in the folder (Section 9) with ICU workout syntax (Section 11)
+   - Clear existing workouts from the folder: list workouts (Section 9), delete each one
+   - Create each session as a workout in the folder (Section 9) with ICU workout syntax (Section 11)
    - Apply plan to calendar via Section 10 (start_date = Monday of the week)
-   - POST a `NOTE` event on Monday with week rationale and key session notes
+   - Create a `NOTE` event on Monday with week rationale and key session notes
 6. If API is unreachable: output the plan in the conversation, note that ICU sync is pending in `current-plan.md`
 
 ## Error Handling
 
-- If the API returns 401: credentials are wrong — tell the athlete to check `config/intervals-icu.json`
-- If the API returns 400: bad workout syntax in description — check ICU syntax (Section 11) and fix
-- If the API returns 409: duplicate event on that date — use PUT to update the existing event instead
-- If the API returns empty data: the athlete may not have synced their device — fall back to manual input
+- If the CLI returns an error with 401: credentials are wrong — tell the athlete to check `config/intervals-icu.json`
+- If the CLI returns an error with 400: bad workout syntax in description — check ICU syntax (Section 11) and fix
+- If the CLI returns an error with 409: duplicate event on that date — use update to modify the existing event instead
+- If the CLI returns empty data: the athlete may not have synced their device — fall back to manual input
 - If the API is unreachable: proceed with manual input, note that data is self-reported
 
 ## Notes
 
 - All times from the API are local to the athlete's timezone setting in intervals.icu
-- Distances are in meters — convert to km for display
-- Durations are in seconds — convert to minutes/hours
+- Distances are in meters — convert to km for display (the CLI does this automatically in formatted output)
+- Durations are in seconds — convert to minutes/hours (the CLI does this automatically in formatted output)
 - The API returns a lot of fields — only extract what's needed, don't overwhelm the athlete
 - Wellness data syncs from connected devices (Garmin, Oura, etc.) — it may not be available until the device syncs

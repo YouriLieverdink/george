@@ -1,0 +1,609 @@
+#!/usr/bin/env python3
+"""CLI wrapper for the Intervals.icu API."""
+
+import argparse
+import base64
+import json
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+CONFIG_PATH = Path(__file__).resolve().parent.parent / "config" / "intervals-icu.json"
+
+SUBJECTIVE_LABELS = {
+    "soreness": {1: "LOW", 2: "AVG", 3: "HIGH", 4: "EXTREME"},
+    "fatigue": {1: "LOW", 2: "AVG", 3: "HIGH", 4: "EXTREME"},
+    "stress": {1: "LOW", 2: "AVG", 3: "HIGH", 4: "EXTREME"},
+    "mood": {1: "GREAT", 2: "GOOD", 3: "OK", 4: "GRUMPY"},
+    "motivation": {1: "EXTREME", 2: "HIGH", 3: "AVG", 4: "LOW"},
+    "injury": {1: "NONE", 2: "NIGGLE", 3: "POOR", 4: "INJURED"},
+    "hydration": {1: "GOOD", 2: "OK", 3: "POOR", 4: "BAD"},
+}
+
+WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+
+def load_config():
+    try:
+        with open(CONFIG_PATH) as f:
+            return json.load(f)
+    except FileNotFoundError:
+        error(f"Config not found: {CONFIG_PATH}")
+    except json.JSONDecodeError:
+        error(f"Invalid JSON in {CONFIG_PATH}")
+
+
+def error(msg, code=1):
+    print(msg, file=sys.stderr)
+    sys.exit(code)
+
+
+class ICUClient:
+    def __init__(self, config):
+        self.athlete_id = config["athleteId"]
+        self.base_url = config.get("baseUrl", "https://intervals.icu/api/v1")
+        creds = f"API_KEY:{config['apiKey']}"
+        self.auth = "Basic " + base64.b64encode(creds.encode()).decode()
+
+    def request(self, method, path, data=None, params=None):
+        url = f"{self.base_url}{path}"
+        if params:
+            url += "?" + urllib.parse.urlencode(params)
+
+        body = None
+        if data is not None:
+            body = json.dumps(data).encode()
+
+        req = urllib.request.Request(url, data=body, method=method)
+        req.add_header("Authorization", self.auth)
+        if body is not None:
+            req.add_header("Content-Type", "application/json")
+
+        try:
+            with urllib.request.urlopen(req) as resp:
+                raw = resp.read()
+                if not raw:
+                    return None
+                return json.loads(raw)
+        except urllib.error.HTTPError as e:
+            body_text = ""
+            try:
+                body_text = e.read().decode()
+            except Exception:
+                pass
+            if e.code == 401:
+                error(f"Error ({e.code}): Authentication failed. Check {CONFIG_PATH}.")
+            elif e.code == 404:
+                error(f"Error ({e.code}): Resource not found.")
+            else:
+                error(f"Error ({e.code}): {body_text or e.reason}")
+        except urllib.error.URLError as e:
+            error(f"Error: Cannot reach intervals.icu — {e.reason}")
+
+
+# --- Formatting helpers ---
+
+def fmt_duration(seconds):
+    if seconds is None:
+        return None
+    seconds = int(seconds)
+    h, m, s = seconds // 3600, (seconds % 3600) // 60, seconds % 60
+    if h > 0:
+        return f"{h}:{m:02d}:{s:02d}"
+    return f"{m}:{s:02d}"
+
+
+def fmt_distance(meters):
+    if meters is None:
+        return None
+    return f"{meters / 1000:.1f} km"
+
+
+def fmt_pace(speed_ms):
+    """Convert m/s to min/km pace string."""
+    if not speed_ms or speed_ms <= 0:
+        return None
+    secs_per_km = 1000 / speed_ms
+    m, s = int(secs_per_km) // 60, int(secs_per_km) % 60
+    return f"{m}:{s:02d} /km"
+
+
+def subjective_label(field, value):
+    if value is None:
+        return None
+    labels = SUBJECTIVE_LABELS.get(field, {})
+    return labels.get(int(value))
+
+
+def weekday_from_date(date_str):
+    """Get weekday abbreviation from YYYY-MM-DD string."""
+    from datetime import date
+    parts = date_str.split("T")[0].split("-")
+    d = date(int(parts[0]), int(parts[1]), int(parts[2]))
+    return WEEKDAYS[d.weekday()]
+
+
+# --- Subcommand handlers ---
+
+def activities_list(client, args):
+    params = {}
+    if args.oldest:
+        params["oldest"] = args.oldest
+    if args.newest:
+        params["newest"] = args.newest
+    data = client.request("GET", f"/athlete/{client.athlete_id}/activities", params=params)
+    if args.json:
+        print(json.dumps(data, indent=2))
+        return
+    if not data:
+        error("Error: No activities found for this date range.")
+    for a in data:
+        date = (a.get("start_date_local") or "")[:10]
+        typ = a.get("type", "")
+        name = a.get("name", "")
+        dur = fmt_duration(a.get("moving_time"))
+        dist = fmt_distance(a.get("distance"))
+        avg_hr = a.get("average_heartrate")
+        max_hr = a.get("max_heartrate")
+        load = a.get("icu_training_load")
+        watts = a.get("icu_average_watts")
+
+        parts = [date, typ, name]
+        if dur:
+            parts.append(dur)
+        if dist:
+            parts.append(dist)
+        if avg_hr:
+            parts.append(f"avg HR {int(avg_hr)}")
+        if max_hr:
+            parts.append(f"max HR {int(max_hr)}")
+        if load:
+            parts.append(f"load {int(load)}")
+        if watts:
+            parts.append(f"avg {int(watts)}w")
+        print(" | ".join(parts))
+
+
+def activities_get(client, args):
+    data = client.request("GET", f"/activity/{args.id}")
+    if args.json:
+        print(json.dumps(data, indent=2))
+        return
+    if not data:
+        error(f"Error: Activity {args.id} not found.")
+
+    name = data.get("name", "Unknown")
+    date = (data.get("start_date_local") or "")[:10]
+    typ = data.get("type", "")
+    moving = fmt_duration(data.get("moving_time"))
+    elapsed = fmt_duration(data.get("elapsed_time"))
+    dist = fmt_distance(data.get("distance"))
+    avg_hr = data.get("average_heartrate")
+    max_hr = data.get("max_heartrate")
+    avg_speed = data.get("average_speed")
+    gap = data.get("gap")
+    load = data.get("icu_training_load")
+    intensity = data.get("icu_intensity")
+    cadence = data.get("average_cadence")
+    watts = data.get("icu_average_watts")
+    weighted_watts = data.get("icu_weighted_avg_watts")
+
+    print(f"Activity: {name}")
+    print(f"Date: {date}")
+    print(f"Type: {typ}")
+    dur_parts = []
+    if moving:
+        dur_parts.append(f"{moving} (moving)")
+    if elapsed:
+        dur_parts.append(f"{elapsed} (elapsed)")
+    if dur_parts:
+        print(f"Duration: {' / '.join(dur_parts)}")
+    if dist:
+        print(f"Distance: {dist}")
+    if avg_hr or max_hr:
+        hr_parts = []
+        if avg_hr:
+            hr_parts.append(f"avg {int(avg_hr)}")
+        if max_hr:
+            hr_parts.append(f"max {int(max_hr)}")
+        print(f"HR: {' / '.join(hr_parts)}")
+    if avg_speed:
+        pace_str = fmt_pace(avg_speed)
+        line = f"Pace: {pace_str}" if pace_str else ""
+        if gap:
+            gap_str = fmt_pace(gap)
+            if gap_str:
+                line += f" (GAP: {gap_str})"
+        if line:
+            print(line)
+    if watts or weighted_watts:
+        pw = []
+        if watts:
+            pw.append(f"avg {int(watts)}w")
+        if weighted_watts:
+            pw.append(f"NP {int(weighted_watts)}w")
+        print(f"Power: {' / '.join(pw)}")
+    load_parts = []
+    if load:
+        load_parts.append(f"Load: {int(load)}")
+    if intensity:
+        load_parts.append(f"Intensity: {intensity:.2f}")
+    if load_parts:
+        print(" | ".join(load_parts))
+    if cadence:
+        print(f"Cadence: {int(cadence)}")
+
+    # Intervals
+    intervals = data.get("icu_intervals")
+    if intervals:
+        print(f"\nIntervals:")
+        for i, iv in enumerate(intervals, 1):
+            label = iv.get("label") or iv.get("type") or ""
+            dur = fmt_duration(iv.get("moving_time") or iv.get("elapsed_time"))
+            iv_hr = iv.get("average_heartrate")
+            iv_pace = fmt_pace(iv.get("average_speed"))
+            iv_watts = iv.get("average_watts")
+
+            parts = [f"  {i:>2}. {label:<12}"]
+            if dur:
+                parts.append(f"| {dur:>7}")
+            if iv_hr:
+                parts.append(f"| avg HR {int(iv_hr)}")
+            if iv_pace:
+                parts.append(f"| {iv_pace}")
+            if iv_watts:
+                parts.append(f"| {int(iv_watts)}w")
+            print(" ".join(parts))
+
+    # Zone times
+    zone_times = data.get("icu_zone_times")
+    if zone_times:
+        print(f"\nZone times (HR):")
+        parts = []
+        for i, zt in enumerate(zone_times, 1):
+            parts.append(f"Z{i}: {fmt_duration(zt)}")
+        print(f"  {' | '.join(parts)}")
+
+
+def wellness_get(client, args):
+    params = {}
+    if args.oldest:
+        params["oldest"] = args.oldest
+    if args.newest:
+        params["newest"] = args.newest
+    data = client.request("GET", f"/athlete/{client.athlete_id}/wellness", params=params)
+    if args.json:
+        print(json.dumps(data, indent=2))
+        return
+    if not data:
+        error("Error: No wellness data found for this date range. Device may not have synced yet.")
+    for w in data:
+        date = w.get("id", "")
+        parts = [date]
+
+        sleep = w.get("sleep")
+        sleep_score = w.get("sleepScore")
+        sleep_quality = w.get("sleepQuality")
+        if sleep is not None:
+            s = f"sleep {sleep:.1f}h"
+            sq_parts = []
+            if sleep_score is not None:
+                sq_parts.append(f"score {sleep_score}")
+            if sleep_quality:
+                sq_parts.append(sleep_quality)
+            if sq_parts:
+                s += f" ({', '.join(sq_parts)})"
+            parts.append(s)
+
+        for field, label in [("hrv", "HRV"), ("restingHR", "rHR"), ("weight", "weight"), ("spO2", "SpO2")]:
+            val = w.get(field)
+            if val is not None:
+                if field == "weight":
+                    parts.append(f"{label} {val:.1f}")
+                elif field == "spO2":
+                    parts.append(f"{label} {val}%")
+                else:
+                    parts.append(f"{label} {val}")
+
+        steps = w.get("steps")
+        if steps is not None:
+            parts.append(f"steps {steps}")
+
+        for field in ["soreness", "fatigue", "stress", "mood", "motivation", "injury", "hydration"]:
+            val = w.get(field)
+            label = subjective_label(field, val)
+            if label:
+                parts.append(f"{field} {label}")
+
+        print(" | ".join(parts))
+
+
+def wellness_put(client, args):
+    data = json.loads(args.data)
+    client.request("PUT", f"/athlete/{client.athlete_id}/wellness/{args.date}", data=data)
+    if args.json:
+        print(json.dumps({"status": "ok", "date": args.date}))
+        return
+    print(f"Updated wellness for {args.date}")
+
+
+def athlete_get(client, args):
+    data = client.request("GET", f"/athlete/{client.athlete_id}/athlete-summary")
+    if args.json:
+        print(json.dumps(data, indent=2))
+        return
+    if not data:
+        error("Error: Could not retrieve athlete data.")
+    # athlete-summary returns an array; use the most recent entry
+    latest = data[-1] if isinstance(data, list) else data
+    ctl = latest.get("fitness")
+    atl = latest.get("fatigue")
+    tsb = latest.get("form")
+    if ctl is not None:
+        print(f"Fitness (CTL): {ctl:.1f}")
+    if atl is not None:
+        print(f"Fatigue (ATL): {atl:.1f}")
+    if tsb is not None:
+        print(f"Form (TSB): {tsb:.1f}")
+
+
+def events_list(client, args):
+    params = {}
+    if args.oldest:
+        params["oldest"] = args.oldest
+    if args.newest:
+        params["newest"] = args.newest
+    data = client.request("GET", f"/athlete/{client.athlete_id}/events", params=params)
+    if args.json:
+        print(json.dumps(data, indent=2))
+        return
+    if not data:
+        error("Error: No events found for this date range.")
+    for e in data:
+        date = (e.get("start_date_local") or "")[:10]
+        wd = weekday_from_date(date) if date else ""
+        cat = e.get("category", "")
+        name = e.get("name", "")
+        typ = e.get("type", "")
+        dur = fmt_duration(e.get("moving_time"))
+        desc = e.get("description", "")
+
+        if cat == "WORKOUT":
+            parts = [f"{date} {wd}", cat, name]
+            if typ:
+                parts.append(typ)
+            if dur:
+                parts.append(dur)
+            print(" | ".join(parts))
+        elif cat == "NOTE":
+            desc_preview = desc[:80].replace("\n", " ") if desc else ""
+            parts = [f"{date} {wd}", cat, name]
+            if desc_preview:
+                parts.append(desc_preview)
+            print(" | ".join(parts))
+        else:
+            parts = [f"{date} {wd}", cat]
+            if name:
+                parts.append(name)
+            print(" | ".join(parts))
+
+
+def events_create(client, args):
+    data = json.loads(args.data)
+    result = client.request("POST", f"/athlete/{client.athlete_id}/events", data=data)
+    if args.json:
+        print(json.dumps(result, indent=2))
+        return
+    eid = result.get("id", "?") if result else "?"
+    date = (result.get("start_date_local") or "")[:10] if result else ""
+    print(f"Created event {eid} on {date}")
+
+
+def events_update(client, args):
+    data = json.loads(args.data)
+    result = client.request("PUT", f"/athlete/{client.athlete_id}/events/{args.id}", data=data)
+    if args.json:
+        print(json.dumps(result, indent=2))
+        return
+    print(f"Updated event {args.id}")
+
+
+def events_delete(client, args):
+    client.request("DELETE", f"/athlete/{client.athlete_id}/events/{args.id}")
+    if args.json:
+        print(json.dumps({"status": "ok", "id": args.id}))
+        return
+    print(f"Deleted event {args.id}")
+
+
+def events_apply_plan(client, args):
+    data = {
+        "folder_id": int(args.folder_id),
+        "start_date_local": f"{args.start_date}T00:00:00",
+    }
+    result = client.request("POST", f"/athlete/{client.athlete_id}/events/apply-plan", data=data)
+    if args.json:
+        print(json.dumps(result, indent=2))
+        return
+    count = len(result) if result else 0
+    if count > 0:
+        dates = sorted(set((e.get("start_date_local") or "")[:10] for e in result))
+        print(f"Applied {count} workouts to calendar ({dates[0]} to {dates[-1]})")
+    else:
+        print("No workouts applied.")
+
+
+def folders_create(client, args):
+    data = {"name": args.name}
+    result = client.request("POST", f"/athlete/{client.athlete_id}/folders", data=data)
+    if args.json:
+        print(json.dumps(result, indent=2))
+        return
+    fid = result.get("id", "?") if result else "?"
+    print(f'Created folder {fid} "{args.name}"')
+
+
+def workouts_list(client, args):
+    params = {"folder_id": args.folder_id}
+    data = client.request("GET", f"/athlete/{client.athlete_id}/workouts", params=params)
+    if args.json:
+        print(json.dumps(data, indent=2))
+        return
+    if not data:
+        error("Error: No workouts found in this folder.")
+    for w in data:
+        day = w.get("day")
+        wid = w.get("id", "?")
+        name = w.get("name", "")
+        typ = w.get("type", "")
+        dur = fmt_duration(w.get("moving_time"))
+        day_label = f"day {day} {WEEKDAYS[day - 1]}" if day and 1 <= day <= 7 else f"day {day}"
+        parts = [day_label, f"id {wid}", name]
+        if typ:
+            parts.append(typ)
+        if dur:
+            parts.append(dur)
+        print(" | ".join(parts))
+
+
+def workouts_create(client, args):
+    data = json.loads(args.data)
+    result = client.request("POST", f"/athlete/{client.athlete_id}/workouts", data=data)
+    if args.json:
+        print(json.dumps(result, indent=2))
+        return
+    wid = result.get("id", "?") if result else "?"
+    name = result.get("name", "") if result else ""
+    day = result.get("day") if result else None
+    day_str = f" (day {day})" if day else ""
+    print(f'Created workout {wid} "{name}"{day_str}')
+
+
+def workouts_delete(client, args):
+    client.request("DELETE", f"/athlete/{client.athlete_id}/workouts/{args.id}")
+    if args.json:
+        print(json.dumps({"status": "ok", "id": args.id}))
+        return
+    print(f"Deleted workout {args.id}")
+
+
+# --- CLI setup ---
+
+def build_parser():
+    parser = argparse.ArgumentParser(prog="icu", description="Intervals.icu API CLI")
+    sub = parser.add_subparsers(dest="resource", required=True)
+
+    # Shared parent for --json flag on every action subparser
+    json_parent = argparse.ArgumentParser(add_help=False)
+    json_parent.add_argument("--json", action="store_true", help="Output raw JSON")
+
+    # activities
+    act = sub.add_parser("activities")
+    act_sub = act.add_subparsers(dest="action", required=True)
+
+    act_list = act_sub.add_parser("list", parents=[json_parent])
+    act_list.add_argument("--oldest", required=True)
+    act_list.add_argument("--newest", required=True)
+
+    act_get = act_sub.add_parser("get", parents=[json_parent])
+    act_get.add_argument("--id", required=True)
+
+    # wellness
+    wel = sub.add_parser("wellness")
+    wel_sub = wel.add_subparsers(dest="action", required=True)
+
+    wel_get = wel_sub.add_parser("get", parents=[json_parent])
+    wel_get.add_argument("--oldest", required=True)
+    wel_get.add_argument("--newest", required=True)
+
+    wel_put = wel_sub.add_parser("put", parents=[json_parent])
+    wel_put.add_argument("--date", required=True)
+    wel_put.add_argument("--data", required=True)
+
+    # athlete
+    ath = sub.add_parser("athlete")
+    ath_sub = ath.add_subparsers(dest="action", required=True)
+    ath_sub.add_parser("get", parents=[json_parent])
+
+    # events
+    evt = sub.add_parser("events")
+    evt_sub = evt.add_subparsers(dest="action", required=True)
+
+    evt_list = evt_sub.add_parser("list", parents=[json_parent])
+    evt_list.add_argument("--oldest", required=True)
+    evt_list.add_argument("--newest", required=True)
+
+    evt_create = evt_sub.add_parser("create", parents=[json_parent])
+    evt_create.add_argument("--data", required=True)
+
+    evt_update = evt_sub.add_parser("update", parents=[json_parent])
+    evt_update.add_argument("--id", required=True)
+    evt_update.add_argument("--data", required=True)
+
+    evt_delete = evt_sub.add_parser("delete", parents=[json_parent])
+    evt_delete.add_argument("--id", required=True)
+
+    evt_apply = evt_sub.add_parser("apply-plan", parents=[json_parent])
+    evt_apply.add_argument("--folder-id", required=True)
+    evt_apply.add_argument("--start-date", required=True)
+
+    # folders
+    fld = sub.add_parser("folders")
+    fld_sub = fld.add_subparsers(dest="action", required=True)
+
+    fld_create = fld_sub.add_parser("create", parents=[json_parent])
+    fld_create.add_argument("--name", required=True)
+
+    # workouts
+    wkt = sub.add_parser("workouts")
+    wkt_sub = wkt.add_subparsers(dest="action", required=True)
+
+    wkt_list = wkt_sub.add_parser("list", parents=[json_parent])
+    wkt_list.add_argument("--folder-id", required=True)
+
+    wkt_create = wkt_sub.add_parser("create", parents=[json_parent])
+    wkt_create.add_argument("--data", required=True)
+
+    wkt_delete = wkt_sub.add_parser("delete", parents=[json_parent])
+    wkt_delete.add_argument("--id", required=True)
+
+    return parser
+
+
+HANDLERS = {
+    ("activities", "list"): activities_list,
+    ("activities", "get"): activities_get,
+    ("wellness", "get"): wellness_get,
+    ("wellness", "put"): wellness_put,
+    ("athlete", "get"): athlete_get,
+    ("events", "list"): events_list,
+    ("events", "create"): events_create,
+    ("events", "update"): events_update,
+    ("events", "delete"): events_delete,
+    ("events", "apply-plan"): events_apply_plan,
+    ("folders", "create"): folders_create,
+    ("workouts", "list"): workouts_list,
+    ("workouts", "create"): workouts_create,
+    ("workouts", "delete"): workouts_delete,
+}
+
+
+def main():
+    parser = build_parser()
+    args = parser.parse_args()
+
+    config = load_config()
+    client = ICUClient(config)
+
+    handler = HANDLERS.get((args.resource, args.action))
+    if not handler:
+        parser.print_help()
+        sys.exit(1)
+
+    handler(client, args)
+
+
+if __name__ == "__main__":
+    main()
