@@ -1,5 +1,16 @@
 {
   "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pull-data.sh\"",
+            "timeout": 15000
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [
