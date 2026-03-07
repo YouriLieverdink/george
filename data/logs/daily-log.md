@@ -76,3 +76,16 @@
 - Planned session: Easy Run 30 min | Modifications: **cancelled — rest day**
 - Readiness: RED. 4/6 low-readiness triggers: poor sleep (6h/47/POOR), fatigue HIGH(3), HRV 50% below 7-day avg (31 vs ~62), significant alcohol. First run back after GI illness moved to tomorrow (Saturday) — want recovery-positive conditions for return to running.
 - Notes: HRV 31 is the lowest reading since tracking began (lower than 41 during acute GI illness on Feb 28). Resting HR trending up (59 vs 52–56 recent range). Alcohol likely primary driver of today's poor recovery markers. Run moved to 2026-03-07 on ICU calendar. NOTE event posted. Wellness scores synced.
+
+## 2026-03-07 — Saturday
+
+### Morning Check-in
+- Sleep: 7.1h (score 85, quality GOOD)
+- HRV: 61 | Resting HR: 55 | SpO2: — | Weight: —
+- Steps: 374 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: AVG(2) | Stress: LOW(1)
+- Mood: GOOD(2) | Motivation: AVG(3) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 2 drinks | Caffeine cutoff: ~14:00
+- Time available: session already planned
+- Planned session: Easy Run 30 min | Modifications: none — green light
+- Readiness: GREEN. No triggers. HRV bounced back fully from 31→61 (7-day avg ~60). Sleep solid (7.1h/85/GOOD) after yesterday's crash (6h/47/POOR). First run back after GI illness — monitor for gut symptoms during/after.
