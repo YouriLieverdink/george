@@ -78,6 +78,7 @@
 - Values relationship time — explicitly doesn't want training to take away from time with girlfriend on trips. Prefers minimal, opportunistic training during vacations.
 - Prefers flexible training timing over rigid schedule — morning when sleep was good, evening when it wasn't
 - **Paid commitments override caution** (2026-03-04): Will push through illness/discomfort for sessions with financial commitment (swim course). Respect this but ensure safety guardrails are clear when it happens.
+- **Long ride substitution for marathon prep** (2026-03-07): During marathon prep (Apr–May), substitute supplementary long runs with long cycling sessions. Serves double duty: builds aerobic base with less impact stress + prepares for Elfstedentocht (240 km, May 25). Structure: 1 key long run/week (progression toward 30+ km) + 1 long ride replacing a second long run (progression toward 240 km). Protect the weekly long run — cycling replaces volume, not the key session. Also need to start cycling in rebuild phase (April) to avoid underpreparing like Amsterdam-Paris.
 - **Strength & body composition goal** (2026-03-03): Wants to rebuild muscle mass — had more muscle from previous strength training and misses it. Also interested in visible abs / better body composition. Enjoys lifting. Agreed to hypertrophy-focused upper/lower split 2x/week. Has access to a local gym (full equipment: barbells, dumbbells, cables).
 
 ## Intervals.icu
