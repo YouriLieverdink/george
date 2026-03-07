@@ -89,3 +89,13 @@
 - Time available: session already planned
 - Planned session: Easy Run 30 min | Modifications: none — green light
 - Readiness: GREEN. No triggers. HRV bounced back fully from 31→61 (7-day avg ~60). Sleep solid (7.1h/85/GOOD) after yesterday's crash (6h/47/POOR). First run back after GI illness — monitor for gut symptoms during/after.
+
+### Session Debrief
+- Session: Easy Run — 3.9 km in 33:13, avg HR 127, max HR 148, avg pace ~8:31/km
+- Plan vs. actual: 30 min planned, 33 min actual — slightly longer, appropriate intensity (HR 127, solidly Z1-Z2)
+- RPE: 3–4/10 (slightly harder than normal easy run — expected after 10-day break)
+- Pain: 0/10
+- GI during/after: None. No gut discomfort at all — significant milestone post-illness.
+- Energy/legs: Heavy at the start, loosened up. Felt good to be back.
+- Learning: "Enjoyed running without music — time flew by."
+- Alerts: None triggered.

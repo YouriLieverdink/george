@@ -49,7 +49,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-07:** GI return-to-training: first easy run (30 min) moved to Saturday after Friday rest day (alcohol + poor recovery). Monitor for any GI symptoms during or after running. Follow up in debrief: (1) any gut discomfort during the run? (2) how did energy/legs feel on first run back?
+- **2026-03-07:** GI return-to-training: first easy run completed Saturday — no GI symptoms during or after. **Resolved.** GI illness no longer limiting training. Continue normal rebuild progression.
 
 ## Key Learnings
 
@@ -60,7 +60,7 @@
   Retention: Permanent unless superseded
 -->
 
-<!-- No entries yet — will populate from debrief sessions. -->
+- **2026-03-07 — Running without music:** First run back after illness — ran without music, enjoyed it, time flew by. Worth remembering: unstructured, unplugged easy runs resonate with the athlete's "enjoy the process" mindset.
 
 ## Preferences & Style
 
