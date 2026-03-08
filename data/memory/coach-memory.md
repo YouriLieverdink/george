@@ -19,7 +19,7 @@
 -->
 
 - **Sleep & social evenings** (2026-03-01, updated 2026-03-02): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter. Committed to fixed 7:00 wake-up daily + in bed by 23:00 on 5+ nights/week. Recognizes some late nights are habit rather than quality social time. Wants to become a morning person again.
-- **Caffeine** (2026-03-01, updated 2026-03-06): Heavy user (~8 cups/day, lifelong habit). Late caffeine cutoff likely compounds sleep issues. Process goal: moderate over time. **2026-03-04:** Caffeine back after illness pause. Cutoff ~19:00 — same night sleep dropped from 7.8h/86 to 6.7h/78 with AVG quality. **2026-03-05:** Cutoff 14:00 — sleep bounced back to 8.35h/91/GOOD. **2026-03-06:** Cutoff ~16:00 + significant alcohol → sleep crashed to 6h/47/POOR, HRV 31. Caffeine cutoff and alcohol confounded — can't isolate caffeine effect this time, but combined impact is clear.
+- **Caffeine & sleep quality** (2026-03-01, updated 2026-03-08): Heavy user (~8 cups/day, lifelong habit). Week 1 data: 14:00 cutoff → 8.35h/91/GOOD (best sleep of the week); 16:00+ cutoff → 6–6.7h/47–78/POOR-AVG. Clear dose-response between cutoff time and sleep quality. Target: 14:00 cutoff. Adherence drifted from 14:00→16:00→17:30 over the week — follow up in Week 2.
 - **Alcohol & recovery** (2026-03-06, updated 2026-03-08): Heavy Thursday → HRV crashed 61→31 (50% drop), sleep 6h/47/POOR. Recovery fast: HRV back to 61 next day. Then 3 consecutive drinking nights (Thu heavy, Fri 2, Sat 3). No compounding in morning metrics — each day recovered well (Sat: HRV 61, sleep 85; Sun: HRV 67, sleep 93/GREAT). Body handles moderate drinking well in isolation, but 3/4 nights is a frequency pattern to watch over time — especially once training load increases.
 - **Planned social drinking dates** (2026-03-06): Athlete proactively identified dates he wants to drink and shared them for training planning. Schedule rest/easy days after these. Approach: not abstaining, but pre-deciding when and planning around it.
   - 2026-03-20: Gala (heavy)
@@ -38,7 +38,7 @@
 -->
 
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
-- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea on last day in Egypt. Shifted to nausea + stomach pain after eating + constipation. Unable to eat real meals for ~4 days. Fluids OK. Week 1 training fully paused. **2026-03-03 doctor visit:** No fever, no blood in stool — nothing acute. Doctor says wait it out, stay hydrated, eat small amounts. Full resolution may take ~6 weeks. No medication prescribed. **2026-03-03:** Athlete reports stomach "getting a lot better" but still not eating full meals — made pasta but froze it instead of eating it. Trending toward recovery but not there yet. Resume movement once eating normally without pain for 2+ days. **2026-03-04:** Still symptomatic — painful stomach this morning (eased but not resolved). Day 5 since onset. Not eating full meals. Return criteria still not met. Coach recommended skipping swim — athlete chose to attend (Lesson 3) due to financial commitment. Given safety guidelines: stay easy, exit if symptoms worsen, tell instructor. **2026-03-04 post-swim:** Diarrhea after breakfast (change from constipation pattern of recent days). GI noticeable during swim but manageable — did not have to stop. This is a fluctuation in recovery, not a new acute episode. Continue monitoring. Return criteria still not met for unrestricted training. **2026-03-05:** Significant improvement — ate full carbonara dinner without pain, no diarrhea. Return criteria approaching met. Cleared for first easy run (30 min). Caffeine cutoff improved to 14:00. Sleep excellent (8h21m, score 91).
+- **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea. Shifted to nausea + stomach pain + constipation. Week 1 training largely paused. Doctor (Mar 3): no acute concern, wait it out. Progressive improvement through the week. **2026-03-07: Resolved.** First run back — no GI symptoms during or after. Eating normally. Full clearance for training.
 
 ## Open Follow-ups
 
@@ -49,7 +49,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-07:** GI return-to-training: first easy run completed Saturday — no GI symptoms during or after. **Resolved.** GI illness no longer limiting training. Continue normal rebuild progression.
+- **2026-03-08:** Caffeine cutoff adherence: 14:00 target drifted to 17:30 by end of week. Check in during Week 2 — reinforce the 14:00 commitment with the sleep data evidence.
 
 ## Key Learnings
 

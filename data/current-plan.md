@@ -13,7 +13,7 @@
 - **Target event:** IRONMAN 70.3 Greece
 - **Event date:** 2026-10-25
 - **Plan start date:** 2026-05-11 (original) — pre-base work starts now (March 1)
-- **Current week:** Week 1 (Mar 2–8)
+- **Current week:** Week 2 (Mar 9–15)
 - **Current phase:** Rebuild & Base Foundation
 
 ### Secondary: Marathon of Groningen
@@ -55,13 +55,9 @@
 
 ## This Week
 
-### Week 1 — Rebuild — Mar 2–8, 2026
+### Week 2 — Rebuild — Mar 9–15, 2026
 
-#### Rationale
-
-Coming off illness and inconsistent training with very low weekly volume. Groningen marathon is 13 weeks out (B race, no time target), IRONMAN 70.3 Greece is 34 weeks out (A race). This week is about rebuilding the habit of showing up. All running is easy/conversational — no pace targets. Targeting 4 sessions (not 6) to keep the barrier low. Swim course on Wednesday is locked in. Strength is a light reintroduction — movement patterns only, no load chasing.
-
-Session schedule, tracking, modifications, and notes are on the intervals.icu calendar (single source of truth). Synced to intervals.icu on 2026-03-01. Week paused due to GI illness — see NOTE and SICKNESS events on ICU calendar for details.
+<!-- To be populated by /coach:plan -->
 
 ## Decisions & Agreements
 
@@ -75,4 +71,4 @@ Session schedule, tracking, modifications, and notes are on the intervals.icu ca
 
 ## Previous Weeks
 
-<!-- No previous weeks yet — onboarding completed 2026-03-01. -->
+- Week 1 (Mar 2–8): `data/archive/weekly/2026-W10.md`
