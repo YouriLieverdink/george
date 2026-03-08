@@ -49,7 +49,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-08:** Folder type issue: `./scripts/icu folders create` creates type "FOLDER", not "PLAN". Apply-plan endpoint rejects it (422: "Folder is not a plan"). Workaround: create WORKOUT events directly on the calendar. Investigate adding `--type PLAN` flag to CLI or using API directly for plan folders.
+- **2026-03-08:** ~~Folder type issue~~ **Resolved.** CLI now defaults to `--type PLAN`. Old FOLDER-type folders (732798, 732800) need deletion. Next `/coach:plan` will create a proper PLAN folder and store the new ID.
 
 ## Key Learnings
 
@@ -88,7 +88,7 @@
   Retention: Permanent — only recreate folder_id if the folder is deleted from intervals.icu.
 -->
 
-- Workout library folder: "George's Plan" (folder_id: 732798, type: FOLDER — NOT usable with apply-plan, see Open Follow-ups)
+- Workout library folder: "George's Plan" — needs new PLAN folder. Old FOLDER-type folders (732798, 732800) should be deleted. On next `/coach:plan`, create a new folder with `--type PLAN` and store the new `folder_id` here.
 
 ## Race Rehearsal Log
 
