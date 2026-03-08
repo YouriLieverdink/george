@@ -120,11 +120,15 @@ After the athlete approves the plan, sync workouts to the intervals.icu workout 
 
 5. **Apply plan to calendar:** POST to `/events/apply-plan` (Section 10) with `folder_id` and `start_date_local` set to Monday of the target week.
 
-6. **Post week rationale NOTE:** POST a `NOTE` event on Monday (Section 6) with the week rationale, key session notes, and fueling focus. This makes the coaching context visible on the ICU calendar.
+6. **Ask for session times:** Before finishing, ask the athlete what time they'd like each session scheduled this week (e.g., "07:00 for morning runs, 18:00 for evening strength"). Record per-session times.
 
-7. **Report to athlete:** Confirm how many events were created, the date range, the folder name ("George's Plan"), and remind them to check "Upload planned workouts" is enabled in Intervals.icu settings (Settings → Garmin).
+7. **Set session times:** If the athlete specified times, query the created events for the week (`events list --oldest MONDAY --newest SUNDAY --json`). For each WORKOUT event, update its `start_date_local` with the preferred time via `events update --id <id> --data '{"start_date_local":"YYYY-MM-DDTHH:MM:SS"}'`. If no time preference, skip (events remain all-day).
 
-8. **Record sync metadata** in `current-plan.md` (e.g., "Synced to intervals.icu: 2026-03-02 to 2026-03-08, folder: George's Plan")
+8. **Post week rationale NOTE:** POST a `NOTE` event on Monday (Section 6) with the week rationale, key session notes, and fueling focus. This makes the coaching context visible on the ICU calendar.
+
+9. **Report to athlete:** Confirm how many events were created, the date range, the folder name ("George's Plan"), and remind them to check "Upload planned workouts" is enabled in Intervals.icu settings (Settings → Garmin).
+
+10. **Record sync metadata** in `current-plan.md` (e.g., "Synced to intervals.icu: 2026-03-02 to 2026-03-08, folder: George's Plan")
 
 ### Error Handling
 

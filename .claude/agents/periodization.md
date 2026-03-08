@@ -373,22 +373,22 @@ Cooldown
 
 ```
 Warmup
-- 10m mobility + activation
+10 min mobility + activation
 
 Main set
-- Trap-bar deadlift 3x8
-- Split squat 3x10 each
-- Calf raises 3x15
-- Bent-over row 3x10
-- Push-ups 3x12
-- Loaded carry 3x30m
-- Pallof press 3x10 each
+Trap-bar deadlift 3x8
+Split squat 3x10 each
+Calf raises 3x15
+Bent-over row 3x10
+Push-ups 3x12
+Loaded carry 3x30m
+Pallof press 3x10 each
 
 Cooldown
-- 5m stretching
+5 min stretching
 ```
 
-Note: Strength workouts use plain text descriptions — they don't parse into structured steps on Garmin but still appear as planned events on the calendar.
+Note: Strength descriptions must NOT use ICU step syntax (`- Xm`, `- 5m`, etc.) because the parser treats them as timed steps and overrides `moving_time` with the sum of parsed durations instead of the intended total. Use plain text without `- ` dash prefixes, and write `min` instead of `m` for durations.
 
 ---
 

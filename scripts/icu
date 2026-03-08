@@ -4,6 +4,7 @@
 import argparse
 import base64
 import json
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -390,8 +391,16 @@ def events_list(client, args):
             print(" | ".join(parts))
 
 
+def _normalize_start_date(data):
+    """Append T00:00:00 to bare YYYY-MM-DD dates so the API accepts them."""
+    sdt = data.get("start_date_local", "")
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", sdt):
+        data["start_date_local"] = sdt + "T00:00:00"
+
+
 def events_create(client, args):
     data = json.loads(args.data)
+    _normalize_start_date(data)
     result = client.request("POST", f"/athlete/{client.athlete_id}/events", data=data)
     if args.json:
         print(json.dumps(result, indent=2))
@@ -403,6 +412,7 @@ def events_create(client, args):
 
 def events_update(client, args):
     data = json.loads(args.data)
+    _normalize_start_date(data)
     result = client.request("PUT", f"/athlete/{client.athlete_id}/events/{args.id}", data=data)
     if args.json:
         print(json.dumps(result, indent=2))
@@ -436,13 +446,24 @@ def events_apply_plan(client, args):
 
 
 def folders_create(client, args):
-    data = {"name": args.name}
+    data = {"name": args.name, "type": args.type}
+    if args.type == "PLAN" and args.duration_weeks:
+        data["duration_weeks"] = int(args.duration_weeks)
     result = client.request("POST", f"/athlete/{client.athlete_id}/folders", data=data)
     if args.json:
         print(json.dumps(result, indent=2))
         return
     fid = result.get("id", "?") if result else "?"
-    print(f'Created folder {fid} "{args.name}"')
+    ftype = result.get("type", "?") if result else "?"
+    print(f'Created {ftype} folder {fid} "{args.name}"')
+
+
+def folders_delete(client, args):
+    client.request("DELETE", f"/athlete/{client.athlete_id}/folders/{args.id}")
+    if args.json:
+        print(json.dumps({"status": "ok", "id": args.id}))
+        return
+    print(f"Deleted folder {args.id}")
 
 
 def workouts_list(client, args):
@@ -555,6 +576,11 @@ def build_parser():
 
     fld_create = fld_sub.add_parser("create", parents=[json_parent])
     fld_create.add_argument("--name", required=True)
+    fld_create.add_argument("--type", default="PLAN")
+    fld_create.add_argument("--duration-weeks", default=None)
+
+    fld_delete = fld_sub.add_parser("delete", parents=[json_parent])
+    fld_delete.add_argument("--id", required=True)
 
     # workouts
     wkt = sub.add_parser("workouts")
@@ -584,6 +610,7 @@ HANDLERS = {
     ("events", "delete"): events_delete,
     ("events", "apply-plan"): events_apply_plan,
     ("folders", "create"): folders_create,
+    ("folders", "delete"): folders_delete,
     ("workouts", "list"): workouts_list,
     ("workouts", "create"): workouts_create,
     ("workouts", "delete"): workouts_delete,

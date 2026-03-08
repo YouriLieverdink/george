@@ -170,7 +170,7 @@ Every command that needs to know "what's planned today/this week" reads from thi
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `start_date_local` | string | Date in `YYYY-MM-DD` format |
+| `start_date_local` | string | Date as `YYYY-MM-DD` (auto-normalized to `YYYY-MM-DDT00:00:00`) or `YYYY-MM-DDTHH:MM:SS` for a specific time |
 | `category` | string | Always `"WORKOUT"` for planned workouts |
 | `name` | string | Session title shown on calendar |
 | `type` | string | Sport type (see mapping below) |
@@ -202,15 +202,27 @@ Every command that needs to know "what's planned today/this week" reads from thi
 
 The API returns the created/updated event with its `id`. Mid-week adjustments query events by date range to find the event to update — no need to store IDs locally.
 
+**Scheduling events at specific times:** To place a workout at a specific time of day, include the time in `start_date_local` (e.g., `"2026-03-09T07:00:00"` for 7 AM). The CLI auto-normalizes bare `YYYY-MM-DD` dates to midnight (`T00:00:00`), which creates all-day events. Use `events update` to set times on existing events after `apply-plan`.
+
 ### 8. Create Workout Library Folder
 
 **Use in:** `/coach:plan` (one-time setup — create a persistent folder for coach-generated workouts)
 
 ```bash
 ./scripts/icu folders create --name "George's Plan"
+# Default --type is PLAN (required for apply-plan). Use --type FOLDER for plain folders.
+# Optional: --duration-weeks N (for PLAN folders)
 ```
 
-Returns the created folder with its `id`. Store this `folder_id` in `data/memory/coach-memory.md` — it persists across weeks and plan cycles. Only recreate if the folder is deleted.
+Returns the created folder with its `id` and `type`. Store this `folder_id` in `data/memory/coach-memory.md` — it persists across weeks and plan cycles. Only recreate if the folder is deleted.
+
+**Important:** The folder must have `type: PLAN` for `apply-plan` to work. The default is `PLAN`.
+
+**Delete a folder:**
+
+```bash
+./scripts/icu folders delete --id <folderId>
+```
 
 ### 9. Manage Workouts in a Folder
 
@@ -344,6 +356,8 @@ Check `data/memory/coach-memory.md` → Current Zones before generating workouts
 ```
 
 On the Garmin watch, "Build to tempo" and "Recovery jog" appear as step labels.
+
+**Strength workout gotcha:** Do NOT use ICU step syntax (`- Xm`, `- 5m`) in strength workout descriptions. The parser treats dashed lines with duration-like values as timed steps and overrides `moving_time` with the sum of parsed durations. Use plain text without `- ` prefixes and write `min` instead of `m` (e.g., `10 min mobility` not `- 10m mobility`).
 
 **Garmin sync notes:**
 - Ramps become range targets on device (e.g., `ramp 60-80%` shows as 60–80% target range)
