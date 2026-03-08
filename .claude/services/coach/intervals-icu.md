@@ -209,14 +209,16 @@ The API returns the created/updated event with its `id`. Mid-week adjustments qu
 **Use in:** `/coach:plan` (one-time setup — create a persistent folder for coach-generated workouts)
 
 ```bash
-./scripts/icu folders create --name "George's Plan"
+./scripts/icu folders create --name "George's Plan" --duration-weeks 1
 # Default --type is PLAN (required for apply-plan). Use --type FOLDER for plain folders.
-# Optional: --duration-weeks N (for PLAN folders)
+# --duration-weeks is REQUIRED for apply-plan to work.
 ```
 
 Returns the created folder with its `id` and `type`. Store this `folder_id` in `data/memory/coach-memory.md` — it persists across weeks and plan cycles. Only recreate if the folder is deleted.
 
-**Important:** The folder must have `type: PLAN` for `apply-plan` to work. The default is `PLAN`.
+**Important:** The folder must have `type: PLAN` **and** `--duration-weeks` set for `apply-plan` to work. The default type is `PLAN`.
+
+**Important:** Deleting a folder does NOT delete its applied calendar events. Always delete applied events from the calendar first, then delete the folder.
 
 **Delete a folder:**
 
@@ -234,7 +236,7 @@ Returns the created folder with its `id` and `type`. Store this `folder_id` in `
 ./scripts/icu workouts list --folder-id <folderId>
 ```
 
-Returns one line per workout with day, id, name, type, duration. Use the `id` from each to delete old workouts before adding new ones.
+**Note:** This returns workouts from ALL folders, not just the specified one. Filter results by `folder_id` when using `--json` output to isolate workouts from a specific folder.
 
 **Create a workout in a folder:**
 
@@ -248,7 +250,7 @@ Returns one line per workout with day, id, name, type, duration. Use the `id` fr
 |-------|------|-------------|
 | `folder_id` | integer | ID of the library folder (from Section 8) |
 | `name` | string | Session title |
-| `day` | integer | Day within the plan week: 1=Monday, 2=Tuesday, ..., 7=Sunday |
+| `day` | integer | Day within the plan week (0-based): 0=Monday, 1=Tuesday, ..., 6=Sunday |
 | `description` | string | ICU workout syntax (see Section 11) |
 | `type` | string | Sport type (`Run`, `Ride`, `Swim`, `WeightTraining`) |
 | `moving_time` | integer | Planned duration in seconds |
@@ -275,7 +277,9 @@ Returns one line per workout with day, id, name, type, duration. Use the `id` fr
 - `folder-id`: the library folder ID
 - `start-date`: Monday of the target week
 
-Returns a confirmation with the number of workouts applied and date range. Mid-week adjustments query events by date range (Section 6) to find specific events — no need to store IDs locally.
+**Known issue:** The API returns `{}` on success instead of an event list, so the CLI reports "No workouts applied" even when events ARE created. Always verify by listing calendar events after applying.
+
+Mid-week adjustments query events by date range (Section 6) to find specific events — no need to store IDs locally.
 
 ### 11. Workout Description Syntax
 

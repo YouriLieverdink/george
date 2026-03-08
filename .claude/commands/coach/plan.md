@@ -108,7 +108,7 @@ After the athlete approves the plan, sync workouts to the intervals.icu workout 
 4. **Create workouts in the folder:** For each training session this week, POST to `/workouts` (Section 9) with:
    - `folder_id`: the persistent folder ID
    - `name`: session title
-   - `day`: day within the week (1=Monday, 2=Tuesday, ..., 7=Sunday)
+   - `day`: day within the week (0-based: 0=Monday, 1=Tuesday, ..., 6=Sunday)
    - `description`: ICU workout syntax (Section 11) with warmup/main/cooldown, targets, and repeats
    - `type`: sport type (`Run`, `Ride`, `Swim`, `WeightTraining`)
    - `moving_time`: planned duration in seconds
