@@ -49,7 +49,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-08:** ~~Folder type issue~~ **Resolved.** CLI now defaults to `--type PLAN`. Old FOLDER-type folders (732798, 732800) need deletion. Next `/coach:plan` will create a proper PLAN folder and store the new ID.
+*(no open follow-ups)*
 
 ## Key Learnings
 
@@ -88,7 +88,7 @@
   Retention: Permanent — only recreate folder_id if the folder is deleted from intervals.icu.
 -->
 
-- Workout library folder: "George's Plan" — needs new PLAN folder. Old FOLDER-type folders (732798, 732800) should be deleted. On next `/coach:plan`, create a new folder with `--type PLAN` and store the new `folder_id` here.
+- Workout library folder: "George's Plan" — `folder_id: 732813` (type: PLAN, created 2026-03-08)
 
 ## Race Rehearsal Log
 
