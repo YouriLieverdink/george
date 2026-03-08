@@ -40,25 +40,20 @@ A restart week defined by illness recovery, not training. GI illness from Egypt 
 - GI illness resolved enough to resume training. Full meal (carbonara) tolerated Thursday. No GI symptoms during Saturday's run — major milestone.
 - First run back felt good. RPE 3–4/10, no pain, enjoyed the process, ran without music.
 - HRV recovery from the alcohol crash (31→61 in one day) shows good autonomic resilience.
-- Caffeine cutoff experiment yielded clear signal: 14:00 cutoff = best sleep of the week (8.35h/91).
 - Athlete proactively shared planned drinking dates for training planning. Good self-awareness.
 
 ### Concerns
 
-- Three consecutive nights of alcohol (Thu heavy, Fri 2 drinks, Sat 3 drinks). Metrics recovered each morning, but stacking frequency is worth monitoring as training load increases. Body handled it at near-zero training load — may not hold at higher loads.
-- Caffeine cutoff drifting: 14:00 (Thu) → 16:00 (Fri) → 17:30 (Sun). The 14:00 target produced the best sleep. Worth reinforcing.
+- Three consecutive nights of alcohol (Thu heavy, Fri 2 drinks, Sat 3 drinks). Metrics recovered each morning, but stacking frequency is worth monitoring as training load increases.
 - Only 2 sessions completed. Understandable given illness, but Week 2 needs to establish real consistency (target: 4 sessions).
-- Strength session (Sunday) still pending at time of review. First strength reintroduction.
 
 ### Adjustment for Next Week
 
 - GI illness is no longer a training limiter. Cleared for normal rebuild progression.
-- Target 4 sessions in Week 2: 2 runs (easy), 1 swim (Wednesday lesson), 1 strength. Keep the bar achievable.
-- Reinforce caffeine cutoff at 14:00 — the data supports it.
+- Target 4 sessions in Week 2: 2 runs (easy), 1 swim (Wednesday lesson), 1 strength. Strength was removed from Week 1 schedule — reintroduce in Week 2 planning.
 - Next drinking date is Mar 20 (gala). Two clean weeks of training ahead — good window to build the habit.
 - Monitor how the body handles back-to-back training days now that illness is behind us.
 
 ### Questions for the Athlete
 
-1. How did the strength session go today? Any soreness or movement issues to note?
-2. The 14:00 caffeine cutoff gave you your best sleep of the week. Are you willing to commit to that as the target for the next two weeks?
+1. When would you like to slot strength back in this coming week?

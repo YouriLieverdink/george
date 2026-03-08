@@ -19,7 +19,7 @@
 -->
 
 - **Sleep & social evenings** (2026-03-01, updated 2026-03-02): Consistently gets <8h sleep. Late social evenings (often past midnight) with early work mornings — key recovery limiter. Committed to fixed 7:00 wake-up daily + in bed by 23:00 on 5+ nights/week. Recognizes some late nights are habit rather than quality social time. Wants to become a morning person again.
-- **Caffeine & sleep quality** (2026-03-01, updated 2026-03-08): Heavy user (~8 cups/day, lifelong habit). Week 1 data: 14:00 cutoff → 8.35h/91/GOOD (best sleep of the week); 16:00+ cutoff → 6–6.7h/47–78/POOR-AVG. Clear dose-response between cutoff time and sleep quality. Target: 14:00 cutoff. Adherence drifted from 14:00→16:00→17:30 over the week — follow up in Week 2.
+- **Caffeine** (2026-03-01, updated 2026-03-08): Heavy user (~8 cups/day, lifelong habit). Process goal: moderate over time, no caffeine after 14:00. Not enough clean data yet to draw conclusions on caffeine → sleep impact — Week 1 sleep variation is better explained by social nights, bedtime, and alcohol. Do not attribute sleep quality to caffeine cutoff without controlling for confounders.
 - **Alcohol & recovery** (2026-03-06, updated 2026-03-08): Heavy Thursday → HRV crashed 61→31 (50% drop), sleep 6h/47/POOR. Recovery fast: HRV back to 61 next day. Then 3 consecutive drinking nights (Thu heavy, Fri 2, Sat 3). No compounding in morning metrics — each day recovered well (Sat: HRV 61, sleep 85; Sun: HRV 67, sleep 93/GREAT). Body handles moderate drinking well in isolation, but 3/4 nights is a frequency pattern to watch over time — especially once training load increases.
 - **Planned social drinking dates** (2026-03-06): Athlete proactively identified dates he wants to drink and shared them for training planning. Schedule rest/easy days after these. Approach: not abstaining, but pre-deciding when and planning around it.
   - 2026-03-20: Gala (heavy)
@@ -49,7 +49,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-08:** Caffeine cutoff adherence: 14:00 target drifted to 17:30 by end of week. Check in during Week 2 — reinforce the 14:00 commitment with the sleep data evidence.
+- **2026-03-08:** Strength session status: Was on the Week 1 plan for Sunday but removed from schedule after discussion. Confirm timing/reintroduction in Week 2 planning.
 
 ## Key Learnings
 
