@@ -61,7 +61,7 @@ Stepping up from 2 to 5 sessions. GI illness resolved, readiness strong at end o
 
 5 sessions: 2 easy runs (30+35 min), 1 swim lesson (Wed), 2 strength (Mon upper / Thu lower). Estimated load ~65–75. Volume ~2h total.
 
-Synced to intervals.icu: 2026-03-09 to 2026-03-14, direct calendar events + week rationale NOTE.
+Synced to intervals.icu: 2026-03-09 to 2026-03-14, folder "George's Plan" (732815) + week rationale NOTE.
 
 ## Decisions & Agreements
 

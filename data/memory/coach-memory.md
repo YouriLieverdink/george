@@ -88,7 +88,8 @@
   Retention: Permanent — only recreate folder_id if the folder is deleted from intervals.icu.
 -->
 
-- Workout library folder: "George's Plan" — `folder_id: 732813` (type: PLAN, created 2026-03-08)
+- Workout library folder: "George's Plan" — `folder_id: 732815` (type: PLAN, duration_weeks: 1, created 2026-03-08)
+- **Apply-plan day numbering is 0-based:** day 0 = Monday (start date), day 1 = Tuesday, ..., day 6 = Sunday. The CLI's "No workouts applied" message is a false negative — events ARE created despite the empty `{}` response.
 
 ## Race Rehearsal Log
 
