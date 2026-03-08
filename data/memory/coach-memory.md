@@ -49,7 +49,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-- **2026-03-08:** Strength session status: Was on the Week 1 plan for Sunday but removed from schedule after discussion. Confirm timing/reintroduction in Week 2 planning.
+- **2026-03-08:** Folder type issue: `./scripts/icu folders create` creates type "FOLDER", not "PLAN". Apply-plan endpoint rejects it (422: "Folder is not a plan"). Workaround: create WORKOUT events directly on the calendar. Investigate adding `--type PLAN` flag to CLI or using API directly for plan folders.
 
 ## Key Learnings
 
@@ -88,7 +88,7 @@
   Retention: Permanent — only recreate folder_id if the folder is deleted from intervals.icu.
 -->
 
-- Workout library folder: "George's Plan" (folder_id: _pending first /coach:plan run_)
+- Workout library folder: "George's Plan" (folder_id: 732798, type: FOLDER — NOT usable with apply-plan, see Open Follow-ups)
 
 ## Race Rehearsal Log
 
