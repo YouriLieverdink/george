@@ -99,3 +99,17 @@
 - Energy/legs: Heavy at the start, loosened up. Felt good to be back.
 - Learning: "Enjoyed running without music — time flew by."
 - Alerts: None triggered.
+
+## 2026-03-08 — Sunday
+
+### Morning Check-in
+- Sleep: 8.3h (score 93, quality GREAT)
+- HRV: 67 | Resting HR: 53 | SpO2: — | Weight: —
+- Steps: 89 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: LOW(1) | Stress: LOW(1)
+- Mood: GOOD(2) | Motivation: HIGH(2) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 3 drinks | Caffeine cutoff: ~17:30
+- Time available: enough
+- Planned session: Strength — Full Body Intro (40 min) | Modifications: none — green light
+- Readiness: GREEN. Excellent sleep (best score this week), HRV above 7-day avg (67 vs ~60), low fatigue, high motivation. 3 drinks only flag but no compounding effect on metrics. Proceed as planned.
+- Notes: 3rd consecutive night with alcohol (Thu heavy, Fri 2, Sat 3) — recovery metrics strong each morning but stacking noted. Caffeine cutoff 17:30 — drifting from 14:00 target, no sleep impact this time. Last day of Week 1. First strength session of rebuild.
