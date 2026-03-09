@@ -14,3 +14,18 @@
 - Closed by asking if athlete still wants to proceed with today's upper body session.
 
 **Memory updates:** None — alcohol/sleep pattern already well-documented in coach-memory.md.
+
+## 2026-03-09 — Chat (follow-up)
+
+**Topic:** Grogginess and difficulty waking up despite 9+ hours sleep
+
+**Athlete report:** Hard time waking up, still groggy, unsure what's causing it.
+
+**Key points discussed:**
+- Objective data is actually strong: HRV 68 (best all week), rHR 52 (best all week), sleep 9.3h/83/GOOD. Body is recovering well underneath.
+- Grogginess explained as sleep inertia from oversleeping — waking mid-deep-sleep cycle after the body tried to compensate for 4 nights of alcohol-degraded quality with extra duration. Compounded by Monday life-stress kicking in.
+- Nothing in the data triggers any alert. No clinical concern.
+- Upper body strength session still recommended — low cardiovascular demand, may help clear the fog. Permission to skip and shift to Tuesday if grogginess persists into the afternoon.
+- Framed the next 11 days (until March 20 gala) as a clean window to establish the 5-session/week rhythm and see what consistent sleep + no alcohol feels like.
+
+**Memory updates:** Updated alcohol & recovery pattern with sleep inertia/oversleeping observation.
