@@ -113,3 +113,17 @@
 - Planned session: Strength — Full Body Intro (40 min) | Modifications: none — green light
 - Readiness: GREEN. Excellent sleep (best score this week), HRV above 7-day avg (67 vs ~60), low fatigue, high motivation. 3 drinks only flag but no compounding effect on metrics. Proceed as planned.
 - Notes: 3rd consecutive night with alcohol (Thu heavy, Fri 2, Sat 3) — recovery metrics strong each morning but stacking noted. Caffeine cutoff 17:30 — drifting from 14:00 target, no sleep impact this time. Last day of Week 1. First strength session of rebuild.
+
+## 2026-03-09 — Monday
+
+### Morning Check-in
+- Sleep: 9.3h (score 83, quality GOOD)
+- HRV: 68 | Resting HR: 52 | SpO2: — | Weight: —
+- Steps: 91 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: HIGH(3) | Stress: HIGH(3)
+- Mood: OK(3) | Motivation: AVG(3) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 2 (wine) | Caffeine cutoff: ~12:00
+- Time available: limited
+- Planned session: Strength — Upper Body (45 min) | Modifications: none — proceed as planned
+- Readiness: GREEN. 1/6 low-readiness triggers (fatigue HIGH). Sleep and HRV excellent. Fatigue + stress pattern reads as Monday life-load, not physical overtraining. Strength session appropriate.
+- Notes: 4th consecutive night with alcohol (Thu heavy, Fri 2, Sat 3, Sun 2) — metrics still strong but frequency flagged for athlete. Best caffeine cutoff logged (~12:00). Week 2 opener — 5 sessions planned this week. Sunday's strength session (Full Body Intro) status pending — awaiting athlete confirmation.
