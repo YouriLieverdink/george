@@ -139,3 +139,21 @@ Update `data/current-plan.md`:
 5. **What's next** — brief look ahead at the next training phase or event
 
 Keep the tone celebratory and forward-looking. The athlete just accomplished something significant — lead with that.
+
+### Log Conversation
+
+Append to `data/logs/conversations.md`:
+
+```
+## YYYY-MM-DD HH:MM — /coach:postrace
+
+### Summary
+[2–3 sentences: what was discussed, what was decided]
+
+### Key Points
+- [Topics covered, athlete inputs, coach recommendations]
+- [Modifications made, concerns raised, patterns noted]
+
+### Action Items
+- [Commitments, follow-ups, things to check next time — or "None"]
+```

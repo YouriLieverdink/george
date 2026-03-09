@@ -81,11 +81,12 @@ Motivational clichés ("crush it", "beast mode", "no pain no gain"), excessive p
 - **`data/current-plan.md`** → **Operational state (phase, goals, decisions).** Tracks which plan is active, current week/phase, rationale, goals, fixed commitments, and decisions. Does NOT contain the session schedule — that lives on the intervals.icu calendar as the single source of truth. Every command reads this file for context.
 - **`data/plans/`** → Training plan library: original plans as reference (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These don't change — they are the baseline the coach references when looking up what was originally prescribed.
 - **`data/memory/coach-memory.md`** → **Accumulated coaching intelligence.** Athlete patterns & tendencies, injury & health history, open follow-ups, key learnings, preferences, fitness test history, and current zones. Every command reads this for context; checkin, debrief, review, and chat write to it.
+- **`data/logs/conversations.md`** → Append-only conversation log: summary of every coach interaction. Every command appends an entry after completing. Read recent entries (last 2 weeks) before every interaction for continuity across sessions.
 - **`data/logs/daily-log.md`** → Append-only daily log: check-in data (sleep, HRV, readiness) and post-session debrief (RPE, pain, fueling, notes). Written by checkin and debrief.
 - **`data/logs/weekly-reviews.md`** → Append-only weekly review summaries. Written by review.
 - **`data/archive/`** → Completed weeks (`weekly/YYYY-WNN.md`) and race reports (`races/YYYY-MM-DD-race-name.md`). Written by review and postrace.
 
-Always read `current-plan.md` first to understand the current phase and context, then `coach-memory.md` for accumulated context. For today's planned session, read from the intervals.icu calendar (Section 6) — not from `current-plan.md`. Reference the original plan from `plans/` when you need to look up what was originally prescribed for a given week. Cross-reference `events.md` for event dates and proximity.
+Always read `current-plan.md` first to understand the current phase and context, then `coach-memory.md` for accumulated context, then `conversations.md` (last 2 weeks of entries) for recent conversation continuity. For today's planned session, read from the intervals.icu calendar (Section 6) — not from `current-plan.md`. Reference the original plan from `plans/` when you need to look up what was originally prescribed for a given week. Cross-reference `events.md` for event dates and proximity.
 
 ### Intervals.icu API (objective training data)
 

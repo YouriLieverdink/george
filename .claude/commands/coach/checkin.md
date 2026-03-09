@@ -154,3 +154,21 @@ After the check-in:
 - If a pattern is noticed (e.g., third consecutive morning with poor sleep + late caffeine), write an observation to `data/memory/coach-memory.md` → Athlete Patterns & Tendencies with a date stamp.
 - If injury ≥ NIGGLE(2), append to `data/memory/coach-memory.md` → Injury & Health History with date, location, severity, and context.
 - If following up on an open item and it's resolved, remove it from Open Follow-ups.
+
+## Log Conversation
+
+Append to `data/logs/conversations.md`:
+
+```
+## YYYY-MM-DD HH:MM — /coach:checkin
+
+### Summary
+[2–3 sentences: what was discussed, what was decided]
+
+### Key Points
+- [Topics covered, athlete inputs, coach recommendations]
+- [Modifications made, concerns raised, patterns noted]
+
+### Action Items
+- [Commitments, follow-ups, things to check next time — or "None"]
+```
