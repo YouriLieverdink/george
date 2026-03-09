@@ -108,3 +108,21 @@ Update `data/current-plan.md`:
 - Record any athlete decisions about pacing, nutrition, or logistics
 
 Write any significant athlete inputs to `data/memory/coach-memory.md` (e.g., race-day fears, mental preparation notes, specific equipment decisions).
+
+### Log Conversation
+
+Append to `data/logs/conversations.md`:
+
+```
+## YYYY-MM-DD HH:MM — /coach:raceweek
+
+### Summary
+[2–3 sentences: what was discussed, what was decided]
+
+### Key Points
+- [Topics covered, athlete inputs, coach recommendations]
+- [Modifications made, concerns raised, patterns noted]
+
+### Action Items
+- [Commitments, follow-ups, things to check next time — or "None"]
+```

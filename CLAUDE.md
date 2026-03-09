@@ -44,6 +44,7 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 | `data/current-plan.md` | **Operational state** — current week/phase, rationale, goals, decisions, agreements. Does NOT contain the session schedule (that's on the intervals.icu calendar) | Coach maintains this via commands |
 | `data/plans/` | Training plan library — original plans as reference | You add plans; coach reads them |
 | `data/memory/coach-memory.md` | **Coaching memory** — patterns, injury history, follow-ups, learnings, preferences, zones, fitness tests | Coach writes via commands; accumulates over time |
+| `data/logs/conversations.md` | Conversation log — summary of every coach interaction | All commands append; coach reads for context |
 | `data/logs/daily-log.md` | Daily check-in + debrief log | `/coach:checkin`, `/coach:debrief` |
 | `data/logs/weekly-reviews.md` | Weekly review summaries | `/coach:review` |
 | `data/archive/weekly/` | Completed week archives (one file per week) | `/coach:review` |
@@ -55,6 +56,7 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 - **`plans/`** holds the original training plans as-is (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These are reference documents that don't change.
 - **`current-plan.md`** is the operational state: which plan is active, what week you're in, rationale, goals, and decisions. Does NOT contain the session schedule — that lives on the intervals.icu calendar as the single source of truth. Completed weeks are archived to `data/archive/weekly/`.
 - **`coach-memory.md`** is accumulated coaching intelligence: what the coach has learned about you over time. Every command reads it for context; checkin, debrief, review, and chat write to it.
+- **`conversations.md`** is an append-only log of every coach interaction. It ensures nothing discussed is lost between sessions. The coach reads recent entries before every interaction for continuity.
 - **`daily-log.md`** and **`weekly-reviews.md`** are append-only logs replacing the Google Sheets tabs.
 
 The coach reads `current-plan.md` for phase/context and `coach-memory.md` for accumulated intelligence before every decision. For today's planned session, it reads from the intervals.icu calendar. It references the original plan from `plans/` and checks `events.md` for what's coming.

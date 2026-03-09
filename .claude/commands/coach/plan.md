@@ -147,3 +147,21 @@ Mid-week adjustments (from `/coach:checkin` modifying a planned session) operate
 - **Update:** GET events for the date, find the matching event by type/name, then PUT to update the workout description/duration (Section 7)
 - **Cancel:** GET events for the date, find the matching event, then DELETE to remove it. POST a `NOTE` event with the cancellation reason.
 - **Replace:** POST to `/events` (not `/workouts`) for ad-hoc replacement sessions (Section 7)
+
+## Log Conversation
+
+Append to `data/logs/conversations.md`:
+
+```
+## YYYY-MM-DD HH:MM — /coach:plan
+
+### Summary
+[2–3 sentences: what was discussed, what was decided]
+
+### Key Points
+- [Topics covered, athlete inputs, coach recommendations]
+- [Modifications made, concerns raised, patterns noted]
+
+### Action Items
+- [Commitments, follow-ups, things to check next time — or "None"]
+```

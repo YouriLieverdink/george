@@ -116,6 +116,18 @@
 
 ## 2026-03-09 — Monday
 
+### Morning Check-in
+- Sleep: 9.3h (score 83, quality GOOD)
+- HRV: 68 | Resting HR: 52 | SpO2: — | Weight: —
+- Steps: 91 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: HIGH(3) | Stress: HIGH(3)
+- Mood: OK(3) | Motivation: AVG(3) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 2 (wine) | Caffeine cutoff: ~12:00
+- Time available: limited
+- Planned session: Strength — Upper Body (45 min) | Modifications: none — proceed as planned
+- Readiness: GREEN. 1/6 low-readiness triggers (fatigue HIGH). Sleep and HRV excellent. Fatigue + stress pattern reads as Monday life-load, not physical overtraining. Strength session appropriate.
+- Notes: 4th consecutive night with alcohol (Thu heavy, Fri 2, Sat 3, Sun 2) — metrics still strong but frequency flagged for athlete. Best caffeine cutoff logged (~12:00). Week 2 opener — 5 sessions planned this week. Sunday's strength session (Full Body Intro) status pending — awaiting athlete confirmation.
+
 ### Session Debrief
 - Session: Easy Run (swapped from Tuesday — Upper Body Strength moved to Tuesday)
 - Activity: 3.78 km in 29:11, avg HR 143, max HR 161, avg pace ~7:43/km

@@ -155,7 +155,14 @@ At the start of every review, check whether the current month differs from the e
 3. Remove those entries from `daily-log.md`, keeping only the current month's entries
 4. Preserve the file header in `daily-log.md`
 
-This prevents the daily log from growing indefinitely. The archived logs remain available for historical analysis.
+Also check `data/logs/conversations.md` for entries from previous months. If found:
+
+1. Extract all entries from the previous month(s)
+2. Write them to `data/archive/logs/conversations-YYYY-MM.md` (e.g., `conversations-2026-02.md`)
+3. Remove those entries from `conversations.md`, keeping only the current month's entries
+4. Preserve the file header in `conversations.md`
+
+This prevents the logs from growing indefinitely. The archived logs remain available for historical analysis.
 
 ### Archive the completed week
 
@@ -182,3 +189,21 @@ Update `data/memory/coach-memory.md`:
 3. **Update injury history** — if an injury signal appeared, progressed, or resolved this week, update the entry.
 4. **Prune stale entries** — entries in Athlete Patterns & Tendencies older than 12 weeks that haven't been reobserved should be archived to `data/memory/archive/YYYY-MM.md` and removed from the main file. Keep Injury & Health History entries permanently (they're date-stamped and compact). Keep Fitness Test History and Current Zones permanently.
 5. **Update preferences** — if the athlete responded particularly well (or poorly) to a coaching approach this week, note it.
+
+### Log Conversation
+
+Append to `data/logs/conversations.md`:
+
+```
+## YYYY-MM-DD HH:MM — /coach:review
+
+### Summary
+[2–3 sentences: what was discussed, what was decided]
+
+### Key Points
+- [Topics covered, athlete inputs, coach recommendations]
+- [Modifications made, concerns raised, patterns noted]
+
+### Action Items
+- [Commitments, follow-ups, things to check next time — or "None"]
+```

@@ -16,6 +16,7 @@ Load the coach agent from `.claude/agents/coach.md` and alert rules from `.claud
 2. `data/current-plan.md` — Current week, phase, modifications, and decisions.
 3. `data/references/events.md` — Upcoming races and proximity.
 4. `data/references/athlete-profile.md` — Profile, constraints, equipment.
+5. `data/logs/conversations.md` — Recent conversation entries (last 2 weeks) for continuity across sessions.
 
 Do NOT respond from memory or prior conversation context alone. The files are the source of truth — read them first, then respond.
 
@@ -37,11 +38,28 @@ Use this context to personalize your answers (e.g., reference the athlete's curr
 
 ## After Responding
 
-If the athlete mentioned something significant during the conversation, append it to `data/memory/coach-memory.md` under the appropriate section with a date stamp:
+### Log Conversation
+Append to `data/logs/conversations.md`:
+
+```
+## YYYY-MM-DD HH:MM — /coach:chat
+
+### Summary
+[2–3 sentences: what was discussed, what was decided]
+
+### Key Points
+- [Topics covered, athlete inputs, coach recommendations]
+- [Modifications made, concerns raised, patterns noted]
+
+### Action Items
+- [Commitments, follow-ups, things to check next time — or "None"]
+```
+
+### Update Memory
+
+Always evaluate whether any of the following memory sections should be updated — err on the side of writing rather than skipping:
 - **Injury signal** → Injury & Health History
 - **Mental barrier or mindset insight** → Key Learnings or Preferences & Style
 - **Gear decision or issue** → Athlete Patterns & Tendencies
 - **Commitment or goal change** → Open Follow-ups (if it needs checking on) or Preferences & Style
 - **Something they want the coach to remember** → the most fitting section
-
-Only write genuinely significant information — not every conversation needs a memory entry.

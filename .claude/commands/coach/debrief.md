@@ -86,6 +86,22 @@ After collecting the data:
 
 5. **If this was the last session of the week:** suggest running `/coach:review` for the weekly review.
 
+6. **Log conversation** — append to `data/logs/conversations.md`:
+
+   ```
+   ## YYYY-MM-DD HH:MM — /coach:debrief
+
+   ### Summary
+   [2–3 sentences: what was discussed, what was decided]
+
+   ### Key Points
+   - [Topics covered, athlete inputs, coach recommendations]
+   - [Modifications made, concerns raised, patterns noted]
+
+   ### Action Items
+   - [Commitments, follow-ups, things to check next time — or "None"]
+   ```
+
 ## Output
 
 Keep it concise — the athlete just finished training. Provide:
