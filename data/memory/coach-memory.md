@@ -39,6 +39,7 @@
 
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
 - **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea. Shifted to nausea + stomach pain + constipation. Week 1 training largely paused. Doctor (Mar 3): no acute concern, wait it out. Progressive improvement through the week. **2026-03-07: Resolved.** First run back — no GI symptoms during or after. Eating normally. Full clearance for training.
+- **2026-03-09 — Left shin pain (run):** Slight pain appeared ~halfway through easy run (3.78 km). Walked 30 sec, resumed, pain resolved completely. NIGGLE level — no swelling, no sharp bone pain, no gait change. First occurrence. Monitor on next run.
 
 ## Open Follow-ups
 
@@ -49,7 +50,7 @@
   Retention: Active items only — remove once resolved
 -->
 
-*(no open follow-ups)*
+- **2026-03-09:** Left shin — monitor on next run. If pain returns, assess: earlier onset? worse severity? gait change? If yes to any, shift to low-impact and consider physio.
 
 ## Key Learnings
 

@@ -113,3 +113,16 @@
 - Planned session: Strength — Full Body Intro (40 min) | Modifications: none — green light
 - Readiness: GREEN. Excellent sleep (best score this week), HRV above 7-day avg (67 vs ~60), low fatigue, high motivation. 3 drinks only flag but no compounding effect on metrics. Proceed as planned.
 - Notes: 3rd consecutive night with alcohol (Thu heavy, Fri 2, Sat 3) — recovery metrics strong each morning but stacking noted. Caffeine cutoff 17:30 — drifting from 14:00 target, no sleep impact this time. Last day of Week 1. First strength session of rebuild.
+
+## 2026-03-09 — Monday
+
+### Session Debrief
+- Session: Easy Run (swapped from Tuesday — Upper Body Strength moved to Tuesday)
+- Activity: 3.78 km in 29:11, avg HR 143, max HR 161, avg pace ~7:43/km
+- Zone distribution: 96% Z1, 4% Z2 — well within easy aerobic range
+- Training load: 19
+- RPE: 4/10 — felt as expected, matches watch data
+- Pain: Left shin — slight pain appeared ~halfway through. Walked ~30 sec, resumed running, pain resolved and did not return.
+- Fueling: N/A (session <75 min)
+- Alerts: Left shin pain flagged for monitoring (NIGGLE level). No red flags: self-resolving, no swelling, no sharp bone pain, no gait change. Does not meet POOR(3) threshold. First occurrence — monitor next run.
+- Coach notes: Second run back post-illness. HR slightly higher than Saturday's run (143 vs 127 avg) — could be normal variation, early rebuild, or the shin discomfort briefly elevating effort. Zone distribution still excellent (96% Z1). Shin pain is the only item to watch — if it recurs on the next run, we reassess. Swap from strength to run today was athlete-initiated.
