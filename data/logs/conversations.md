@@ -1,5 +1,23 @@
 # Conversation Log
 
+## 2026-03-10 19:35 — /coach:chat
+
+### Summary
+Athlete asked about daily protein powder/shakes. Coach explained supplementation is a practical tool to hit the existing 1.6–2.0g/kg target, not a necessity. Recommended whole food first, one shake per day to fill gaps. Advised whey protein (or isolaat if GI issues), and noted creatine can be mixed in for convenience.
+
+### Key Points
+- Protein target already established at 1.6–2.0g/kg/day — question is whether diet alone covers it
+- One shake/day (~25–30g) likely bridges the gap between typical food intake and target
+- Whole food prioritized for micronutrients and satiety
+- Timing less important than total daily intake
+- GI caution: whey isolaat if concentrate causes bloating, given recent GI history
+- Practical tip: mix creatine into the daily shake
+
+### Action Items
+- None — informational conversation
+
+---
+
 ## 2026-03-10 19:32 — /coach:chat
 
 ### Summary
