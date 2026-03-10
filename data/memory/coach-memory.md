@@ -40,6 +40,7 @@
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
 - **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea. Shifted to nausea + stomach pain + constipation. Week 1 training largely paused. Doctor (Mar 3): no acute concern, wait it out. Progressive improvement through the week. **2026-03-07: Resolved.** First run back — no GI symptoms during or after. Eating normally. Full clearance for training.
 - **2026-03-09 — Left shin pain (run):** Slight pain appeared ~halfway through easy run (3.78 km). Walked 30 sec, resumed, pain resolved completely. NIGGLE level — no swelling, no sharp bone pain, no gait change. First occurrence. Monitor on next run.
+- **2026-03-10 — Left shoulder pain (bench press):** Mild pain during dumbbell bench press only. No pain reported on OHP, rows, or other exercises in the same session. Session completed. NIGGLE level — no sharp pain, no numbness/tingling, no night pain. First occurrence. Monitor on next pressing session.
 
 ## Open Follow-ups
 
@@ -51,6 +52,7 @@
 -->
 
 - **2026-03-09:** Left shin — monitor on next run. If pain returns, assess: earlier onset? worse severity? gait change? If yes to any, shift to low-impact and consider physio.
+- **2026-03-10:** Left shoulder — monitor on next pressing session (bench/OHP). If pain returns, assess: same movement? worsened? any numbness/tingling? If yes, reduce load or substitute movement and consider physio.
 
 ## Key Learnings
 
@@ -62,6 +64,7 @@
 -->
 
 - **2026-03-07 — Running without music:** First run back after illness — ran without music, enjoyed it, time flew by. Worth remembering: unstructured, unplugged easy runs resonate with the athlete's "enjoy the process" mindset.
+- **2026-03-10 — Strength baseline (upper body, Week 2):** Bench 12 kg x10, T-Bar Row 20 kg x10, OHP 15 kg x15/12, Pull-ups 6/4 reps (RPE 10 on set 2 — clear limiter this phase), Farmers Walk 32→48 kg x30m, Triceps pushdown 10–12.5 kg x10. Use 32 kg for both Farmers Walk sets next session before progressing. Pull-up progression: prioritize adding reps before adding weight.
 
 ## Preferences & Style
 

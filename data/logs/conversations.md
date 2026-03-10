@@ -1,5 +1,22 @@
 # Conversation Log
 
+## 2026-03-10 18:47 — /coach:debrief
+
+### Summary
+Upper Body Strength debrief from Hevy app (no ICU sync — external app). Full session completed: bench press, T-bar row, OHP, pull-ups, farmers walk, triceps pushdown. Left shoulder NIGGLE flagged during bench press only — session continued, no escalation. Strength baseline logged for progressive overload tracking.
+
+### Key Points
+- Session completed as planned — all exercises done
+- Left shoulder mild pain on bench press (NIGGLE level) — first occurrence, isolated to that movement, session continued without issue
+- Pull-ups hit RPE 10 on set 2 (4 reps) — clear near-term limiter; prioritize adding reps before load
+- Farmers Walk jumped 32→48 kg in same session — keep 32 kg for both sets next time before progressing
+- OHP and rows completed without shoulder complaints — reassuring
+
+### Action Items
+- Monitor left shoulder on next pressing session (Thursday upper body or next strength session)
+- Farmers Walk: both sets at 32 kg next session before adding load
+- Pull-ups: aim for 7 reps on set 1 next session before adding weight
+
 ## 2026-03-10 08:30 — /coach:checkin
 
 ### Summary

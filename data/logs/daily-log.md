@@ -152,3 +152,18 @@
 - Planned session: Strength — Upper Body (45 min) | Modifications: none — proceed as planned
 - Readiness: GREEN. 0/6 low-readiness triggers. HRV at 7-day avg (61 vs ~60). Sleep below target but quality AVG, not POOR. Motivation LOW(4) noted but no overtraining pattern — likely Tuesday energy dip. First dry night after 4 consecutive alcohol nights.
 - Notes: Sunday Full Body Intro session appears to have been skipped (no activity on ICU, athlete did not confirm completion). Upper Body Strength proceeds as planned — standalone session.
+
+### Session Debrief
+- Session: Strength — Upper Body (from Hevy app, no ICU activity synced)
+- Duration: ~45–50 min (estimated from exercise volume)
+- Exercises completed:
+  - Dumbbell Bench Press: 2x10 @ 12 kg (RPE 7 warmup + working)
+  - T-Bar Row: 2x10 @ 20 kg (RPE 7 / 7.5)
+  - Overhead Press (Barbell): 15x15 @ 8 RPE, 15x12 @ 8.5 RPE
+  - Pull-Up: 6 reps @ 8.5 RPE, 4 reps @ 10 RPE
+  - Farmers Walk: 32 kg x 30m, 48 kg x 30m
+  - Triceps Rope Pushdown: 2x10 @ 10–12.5 kg (RPE 7 / 7.5)
+- Pain: Left shoulder — mild pain during dumbbell bench press. Not reported during OHP, rows, or other exercises. Self-resolved (session continued).
+- Fueling: N/A (session <75 min)
+- Alerts: Left shoulder NIGGLE flagged. Localized to bench press movement only. No sharp pain, no numbness/tingling, no night pain reported. First occurrence. Monitor on next pressing session — if it returns or worsens, reduce load or substitute movement.
+- Coach notes: Solid upper body session. Full planned exercise list completed. Pull-ups hit RPE 10 on set 2 (4 reps) — the biggest limiter this phase, as expected at this training age. Farmers walk load progression (32→48 kg) is aggressive but single-session; keep 32 kg for both sets next session and add load slowly. Benchmark weights logged for progressive overload tracking.
