@@ -12,10 +12,16 @@ Upper Body Strength debrief from Hevy app (no ICU sync — external app). Full s
 - Farmers Walk jumped 32→48 kg in same session — keep 32 kg for both sets next time before progressing
 - OHP and rows completed without shoulder complaints — reassuring
 
+### Follow-up Exchange
+- **Shoulder:** Only stings in bottom/stretched position of bench press under load. Fine at rest and during all other movements. Settled completely post-session. Updated to position-specific NIGGLE — monitor on bench press only, OHP is clear.
+- **Farmers Walk:** 32 kg was intentionally easy, 48 kg was a deliberate step-up and felt manageable. Updated baseline to 48 kg.
+- **Row substitution:** Athlete gets back pain from barbell/dumbbell rows — hates them. T-Bar Row is the permanent substitute. Logged as movement intolerance — do not program BB/DB rows going forward. Use T-Bar Row, cable row, or chest-supported row.
+
 ### Action Items
-- Monitor left shoulder on next pressing session (Thursday upper body or next strength session)
-- Farmers Walk: both sets at 32 kg next session before adding load
-- Pull-ups: aim for 7 reps on set 1 next session before adding weight
+- Monitor left shoulder on next bench press (bottom position under load specifically)
+- Farmers Walk: 48 kg as working weight going forward
+- Pull-ups: aim for more reps on set 2 before adding weight
+- Future programming: no barbell/dumbbell rows — use T-Bar Row or cable/chest-supported alternatives
 
 ## 2026-03-10 08:30 — /coach:checkin
 

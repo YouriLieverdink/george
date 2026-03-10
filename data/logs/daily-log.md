@@ -163,7 +163,9 @@
   - Pull-Up: 6 reps @ 8.5 RPE, 4 reps @ 10 RPE
   - Farmers Walk: 32 kg x 30m, 48 kg x 30m
   - Triceps Rope Pushdown: 2x10 @ 10–12.5 kg (RPE 7 / 7.5)
-- Pain: Left shoulder — mild pain during dumbbell bench press. Not reported during OHP, rows, or other exercises. Self-resolved (session continued).
+- Pain: Left shoulder — mild pain in bottom/stretched position of dumbbell bench press under load only. Fine at rest, fine during OHP and all other movements. Settled completely post-session.
+- Exercise substitution: T-Bar Row replaced planned barbell/dumbbell rows — athlete reports back pain with BB/DB rows (movement intolerance). T-Bar Row is comfortable. Logged as permanent preference.
+- Farmers Walk: 32 kg intentionally used as warmup — felt too light. 48 kg was the working set and manageable. Use 48 kg as baseline going forward.
 - Fueling: N/A (session <75 min)
-- Alerts: Left shoulder NIGGLE flagged. Localized to bench press movement only. No sharp pain, no numbness/tingling, no night pain reported. First occurrence. Monitor on next pressing session — if it returns or worsens, reduce load or substitute movement.
-- Coach notes: Solid upper body session. Full planned exercise list completed. Pull-ups hit RPE 10 on set 2 (4 reps) — the biggest limiter this phase, as expected at this training age. Farmers walk load progression (32→48 kg) is aggressive but single-session; keep 32 kg for both sets next session and add load slowly. Benchmark weights logged for progressive overload tracking.
+- Alerts: Left shoulder NIGGLE flagged. Specific to bench press bottom position under load — not a general shoulder issue. First occurrence. Monitor on next bench press. If persistent, reduce ROM (floor press) or substitute incline press.
+- Coach notes: Solid upper body session. Full exercise list completed with one sensible substitution. Pull-ups remain the clear limiter (RPE 10 on set 2, 4 reps). Benchmark weights logged for progressive overload tracking.

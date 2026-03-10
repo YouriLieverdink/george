@@ -40,7 +40,7 @@
 - **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
 - **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea. Shifted to nausea + stomach pain + constipation. Week 1 training largely paused. Doctor (Mar 3): no acute concern, wait it out. Progressive improvement through the week. **2026-03-07: Resolved.** First run back — no GI symptoms during or after. Eating normally. Full clearance for training.
 - **2026-03-09 — Left shin pain (run):** Slight pain appeared ~halfway through easy run (3.78 km). Walked 30 sec, resumed, pain resolved completely. NIGGLE level — no swelling, no sharp bone pain, no gait change. First occurrence. Monitor on next run.
-- **2026-03-10 — Left shoulder pain (bench press):** Mild pain during dumbbell bench press only. No pain reported on OHP, rows, or other exercises in the same session. Session completed. NIGGLE level — no sharp pain, no numbness/tingling, no night pain. First occurrence. Monitor on next pressing session.
+- **2026-03-10 — Left shoulder pain (bench press):** Pain only in bottom/stretched position of dumbbell bench press under load. Fine at rest, fine during OHP, rows, and all other movements. Session completed without issue. NIGGLE level — no sharp pain, no numbness/tingling, no night pain. First occurrence. Likely positional impingement at end-range under load. Monitor on next bench press session — if it persists, reduce ROM (floor press) or substitute incline press.
 
 ## Open Follow-ups
 
@@ -52,7 +52,7 @@
 -->
 
 - **2026-03-09:** Left shin — monitor on next run. If pain returns, assess: earlier onset? worse severity? gait change? If yes to any, shift to low-impact and consider physio.
-- **2026-03-10:** Left shoulder — monitor on next pressing session (bench/OHP). If pain returns, assess: same movement? worsened? any numbness/tingling? If yes, reduce load or substitute movement and consider physio.
+- **2026-03-10:** Left shoulder — monitor on next bench press specifically (bottom/stretched position under load). OHP is clear. If pain returns: reduce ROM (floor press) or substitute incline press. If worsening or any numbness/tingling, consider physio.
 
 ## Key Learnings
 
@@ -64,7 +64,7 @@
 -->
 
 - **2026-03-07 — Running without music:** First run back after illness — ran without music, enjoyed it, time flew by. Worth remembering: unstructured, unplugged easy runs resonate with the athlete's "enjoy the process" mindset.
-- **2026-03-10 — Strength baseline (upper body, Week 2):** Bench 12 kg x10, T-Bar Row 20 kg x10, OHP 15 kg x15/12, Pull-ups 6/4 reps (RPE 10 on set 2 — clear limiter this phase), Farmers Walk 32→48 kg x30m, Triceps pushdown 10–12.5 kg x10. Use 32 kg for both Farmers Walk sets next session before progressing. Pull-up progression: prioritize adding reps before adding weight.
+- **2026-03-10 — Strength baseline (upper body, Week 2):** Bench 12 kg x10, T-Bar Row 20 kg x10 (substituted for barbell/DB rows — see preferences), OHP 15 kg x15/12, Pull-ups 6/4 reps (RPE 10 on set 2 — clear limiter this phase), Farmers Walk 48 kg x30m (32 kg too light — use 48 kg as working weight going forward), Triceps pushdown 10–12.5 kg x10. Pull-up progression: prioritize adding reps before adding weight.
 
 ## Preferences & Style
 
@@ -84,6 +84,8 @@
 - **Paid commitments override caution** (2026-03-04): Will push through illness/discomfort for sessions with financial commitment (swim course). Respect this but ensure safety guardrails are clear when it happens.
 - **Long ride substitution for marathon prep** (2026-03-07): During marathon prep (Apr–May), substitute supplementary long runs with long cycling sessions. Serves double duty: builds aerobic base with less impact stress + prepares for Elfstedentocht (240 km, May 25). Structure: 1 key long run/week (progression toward 30+ km) + 1 long ride replacing a second long run (progression toward 240 km). Protect the weekly long run — cycling replaces volume, not the key session. Also need to start cycling in rebuild phase (April) to avoid underpreparing like Amsterdam-Paris.
 - **Strength & body composition goal** (2026-03-03): Wants to rebuild muscle mass — had more muscle from previous strength training and misses it. Also interested in visible abs / better body composition. Enjoys lifting. Agreed to hypertrophy-focused upper/lower split 2x/week. Has access to a local gym (full equipment: barbells, dumbbells, cables).
+- **Row intolerance — back pain with barbell/dumbbell rows** (2026-03-10): Gets significant back pain from barbell and dumbbell rows. Substitutes T-Bar Row instead, which he tolerates well. Do NOT program barbell or dumbbell rows going forward. Use T-Bar Row, cable row, or chest-supported row as horizontal pull options.
+- **Farmers Walk baseline** (2026-03-10): 32 kg is too light — felt easy. 48 kg is the working weight. Progress from there.
 
 ## Intervals.icu
 
