@@ -1,5 +1,21 @@
 # Conversation Log
 
+## 2026-03-10 08:30 — /coach:checkin
+
+### Summary
+Tuesday check-in. Wellness data mostly solid (HRV 61, rHR 53, no alcohol), but sleep was short at 6.6h/score 73/AVG quality and motivation LOW(4). Readiness GREEN — 0 triggers. Proceeded with planned Upper Body Strength session (45 min). Sunday's Full Body Intro session appears skipped.
+
+### Key Points
+- First dry night after 4 consecutive alcohol nights — good reset
+- Caffeine cutoff ~14:00 — on target
+- Motivation LOW(4) with mood OK(3) — flagged but no overtraining pattern (only 2 sessions last week)
+- Left shin from Monday's run: no relevance today (upper body), monitor on Thursday's run
+- Sunday's Full Body Intro: no ICU activity, athlete didn't confirm — assumed skipped
+
+### Action Items
+- Log weights used in today's session (debrief) for progression tracking
+- Monitor left shin on Thursday's run (next run day)
+
 ## 2026-03-09 — Chat
 
 **Topic:** Sleep staging data — value of tracking REM/deep/light sleep breakdown

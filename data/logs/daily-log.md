@@ -138,3 +138,17 @@
 - Fueling: N/A (session <75 min)
 - Alerts: Left shin pain flagged for monitoring (NIGGLE level). No red flags: self-resolving, no swelling, no sharp bone pain, no gait change. Does not meet POOR(3) threshold. First occurrence — monitor next run.
 - Coach notes: Second run back post-illness. HR slightly higher than Saturday's run (143 vs 127 avg) — could be normal variation, early rebuild, or the shin discomfort briefly elevating effort. Zone distribution still excellent (96% Z1). Shin pain is the only item to watch — if it recurs on the next run, we reassess. Swap from strength to run today was athlete-initiated.
+
+## 2026-03-10 — Tuesday
+
+### Morning Check-in
+- Sleep: 6.6h (score 73, quality AVG)
+- HRV: 61 | Resting HR: 53 | SpO2: — | Weight: —
+- Steps: 6107 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: AVG(2) | Stress: LOW(1)
+- Mood: OK(3) | Motivation: LOW(4) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 0 | Caffeine cutoff: ~14:00
+- Time available: not specified
+- Planned session: Strength — Upper Body (45 min) | Modifications: none — proceed as planned
+- Readiness: GREEN. 0/6 low-readiness triggers. HRV at 7-day avg (61 vs ~60). Sleep below target but quality AVG, not POOR. Motivation LOW(4) noted but no overtraining pattern — likely Tuesday energy dip. First dry night after 4 consecutive alcohol nights.
+- Notes: Sunday Full Body Intro session appears to have been skipped (no activity on ICU, athlete did not confirm completion). Upper Body Strength proceeds as planned — standalone session.
