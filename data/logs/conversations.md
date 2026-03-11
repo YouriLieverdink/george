@@ -176,3 +176,16 @@ Athlete asked how the week has been going so far. Coach reviewed 3/5 completed s
 - Monitor congestion + rHR overnight — if worsening, dial back Thursday run
 - Left shin: first run test Thursday — flag any pain
 - Protein tracking: start this week, even 2-3 days
+
+## 2026-03-11 — /coach:chat
+
+### Summary
+Athlete forgot to track protein intake this week and asked to push it to Monday. Coach agreed, noted this is the second deferral (first was GI illness), and updated the follow-up date in memory. No training decisions made.
+
+### Key Points
+- Protein tracking deferred again — now scheduled for Week 3 (starting Mon Mar 16)
+- Context: Week 1 deferral was GI illness; Week 2 was forgotten
+- Coach acknowledged without pressure; athlete advised to add to calendar
+
+### Action Items
+- Athlete to track protein intake Mon Mar 16–Wed/Thu (3–5 days) and share results
