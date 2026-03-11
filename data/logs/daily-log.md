@@ -169,3 +169,17 @@
 - Fueling: N/A (session <75 min)
 - Alerts: Left shoulder NIGGLE flagged. Specific to bench press bottom position under load — not a general shoulder issue. First occurrence. Monitor on next bench press. If persistent, reduce ROM (floor press) or substitute incline press.
 - Coach notes: Solid upper body session. Full exercise list completed with one sensible substitution. Pull-ups remain the clear limiter (RPE 10 on set 2, 4 reps). Benchmark weights logged for progressive overload tracking.
+
+## 2026-03-11 — Wednesday
+
+### Morning Check-in
+- Sleep: 6.2h (score 61, quality AVG)
+- HRV: 59 | Resting HR: 56 | SpO2: — | Weight: —
+- Steps: 11 | VO2 max: —
+- Soreness: AVG(2) | Fatigue: HIGH(3) | Stress: AVG(2)
+- Mood: GOOD(2) | Motivation: AVG(3) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 2 | Caffeine cutoff: ~14:00
+- Time available: morning (swim slot 08:30–09:30)
+- Planned session: Swim Lesson 4 — Pak het water! (60 min) | Modifications: none — proceed as planned
+- Readiness: AMBER. 2/6 low-readiness triggers (poor sleep 6.2h/score 61, fatigue HIGH). Session is paid swim lesson — technique-focused, inherently low load. Proceed.
+- Notes: Nasal congestion reported — "nose really full." Relevant for swim breathing drills. Advised to mention to instructor and adjust if needed. Combination of congestion + poor sleep + fatigue + rHR 56 (above 52–53 baseline) flagged as possible early illness signal — monitor tomorrow. 2 alcohol drinks last night. Caffeine cutoff 14:00 on target.

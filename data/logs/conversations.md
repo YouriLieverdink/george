@@ -1,5 +1,24 @@
 # Conversation Log
 
+## 2026-03-11 07:45 — /coach:checkin
+
+### Summary
+Morning check-in for Week 2, Day 3. Readiness AMBER — 2/6 triggers (poor sleep 6.2h/score 61 + fatigue HIGH). Swim Lesson 4 proceeds as planned (paid commitment, technique-focused, low load). Nasal congestion flagged — relevant for breathing drills, also monitoring as possible early illness signal alongside elevated rHR (56 vs 52–53 baseline).
+
+### Key Points
+- Sleep dropping: 6.2h/score 61 is the lowest score this week (was 73 yesterday, 83 Monday)
+- Fatigue HIGH — second time in 3 days (also HIGH Monday)
+- Nasal congestion reported — advised to tell swim instructor, adjust breathing drills if needed
+- rHR 56 — slightly above recent 52–53 range; combined with congestion, watching for illness
+- 2 alcohol drinks last night, caffeine cutoff 14:00
+- Protein tracking reminder given — still pending from Monday's chat
+- Shin and shoulder follow-ups remain open but not tested today (swim day)
+
+### Action Items
+- Monitor congestion + sleep + rHR tomorrow — if worsening, may indicate early illness
+- Protein tracking still pending — athlete to start this week
+- Debrief after swim lesson: breathing experience, lesson content, pain check
+
 ## 2026-03-10 19:38 — /coach:chat
 
 ### Summary
