@@ -158,3 +158,21 @@ Tuesday check-in. Wellness data mostly solid (HRV 61, rHR 53, no alcohol), but s
 - Framed the next 11 days (until March 20 gala) as a clean window to establish the 5-session/week rhythm and see what consistent sleep + no alcohol feels like.
 
 **Memory updates:** Updated alcohol & recovery pattern with sleep inertia/oversleeping observation.
+
+## 2026-03-11 — /coach:chat
+
+### Summary
+Athlete asked how the week has been going so far. Coach reviewed 3/5 completed sessions (easy run Mon, upper body strength Tue, swim lesson 4 Wed), total load 48/65–75 target, and highlighted wellness trend: HRV declining (68→61→59), rHR rising (52→53→56), fatigue back to HIGH. Normal load-adaptation response. Flagged congestion + rHR combo to monitor overnight before Thursday run.
+
+### Key Points
+- 3/5 sessions done, on pace for full 5-session week — would be first complete week since before Egypt
+- Load 48/65-75 target — 2 sessions remaining (Thu run + lower body strength)
+- Wellness declining but mood jumped to GOOD today — mentally engaged despite physical fatigue
+- Left shin open: first test is Thursday's run — start slow, check early
+- Protein tracking still pending — encouraged to start even 2-3 days this week
+- Left shoulder not relevant until next upper body session
+
+### Action Items
+- Monitor congestion + rHR overnight — if worsening, dial back Thursday run
+- Left shin: first run test Thursday — flag any pain
+- Protein tracking: start this week, even 2-3 days
