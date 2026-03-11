@@ -183,3 +183,13 @@
 - Planned session: Swim Lesson 4 — Pak het water! (60 min) | Modifications: none — proceed as planned
 - Readiness: AMBER. 2/6 low-readiness triggers (poor sleep 6.2h/score 61, fatigue HIGH). Session is paid swim lesson — technique-focused, inherently low load. Proceed.
 - Notes: Nasal congestion reported — "nose really full." Relevant for swim breathing drills. Advised to mention to instructor and adjust if needed. Combination of congestion + poor sleep + fatigue + rHR 56 (above 52–53 baseline) flagged as possible early illness signal — monitor tomorrow. 2 alcohol drinks last night. Caffeine cutoff 14:00 on target.
+
+### Session Debrief — Swim Lesson 4 (Bosch Control Method: "Pak het water!")
+- Session: Swim (pool) — 1.2 km in 27:30 active time, avg HR 125, max HR 172, training load 13
+- Plan vs. actual: 60 min lesson, ~27:30 active swimming — consistent with Lesson 3 format
+- RPE: 5–6/10 (harder than expected — congestion significantly impaired breathing)
+- Pain: 0/10 — upper body soreness present (DOMS from Tuesday's strength), no new pain
+- Breathing: Nasal congestion made breathing very difficult in the water. Escalated into moments of panic as the session progressed. Athlete didn't initially identify the cause — recognized it was the congestion later.
+- Lesson content: Arm technique — focus on catch phase and underwater pull. Exercises targeting grabbing as much water as possible through specific ranges of motion. Arms above and below the water.
+- Learning: "I learned how to move my arms below the water."
+- Alerts: None triggered. Congestion impacting swim breathing is uncomfortable but not a safety concern. Upper body soreness is expected DOMS from strength session 24h prior, not injury. Panic episodes during breathing difficulty — monitor; if recurring without congestion, flag for swim anxiety assessment.

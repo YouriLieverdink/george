@@ -66,6 +66,7 @@
 
 - **2026-03-07 — Running without music:** First run back after illness — ran without music, enjoyed it, time flew by. Worth remembering: unstructured, unplugged easy runs resonate with the athlete's "enjoy the process" mindset.
 - **2026-03-10 — Strength baseline (upper body, Week 2):** Bench 12 kg x10, T-Bar Row 20 kg x10 (substituted for barbell/DB rows — see preferences), OHP 15 kg x15/12, Pull-ups 6/4 reps (RPE 10 on set 2 — clear limiter this phase), Farmers Walk 48 kg x30m (32 kg too light — use 48 kg as working weight going forward), Triceps pushdown 10–12.5 kg x10. Pull-up progression: prioritize adding reps before adding weight.
+- **2026-03-11 — Swim arm technique (Lesson 4):** Catch phase and underwater pull — "grabbing as much water as possible" through ranges of motion. Athlete reported learning how to move arms below the water. Building on Lesson 3's arm use + breathing.
 
 ## Preferences & Style
 
@@ -147,12 +148,14 @@
 |------|----------|-----------------|----------|-------|
 | — | 1–2 | Completed before coaching started | — | No details available |
 | 2026-03-04 | 3 | Correct arm use, breathing technique | — | 1425m, 59 min pool (28 active). Avg HR 135, max 195. RPE 4/10. GI illness active but manageable during session. First session back after 5-day pause. |
+| 2026-03-11 | 4 | Arm catch phase + underwater pull ("Pak het water!") | Grab as much water as possible through ROM | 1200m, 27:30 active. Avg HR 125, max 172. RPE 5–6/10. Nasal congestion severely impaired breathing → panic episodes. |
 
 ### Technique Cues That Work
 
 <!-- Cues the athlete responds to — use in session descriptions and reminders. -->
 
 - **Trouble swimming slowly** (2026-03-04): Feels like sinking at low effort, so defaults to swimming fast during exercises. This drives HR spikes (195 max on a 4/10 RPE session). As technique and body position improve, slow swimming should become possible. Until then, expect spiky swim HR — don't alarm on it.
+- **Breathing panic when congested** (2026-03-11): Nasal congestion + face in water triggered escalating panic during Lesson 4. Didn't recognize the cause initially. RPE jumped from typical 4/10 to 5–6/10 primarily from breathing difficulty, not physical effort. Monitor: if panic episodes recur without congestion, assess swim-specific breathing anxiety separately.
 
 ### CSS Test Results
 
