@@ -17,22 +17,34 @@ Read today's planned session from the intervals.icu calendar (see `.claude/servi
 
 ### Identify the session to debrief
 
-Before pulling data, determine which session the athlete is debriefing:
+Pull both planned events and completed activities upfront, then match them explicitly.
 
-1. **Pull today's activities** from the API (see `.claude/services/coach/intervals-icu.md`)
-2. **If no activities today:** pull yesterday's activities
-3. **If exactly one activity found:** use it — confirm with the athlete: "Looks like you did [type] [duration] [today/yesterday] — debriefing that one?"
-4. **If multiple activities found:** list them briefly and ask which one: "I see a few sessions — which one are we debriefing? (1) Run 45 min this morning, (2) Strength 40 min yesterday evening"
-5. **If no activities found for today or yesterday:** ask the athlete: "I don't see a recent activity synced. Which session are you debriefing, and when was it?"
+**Step 1 — Pull data from intervals.icu:**
 
-This handles the common case of training in the evening and debriefing the next morning.
+1. Pull today's **calendar events** (WORKOUT category only) from the API
+2. Pull today's **activities** from the API
+3. If no activities today, also pull yesterday's activities
+
+**Step 2 — Match activities to calendar events:**
+
+Match by **primary sport type** (Run↔Run, Ride↔Ride, Swim↔Swim, WeightTraining↔WeightTraining). Use event name and planned duration as secondary confirmation signals. A match means same sport type on the same day.
+
+**Step 3 — Handle the result:**
+
+| Scenario | Action |
+|----------|--------|
+| **One activity, one matching event** (types align) | Confirm the pairing: "You had [event name] on the plan and completed [activity type] [duration] — debriefing that one?" |
+| **One activity, no matching event** (type mismatch or no event for that day) | Flag the mismatch: "The plan had [event name / type], but you did [activity type] instead. Did you swap sessions, or was this an extra?" |
+| **Multiple activities and/or events** | List all activities and calendar events with their types, then ask which pairing to debrief: "I see these on the plan: (A) Easy Run, (B) Strength. And these completed: (1) Run 45 min, (2) WeightTraining 40 min. Which pairing are we debriefing?" |
+| **No activities found** (today or yesterday) | Check if a calendar event exists for today. If yes: "You had [event name] planned but I don't see a synced activity. Did you complete it externally (Hevy, pool timer, etc.) or skip it?" If no event either: "No planned session or activity found — what are we debriefing?" |
+| **Activity exists, no calendar events at all** | Unplanned session: "I don't see anything on the calendar for today, but you did [activity type] [duration]. Unplanned session? Confirm and we'll log it." |
 
 ### Pull activity data from intervals.icu
 
-Once the session is identified, extract from the API:
+Once the session-to-event pairing is confirmed, extract from the matched activity:
 
 1. **Key metrics:** duration, distance, avg HR, max HR, avg pace/power, TSS/training load, zone distribution
-2. **Compare plan vs. actual:** was the prescribed distance/duration roughly hit? Was intensity in the right zone? Cross-reference the ICU calendar event for today.
+2. **Compare plan vs. actual:** use the **matched calendar event** as the reference. Was the prescribed distance/duration roughly hit? Was intensity in the right zone? If a session swap occurred (e.g., ran instead of planned strength), note it explicitly in the comparison and in the daily log.
 
 Present a summary:
 > "Session recorded: 11.2 km easy run in 67 min, avg HR 138, avg pace 5:59/km, training load 58. The plan was 11.2 km Easy at 6:00/km — looks spot on."
