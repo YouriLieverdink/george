@@ -6,8 +6,10 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Edit(/data/**)",
-      "Write(/data/**)"
+      "Read(data/**)",
+      "Edit(data/**)",
+      "Write(data/**)",
+      "Bash(cat:*data/*)"
     ]
   }
 }
