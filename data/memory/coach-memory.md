@@ -53,7 +53,7 @@
 
 - **2026-03-09:** Left shin — monitor on next run. If pain returns, assess: earlier onset? worse severity? gait change? If yes to any, shift to low-impact and consider physio.
 - **2026-03-10:** Left shoulder — monitor on next bench press specifically (bottom/stretched position under load). OHP is clear. If pain returns: reduce ROM (floor press) or substitute incline press. If worsening or any numbness/tingling, consider physio.
-- **2026-03-10:** Protein tracking — athlete to track protein intake for 3–5 days this week (MyFitnessPal/Cronometer). Review results together to determine if supplementation is needed and how much. Previously deferred due to GI illness.
+- **2026-03-16:** Protein tracking — athlete to track protein intake for 3–5 days starting Monday Mar 16 (MyFitnessPal/Cronometer). Review results together to determine if supplementation is needed and how much. Previously deferred twice: GI illness (Week 1), forgot this week (Week 2).
 
 ## Key Learnings
 
