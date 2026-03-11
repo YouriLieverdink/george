@@ -33,22 +33,37 @@ Read from local files:
    - Any injury signals or alerts from `current-plan.md`
    - Plan adherence: compare completed activities vs. what was planned
 
-3. **Choose 2–3 key sessions max** for the week. Everything else is easy/recovery/skill.
+3. **Zone calibration check** (before generating structured workouts):
+   - Read `coach-memory.md` → Current Zones and Fitness Test History
+   - For each discipline this week, determine target mode:
+     - **HR+RPE** if zones are estimated/uncalibrated
+     - **Pace/Power** if zones are calibrated from a recent threshold test and fitness is stable
+     - **HR-only** if returning from illness or a training break
+     - **RPE-only** for uncalibrated swim (no CSS test)
+   - Record the target mode decision in the week rationale
+   - If zones have been estimated for 4+ weeks with consistent training → suggest scheduling a zone test (5k TT for run, 20-min FTP test for bike, 400m+200m CSS for swim)
 
-4. **Schedule with recovery protection:**
+4. **Choose 2–3 key sessions max** for the week. Everything else is easy/recovery/skill.
+
+5. **Schedule with recovery protection:**
    - Avoid stacking hard run after long run
    - Avoid >2 hard sessions back-to-back
    - Place key sessions on days with most time available
-   - Include strength per phase (2× base/build, 1× peak)
+   - Include strength per phase (2× base/build, 1× peak) — use phase-specific templates from `.claude/agents/periodization.md` → Strength Training Templates
 
-5. **For triathlon plans:** minimum 2 swims/week.
+6. **For triathlon plans:** minimum 2 swims/week.
 
-6. **For each session, provide:**
+7. **For each session, provide:**
    - Warm-up / main / cool-down structure
-   - Target intensities (zone, RPE range, pace/power if applicable)
+   - Target intensities using the target mode determined in step 3 (HR+RPE, Pace/Power, HR-only, or RPE-only)
    - ICU workout description using the syntax from `.claude/services/coach/intervals-icu.md` Section 11, adapted from the templates in `.claude/agents/periodization.md` "Intervals.icu Structured Workout Descriptions"
-   - Fueling notes for sessions >75–90 min
    - What to log after
+
+8. **Fueling instructions for `[FUEL]`-tagged sessions** (>75 min, bricks, race simulations):
+   - Mark eligible sessions with `[FUEL]` in the session name
+   - Reference current nutrition phase from `.claude/agents/periodization.md` → Race Nutrition Development Protocol
+   - Check `coach-memory.md` → Race Rehearsal Log for tested products and GI outcomes
+   - Include specific fueling target (g carbs/h) and product recommendations in session notes
 
 ## Output Format
 

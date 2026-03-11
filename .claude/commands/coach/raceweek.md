@@ -59,12 +59,17 @@ Generate a race-specific checklist based on the event type:
 - [ ] Flat kit (tube, CO2, tire levers) — for triathlon
 - [ ] Race number, timing chip collected
 
-**Nutrition (race day):** *(Use Race Rehearsal Log from `coach-memory.md` — reference tested products and GI outcomes)*
+**Nutrition (race day):** *(Build from Race Rehearsal Log in `coach-memory.md` using the race-day template from `.claude/agents/periodization.md` → Race Nutrition Development Protocol)*
 - [ ] Pre-race meal planned (2–3h before start, familiar foods)
-- [ ] On-course fueling plan: what products, how many, at what intervals — based on what's been tested
+- [ ] On-course fueling plan built from rehearsal data:
+  - Products: [tested products with good GI outcomes from Race Rehearsal Log]
+  - Target intake: [g carbs/h based on Phase 3 rehearsal rate]
+  - Timing: every [X] min
+  - Per-discipline breakdown (triathlon): bike plan + run plan
 - [ ] Backup fuel (in case aid stations don't have what you expect)
-- [ ] Hydration plan (bottles, electrolytes)
+- [ ] Hydration plan (bottles, electrolytes, sodium loading)
 - [ ] Post-race recovery food
+- **Warning:** if <3 fueling entries in Race Rehearsal Log → warn athlete "Limited fueling data — going conservative with targets. Consider rehearsing in remaining sessions."
 
 **Travel/logistics:**
 - [ ] Start time and location confirmed

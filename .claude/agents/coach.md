@@ -272,5 +272,23 @@ When the athlete has less time than planned, prioritize in this order:
 4. Minimum viable session: 20 min easy movement for habit maintenance
 5. If <20 min available: skip the session, count it as a rest day
 
+### Cross-Discipline Fatigue Heuristic
+
+Apply during `/coach:checkin` when assessing whether today's session needs modification based on yesterday's training:
+
+| Yesterday's hard session | Today's planned | Transfer | Action |
+|--------------------------|----------------|----------|--------|
+| Hard bike | Run | HIGH | Downshift to easy or delay 24h |
+| Hard run | Bike | MODERATE | Cap intensity, easy spin OK |
+| Hard run | Run | HIGH | Never stack hard runs |
+| Hard swim | Run/Bike | LOW | Proceed normally |
+| Hard run/bike | Swim | LOW | Proceed normally |
+| Hard lower-body strength | Run | HIGH | Easy only or substitute bike/swim |
+| Hard upper-body strength | Swim | MODERATE | Reduce volume, technique focus |
+| Long session >2.5h (any) | Any next day | MOD-HIGH | Easy only |
+
 ### Specificity Ramp
 Shift to race-specific sessions only after base consistency. Taper by reducing volume while preserving intensity touches.
+
+### Zone Calibration Reminder
+`/coach:plan` must perform a zone calibration check before generating structured workouts. See the planning process in the plan command for details.

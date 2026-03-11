@@ -39,9 +39,10 @@ This gives you hard data for the analysis rather than relying on memory or self-
 
 1. **Load trend** (from intervals.icu activities):
    - Total volume this week vs. previous weeks (km, hours)
-   - Intensity distribution: zone time from activities (how much easy vs. moderate vs. hard)
    - Total training load (icu_training_load sum) and CTL/ATL/TSB trend
    - Compare to plan: did load land where intended? Cross-reference ICU calendar events vs. activities.
+   - **Load spike check:** Compute this week's total training load / 4-week rolling average. Flag if >1.3, alert if >1.5. Cross-reference with any niggle reports from the week. See `.claude/agents/alerts.md` → Load Spike Detection.
+   - **Intensity distribution (zone-time computation):** For each activity this week, pull `icu_zone_times` from the activity detail endpoint. Sum across all activities: total seconds in Z1-Z5. Compute percentages: Easy (Z1+Z2), Moderate (Z3), Hard (Z4+Z5). Compare against phase targets from `.claude/agents/periodization.md` → Intensity Distribution Targets. Flag if deviation >5 percentage points in any category. Exclude strength and beginner swim from calculation.
 
 2. **Readiness trend** (from intervals.icu wellness):
    - Sleep duration, score, and quality pattern across the week
@@ -69,12 +70,29 @@ This gives you hard data for the analysis rather than relying on memory or self-
    - Sessions completed vs. planned
    - Reasons for any gaps (fatigue? time? motivation? injury?)
 
+### Overtraining Tier Evaluation
+
+Compute and evaluate against the Overtraining Spectrum from `.claude/agents/alerts.md`:
+- HRV 7-day average vs 30-day average (% difference)
+- Resting HR 7-day average vs 30-day average (bpm difference)
+- Consecutive days with fatigue HIGH (from wellness data)
+- Key session hit rate this week (sessions completed at target vs planned)
+- Mood poor-day count (OK(3) or GRUMPY(4)) over last 14 days
+
+State which tier applies (FOR / NFOR / OTS / none) and the evidence.
+
 ### Decide
 
-Based on the analysis, determine:
-- **Continue as planned:** adapting safely, readiness stable, hitting targets
-- **Modify next week:** fatigue accumulating, insert deload or reduce intensity
-- **Escalate:** red flags present, refer or shift to recovery protocol
+Based on the analysis, apply the **Plan Adaptation Decision Rules** from `.claude/agents/periodization.md`:
+
+1. **Check deload triggers:** CTL drop >5 pts without planned deload? Adherence <60% x2 weeks? Fatigue HIGH 4+/7? 2+ key sessions failed? HRV 7d >15% below 30d?
+2. **Check phase extension triggers:** objectives not met? <2% improvement? Adherence <70% due to illness/injury? >1 week modified for injury?
+3. **Check simplification triggers:** adherence <50% x2 weeks? Same session skipped 3+/4 weeks? Mood poor >50% of days over 2 weeks?
+4. **Check early advancement triggers:** adherence >90%? Key sessions on target? Readiness stable? CTL trending up?
+
+State which rule triggered (or "none — continue as planned"). Log the decision and rationale in `current-plan.md` → Decisions & Agreements.
+
+Precedence: **Safety > Adaptation > Progression > Schedule.**
 
 ### Output
 
@@ -86,8 +104,9 @@ Based on the analysis, determine:
 
 ### Load
 - Volume: [X hours / X km] (vs. [previous week])
+- Training load: [X] (4-week avg: [X], ratio: [X.XX])
 - Key sessions completed: [X/Y]
-- Intensity distribution: [approximately X% easy, Y% moderate, Z% hard]
+- Intensity distribution: Easy [X]% / Moderate [X]% / Hard [X]% (phase target: [X/X/X]) [OK / FLAG: deviation in ...]
 
 ### Readiness
 - Sleep: [trend — duration, score, quality]
@@ -103,6 +122,17 @@ Based on the analysis, determine:
 
 ### Concerns
 - [What needs attention — specific]
+
+### Overtraining Check
+- HRV 7d vs 30d: [X]% | rHR 7d vs 30d: [+/-X] bpm
+- Fatigue HIGH streak: [X] days | Key session hit rate: [X/Y]
+- Mood poor days (14d): [X] | Classification: [none / FOR / NFOR / OTS]
+
+### Load Spike
+- This week: [X] / 4-week avg: [X] = ratio [X.XX] [OK / FLAG / ALERT]
+
+### Adaptation Rules
+- [Which rule triggered, or "none — continue as planned"]
 
 ### Adjustment for Next Week
 - [What changes and why]

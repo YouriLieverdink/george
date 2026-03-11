@@ -38,6 +38,23 @@ Collect athlete profile + constraints
 3. **Strength as injury-performance support:** 2×/week in base/build, maintain 1×/week near peak/taper.
 4. **Taper as fatigue shedding:** reduce volume 40–60% while largely maintaining intensity; ≤21 days progressive.
 5. **Never out-optimize safety:** red flags → recovery/referral, not "push through."
+6. **Injury prevention built in:** during volume ramps and return-from-break, include activation routines from `.claude/agents/alerts.md` → Prevention Routines by Region for any areas with niggle history.
+
+## Intensity Distribution Targets
+
+3-zone model mapping: Easy = Z1+Z2, Moderate = Z3, Hard = Z4+Z5.
+
+| Phase | Easy | Moderate | Hard |
+|-------|------|----------|------|
+| Rebuild/Base | 80-85% | 10-15% | ≤5% |
+| Build | 75-80% | 10-15% | 10-15% |
+| Peak | 70-75% | 10-15% | 15-20% |
+| Taper | 80-85% | 10% | 5-10% |
+| Deload | 85-90% | 5-10% | <5% |
+
+Deviation >5 percentage points in any category warrants discussion during `/coach:review`.
+
+Exclude beginner swim sessions and strength training from the intensity distribution calculation — these are developing technical proficiency and neuromuscular adaptation respectively, not contributing to aerobic load distribution.
 
 ---
 
@@ -226,6 +243,46 @@ All blueprints reference "3:1 load:deload" — here's what a deload week actuall
 - Mood remains flat or worsening
 - → Consider extending the deload by 2–3 days, or flag for overtraining screening
 
+## Plan Adaptation Decision Rules
+
+Four decision rules evaluated during `/coach:review`. Precedence: **Safety > Adaptation > Progression > Schedule.**
+
+### Insert Deload
+
+Trigger if ANY:
+- CTL drop >5 pts without a planned deload
+- Adherence <60% for 2 consecutive weeks
+- Fatigue HIGH 4+/7 days
+- 2+ key sessions failed (RPE way above target, bailed, or couldn't complete)
+- HRV 7-day avg >15% below 30-day baseline
+
+### Extend Phase
+
+Trigger if ANY:
+- Phase objectives not met (check `current-plan.md` phase goals)
+- <2% threshold improvement after a full mesocycle
+- Adherence <70% due to illness/injury/life (not motivation — that's simplification)
+- >1 week modified due to injury
+
+### Simplify Plan
+
+Trigger if ANY:
+- Adherence <50% for 2 consecutive weeks (time or motivation)
+- Same session skipped 3+/4 weeks
+- Mood OK(3)/GRUMPY(4) >50% of days over 2 weeks
+
+Action: reduce weekly sessions by 1, protect key sessions first, cut the lowest-priority session.
+
+### Advance Early
+
+Trigger if ALL:
+- Adherence >90%
+- Key sessions hitting targets
+- Readiness stable (no fatigue/soreness trending up)
+- CTL trending up
+
+Action: advance 1 week early with a transitional week (slightly higher volume than deload, slightly lower than full load).
+
 ---
 
 ## Session Library ("Recipes")
@@ -254,11 +311,67 @@ All blueprints reference "3:1 load:deload" — here's what a deload week actuall
 - **Run:** 20–45 min easy-to-steady (not a race)
 - **Purpose:** neuromuscular adaptation + pacing discipline. Ask for GI feedback + perceived coordination.
 
-### Strength: Endurance-Focused
-- **Pattern:** squat/hinge/push/pull/carry + calf/foot + trunk
-- **Example exercises:** trap-bar deadlift or RDL; split squat; calf raises; rows; push-ups; loaded carries; anti-rotation press
-- **Volume:** base phase 2–4 sets; peak phase 1–2 sets
-- **Safety:** NSCA-style mindset — progression, technique, monitoring
+### Strength Training Templates
+
+#### Phase Periodization
+
+| Training Phase | Strength Phase | Sets × Reps | RPE | Frequency |
+|----------------|---------------|-------------|-----|-----------|
+| Rebuild | Anatomical Adaptation | 2-3 × 12-15 | 5-6 | 2×/week |
+| Base | Hypertrophy / Max Strength | 3-4 × 8-12 or 3-4 × 4-6 | 7-8 | 2×/week |
+| Build | Power Endurance | 2-3 × 8-12 circuit | 6-7 | 2→1×/week |
+| Peak/Taper | Maintenance | 2 × 6-8 | 6-7 | 1×/week |
+
+#### Exercise Pools
+
+**Upper body:** bench press, T-bar row (no BB/DB rows — athlete preference), OHP, pull-ups, farmers walk, accessories (face pulls, bicep curls, tricep pushdowns)
+
+**Lower body:** squat (back or front), RDL or trap-bar deadlift, split squat/lunges, calf raises, core (pallof press, dead bug, ab wheel), accessories (leg curl, leg extension)
+
+**Athlete-specific notes:** check `coach-memory.md` → Preferences & Style for equipment availability and exercise substitutions. When in doubt, default to the simplest compound movement.
+
+#### Sample Sessions by Phase
+
+**Anatomical Adaptation (Rebuild):**
+- Warmup: 10 min mobility + activation
+- Goblet squat 2×15, RDL 2×15, Split squat 2×12 each
+- Bench press 2×15, T-bar row 2×15
+- Calf raises 2×15, Pallof press 2×12 each
+- Cooldown: 5 min stretching
+
+**Max Strength (Base):**
+- Warmup: 10 min mobility + activation
+- Back squat 4×6, RDL 3×8
+- Bench press 3×8, Pull-ups 3×8
+- Calf raises 3×15, Farmers walk 3×30m
+- Ab wheel 3×10
+- Cooldown: 5 min stretching
+
+**Power Endurance (Build):**
+- Warmup: 10 min mobility + activation
+- Circuit (2-3 rounds, minimal rest between exercises):
+  Trap-bar deadlift ×10, Split squat ×10 each, Push-ups ×12
+  T-bar row ×10, Calf raises ×15, Pallof press ×10 each
+- Cooldown: 5 min stretching
+
+**Maintenance (Peak/Taper):**
+- Warmup: 10 min mobility + activation
+- Back squat 2×6, RDL 2×6
+- Bench press 2×8, T-bar row 2×8
+- Calf raises 2×12
+- Cooldown: 5 min stretching
+
+#### Scheduling Rules
+- No strength + key endurance session on the same day
+- 48h between sessions targeting the same muscle groups
+- Place strength on easy-endurance days or rest days
+- Reduce strength volume/intensity the day before a key session
+
+#### ICU Format
+- **Type:** `WeightTraining`
+- **Description:** plain text (no ICU step syntax — see note in Intervals.icu section)
+- **moving_time:** calculate from exercise list (warmup + exercises × 3 min + cooldown) × 60
+- **icu_training_load:** use the Strength Load Estimation table
 
 ---
 
@@ -365,30 +478,94 @@ Cooldown
 - 10m Z1 Pace
 ```
 
-### Strength: Endurance-Focused
+### Strength: Phase-Specific Templates
 
-**name:** `Strength: Endurance-Focused`
+Note: Strength descriptions must NOT use ICU step syntax (`- Xm`, `- 5m`, etc.) because the parser treats them as timed steps and overrides `moving_time` with the sum of parsed durations instead of the intended total. Use plain text without `- ` dash prefixes, and write `min` instead of `m` for durations.
+
+**Anatomical Adaptation** (Rebuild phase)
+**name:** `Strength: Anatomical Adaptation`
 **type:** `WeightTraining`
-**moving_time:** `2700` (45 min)
+**moving_time:** `2700` (45 min) | **icu_training_load:** `25`
 
 ```
 Warmup
 10 min mobility + activation
 
 Main set
-Trap-bar deadlift 3x8
-Split squat 3x10 each
-Calf raises 3x15
-Bent-over row 3x10
-Push-ups 3x12
-Loaded carry 3x30m
-Pallof press 3x10 each
+Goblet squat 2x15
+RDL 2x15
+Split squat 2x12 each
+Bench press 2x15
+T-bar row 2x15
+Calf raises 2x15
+Pallof press 2x12 each
 
 Cooldown
 5 min stretching
 ```
 
-Note: Strength descriptions must NOT use ICU step syntax (`- Xm`, `- 5m`, etc.) because the parser treats them as timed steps and overrides `moving_time` with the sum of parsed durations instead of the intended total. Use plain text without `- ` dash prefixes, and write `min` instead of `m` for durations.
+**Max Strength** (Base phase)
+**name:** `Strength: Max Strength`
+**type:** `WeightTraining`
+**moving_time:** `3000` (50 min) | **icu_training_load:** `40`
+
+```
+Warmup
+10 min mobility + activation
+
+Main set
+Back squat 4x6
+RDL 3x8
+Bench press 3x8
+Pull-ups 3x8
+Calf raises 3x15
+Farmers walk 3x30m
+Ab wheel 3x10
+
+Cooldown
+5 min stretching
+```
+
+**Power Endurance** (Build phase)
+**name:** `Strength: Power Endurance`
+**type:** `WeightTraining`
+**moving_time:** `2400` (40 min) | **icu_training_load:** `30`
+
+```
+Warmup
+10 min mobility + activation
+
+Main set (circuit, 2-3 rounds)
+Trap-bar deadlift x10
+Split squat x10 each
+Push-ups x12
+T-bar row x10
+Calf raises x15
+Pallof press x10 each
+
+Cooldown
+5 min stretching
+```
+
+**Maintenance** (Peak/Taper phase)
+**name:** `Strength: Maintenance`
+**type:** `WeightTraining`
+**moving_time:** `1800` (30 min) | **icu_training_load:** `15`
+
+```
+Warmup
+10 min mobility + activation
+
+Main set
+Back squat 2x6
+RDL 2x6
+Bench press 2x8
+T-bar row 2x8
+Calf raises 2x12
+
+Cooldown
+5 min stretching
+```
 
 ---
 
@@ -459,6 +636,52 @@ Track and refine during build/peak phase:
 - **Pacing adjustment:** if race-day temp >28°C, plan for 3–5% slower pace targets
 - **Cooling opportunities:** ice in cap/suit at aid stations, cold sponges, water dousing
 - **Warning signs:** stop if: confusion, stopping sweating, severe headache, nausea + dizziness (heat illness — see alerts.md)
+
+## Race Nutrition Development Protocol
+
+Progressive fueling practice integrated into the training plan across three phases.
+
+### Phase 1 — Foundation (Base)
+- **Target:** 30-40g carbs/h
+- **Products:** familiar, easily tolerated (whatever the athlete already uses)
+- **Focus:** establish the habit of eating during training. Practice the mechanics — opening gels, drinking from bottles on the bike, eating while running.
+- **Sessions:** every long session >75 min
+
+### Phase 2 — Race Candidate Testing (Build)
+- **Target:** 50-60g carbs/h
+- **Products:** race-candidate products (what will be available on course, or athlete's preferred race fuel)
+- **Timing:** every 20-25 min
+- **Focus:** test specific products, practice race timing, note GI response
+- **Sessions:** long rides, bricks, long runs >75 min
+
+### Phase 3 — Race Rehearsal (Peak, 4-6 weeks pre-race)
+- **Target:** 60-90g carbs/h at race rate
+- **Products:** only race-day products (nothing new)
+- **Focus:** full rehearsal including pre-race meal timing, exact products, exact intervals
+- **Sessions:** race simulations, key long sessions
+
+### Integration with `/coach:plan`
+
+Mark fueling-eligible sessions with `[FUEL]` tag in the session name (sessions >75 min, bricks, race simulations). When generating the plan, reference the current nutrition phase and include fueling instructions:
+- Check `coach-memory.md` → Race Rehearsal Log for tested products and GI outcomes
+- Include specific fueling targets (g/h) in session notes
+- Note which products to use
+
+### Race-Day Nutrition Plan Template
+
+Built from rehearsal data in `coach-memory.md` → Race Rehearsal Log during `/coach:raceweek`:
+
+```
+Pre-race: [meal], [timing before start]
+Swim: nothing (triathlon)
+Bike: [product] every [X min], targeting [X]g/h. [hydration plan]
+Run: [product] every [X min], targeting [X]g/h. [hydration plan]
+Backup: [alternative if GI issues arise]
+```
+
+**Warning:** if <3 fueling log entries in Race Rehearsal Log by race week → warn athlete "Limited fueling data — going conservative with targets."
+
+---
 
 **Duration estimation:** Calculate `moving_time` from the exercise list rather than using a fixed value:
 - Warmup: use stated duration (e.g., 10 min)

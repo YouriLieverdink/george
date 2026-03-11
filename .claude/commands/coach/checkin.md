@@ -92,27 +92,54 @@ After receiving answers: write the subjective scores back to intervals.icu via t
 
 ## Decision Logic
 
-Combine device data (HRV, resting HR, sleep) with subjective scores to assess readiness. Apply the decision tree from `.claude/agents/alerts.md`:
+After receiving the athlete's subjective scores, compute the **Readiness Score** per the algorithm in `.claude/agents/alerts.md` → Readiness Score section, then apply the decision tree.
 
-1. **Red flags?** (chest pain, fainting, severe SOB, systemic illness)
-   → STOP. Rest only. Recommend medical evaluation.
+### Step 1: Compute Readiness Score
 
-2. **Injury ≥ POOR(3) or altered mechanics?**
-   → Replace run with low-impact. Reduce intensity. Flag for follow-up.
-   Injury = NIGGLE(2) → flag for monitoring, proceed with caution.
+Using the device data (sleep score, HRV, resting HR) and subjective scores (fatigue, soreness, mood, motivation), compute the weighted score (0-100) with modifiers (alcohol, SpO2, injury, stress, consecutive low days). Log the score and breakdown.
 
-3. **Readiness low?** (2+ of: poor sleep, fatigue ≥ HIGH(3), soreness ≥ HIGH(3), HRV ≥10% below 7-day rolling average (compute from Intervals.icu wellness data), alcohol ≥ 3 drinks, low SpO2)
-   → Keep session but downshift: easy aerobic only, or shorten 30–50%.
-   Note: alcohol the previous evening lowers the threshold for downshifting — even 1–2 drinks with poor sleep warrants caution. Late caffeine cutoff (after ~15:00) combined with poor sleep is a pattern to flag over time.
-   Low SpO2 (below athlete's baseline) → flag as possible illness indicator.
+### Step 2: Red Flag Check
 
-4. **Overtraining signals?** (mood = GRUMPY(4) + motivation = LOW(4) + declining performance trend)
-   → Flag for review. Consider deload or extra rest day.
+Red flags? (chest pain, fainting, severe SOB, systemic illness)
+→ Score = 0. STOP. Rest only. Recommend medical evaluation.
 
-5. **Key session day + hard session in last 48h?** (check intervals.icu activities for last 48h)
-   → Convert to moderate or move key session 24–48h.
+### Step 3: Injury Gate
 
-6. **Otherwise:** proceed with planned session.
+Injury ≥ POOR(3) or altered mechanics?
+→ Replace run with low-impact. Reduce intensity. Flag for follow-up.
+
+Injury = NIGGLE(2) → check `coach-memory.md` → Injury & Health History for same-location history. If niggle escalation criteria are met (see `.claude/agents/alerts.md` → Niggle Escalation Tracking: same location 3+ times in 10 days, intensity increasing, appearing earlier, or present at rest) → suggest prevention routine from alerts.md as warmup add-on and reduce affected discipline 50%. Otherwise → flag for monitoring, proceed with caution.
+
+### Step 4: Readiness Score Actions
+
+Apply threshold-based actions from the readiness score:
+
+| Score | Color | Action |
+|-------|-------|--------|
+| 80-100 | GREEN | Execute as planned |
+| 60-79 | AMBER | Cap top-end intensity on key sessions; easy sessions proceed normally |
+| 40-59 | YELLOW | Easy aerobic only, or shorten 30-50%. No key session work |
+| 20-39 | ORANGE | Active recovery only (20-30 min easy walk/mobility) |
+| 0-19 | RED | Full rest. If red flag → medical evaluation |
+
+Additional context: alcohol the previous evening lowers the threshold for downshifting — even 1-2 drinks with poor sleep warrants caution. Late caffeine cutoff (after ~15:00) combined with poor sleep is a pattern to flag over time. Low SpO2 (below athlete's baseline) → flag as possible illness indicator.
+
+### Step 5: Cross-Discipline Fatigue Check
+
+Check intervals.icu activities for the last 48h. Apply the **Cross-Discipline Fatigue Heuristic** from `.claude/agents/coach.md`:
+
+- **HIGH transfer** (e.g., hard bike → run, hard run → run, hard lower-body strength → run) → Convert key session to easy, or move 24-48h
+- **MODERATE transfer** (e.g., hard run → bike, hard upper-body strength → swim) → Cap intensity, easy effort OK
+- **LOW transfer** (e.g., hard swim → run/bike, hard run/bike → swim) → Proceed normally
+
+### Step 6: Overtraining Signals
+
+Mood = GRUMPY(4) + motivation = LOW(4) + declining performance trend
+→ Flag for review. Consider deload or extra rest day. Reference Overtraining Spectrum tiers from `.claude/agents/alerts.md`.
+
+### Step 7: Proceed
+
+If none of the above triggered → execute planned session.
 
 If the session is modified, sync the change to intervals.icu:
 - **Modified session:** PUT to update the calendar event with new description/duration
@@ -145,6 +172,7 @@ Append the check-in data to `data/logs/daily-log.md` under today's date:
 - Mood: [X] | Motivation: [X] | Injury: [X] | Hydration: [X]
 - Alcohol: [X] | Caffeine cutoff: [X]
 - Time available: [X]
+- Readiness: [SCORE]/100 ([COLOR]) | Components: Sleep [X], HRV [X], rHR [X], Fatigue [X], Soreness [X], Mood+Mot [X] | Modifiers: [list or "none"]
 - Planned session: [session] | Modifications: [if any]
 ```
 

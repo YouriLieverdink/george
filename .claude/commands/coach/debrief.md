@@ -57,7 +57,7 @@ The API already has distance, duration, HR, pace, power, and training load. Ask 
 
 1. **RPE (0–10)** + how it compared to the plan (easier / as expected / harder)
 2. **Pain or niggles (0–10):** where, when it started, how it changed during the session
-3. **Fueling** (for sessions >75 min): what and how much, GI response (good / mild issues / problems)
+3. **Fueling** (for sessions >75 min or `[FUEL]`-tagged): what product, how much (g carbs/h), at what intervals, GI response (good / mild issues / problems), energy levels through session. Log to `coach-memory.md` → Race Rehearsal Log.
 4. **For key sessions:** did you hit pacing/power targets? If not, why? (cross-reference with API data)
 5. **One sentence: "What did you learn?"**
 
@@ -65,17 +65,23 @@ The API already has distance, duration, HR, pace, power, and training load. Ask 
 
 After collecting the data:
 
-1. **Check alerts:** Apply alert rules from `.claude/agents/alerts.md`:
+1. **Pacing adherence** (for key sessions): Compare planned workout targets (from the matched calendar event description — parsed intervals, pace/power/HR targets) against actual activity metrics (avg pace, avg power, HR zones, lap splits). Report adherence:
+   - Target vs actual for each structured interval (if available)
+   - Overall session: on-target / slightly over / significantly over or under
+   - Note any drift patterns (e.g., started on target, faded in final intervals)
+   - Log pacing adherence summary in the daily log entry.
+
+2. **Check alerts:** Apply alert rules from `.claude/agents/alerts.md`:
    - Pain ≥ 4/10 or worsening trend? → Flag and recommend modification tomorrow.
    - RPE much higher than expected for the prescribed intensity? → Note potential fatigue accumulation.
    - GI issues during fueling practice? → Adjust fueling plan for next long session.
 
-2. **Provide brief feedback:**
+3. **Provide brief feedback:**
    - Affirm what went well (use specific observations, not generic praise)
    - If something needs attention, frame as a collaborative next step
    - Connect to the bigger picture (what this session contributes to the plan)
 
-3. **Update the daily log** — append session data to `data/logs/daily-log.md` under today's date (add a `### Session Debrief` subsection if the morning check-in entry already exists, or create a new date entry):
+4. **Update the daily log** — append session data to `data/logs/daily-log.md` under today's date (add a `### Session Debrief` subsection if the morning check-in entry already exists, or create a new date entry):
 
    ```
    ### Session Debrief
@@ -83,12 +89,13 @@ After collecting the data:
    - Plan vs. actual: [comparison]
    - RPE: [X]/10 ([easier / as expected / harder])
    - Pain: [X]/10 — [location, details if any]
-   - Fueling: [details if applicable]
+   - Fueling: [details if applicable — product, g/h, GI response]
+   - Pacing adherence: [on-target / over / under — key session only]
    - Learning: "[athlete's response]"
    - Alerts: [any triggered]
    ```
 
-4. **Update memory** — write to `data/memory/coach-memory.md`:
+5. **Update memory** — write to `data/memory/coach-memory.md`:
    - **Key Learnings:** If the athlete's "what did you learn?" response contains an insight worth preserving, add it with a date stamp.
    - **Injury & Health History:** If pain ≥ 4/10 or any new injury signal, append with date, location, severity, and context.
    - **Athlete Patterns:** If a debrief-relevant pattern is emerging (e.g., consistently higher RPE than expected on Thursdays, recurring calf tightness after intervals), note it.
@@ -96,9 +103,9 @@ After collecting the data:
    - **Race Rehearsal Log:** If fueling was practiced (sessions >75 min), update "Nutrition Products Tested" with product, GI outcome. If swim was open water, update "Open Water Swimming." If brick session, note transition practice.
    - **Swim Development:** If this was a swim course session, update "Lesson Progress" with lesson content and any technique cues that worked. Check off "Open Water Readiness" items as they're achieved.
 
-5. **If this was the last session of the week:** suggest running `/coach:review` for the weekly review.
+6. **If this was the last session of the week:** suggest running `/coach:review` for the weekly review.
 
-6. **Log conversation** — append to `data/logs/conversations.md`:
+7. **Log conversation** — append to `data/logs/conversations.md`:
 
    ```
    ## YYYY-MM-DD HH:MM — /coach:debrief
