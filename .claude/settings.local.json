@@ -8,8 +8,7 @@
       "Bash(git push:*)",
       "Read(data/**)",
       "Edit(data/**)",
-      "Write(data/**)",
-      "Bash(cat:*data/*)"
+      "Write(data/**)"
     ]
   }
 }
