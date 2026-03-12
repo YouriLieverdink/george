@@ -207,3 +207,19 @@
 - Readiness: 76/100 (AMBER) | Components: Sleep 22.5, HRV 20.0, rHR 10.0, Fatigue 10.5, Soreness 10.5, Mood+Mot 7.9 | Modifiers: alcohol -5
 - Planned session: Strength — Lower Body (45 min, 17:30) | Modifications: none — proceed as planned
 - Notes: Athlete reported feeling awful on waking despite excellent sleep metrics — likely sleep inertia (waking during deep sleep cycle). Objective recovery outstanding: HRV 73 is highest this week (Mon 68, Tue 61, Wed 59), rHR 54 at baseline. AMBER driven by mood OK(3) + alcohol modifier, not by poor recovery. Wednesday's illness signals (congestion + poor sleep + elevated rHR) have not materialized — today's metrics show full recovery. Caffeine cutoff 14:00 on target. Discussed sleep score vs. subjective feel and alcohol's effect on Garmin sleep quality detection.
+
+### Session Debrief
+- Session: Strength — Lower Body, 37:28 (vs 45 min planned), avg HR 119, max HR 149, training load 15
+- Exercises completed:
+  - Goblet Squat: 14 kg x10 (RPE 6), 18 kg x10 (RPE 7.5)
+  - Romanian Deadlift (Barbell): 20 kg x10 (RPE 6), 30 kg x10 (RPE 8)
+  - Split Squat (Dumbbell): 20 kg x10 (RPE 6), 24 kg x10 (RPE 8.5)
+  - Single Leg Calf Raise (Machine): 15 kg x15 (RPE 9.5), 10 kg x15 (RPE 10)
+  - Dead Bug: 10 reps (RPE 7), 10 reps (RPE 8)
+- Plan vs. actual: Session shorter than planned (37 vs 45 min). All exercises completed. Load 15 — appropriate for rebuild phase.
+- RPE: 5/10 (felt nice, moderate effort)
+- Pain: 0/10 — RDL caused normal lower back muscle fatigue (felt when standing up after sets), not pain. No sharp or concerning sensation.
+- Shin check: No left shin sensation during calf raises. High RPE (9.5–10) was purely muscular — started too heavy at 15 kg, dropped to 10 kg but already fatigued. Calibration: start at 10 kg next time.
+- Split squat note: Set 1 grip was the limiter (hands gave out before legs). Set 2 adjusted stance — felt it in quads properly but was harder. Good calibration for form next time.
+- Learning: (pending)
+- Alerts: None triggered. No shin pain, no back pain, no new injury signals.
