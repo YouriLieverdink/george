@@ -56,7 +56,7 @@
 ## Nutrition & Recovery
 - **GI issues / allergies / preferences:** Acute GI illness Feb 27–28, 2026 (Egypt travel). Under investigation — doctor visit Mar 3. No known food allergies.
 - **Caffeine tolerance:** heavy user (~8 cups/day, lifelong habit). Revisit as process goal — potential sleep/recovery impact.
-- **Sleep:** consistently <8 hours/night. Late social evenings (often past midnight) with early work mornings. Key area to address for recovery and adaptation. Working toward fixed 7:00 wake-up and 23:00 bedtime on 5+ nights/week.
+- **Sleep:** consistently <8 hours/night. Late social evenings (often past midnight) with early work mornings. Key area to address for recovery and adaptation. Working toward fixed 7:00 wake-up daily (non-negotiable, including weekends) and 23:00 bedtime on 5+ nights/week. Obstacles: girlfriend wakes later (hard to leave bed), frequent social evenings until midnight+. Using Garmin vibration alarm. Flexible work hours (9–5 or 10–6) — shift work start, not wake time. Tracking "out of bed" time daily for accountability.
 
 ## Goal Stack
 - **Outcome goal:** Finish IRONMAN 70.3 Greece and enjoy every moment
