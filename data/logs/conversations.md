@@ -1,5 +1,23 @@
 # Conversation Log
 
+## 2026-03-12 17:47 — /coach:debrief
+
+### Summary
+Lower Body Strength debrief from Hevy app (no ICU activity sync — external app, but matched to ICU WeightTraining activity 37:28). All exercises completed. Overall RPE 5/10 — enjoyable session. No pain or injury signals. Calf raise calibration noted (started too heavy). Lower back fatigue from RDL was normal muscle engagement, not pain. Left shin clear during calf raises.
+
+### Key Points
+- Session 37:28 vs 45 min planned — shorter but complete
+- Lower body baseline logged: Goblet Squat 18 kg, RDL 30 kg, Split Squat 24 kg, Calf Raise 10 kg (15 kg too heavy), Dead Bug 10 reps
+- Left shin: no sensation during calf raises — positive signal, continue monitoring on next run
+- RDL back fatigue: normal posterior chain engagement, not pain — no concern
+- Split squat: grip limiting before quads on heavier sets — may need straps or different hold
+- Calf raise calibration: start at 10 kg next session, 15 kg was too aggressive
+
+### Action Items
+- Left shin: next test remains the next run session
+- Left shoulder: next test remains next upper body / bench press
+- Protein tracking: Monday Mar 16, third attempt — no more deferrals
+
 ## 2026-03-12 08:00 — /coach:checkin
 
 ### Summary
