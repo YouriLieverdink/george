@@ -221,5 +221,6 @@
 - Pain: 0/10 — RDL caused normal lower back muscle fatigue (felt when standing up after sets), not pain. No sharp or concerning sensation.
 - Shin check: No left shin sensation during calf raises. High RPE (9.5–10) was purely muscular — started too heavy at 15 kg, dropped to 10 kg but already fatigued. Calibration: start at 10 kg next time.
 - Split squat note: Set 1 grip was the limiter (hands gave out before legs). Set 2 adjusted stance — felt it in quads properly but was harder. Good calibration for form next time.
-- Learning: (pending)
+- Learning: "We have a sauna at the gym now."
 - Alerts: None triggered. No shin pain, no back pain, no new injury signals.
+- Next session: Saturday Mar 14 — Easy Run 35 min (shin test). Friday is rest.
