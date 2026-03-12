@@ -43,7 +43,7 @@
 - **Process:**
   - Rebuild consistency: build to 5–6 sessions/week by end of March
   - Practice race fueling on all sessions >75 min (target 60–90g carbs/h)
-  - Sleep: fixed 7:00 wake-up daily, in bed by 23:00 on 5+ nights/week (target ~7.5h sleep)
+  - Sleep: fixed 7:00 wake-up daily (including weekends — non-negotiable), in bed by 23:00 on 5+ nights/week (target ~7.5h sleep). Track "out of bed" time daily at check-in for accountability.
   - Complete swim course (Bosch method, 8 lessons through April)
   - Strength 2x/week (upper/lower hypertrophy split) through rebuild + marathon prep; compress to 2x full-body maintenance in build/peak
   - Protein intake: target 1.6–2.0g/kg bodyweight daily to support muscle growth
