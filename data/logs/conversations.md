@@ -1,5 +1,25 @@
 # Conversation Log
 
+## 2026-03-12 08:00 — /coach:checkin
+
+### Summary
+Thursday morning check-in, Week 2 Day 4. Excellent objective recovery (HRV 73 — week's best, sleep 90/GREAT, rHR 54 at baseline). Readiness 76/100 AMBER — driven by mood OK(3) + alcohol modifier, not poor recovery. Athlete reported feeling awful on waking despite great metrics — discussed sleep inertia and why Garmin sleep scores don't reflect subjective feel. Also explained how 2 beers can coexist with a "GREAT" sleep score (Garmin isn't sensitive to low-moderate alcohol). Lower body strength proceeds as planned. Wednesday's illness signals (congestion, elevated rHR) have resolved.
+
+### Key Points
+- HRV 73 is highest this week (Mon 68, Tue 61, Wed 59) — strong recovery signal
+- Wednesday's congestion + elevated rHR concern has resolved (rHR back to 54)
+- 2 beers last night, caffeine cutoff 14:00 (on target)
+- Left shin and left shoulder follow-ups not relevant today (lower body strength, no bench press)
+- Discussed: sleep score vs. subjective feel (sleep inertia), alcohol + Garmin sleep quality detection limits
+- Protein tracking reminder given — starts Monday March 16, third attempt
+- Wellness scores synced to intervals.icu
+
+### Action Items
+- Debrief after lower body strength: RPE, working weights, shin during calf raises, general feedback
+- Left shin monitor continues — next run (likely next week)
+- Left shoulder monitor continues — next upper body / bench press session
+- Protein tracking: Monday Mar 16, no more deferrals
+
 ## 2026-03-11 10:20 — /coach:debrief
 
 ### Summary
