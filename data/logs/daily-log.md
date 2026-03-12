@@ -193,3 +193,17 @@
 - Lesson content: Arm technique — focus on catch phase and underwater pull. Exercises targeting grabbing as much water as possible through specific ranges of motion. Arms above and below the water.
 - Learning: "I learned how to move my arms below the water."
 - Alerts: None triggered. Congestion impacting swim breathing is uncomfortable but not a safety concern. Upper body soreness is expected DOMS from strength session 24h prior, not injury. Panic episodes during breathing difficulty — monitor; if recurring without congestion, flag for swim anxiety assessment.
+
+## 2026-03-12 — Thursday
+
+### Morning Check-in
+- Sleep: 7.4h (score 90, quality GREAT)
+- HRV: 73 | Resting HR: 54 | SpO2: — | Weight: —
+- Steps: — | VO2 max: —
+- Soreness: AVG(2) | Fatigue: AVG(2) | Stress: LOW(1)
+- Mood: OK(3) | Motivation: HIGH(2) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 2 (beers with friends) | Caffeine cutoff: ~14:00
+- Time available: 2–3 hours tonight
+- Readiness: 76/100 (AMBER) | Components: Sleep 22.5, HRV 20.0, rHR 10.0, Fatigue 10.5, Soreness 10.5, Mood+Mot 7.9 | Modifiers: alcohol -5
+- Planned session: Strength — Lower Body (45 min, 17:30) | Modifications: none — proceed as planned
+- Notes: Athlete reported feeling awful on waking despite excellent sleep metrics — likely sleep inertia (waking during deep sleep cycle). Objective recovery outstanding: HRV 73 is highest this week (Mon 68, Tue 61, Wed 59), rHR 54 at baseline. AMBER driven by mood OK(3) + alcohol modifier, not by poor recovery. Wednesday's illness signals (congestion + poor sleep + elevated rHR) have not materialized — today's metrics show full recovery. Caffeine cutoff 14:00 on target. Discussed sleep score vs. subjective feel and alcohol's effect on Garmin sleep quality detection.
