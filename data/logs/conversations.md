@@ -21,6 +21,12 @@ Athlete asked whether the annual Ardennes cycling trip (May 14–17, ~310 km ove
 - Include climbing exposure before Ardennes where possible
 - Monitor left knee during cycling progression and Ardennes trip
 
+**Follow-up: 70.3 plan usage**
+- Athlete asked whether the purchased 24-week Best Triathletes plan will be followed closely
+- Coach: no — plan is a reference/framework, not a rigid schedule. Life events (Ardennes, marathon, vacations, swim course, injury history) make week-by-week adherence unrealistic
+- Will use: phase structure, intensity distribution, session templates, progression logic
+- Will adapt: weekly schedule to real life, volume to actual CTL, strength to athlete's hypertrophy goals, swimming to course progression
+
 ## 2026-03-16 09:51 — /coach:plan
 
 ### Summary
