@@ -1,5 +1,24 @@
 # Conversation Log
 
+## 2026-03-16 09:51 — /coach:plan
+
+### Summary
+Week 3 plan generated and synced to intervals.icu. 7 sessions across all three disciplines + strength. Athlete pushed for more volume than initially proposed — no load cap, added Friday easy bike (first ride of rebuild) and Saturday technique swim practice. Estimated load ~115 (up from 63 in Week 2).
+
+### Key Points
+- Athlete corrected coach: no load cap for Week 3, agreed earlier to moderate progression (~75-80), then expanded further
+- Added easy bike Friday morning (before gala evening) and easy swim Saturday afternoon (conditional on post-gala recovery)
+- All run targets HR-based (estimated zones). Swim RPE-only (no CSS).
+- Shin retest Tuesday, shoulder retest Monday bench press, calf raises at 10 kg Thursday
+- Gala date corrected: March 20 is Friday, not Thursday as previously recorded
+- Session times set per athlete preference
+
+### Action Items
+- Protein tracking review ~Mar 19-20
+- Left shin: final running-load test Tuesday
+- Left shoulder: bench press retest today
+- Monitor post-gala recovery for Saturday/Sunday session decisions
+
 ## 2026-03-16 09:31 — /coach:review
 
 ### Summary
