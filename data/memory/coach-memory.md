@@ -37,7 +37,7 @@
   Retention: Permanent — entries are compact and date-stamped
 -->
 
-- **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported.
+- **2025-07 — Left knee pain:** Overload during Amsterdam–Paris cycling tour (~500 km). Insufficient preparation. Resolved on its own. No recurrence reported. **Key learning:** progressive cycling volume essential before multi-day rides — especially with climbing. Ardennes trip May 14–17 (4 days, ~310 km, hilly) needs 8-week ramp starting March 2026.
 - **2026-02-27/28 — GI illness (Egypt travel):** Acute onset vomiting + diarrhea. Shifted to nausea + stomach pain + constipation. Week 1 training largely paused. Doctor (Mar 3): no acute concern, wait it out. Progressive improvement through the week. **2026-03-07: Resolved.** First run back — no GI symptoms during or after. Eating normally. Full clearance for training.
 - **2026-03-09 — Left shin pain (run):** Slight pain appeared ~halfway through easy run (3.78 km). Walked 30 sec, resumed, pain resolved completely. NIGGLE level — no swelling, no sharp bone pain, no gait change. First occurrence. Monitor on next run.
 - **2026-03-10 — Left shoulder pain (bench press):** Pain only in bottom/stretched position of dumbbell bench press under load. Fine at rest, fine during OHP, rows, and all other movements. Session completed without issue. NIGGLE level — no sharp pain, no numbness/tingling, no night pain. First occurrence. Likely positional impingement at end-range under load. Monitor on next bench press session — if it persists, reduce ROM (floor press) or substitute incline press.
