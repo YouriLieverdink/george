@@ -224,3 +224,53 @@
 - Learning: "We have a sauna at the gym now."
 - Alerts: None triggered. No shin pain, no back pain, no new injury signals.
 - Next session: Saturday Mar 14 — Easy Run 35 min (shin test). Friday is rest.
+
+## 2026-03-13 — Friday (retrospective)
+
+### Catch-up Entry
+- Sleep: 3.0h (score 23, quality POOR)
+- HRV: 26 | Resting HR: 58 | SpO2: — | Weight: —
+- Steps: 6,773 | VO2 max: —
+- Soreness: HIGH(3) | Fatigue: HIGH(3) | Stress: LOW(1)
+- Mood: GOOD(2) | Motivation: HIGH(2) | Injury: NIGGLE(2) (calf DOMS) | Hydration: POOR(3)
+- Alcohol: heavy (Thursday night) | Caffeine cutoff: ~14:00
+- Planned session: rest day | Modifications: none
+- Notes: HRV crashed 73→26 (64% drop) — second confirmed alcohol-driven HRV crash (first was Mar 6: 61→31). rHR jumped 54→58. Sleep devastated: 3h, score 23, quality POOR. Calf DOMS from Thursday's lower body strength (single-leg calf raises hit RPE 9.5–10). Away for weekend with girlfriend. Retrospectively logged Mon Mar 16.
+
+## 2026-03-14 — Saturday (retrospective)
+
+### Catch-up Entry
+- Sleep: 9.4h (score 84, quality GOOD)
+- HRV: 67 | Resting HR: 53 | SpO2: — | Weight: —
+- Steps: 12,671 | VO2 max: —
+- Soreness: EXTREME(4) | Fatigue: AVG(2) | Stress: LOW(1)
+- Mood: GREAT(1) | Motivation: HIGH(2) | Injury: NIGGLE(2) (calf DOMS — gait changes after sitting, resolved after walking) | Hydration: OK(2)
+- Alcohol: 0 | Caffeine cutoff: ~20:00 (coffee after dinner)
+- Planned session: Easy Run 35 min | Modifications: **CANCELLED** — extreme calf DOMS from Thursday lower body. Calves "on fire." Smart decision.
+- Notes: HRV rebounded strongly (26→67). Body recovered fast objectively from alcohol. Calves too sore to run — walking caused gait changes after sitting. Ran deleted from ICU calendar, NOTE posted. Late caffeine (8pm coffee). Retrospectively logged Mon Mar 16.
+
+## 2026-03-15 — Sunday (retrospective)
+
+### Catch-up Entry
+- Sleep: 8.5h (score 56, quality POOR)
+- HRV: 68 | Resting HR: 53 | SpO2: — | Weight: —
+- Steps: 13,575 | VO2 max: —
+- Soreness: HIGH(3) | Fatigue: AVG(2) | Stress: LOW(1)
+- Mood: GREAT(1) | Motivation: HIGH(2) | Injury: NIGGLE(2) (calf DOMS — still gait changes after sitting) | Hydration: OK(2)
+- Alcohol: 3 | Caffeine cutoff: ~14:00
+- Planned session: rest day | Modifications: none
+- Notes: HRV stable at 68, rHR 53. Calves improving but still affecting gait after sitting. Sleep score 56 despite 8.5h — quality POOR (possibly Saturday's late caffeine + 3 drinks). Most active day (13.5k steps). Retrospectively logged Mon Mar 16.
+
+## 2026-03-16 — Monday
+
+### Morning Check-in
+- Sleep: 8.1h (score 89, quality GOOD)
+- HRV: 59 | Resting HR: 55 | SpO2: — | Weight: —
+- Steps: 109 | VO2 max: —
+- Soreness: AVG(2) | Fatigue: AVG(2) | Stress: LOW(1)
+- Mood: GOOD(2) | Motivation: HIGH(2) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 3 (Sunday night) | Caffeine cutoff: ~14:00
+- Time available: ~2 hours this afternoon
+- Readiness: 69/100 (AMBER) | Components: Sleep 22.3, HRV 16.3, rHR 9.1, Fatigue 10.5, Soreness 10.5, Mood+Mot 10.5 | Modifiers: alcohol -10
+- Planned session: Strength — Upper Body (45 min, afternoon) | Modifications: none — Week 3 not yet planned, prescribing upper body as priority (6 days since last)
+- Notes: Combined check-in covering Fri–Mon after weekend away. Left shin: no issues during 3 days of walking (12k+ steps/day) — resolving well. Left shoulder: no pain at rest over weekend. Protein tracking starting today (third attempt). Calves: residual DOMS but no longer affecting gait — NONE(1) today. HRV 59 slightly below weekend recovery (68) — modest alcohol effect from Sunday's 3 drinks. Overall readiness solid despite AMBER — all subjective scores positive.
