@@ -24,6 +24,7 @@
 - **Alcohol policy change** (2026-03-16): Athlete decided to stop all casual/loose drinking entirely. Only drinks on pre-planned dates below — no more random weeknight beers. Motivated by: feeling terrible the day after, wanting to prioritize training, and recognizing the pattern in the data (HRV crashes, lost sessions). Discussed with girlfriend over the weekend. Key risk: the habitual "random Tuesday 2 beers" is harder to resist than the big nights. No elaborate strategy yet — awareness + commitment. Schedule rest/easy days after planned drinking dates.
   - 2026-03-20: Gala (heavy)
   - 2026-03-28: Birthday party (heavy)
+  - 2026-04-09: Beer tasting with friends (moderate/heavy)
   - 2026-04-15: 1 year anniversary with Jasmijn (moderate/light)
   - 2026-05-01: Yearly friends dinner (moderate)
   - 2026-09-04/05: Weekend away with close friends (moderate/heavy) — falls in 70.3 Build phase, plan recovery week around it
