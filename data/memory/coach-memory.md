@@ -82,6 +82,7 @@
 
 - **Full Ironman ambition** (2026-03-03): Interested in a full Ironman in late 2027. No specific race yet. Revisit after 70.3 Greece (Oct 2026) — use that race experience to decide if/when to commit. Prerequisites: power meter for bike pacing, sustained training consistency through 2026–2027 winter base.
 - Responds well to collaborative, low-pressure coaching style
+- **70.3 readiness anxiety** (2026-03-16): Nervous that adapting the purchased plan means falling behind. Needs reassurance backed by evidence, not just "trust me." Committed to: (1) coach will proactively flag if he's falling behind — no sugarcoating, (2) **readiness check every 2–3 weeks** comparing current fitness against 70.3 demands (swim distance, bike endurance, run-off-bike capability). First check ~early April. Don't let this athlete fail.
 - Identity-driven motivation: "I show up for myself consistently — training is my time to invest in me"
 - Enjoys the process — A-race goal is to "finish and enjoy every moment"
 - Values relationship time — explicitly doesn't want training to take away from time with girlfriend on trips. Prefers minimal, opportunistic training during vacations.
