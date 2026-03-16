@@ -1,5 +1,27 @@
 # Conversation Log
 
+## 2026-03-16 09:31 — /coach:review
+
+### Summary
+Week 2 review completed. 4/5 sessions done (80% adherence) — first real training week since before Egypt. Saturday easy run cancelled due to extreme calf DOMS from first lower body session. Load 63 (up from 37 in Week 1). Load spike ratio 1.37 → FLAG. No overtraining signals. Two new decisions logged: cap Week 3 at ~60-65, space lower body ≥48h from runs.
+
+### Key Points
+- Strength reintroduced successfully (upper + lower baselines logged)
+- Run intensity 100% easy — excellent aerobic discipline
+- Alcohol on 5/7 nights this week, second heavy-night HRV crash confirmed (73→26)
+- Sleep variable (avg score 67, range 23–90)
+- Left shin resolving (12k+ steps pain-free), left shoulder awaiting retest today
+- Mood and motivation highest of the block — athlete is engaged
+- Week archived to `data/archive/weekly/2026-W11.md`
+- Current-plan.md updated to Week 3 (not yet planned)
+
+### Action Items
+- `/coach:plan` needed for Week 3
+- Protein tracking review ~Mar 19–20
+- Left shin: final test on next run
+- Left shoulder: bench press retest today
+- March 20 gala planning (rest day Friday)
+
 ## 2026-03-16 09:00 — /coach:checkin
 
 ### Summary
