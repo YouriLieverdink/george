@@ -57,3 +57,75 @@ A restart week defined by illness recovery, not training. GI illness from Egypt 
 ### Questions for the Athlete
 
 1. When would you like to slot strength back in this coming week?
+
+## Weekly Review — Week 2 — Mar 9–15, 2026
+
+### Summary
+
+A genuine training week — the first since before Egypt. Four out of five planned sessions completed, with only Saturday's easy run cancelled due to extreme calf DOMS from the first structured lower body session. Strength training reintroduced (upper + lower), second run back post-illness went well, swim lesson progressed to catch technique. Training load nearly doubled from Week 1, which is expected but flagged.
+
+### Load
+
+- Volume: ~2h17m / 5.0 km (run 3.8 km + swim 1.2 km)
+- Training load: 63 (run 19 + upper strength 16 + swim 13 + lower strength 15)
+- Key sessions completed: 4/5
+- Intensity distribution: Easy 100% / Moderate 0% / Hard 0% (phase target: 80-85/10-15/≤5) OK — only one run this week, all easy. Strength and beginner swim excluded per protocol.
+
+### Readiness
+
+- Sleep: variable (3.0h–9.4h). Avg score 67. Best: Thu 90/GREAT. Worst: Fri 23/POOR (alcohol). Late caffeine (Sat 20:00) degraded Sun quality despite 8.5h duration.
+- HRV: stable excl. alcohol outlier (26 on Fri). 7d avg 60.3. Best: 73 (Thu). Trend: no concern.
+- rHR: 52–58 range. Baseline 53. Spikes on alcohol (58) and congestion (56) days.
+- Fatigue: HIGH 3/7 days (Mon, Wed, Fri — life stress, load, alcohol respectively). Not consecutive.
+- Soreness: escalated after lower body (EXTREME Sat). Resolving by Mon.
+- Mood / Motivation: strong upward trend. Ended week GREAT/HIGH.
+- Weight: no data.
+- VO2 max: no data.
+- Injury: left shin NIGGLE resolving (walked 12k+ steps pain-free). Left shoulder NIGGLE (bench press only, awaiting retest).
+
+### Wins
+
+- First 4-session training week since before Egypt — consistency habit forming.
+- Strength baselines logged (upper + lower). Sensible progressions identified.
+- Easy run discipline: 100% Z1-Z2.
+- Swim technique advancing (catch phase, underwater pull).
+- Left shin tolerated 3 days of 12k+ step walking with zero sensation.
+- Mood and motivation at highest levels of the training block.
+
+### Concerns
+
+- Calf DOMS cancelled Saturday's run. First structured lower body in a long time — expected but cost a session.
+- Alcohol on 5/7 nights this week. Thursday heavy → Friday devastated (HRV 26, sleep 3h). Pattern confirmed twice now.
+- Sleep remains inconsistent — only 2/7 nights above score 80.
+- Load spike flagged (see below).
+
+### Overtraining Check
+
+- HRV 7d vs baseline: 60.3 vs ~65 (excl. alcohol) = ~7% below | rHR 7d vs baseline: 54.1 vs 53 = +1.1 bpm
+- Fatigue HIGH streak: 3 days (non-consecutive) | Key session hit rate: 4/5
+- Mood poor days (14d): 4 days OK(3), 0 days GRUMPY(4) | Classification: **none** — fatigue driven by alcohol + first-time DOMS, not training overload
+
+### Load Spike
+
+- This week: 63 / 4-week avg: 46 = ratio **1.37** — **FLAG**
+- Context: rebuilding from near-zero. Ratio inflated by low baseline (vacation OW swims + illness). Absolute load modest. No associated niggle escalation.
+
+### Adaptation Rules
+
+- No deload, extension, simplification, or advancement triggers met.
+- **Decision: continue as planned.** Cap Week 3 load at ~60-65 (no increase). Space lower body ≥48h from runs.
+
+### Adjustment for Next Week
+
+- Cap total load at ~60-65
+- Space lower body strength ≥48h from any run
+- Calf raises: start at 10 kg, moderate volume
+- March 20 gala on Thursday → rest/easy on Friday
+- Protein tracking review ~Mar 19-20
+- Left shin: next run is the final running-load test
+- Left shoulder: today's upper body is the bench press retest
+
+### Questions for the Athlete
+
+1. How are the calves feeling today — fully clear, or any lingering tightness?
+2. The gala is Thursday — after that, any clean weekends before the birthday on the 28th?
