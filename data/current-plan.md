@@ -68,7 +68,8 @@
 | 2026-03-01 | Swim course locked in as fixed Wednesday commitment | Bosch control method, 8 lessons. Lessons 3–8 remaining (through ~mid-April). |
 | 2026-03-03 | Sub-4:00 marathon added as A-race (run) for mid-December 2026 | Post-70.3 timing leverages aerobic base from tri block. 2-week recovery → 4-week marathon sharpening → taper → race/solo attempt ~Dec 14. Previous best 4:12; 12-min improvement realistic with 8+ months of training. Race or solo — athlete doesn't need a race to chase the time. |
 | 2026-03-03 | Hypertrophy-focused strength training added to plan | Athlete wants to rebuild muscle mass and improve body composition. Upper/lower split 2x/week during rebuild + marathon prep (best window — low endurance volume). Compress to 2x full-body maintenance when endurance volume climbs. Exercises: squat, RDL, split squat, bench, row, OHP, pull-ups, carries, core. Progressive overload: 3x8–12, add weight when reps feel easy. Protein target 1.6–2.0g/kg/day. |
-| 2026-03-16 | Week 3 load capped at ~60-65 | Load spike ratio 1.37 (FLAG) — driven by low baseline, not excessive loading. Next week should not exceed this week. |
+| 2026-03-16 | Week 3 moderate progression (~75-80 load target) | Load spike ratio 1.37 (FLAG) from Week 2 review — driven by low baseline, not excessive loading. Athlete requested progression, not a hold. Agreed: measured step up, not a hold. Gala on Thu Mar 20 shapes the week (rest Fri). |
+| 2026-03-16 | Athlete stopped all casual drinking | Only pre-planned dates remain. No more loose weeknight drinks. Motivated by feeling awful after + wanting to prioritize training. |
 | 2026-03-16 | Space lower body strength ≥48h from any run | Extreme calf DOMS (3+ days) from first lower body session cancelled Saturday's run. Until DOMS response normalizes, buffer runs from lower body days. |
 
 ## Previous Weeks
