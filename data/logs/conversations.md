@@ -46,6 +46,21 @@ Athlete asked for concrete guidance on mobility exercises for strength workout w
 ### Action Items
 - None — informational session
 
+## 2026-03-16 — /coach:chat
+
+### Summary
+Follow-up to mobility discussion. Athlete asked for specific mobility exercises to be written into all strength and run workouts going forward. Coach updated all 4 remaining workouts this week on intervals.icu (Upper Body, Lower Body, Shin Retest Run, Sunday Easy Run) with concrete exercise lists. Saved as a permanent coaching agreement in memory.
+
+### Key Points
+- Strength warm-ups: replaced vague "10 min mobility + activation" with named exercises tailored to upper/lower split
+- Strength cool-downs: replaced "5 min stretching" with specific static holds
+- Run workouts: added "Pre-run mobility (5 min)" block before the structured warm-up jog — leg swings, hip circles, walking lunges with rotation, ankle circles, calf raises
+- Agreement saved to coach memory: all future plans will include specific mobility exercises in every strength and run workout
+- Updated events: 98830901 (Upper Body), 98830908 (Lower Body), 98830903 (Shin Retest Run), 98830917 (Easy Run)
+
+### Action Items
+- Apply mobility exercise inclusion to all future /coach:plan outputs (agreement saved in memory)
+
 ## 2026-03-16 09:51 — /coach:plan
 
 ### Summary
