@@ -3,7 +3,7 @@
 ## 2026-03-16 — /coach:chat
 
 ### Summary
-Athlete asked whether the annual Ardennes cycling trip (May 14–17, ~310 km over 4 days, hilly) fits in the schedule. Coach confirmed yes — it fits within the marathon prep phase long-ride substitution model, and the marathon is a B race so tired legs are acceptable. Full May is stacked (10km race → Ardennes → Elfstedentocht → marathon in 22 days).
+Athlete asked whether the annual Ardennes cycling trip (May 14–17, ~310 km over 4 days, hilly) fits in the schedule. Coach confirmed yes — it fits within the marathon prep phase long-ride substitution model, and the marathon is a B race so tired legs are acceptable. Full May is stacked (10km race → Ardennes → Elfstedentocht → marathon in 22 days). Follow-up: athlete flagged the need to progressively build cycling volume before the Ardennes to protect the left knee (Amsterdam–Paris overload history). Coach agreed — proposed a weekly cycling ramp from now through May.
 
 ### Key Points
 - Ardennes trip confirmed as fitting in schedule
@@ -11,10 +11,15 @@ Athlete asked whether the annual Ardennes cycling trip (May 14–17, ~310 km ove
 - Key risk: left knee (Amsterdam–Paris overload history) — watch early on Ardennes hills
 - Advice: social pace throughout, don't push climbs
 - Ardennes is good cycling fitness for 70.3 base phase starting June
+- Progressive cycling ramp proposed: 1x45 min (Week 3) → building to 2x/week and 2.5–3h long rides by early May
+- Include some climbing before Ardennes if possible — flat riding alone doesn't prepare for hill forces
+- Cycling slots fill rest/flex days — doesn't steal from run, swim, or strength
 
 ### Action Items
-- Add Ardennes trip to events.md / intervals.icu calendar when dates are confirmed
-- Monitor left knee during Ardennes cycling
+- Add Ardennes trip to events.md ✅ (done)
+- Build progressive cycling into weekly plans (Week 4 onwards)
+- Include climbing exposure before Ardennes where possible
+- Monitor left knee during cycling progression and Ardennes trip
 
 ## 2026-03-16 09:51 — /coach:plan
 
