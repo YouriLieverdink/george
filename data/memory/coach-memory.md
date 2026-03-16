@@ -55,6 +55,7 @@
 - **2026-03-10 (updated 2026-03-16):** Left shoulder — monitor on next bench press specifically (bottom/stretched position under load). OHP is clear. No pain at rest over weekend. If pain returns: reduce ROM (floor press) or substitute incline press. If worsening or any numbness/tingling, consider physio. Today's upper body session is the retest.
 - **2026-03-16:** Protein tracking — athlete confirmed starting today (MyFitnessPal/Cronometer), 3–5 days. Review results together ~Mar 19–20 to determine if supplementation is needed and how much. Third attempt (deferred twice: GI illness Week 1, forgot Week 2).
 - **2026-03-16:** Week 3 load cap — keep at or below 60-65 (load spike ratio 1.37 FLAG from Week 2 review). Space lower body ≥48h from runs.
+- **2026-03-16:** 70.3 readiness check — every 2–3 weeks, proactively assess where athlete stands vs. 70.3 demands (1.9 km swim, 90 km bike, 21.1 km run off bike). First check ~early April. Be honest if falling behind.
 
 ## Key Learnings
 
