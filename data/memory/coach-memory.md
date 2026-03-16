@@ -53,7 +53,7 @@
 
 - **2026-03-09 (updated 2026-03-16):** Left shin — no issues during 3 days of walking (12k+ steps/day) over the weekend. No sensation reported. Still not tested under running load — monitor on next run session. If pain-free on next run, downgrade to resolved.
 - **2026-03-10:** Left shoulder — monitor on next bench press specifically (bottom/stretched position under load). OHP is clear. If pain returns: reduce ROM (floor press) or substitute incline press. If worsening or any numbness/tingling, consider physio.
-- **2026-03-16:** Protein tracking — athlete to track protein intake for 3–5 days starting Monday Mar 16 (MyFitnessPal/Cronometer). Review results together to determine if supplementation is needed and how much. Previously deferred twice: GI illness (Week 1), forgot this week (Week 2).
+- **2026-03-16:** Protein tracking — athlete confirmed starting today (MyFitnessPal/Cronometer), 3–5 days. Review results together ~Mar 19–20 to determine if supplementation is needed and how much. Third attempt (deferred twice: GI illness Week 1, forgot Week 2).
 
 ## Key Learnings
 
