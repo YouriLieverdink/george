@@ -55,13 +55,9 @@
 
 ## This Week
 
-### Week 2 — Rebuild — Mar 9–15, 2026
+### Week 3 — Rebuild — Mar 16–22, 2026
 
-Stepping up from 2 to 5 sessions. GI illness resolved, readiness strong at end of Week 1 (HRV 67, sleep 93/GREAT, motivation HIGH). Strength reintroduced as upper/lower split — athlete requested both sessions rather than the originally planned single full-body intro. All running stays on HR targets (zones uncalibrated). Two clean weeks before March 20 gala — good window to establish the training habit.
-
-5 sessions: 2 easy runs (30+35 min), 1 swim lesson (Wed), 2 strength (Mon upper / Thu lower). Estimated load ~65–75. Volume ~2h total.
-
-Synced to intervals.icu: 2026-03-09 to 2026-03-14, folder "George's Plan" (732815) + week rationale NOTE.
+*Not yet planned — run `/coach:plan` to generate.*
 
 ## Decisions & Agreements
 
