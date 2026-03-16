@@ -30,6 +30,22 @@ Athlete asked whether the annual Ardennes cycling trip (May 14–17, ~310 km ove
 - Coach committed to: proactive honesty if falling behind, no sugarcoating
 - Agreed: **70.3 readiness check every 2–3 weeks** — compare current fitness vs. race demands. First check ~early April.
 
+## 2026-03-16 — /coach:chat
+
+### Summary
+Athlete asked for concrete guidance on mobility exercises for strength workout warm-ups and cool-downs. Coach provided a full breakdown: dynamic mobility for warm-up (world's greatest stretch, leg swings, hip 90/90, inchworm, thoracic rotations, ankle work) and static holds for cool-down (couch stretch, pigeon, doorway chest stretch, child's pose, calf/soleus stretch). Left shoulder flagged — advised to keep arm circles in small range until re-evaluated.
+
+### Key Points
+- Athlete didn't know what "mobility exercises" meant in the strength plan — clarified dynamic vs static distinction
+- Warm-up: movement-based, 5 min, preps joints before loading
+- Cool-down: held stretches, 5 min, extends range when tissues are warm
+- Provided split guidance: lower body days vs upper body days
+- Practical starter routine given: world's greatest stretch + leg swings + thoracic rotations + ankle circles → couch stretch + pigeon + child's pose
+- Left shoulder: noted to avoid full overhead reach until re-evaluated
+
+### Action Items
+- None — informational session
+
 ## 2026-03-16 09:51 — /coach:plan
 
 ### Summary
