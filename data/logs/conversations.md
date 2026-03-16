@@ -351,3 +351,16 @@ Athlete forgot to track protein intake this week and asked to push it to Monday.
 
 ### Action Items
 - Athlete to track protein intake Mon Mar 16–Wed/Thu (3–5 days) and share results
+
+## 2026-03-16 — /coach:chat
+
+### Summary
+Athlete added April 9th (beer tasting with friends) to the pre-planned drinking calendar. Memory updated accordingly. Quick housekeeping conversation — no training decisions made.
+
+### Key Points
+- New planned drinking date added: 2026-04-09 beer tasting with friends (moderate/heavy)
+- Fits within the "no casual drinking, only pre-planned dates" policy established earlier today
+- April 10th should be kept as rest or easy — no key sessions
+
+### Action Items
+- None
