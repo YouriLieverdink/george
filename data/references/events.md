@@ -22,6 +22,14 @@
 - **Goal**: Enjoy with the association. Use as zone calibration — race effort to update running pace zones.
 - **Note**: 22 days before Groningen marathon. Good sharpener/fitness check.
 
+### Ardennes Cycling Trip (association)
+- **Dates**: May 14–17, 2026
+- **Location**: Ardennes, Belgium
+- **Distance**: ~310 km over 4 days (Day 1: 70 km, Day 2–3: 60–110 km each, Day 4: 70 km)
+- **Priority**: Social event (annual association trip)
+- **Goal**: Enjoy the trip. Social/easy pace — do not push climbs.
+- **Note**: 14 days before Groningen marathon. Accept tired legs for marathon. Watch left knee (history of overload on Amsterdam–Paris). Fits long-ride substitution model for marathon prep phase.
+
 ### Elfstedentocht (cycling)
 - **Date**: May 25, 2026
 - **Location**: Friesland, Netherlands
