@@ -1,5 +1,21 @@
 # Conversation Log
 
+## 2026-03-16 — /coach:chat
+
+### Summary
+Athlete asked whether the annual Ardennes cycling trip (May 14–17, ~310 km over 4 days, hilly) fits in the schedule. Coach confirmed yes — it fits within the marathon prep phase long-ride substitution model, and the marathon is a B race so tired legs are acceptable. Full May is stacked (10km race → Ardennes → Elfstedentocht → marathon in 22 days).
+
+### Key Points
+- Ardennes trip confirmed as fitting in schedule
+- Marathon will be on tired legs — already the case with Elfstedentocht, Ardennes extends that further
+- Key risk: left knee (Amsterdam–Paris overload history) — watch early on Ardennes hills
+- Advice: social pace throughout, don't push climbs
+- Ardennes is good cycling fitness for 70.3 base phase starting June
+
+### Action Items
+- Add Ardennes trip to events.md / intervals.icu calendar when dates are confirmed
+- Monitor left knee during Ardennes cycling
+
 ## 2026-03-16 09:51 — /coach:plan
 
 ### Summary
