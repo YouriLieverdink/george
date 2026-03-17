@@ -1,5 +1,22 @@
 # Conversation Log
 
+## 2026-03-17 08:00 — /coach:checkin
+
+### Summary
+Daily check-in on poor sleep night (5.2h, late social event). Mini-debriefed yesterday's upper body strength (cut short, shoulder improving). Readiness YELLOW (51/100) — shortened today's shin retest run from 30 to 22 min.
+
+### Key Points
+- Yesterday's upper body: RPE 4/10, shoulder improving ("feel it a little, not limiting"), session cut short (missed Farmers Walk + Triceps Pushdown) due to crowded gym + time pressure. Used DB Row at 10kg instead of T-Bar (gym crowded).
+- Sleep 5.2h/46/POOR from financial group meeting running 19:30–00:30. No alcohol. One-night hit, not a pattern.
+- HRV 49 (-21% vs baseline), rHR 59 (+11%) — cascading from sleep debt.
+- Today's Easy Run: Shin Retest shortened to ~22 min (YELLOW protocol). Still valid for shin clearance (original niggle appeared ~15 min in).
+- Wellness scores synced to ICU. Run event updated on calendar.
+
+### Action Items
+- Monitor shin during today's run — if pain-free, downgrade to resolved
+- Shoulder: continue monitoring, next bench press ~Mar 19
+- Ask about DB Row vs T-Bar Row choice (back tolerance at light weight)
+
 ## 2026-03-16 — /coach:chat
 
 ### Summary
