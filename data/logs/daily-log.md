@@ -274,3 +274,31 @@
 - Readiness: 69/100 (AMBER) | Components: Sleep 22.3, HRV 16.3, rHR 9.1, Fatigue 10.5, Soreness 10.5, Mood+Mot 10.5 | Modifiers: alcohol -10
 - Planned session: Strength — Upper Body (45 min, afternoon) | Modifications: none — Week 3 not yet planned, prescribing upper body as priority (6 days since last)
 - Notes: Combined check-in covering Fri–Mon after weekend away. Left shin: no issues during 3 days of walking (12k+ steps/day) — resolving well. Left shoulder: no pain at rest over weekend. Protein tracking starting today (third attempt). Calves: residual DOMS but no longer affecting gait — NONE(1) today. HRV 59 slightly below weekend recovery (68) — modest alcohol effect from Sunday's 3 drinks. Overall readiness solid despite AMBER — all subjective scores positive.
+
+### Session Debrief (mini)
+- Session: Strength — Upper Body, 35:06, avg HR 117, max HR 158, load 13
+- RPE: 4/10 — exercises felt easy
+- Left shoulder (bench press): improving — "feel it a little still, but not limiting." Definitely better than Mar 10. Not affecting exercise execution.
+- Session cut short: missed Farmers Walk + Triceps Pushdown. Gym overcrowded right after work, overstimulating environment. Had to rush between work → gym → cooking → social event (financial group meeting 19:30–00:30).
+- Exercises completed (from Hevy):
+  - Bench Press (DB): 12 kg x10 warmup @6 RPE, 12 kg x10 @7 RPE
+  - Dumbbell Row: 10 kg x10 @6 RPE, 10 kg x10 @7 RPE (note: used DB row instead of T-Bar — possibly T-Bar unavailable in crowded gym. Back OK at this light weight.)
+  - OHP (Barbell): 15 kg x12 @6 RPE, 15 kg x12 @8.5 RPE
+  - Pull-Up: 4 reps @9.5 RPE (1 set only — left early)
+- Missing: Farmers Walk, Triceps Pushdown (time)
+- Pain: 0/10 (shoulder niggle noted above, not limiting)
+- Alerts: None triggered. Shoulder trend positive — continue monitoring.
+
+## 2026-03-17 — Tuesday
+
+### Morning Check-in
+- Sleep: 5.2h (score 46, quality POOR)
+- HRV: 49 | Resting HR: 59 | SpO2: — | Weight: —
+- Steps: 446 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: HIGH(3) | Stress: HIGH(3)
+- Mood: OK(3) | Motivation: AVG(3) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 0 | Caffeine cutoff: ~15:00
+- Time available: flexible evening, nothing planned, food prepped
+- Readiness: 51/100 (YELLOW) | Components: Sleep 11.5, HRV 11.6, rHR 7.2, Fatigue 5.3, Soreness 15.0, Mood+Mot 5.3 | Modifiers: stress -5
+- Planned session: Easy Run — Shin Retest (30 min) | Modifications: shortened to ~22 min (YELLOW protocol). Shin retest still valid — original niggle appeared ~15 min in, 20 min pain-free running = clearance.
+- Notes: Poor sleep driven by late social event (financial group/treasurer audit, 19:30–00:30). No alcohol. HRV 49 is 21% below baseline (~62), rHR 59 elevated above 52–55 baseline. One-night sleep hit — no pattern concern. Yesterday's upper body strength mini-debriefed: shoulder improving, session cut short due to crowded gym + time pressure.
