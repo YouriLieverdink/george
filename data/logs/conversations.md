@@ -14,9 +14,27 @@ Youri vroeg hoe hij de juiste hartslagzones op zijn Garmin Forerunner 965 kan in
 - Max HR veldtest (6 min all-out) aanbevolen voor 70.3-voorbereiding
 
 ### Action Items
-- Youri checkt hoogste gemeten HR in recente activiteiten en deelt dit
-- Vergelijk wat er in intervals.icu staat vs Garmin voor gerichte hulp
+- ~~Youri checkt hoogste gemeten HR in recente activiteiten en deelt dit~~ → Done
+- ~~Vergelijk wat er in intervals.icu staat vs Garmin voor gerichte hulp~~ → Done
 - Overweeg max HR veldtest op termijn voor betrouwbare zones
+
+## 2026-03-17 17:30 — /coach:chat (vervolg)
+
+### Summary
+Youri deelde screenshots van Garmin en intervals.icu instellingen. Garmin: Max HR 198, LDHS 180, zones op %LDHS. Intervals.icu had Max HR 208 en Threshold HR 185 — beide fout. Coach berekende exacte bpm-waarden van de Garmin-zones en Youri heeft intervals.icu aangepast met custom HR zones die matchen. Zones nu gesynchroniseerd.
+
+### Key Points
+- Garmin stond goed: Max HR 198, LDHS 180, zones op %LDHS
+- Intervals.icu had verkeerde Max HR (208) en Threshold HR (185) → zones klopten niet
+- Intervals.icu aangepast: Max HR 198, Threshold HR 180, custom bpm zones matching Garmin
+- Z1 0-130, Z2 131-146, Z3 147-160, Z4 161-173, Z5 174-198
+- Historische max HR: 207 (~1 jaar geleden), 198 als werkbare huidige waarde
+- Kanttekening: Z2-plafond (146) mogelijk conservatief — evalueren na een paar runs
+- Coach-memory bijgewerkt met nieuwe zones en alignment-info
+
+### Action Items
+- Monitor of easy runs consistent in Z3 vallen → zo ja, zones opschuiven
+- Max HR veldtest overwegen voor nauwkeurigere zones (past in base-fase)
 
 ## 2026-03-17 08:00 — /coach:checkin
 
