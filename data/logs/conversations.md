@@ -1,5 +1,20 @@
 # Conversation Log
 
+## 2026-03-17 20:20 — /coach:chat
+
+### Summary
+Youri vroeg waarom zijn Form/TSB op de intervals.icu fitness-grafiek de komende maand niet in de groene "Optimal Training Zone" komt, en of hij de trainingsload moet verhogen. Coach legde uit dat dit een artefact is van de extreem lage CTL (5) — bij zulke lage absolute waarden zijn de TSB-zones niet betekenisvol. De groene zone komt vanzelf als CTL stijgt naar 15-20+.
+
+### Key Points
+- Form (TSB) = CTL - ATL. Bij CTL 5 zijn alle getallen gecomprimeerd rond nul → Form schommelt in grey zone
+- "Optimal zone" (-10 tot -30) vereist hogere absolute fitness-getallen, niet meer load
+- Expliciet afgeraden om load te verhogen om de grafiek groen te maken — blessurerisico in rebuild
+- Geschat 4-6 weken consistent trainen voordat CTL hoog genoeg is voor zinvolle TSB-zones
+- Athlete gerustgesteld: progressie Week 1→2→3 ziet er goed uit, vertrouw het proces
+
+### Action Items
+- None
+
 ## 2026-03-17 18:30 — /coach:debrief
 
 ### Summary
