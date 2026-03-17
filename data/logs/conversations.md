@@ -1,5 +1,23 @@
 # Conversation Log
 
+## 2026-03-17 — /coach:chat
+
+### Summary
+Youri vroeg hoe hij de juiste hartslagzones op zijn Garmin Forerunner 965 kan instellen zodat ze overeenkomen met intervals.icu. Coach legde uit dat het probleem vrijwel altijd zit in een verschillende max HR of berekeningsmethode tussen Garmin en intervals.icu.
+
+### Key Points
+- Garmin gebruikt standaard 220-leeftijd als max HR (195 voor Youri), wat bijna nooit klopt
+- Intervals.icu kan een andere max HR of andere berekeningsmethode (% max HR vs Karvonen) gebruiken
+- Huidige cycling HR-zones impliceren max HR ~185-188; running heeft nog geen HR-zones, alleen pacezones
+- Uitleg gegeven hoe max HR in te stellen op Garmin (Activiteiten → Hardlopen → Training → Hartslagzones) en intervals.icu (Instellingen → Health → Max HR)
+- Geadviseerd om hoogste observed HR uit activiteiten te gebruiken als startpunt
+- Max HR veldtest (6 min all-out) aanbevolen voor 70.3-voorbereiding
+
+### Action Items
+- Youri checkt hoogste gemeten HR in recente activiteiten en deelt dit
+- Vergelijk wat er in intervals.icu staat vs Garmin voor gerichte hulp
+- Overweeg max HR veldtest op termijn voor betrouwbare zones
+
 ## 2026-03-17 08:00 — /coach:checkin
 
 ### Summary
