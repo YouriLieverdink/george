@@ -3,17 +3,20 @@
 ## 2026-03-17 20:20 — /coach:chat
 
 ### Summary
-Youri vroeg waarom zijn Form/TSB op de intervals.icu fitness-grafiek de komende maand niet in de groene "Optimal Training Zone" komt, en of hij de trainingsload moet verhogen. Coach legde uit dat dit een artefact is van de extreem lage CTL (5) — bij zulke lage absolute waarden zijn de TSB-zones niet betekenisvol. De groene zone komt vanzelf als CTL stijgt naar 15-20+.
+Youri vroeg waarom zijn Form/TSB op de intervals.icu fitness-grafiek de komende maand niet in de groene "Optimal Training Zone" komt, en of hij de trainingsload moet verhogen. Coach legde uit dat dit een artefact is van de extreem lage CTL (5) — bij zulke lage absolute waarden zijn de TSB-zones niet betekenisvol. De groene zone komt vanzelf als CTL stijgt naar 15-20+. Vervolgens vroeg Youri of zijn eerdere trainingshistorie (marathon, Amsterdam-Paris, Medoc) betekent dat hij sneller kan opbouwen. Coach bevestigde het retraining-effect (myonuclei, cardiovasculair, neuraal) maar benadrukte dat bindweefsel langzamer herstelt — shin en knie-instabiliteit zijn daar signalen van. Afspraak: Week 3-4 uitvoeren zoals gepland, als beide clean verlopen kan Week 5 agressiever.
 
 ### Key Points
 - Form (TSB) = CTL - ATL. Bij CTL 5 zijn alle getallen gecomprimeerd rond nul → Form schommelt in grey zone
 - "Optimal zone" (-10 tot -30) vereist hogere absolute fitness-getallen, niet meer load
 - Expliciet afgeraden om load te verhogen om de grafiek groen te maken — blessurerisico in rebuild
 - Geschat 4-6 weken consistent trainen voordat CTL hoog genoeg is voor zinvolle TSB-zones
-- Athlete gerustgesteld: progressie Week 1→2→3 ziet er goed uit, vertrouw het proces
+- Retraining-effect erkend: gedetrained atleet ≠ beginner, snellere adaptatie verwacht
+- Maar: bindweefsel past langzamer aan dan spieren — shin niggle en knie-instabiliteit zijn signalen
+- Afspraak: Week 3+4 clean uitvoeren → Week 5 mag agressiever opschalen
+- Graadmeter is herstel (DOMS-duur, HRV, niggles dag erna), niet gevoel mid-sessie
 
 ### Action Items
-- None
+- Evalueer na Week 4 of versnelde opbouw verantwoord is (clean = geen nieuwe niggles, geen extreme DOMS, slaap redelijk)
 
 ## 2026-03-17 18:30 — /coach:debrief
 
