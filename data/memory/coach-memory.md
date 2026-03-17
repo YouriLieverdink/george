@@ -205,17 +205,17 @@
 
 ### Running
 
-No formal zone test yet. Using estimated zones from marathon performance (~4:12):
+No formal zone test yet. Using estimated zones from marathon performance (~4:12). HR zones aligned between Garmin Forerunner 965 and intervals.icu as of 2026-03-17. Garmin: Max HR 198, LDHS 180, zones based on %LDHS. Intervals.icu: Max HR 198, Threshold HR 180, custom HR zones set to match Garmin bpm values.
 
-| Zone | Name | Pace (min/km) | HR estimate | RPE |
-|------|------|--------------|-------------|-----|
-| Z1 | Recovery | >7:00 | <130 | 1–2 |
-| Z2 | Easy aerobic | 6:15–7:00 | 130–145 | 2–4 |
-| Z3 | Tempo | 5:40–6:15 | 145–160 | 5–6 |
-| Z4 | Threshold | 5:15–5:40 | 160–172 | 7–8 |
-| Z5 | VO2max | <5:15 | 172+ | 9–10 |
+| Zone | Name | Pace (min/km) | HR (bpm) | RPE |
+|------|------|--------------|----------|-----|
+| Z1 | Recovery | >7:00 | 0–130 | 1–2 |
+| Z2 | Easy aerobic | 6:15–7:00 | 131–146 | 2–4 |
+| Z3 | Tempo | 5:40–6:15 | 147–160 | 5–6 |
+| Z4 | Threshold | 5:15–5:40 | 161–173 | 7–8 |
+| Z5 | VO2max | <5:15 | 174–198 | 9–10 |
 
-*Estimated — needs calibration via 5k/10k time trial when base fitness rebuilt.*
+*Estimated — needs calibration via 5k/10k time trial when base fitness rebuilt. Note: Garmin Z2 ceiling (146) may be conservative — if easy runs consistently land in Z3, revisit zones. Historical max HR: 207 (~1 year ago).*
 
 ### Cycling
 
