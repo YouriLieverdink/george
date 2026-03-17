@@ -1,5 +1,24 @@
 # Conversation Log
 
+## 2026-03-17 18:30 — /coach:debrief
+
+### Summary
+Debrief van de shin retest easy run. Athlete liep 42 min ipv de geplande 22 — eerste 22 min volgens plan (onder 150 HR), daarna 20 min unstructured feel-based running met progressieve intensiteit (max HR 191). Shin nagenoeg cleared (één kort moment, meteen weg). Bilaterale knie-instabiliteit als nieuw signaal — geen pijn, wel instabiel gevoel. Wordt opgepakt in krachttraining.
+
+### Key Points
+- Plan vs actual: 22 min → 42 min, load 12 → 24. Eerste helft on-plan, tweede helft vrijwillige toevoeging.
+- RPE 4/10, genoten van de sessie
+- Shin resolved — downgraded van follow-up. Één kort moment dat meteen wegtrok bij ontspannen lopen.
+- Bilateral knee instability (2/10) — eerste keer, geen pijn, instabiel gevoel beide kanten. Athlete wil dit aanpakken via krachttraining.
+- Max HR 191 verklaard: progressief sprintje op het einde.
+- YELLOW-dag volume overschreden — load laag genoeg om geen probleem te zijn, maar principe benoemd.
+- Single-leg stabiliteitswerk toevoegen aan lower body sessie (donderdag).
+
+### Action Items
+- Monitor knieën bij volgende run
+- Single-leg stability work toevoegen aan lower body strength (Thu Mar 19)
+- Shin: resolved, geen actieve monitoring meer nodig tenzij terugkeer
+
 ## 2026-03-17 — /coach:chat
 
 ### Summary
