@@ -168,6 +168,7 @@
 
 - **Trouble swimming slowly** (2026-03-04): Feels like sinking at low effort, so defaults to swimming fast during exercises. This drives HR spikes (195 max on a 4/10 RPE session). As technique and body position improve, slow swimming should become possible. Until then, expect spiky swim HR — don't alarm on it.
 - **Breathing panic when congested** (2026-03-11): Nasal congestion + face in water triggered escalating panic during Lesson 4. Didn't recognize the cause initially. RPE jumped from typical 4/10 to 5–6/10 primarily from breathing difficulty, not physical effort. Monitor: if panic episodes recur without congestion, assess swim-specific breathing anxiety separately.
+- **Breathing as primary limiter** (2026-03-18): After 5 lessons, athlete self-identifies breathing as the main limiter — out of breath after 1–2 lengths (25–50m) despite significant form improvement. Not congestion-related (unlike L4). Likely driven by stroke inefficiency forcing high effort per length (connects to "trouble swimming slowly" pattern). As catch/pull technique improves and stroke becomes more efficient, breathing demand should reduce. This is expected at this stage — not a red flag.
 
 ### CSS Test Results
 
