@@ -313,3 +313,16 @@
 - Pacing adherence: First 22 min on-target (under 150 HR as planned). Extra 20 min was voluntary unstructured running — not a plan deviation but an addition.
 - Learning: "Ik moet mijn knieën trainen — ze voelden instabiel aan beide kanten."
 - Alerts: None triggered. YELLOW-day volume exceeded (22→42 min) but load still low (24). Bilateral knee instability flagged for monitoring — add single-leg stability work to lower body strength.
+
+## 2026-03-18 — Wednesday
+
+### Session Debrief
+- Session: Swim — Lesson 5 (Bosch Control Method), 1,775m in 37:42 active (25m pool, 71 lengths), ~65 min total pool time, avg HR 138, max HR 182, training load 25
+- Plan vs. actual: Calendar had 60 min swim. Pool time ~65 min, active 38 min. Distance up from 1,200m (Lesson 4) → 1,775m (+48%). Max HR 182 vs. 195 (L3) / 172 (L4) — more controlled than first lesson.
+- HR zones: Z1 5 min, Z2 16 min, Z3 14 min, Z4 2 min. More Z2 time than previous lessons — improving.
+- RPE: 4/10 (logged on Garmin)
+- Pain: 0/10 — shoulder fine in water, no new discomfort
+- Lesson content: Hand positioning through the entire underwater stroke. Deeper work on arm technique — how to position hands during the full underwater phase.
+- Breathing: Still the primary limiter — out of breath after 1–2 lengths (25–50m). Athlete recognizes form is improving significantly but breathing hasn't caught up yet. Technique-driven, not fitness — stroke inefficiency forces harder work per length.
+- Learning: "Swimming form is improving a lot but breathing is still the main limiter — out of breath after 1–2 lanes."
+- Alerts: None triggered. No pain, RPE appropriate, no red flags.

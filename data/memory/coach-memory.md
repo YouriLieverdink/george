@@ -160,6 +160,7 @@
 | — | 1–2 | Completed before coaching started | — | No details available |
 | 2026-03-04 | 3 | Correct arm use, breathing technique | — | 1425m, 59 min pool (28 active). Avg HR 135, max 195. RPE 4/10. GI illness active but manageable during session. First session back after 5-day pause. |
 | 2026-03-11 | 4 | Arm catch phase + underwater pull ("Pak het water!") | Grab as much water as possible through ROM | 1200m, 27:30 active. Avg HR 125, max 172. RPE 5–6/10. Nasal congestion severely impaired breathing → panic episodes. |
+| 2026-03-18 | 5 | Hand positioning through full underwater stroke | Position hands correctly through entire underwater phase | 1775m, 38 min active. Avg HR 138, max 182. RPE 4/10. No congestion. Form improving significantly — breathing still primary limiter (out of breath after 1–2 lengths). |
 
 ### Technique Cues That Work
 
