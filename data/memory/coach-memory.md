@@ -77,6 +77,7 @@
 - **2026-03-17 — Knee instability awareness:** After extended run, athlete self-identified bilateral knee instability and proactively asked to address it through strength. Good body awareness. Use this as motivation to keep single-leg work consistent.
 - **2026-03-17 — Running for headspace:** Ran double the planned time because "ik had gewoon zin om mijn hoofd leeg te maken." Unstructured, feel-based running resonates strongly (see also Mar 7 — running without music). This is a powerful intrinsic motivator — protect space for it in the plan while managing load.
 - **2026-03-18 — Swim form awareness:** After Lesson 5, athlete recognizes significant form improvement over 5 lessons but honestly identifies breathing as the remaining limiter. Good self-awareness — able to separate what's working (arm technique, hand positioning) from what needs work (breathing efficiency). This honesty helps coaching — don't need to dig for it.
+- **2026-03-19 — Showing up on low energy:** Went to lower body strength despite having no energy. Proud of going. This is identity-level consistency ("I show up for myself") in action — reinforce it. Also: skipped RDL (forgot) and dead bug (didn't want to). Pattern worth watching — if exercises keep getting dropped on low-energy days, may need to restructure session order (prioritize compounds first, accessories last).
 
 ## Preferences & Style
 
