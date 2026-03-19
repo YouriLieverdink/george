@@ -18,8 +18,8 @@ Debrief van lower body strength (Week 3). Sessie voltooid ondanks lage energie �
 ### Action Items
 - RDL must not be skipped again — flag it next session. Consider putting it earlier in the order.
 - Dead bug: find a substitute if it keeps getting skipped (e.g., Pallof press, bird dog)
-- Monitor knees on Saturday's run
-- Tomorrow: gala (planned heavy drinking). Friday is a rest day.
+- Monitor knees on Sunday's easy run
+- Tomorrow: gala (planned heavy drinking). Friday has an easy bike on the calendar — assess at check-in whether it's viable post-gala. Saturday: easy swim. Sunday: easy run.
 
 ## 2026-03-17 20:20 — /coach:chat
 
