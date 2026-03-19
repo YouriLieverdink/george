@@ -326,3 +326,15 @@
 - Breathing: Still the primary limiter — out of breath after 1–2 lengths (25–50m). Athlete recognizes form is improving significantly but breathing hasn't caught up yet. Technique-driven, not fitness — stroke inefficiency forces harder work per length.
 - Learning: "Swimming form is improving a lot but breathing is still the main limiter — out of breath after 1–2 lanes."
 - Alerts: None triggered. No pain, RPE appropriate, no red flags.
+
+## 2026-03-19 — Thursday
+
+### Session Debrief
+- Session: Strength: Lower Body — 31:51, avg HR 131, max HR 161, training load 17
+- Plan vs. actual: Duration close (32 vs 35 min planned), load 17 vs 15 estimated. Goblet squat progressed from 18→22 kg (added BW warmup set). Split squat 2x10 @24 kg total (2x12 kg DB) — on plan, grip no longer a limiter. Calf raises 2x12 @10 kg — completed as planned. **RDL skipped (forgotten). Dead bug skipped (didn't feel like it).**
+- RPE: 5/10 (as expected — low energy going in but manageable)
+- Pain: 0/10 — no real pain or niggles. Knees: felt "work" during split squats but not pain, consistent with bilateral instability signal from Mar 17 run. Left shoulder: no issues.
+- Fueling: N/A
+- Pacing adherence: N/A (strength)
+- Learning: "I didn't have the energy to go, but I'm proud I went anyway."
+- Alerts: None triggered. Knee sensation during split squats is work/instability, not pain — continue monitoring. No worsening from Tuesday.
