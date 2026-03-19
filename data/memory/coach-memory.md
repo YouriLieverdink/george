@@ -54,7 +54,7 @@
 -->
 
 - ~~**2026-03-09 (resolved 2026-03-17):** Left shin — resolved. Ran 42 min on Mar 17 with one brief moment that cleared immediately. Cleared from follow-up.~~
-- **2026-03-17:** Bilateral knee instability — both knees, first occurrence during 42 min run. Not pain, instability feeling. Monitor on next run. If recurring, assess quad/VMO strength and consider physio if not improving with strength work.
+- **2026-03-17 (updated 2026-03-19):** Bilateral knee instability — first occurrence during 42 min run (Mar 17). Re-observed during split squats Mar 19: "feeling work in knees" but not pain. Consistent pattern across running and loaded single-leg work = quad/stabilizer weakness confirmed. Improving trajectory: tolerated 2x10 @24 kg split squats without pain. Continue single-leg work. Monitor on next run. If worsening or pain develops, assess physio.
 - **2026-03-10 (updated 2026-03-17):** Left shoulder — retested on bench press Mar 16: "feel it a little still, but not limiting." Improving vs Mar 10 — no longer affecting exercise execution. Continue monitoring. If sensation persists unchanged by next upper body (Mar 19), reduce ROM (floor press) or substitute incline press. If worsening or any numbness/tingling, consider physio.
 - **2026-03-16:** Protein tracking — athlete confirmed starting today (MyFitnessPal/Cronometer), 3–5 days. Review results together ~Mar 19–20 to determine if supplementation is needed and how much. Third attempt (deferred twice: GI illness Week 1, forgot Week 2).
 - **2026-03-16:** Week 3 load cap — keep at or below 60-65 (load spike ratio 1.37 FLAG from Week 2 review). Space lower body ≥48h from runs.
