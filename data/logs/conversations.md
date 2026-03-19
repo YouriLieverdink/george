@@ -1,5 +1,26 @@
 # Conversation Log
 
+## 2026-03-19 21:30 — /coach:debrief
+
+### Summary
+Debrief van lower body strength (Week 3). Sessie voltooid ondanks lage energie — athlete trots op zichzelf. Goblet squat geprogressed naar 22 kg. Split squat grip opgelost. Calf raises zonder problemen @10 kg. RDL vergeten, dead bug bewust geskipt. Knieën voelden "werk" tijdens split squats — consistent met instabiliteitssignaal, geen pijn.
+
+### Key Points
+- Plan vs actual: 32 vs 35 min, load 17 vs 15. Goblet squat 18→22 kg progression. Split squat @24 kg total on-plan, grip solved.
+- RPE 5/10, low energy going in
+- Calf raises @10 kg completed — no repeat of Week 2 DOMS disaster expected
+- RDL forgotten, dead bug skipped — two exercises dropped on a low-energy day
+- Knees: "feeling work" during split squats, not pain. Consistent with Mar 17 instability. Improving trajectory.
+- Left shoulder: no issues during lower body session
+- Goblet squat: "a little stress on the back" at 22 kg — monitoring
+- Learning: showing up on low-energy days is where consistency gets built
+
+### Action Items
+- RDL must not be skipped again — flag it next session. Consider putting it earlier in the order.
+- Dead bug: find a substitute if it keeps getting skipped (e.g., Pallof press, bird dog)
+- Monitor knees on Saturday's run
+- Tomorrow: gala (planned heavy drinking). Friday is a rest day.
+
 ## 2026-03-17 20:20 — /coach:chat
 
 ### Summary
