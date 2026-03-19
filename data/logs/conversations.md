@@ -1,5 +1,23 @@
 # Conversation Log
 
+## 2026-03-19 21:45 — /coach:chat
+
+### Summary
+Athlete asked about rearranging weekend schedule. Originally proposed pushing Friday bike to Sunday and combining with run as first brick session. Coach flagged: brick premature in Week 3 rebuild, knees still being monitored, gala weekend not ideal for first brick. Athlete then clarified no time for Friday bike (work + cooking before gala). Agreed to drop the bike and keep Saturday swim (technique focus) + Sunday run as planned.
+
+### Key Points
+- Friday easy bike deleted from calendar — no time available (work + gala prep)
+- Brick session idea noted but deferred — too early in rebuild, save for a planned fresh week
+- Saturday swim stays: technique focus, low-impact, post-gala friendly
+- Sunday run stays: second knee data point after Tuesday
+- Week 3 load already at 79 through Thursday vs 60-65 cap — bike drop helps contain it
+- Coach failed to check calendar before making forward-looking schedule statements during debrief — corrected after athlete flagged it
+
+### Action Items
+- Assess Saturday swim readiness at check-in (post-gala)
+- Monitor knees on Sunday's run
+- Brick sessions: revisit when build phase begins or when a week allows planned introduction
+
 ## 2026-03-19 21:30 — /coach:debrief
 
 ### Summary
