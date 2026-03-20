@@ -56,21 +56,8 @@ class Session:
             self._exit_registered = True
 
     def _on_exit(self):
-        """Generate and save conversation summary on exit."""
-        if self.conversation.session_id is None:
-            return
-
-        try:
-            self.console.print("\n[dim]Saving conversation summary...[/dim]")
-            summary = self.conversation.send_summary(self.system)
-            files.write_conversation(
-                "session",
-                summary.split("\n")[0][:120],
-                summary,
-            )
-            self.console.print("[dim]Saved.[/dim]")
-        except Exception as e:
-            self.console.print(f"[dim]Could not save summary: {e}[/dim]")
+        """Clean exit — individual commands already write their own conversation logs."""
+        pass
 
 
 def show_help(console: Console) -> None:
