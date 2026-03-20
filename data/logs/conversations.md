@@ -1,5 +1,24 @@
 # Conversation Log
 
+## 2026-03-20 09:50 — /coach:checkin
+
+### Summary
+Rest day check-in before tonight's gala. Body absorbing 4 sessions in 5 days — mildly elevated rHR (60) and below-average HRV (52), normal training fatigue. Protein tracking reviewed: irregular eating confirmed, needs structural anchors not a diet overhaul. First full dry week since tracking — alcohol policy holding.
+
+### Key Points
+- Readiness 74/100 (AMBER) — academic since rest day
+- rHR trending up (57→60), HRV 52 vs ~58 average — training fatigue, not concerning
+- Knees: no pain at rest, improving trajectory
+- Protein: irregular meals, variable intake. Plan: discuss practical high-protein defaults after gala weekend
+- Alcohol: 5 consecutive dry days — first clean week. Policy working. Gala tonight is planned heavy.
+- Caffeine cutoff before 13:00 — on target
+- No session today. Saturday swim is next session, pending post-gala assessment.
+
+### Action Items
+- Saturday check-in: assess post-gala recovery for swim viability
+- Protein anchors discussion: schedule for early next week
+- Continue monitoring knees on Sunday's run
+
 ## 2026-03-19 21:45 — /coach:chat
 
 ### Summary
