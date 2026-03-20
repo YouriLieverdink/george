@@ -1,8 +1,49 @@
 # AI Endurance Coach
 
-An evidence-based personal endurance coach for IRONMAN 70.3, marathon, and ultra events. Built as a Claude Code agent with structured commands, safety-first decision logic, and periodized training planning.
+An evidence-based personal endurance coach for IRONMAN 70.3, marathon, and ultra events.
 
-## Commands
+Two interfaces:
+- **George TUI** (`python3 -m george`) — standalone app, recommended for daily use
+- **Claude Code commands** (`/coach:*`) — original Claude Code agent interface
+
+## George TUI
+
+The TUI moves all deterministic logic (data fetching, readiness scoring, log writing) into Python, and only calls Claude for judgment and conversation. Run with `python3 -m george`.
+
+### TUI Architecture
+
+```
+george/
+├── app.py              # REPL main loop (prompt_toolkit + rich)
+├── claude.py           # Claude Code CLI wrapper (claude -p), conversation management
+├── persona.py          # George system prompt from .claude/agents/coach.md
+├── icu.py              # Python wrapper around scripts/icu (subprocess --json)
+├── readiness.py        # Deterministic readiness score (from alerts.md algorithm)
+├── files.py            # Read/write all data files, log appending
+├── dates.py            # Date helpers
+├── commands/
+│   ├── checkin.py      # /checkin — fetch → Claude → structured output → write
+│   ├── debrief.py      # /debrief — match activity → Claude → write
+│   ├── plan.py         # /plan — compute analytics → Claude (opus) → sync to ICU
+│   ├── review.py       # /review — compute trends → Claude (opus) → archive
+│   ├── status.py       # /status — pure script, no Claude call
+│   ├── chat.py         # /chat — freeform multi-turn
+│   ├── raceweek.py     # /raceweek — race week briefing
+│   └── postrace.py     # /postrace — race report + recovery
+```
+
+### Key design decisions
+
+- **Readiness scores are deterministic** — computed in `readiness.py`, not by the LLM
+- **Data fetching happens before Claude sees anything** — scripts assemble all context
+- **Claude via CLI** — all calls go through `claude -p`, no API key needed
+- **Structured output via --json-schema** — Claude returns validated JSON for write operations
+- **Model selection per command** — sonnet for daily commands, opus for plan/review
+- **Conversation carries across commands** — one session object, full history preserved
+
+## Claude Code Commands
+
+The original agent interface, still available for use within Claude Code:
 
 | Command | Description | When |
 |---------|-------------|------|
@@ -20,17 +61,17 @@ An evidence-based personal endurance coach for IRONMAN 70.3, marathon, and ultra
 ## Daily Flow
 
 ```
-Morning:   /coach:checkin   → readiness scores → adapted session for today
+Morning:   /checkin   → readiness scores → adapted session for today
 Training:  do the session
-After:     /coach:debrief   → log RPE, pain, fueling, learnings
+After:     /debrief   → log RPE, pain, fueling, learnings
 ```
 
 ## Weekly Flow
 
 ```
-Sunday:    /coach:review    → analyze the past week's trends
-           /coach:plan      → generate next week based on review
-Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
+Sunday:    /review    → analyze the past week's trends
+           /plan      → generate next week based on review
+Mon–Sat:   /checkin + /debrief daily cycle
 ```
 
 ## Data
@@ -44,20 +85,23 @@ Mon–Sat:   /coach:checkin + /coach:debrief daily cycle
 | `data/current-plan.md` | **Operational state** — current week/phase, rationale, goals, decisions, agreements. Does NOT contain the session schedule (that's on the intervals.icu calendar) | Coach maintains this via commands |
 | `data/plans/` | Training plan library — original plans as reference | You add plans; coach reads them |
 | `data/memory/coach-memory.md` | **Coaching memory** — patterns, injury history, follow-ups, learnings, preferences, zones, fitness tests | Coach writes via commands; accumulates over time |
-| `data/logs/conversations.md` | Conversation log — summary of every coach interaction | All commands append; coach reads for context |
-| `data/logs/daily-log.md` | Daily check-in + debrief log | `/coach:checkin`, `/coach:debrief` |
-| `data/logs/weekly-reviews.md` | Weekly review summaries | `/coach:review` |
-| `data/archive/weekly/` | Completed week archives (one file per week) | `/coach:review` |
-| `data/archive/races/` | Race reports | `/coach:postrace` |
-| `data/archive/logs/` | Monthly daily-log archives (one file per month, e.g. `2026-02.md`) | `/coach:review` (auto-rotates when new month starts) |
+| `data/logs/conversations/INDEX.md` | Conversation timeline — one line per interaction (always loaded) | All commands append |
+| `data/logs/conversations/*.md` | Individual conversation files with frontmatter | All commands write |
+| `data/logs/daily/INDEX.md` | Daily log timeline — one line per day (always loaded) | `/checkin`, `/debrief` append |
+| `data/logs/daily/*.md` | Individual day files (checkin + debrief per day) | `/checkin`, `/debrief` write |
+| `data/logs/weekly-reviews.md` | Weekly review summaries | `/review` |
+| `data/archive/weekly/` | Completed week archives (one file per week) | `/review` |
+| `data/archive/races/` | Race reports | `/postrace` |
+| `data/archive/logs/` | Monthly daily-log archives (one file per month, e.g. `2026-02.md`) | `/review` (auto-rotates when new month starts) |
 
 ### How the data works together
 
 - **`plans/`** holds the original training plans as-is (e.g. `ironman-70.3.md`, `marathon-sub345.md`). These are reference documents that don't change.
 - **`current-plan.md`** is the operational state: which plan is active, what week you're in, rationale, goals, and decisions. Does NOT contain the session schedule — that lives on the intervals.icu calendar as the single source of truth. Completed weeks are archived to `data/archive/weekly/`.
 - **`coach-memory.md`** is accumulated coaching intelligence: what the coach has learned about you over time. Every command reads it for context; checkin, debrief, review, and chat write to it.
-- **`conversations.md`** is an append-only log of every coach interaction. It ensures nothing discussed is lost between sessions. The coach reads recent entries before every interaction for continuity.
-- **`daily-log.md`** and **`weekly-reviews.md`** are append-only logs replacing the Google Sheets tabs.
+- **`logs/conversations/`** stores individual conversation files with frontmatter. `INDEX.md` is a compact timeline (one line per entry, always loaded). Individual files are only read when their content is needed.
+- **`logs/daily/`** stores one file per day with checkin + debrief data. `INDEX.md` is a compact timeline (one line per day, always loaded). Individual files are read selectively (today for checkin/debrief, this week for review).
+- **`weekly-reviews.md`** is an append-only log (small, infrequent).
 
 The coach reads `current-plan.md` for phase/context and `coach-memory.md` for accumulated intelligence before every decision. For today's planned session, it reads from the intervals.icu calendar. It references the original plan from `plans/` and checks `events.md` for what's coming.
 
@@ -65,16 +109,16 @@ The coach reads `current-plan.md` for phase/context and `coach-memory.md` for ac
 
 Configured in `config/intervals-icu.json` with your athlete ID and API key. See `.claude/services/coach/intervals-icu.md` for full API reference.
 
-**All API calls must go through `./scripts/icu`.** Never use `curl` or raw HTTP requests. The CLI handles authentication, formatting, and error handling automatically. See the API reference for all available subcommands.
+**In the TUI**, all API calls go through `george/icu.py` which wraps `scripts/icu` with `--json` output.
 
-**Before making any `./scripts/icu` calls, always read `.claude/services/coach/intervals-icu.md` first** to verify the correct resource, action, and flag syntax. Do not guess at CLI syntax from memory.
+**In Claude Code commands**, all API calls must go through `./scripts/icu`. Never use `curl` or raw HTTP requests. Before making any `./scripts/icu` calls, always read `.claude/services/coach/intervals-icu.md` first to verify the correct syntax.
 
 | Data | What the coach pulls | Used by |
 |------|---------------------|---------|
-| Calendar events | **Single source of truth for the session schedule.** Planned workouts (WORKOUT), coaching notes (NOTE), illness markers (SICKNESS) | `/coach:checkin`, `/coach:debrief`, `/coach:plan`, `/coach:review`, `/coach:status` |
-| Activities | Completed workouts: distance, duration, HR, pace, power, training load, zones | `/coach:debrief`, `/coach:review` |
-| Wellness | Garmin-synced: sleep (duration, score, quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective (1–4 scale): soreness, fatigue, stress, mood, motivation, injury, hydration | `/coach:checkin`, `/coach:review` |
-| Athlete summary | Current CTL (fitness), ATL (fatigue), TSB (form) | `/coach:review`, `/coach:plan` |
+| Calendar events | **Single source of truth for the session schedule.** Planned workouts (WORKOUT), coaching notes (NOTE), illness markers (SICKNESS) | `/checkin`, `/debrief`, `/plan`, `/review`, `/status` |
+| Activities | Completed workouts: distance, duration, HR, pace, power, training load, zones | `/debrief`, `/review` |
+| Wellness | Garmin-synced: sleep (duration, score, quality), HRV, resting HR, weight, SpO2, VO2 max, steps. Subjective (1–4 scale): soreness, fatigue, stress, mood, motivation, injury, hydration | `/checkin`, `/review` |
+| Athlete summary | Current CTL (fitness), ATL (fatigue), TSB (form) | `/review`, `/plan` |
 
 The coach pulls objective data from intervals.icu first, then asks you only for what the API can't provide (RPE feel, pain location, fueling details, learnings).
 
@@ -100,5 +144,6 @@ The coach pulls objective data from intervals.icu first, then asks you only for 
 1. Fill in `data/references/events.md` with your race calendar
 2. Add your training plans to `data/plans/` (one file per plan, e.g. `ironman-70.3.md`, `marathon-sub345.md`)
 3. Set up intervals.icu API access: go to https://intervals.icu/settings → "Developer Settings" → generate API key. Add your athlete ID and key to `config/intervals-icu.json`
-4. Run `/coach:onboard` to complete your athlete profile — this also creates `data/current-plan.md`
-5. Start the daily cycle: `/coach:checkin` → train → `/coach:debrief`
+4. Install [Claude Code](https://claude.com/claude-code) and authenticate (`claude` must be on your PATH)
+5. Install Python dependencies: `pip install prompt_toolkit rich`
+6. Run `python3 -m george` and start with `/checkin`
