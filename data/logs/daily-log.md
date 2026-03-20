@@ -338,3 +338,17 @@
 - Pacing adherence: N/A (strength)
 - Learning: "I didn't have the energy to go, but I'm proud I went anyway."
 - Alerts: None triggered. Knee sensation during split squats is work/instability, not pain — continue monitoring. No worsening from Tuesday.
+
+## 2026-03-20 — Friday
+
+### Morning Check-in
+- Sleep: 7.2h (score 69, quality AVG)
+- HRV: 52 | Resting HR: 60 | SpO2: — | Weight: —
+- Steps: 453 | VO2 max: —
+- Soreness: LOW(1) | Fatigue: AVG(2) | Stress: AVG(2)
+- Mood: OK(3) | Motivation: AVG(3) | Injury: NONE(1) | Hydration: OK(2)
+- Alcohol: 0 (5th consecutive dry day — first clean week since tracking began) | Caffeine cutoff: ~13:00
+- Time available: afternoon free (cleaning, gala prep)
+- Readiness: 74/100 (AMBER) | Components: Sleep 17.3, HRV 17.8, rHR 8.2, Fatigue 10.5, Soreness 15.0, Mood+Mot 5.3 | Modifiers: none
+- Planned session: Rest day (bike dropped yesterday — gala evening) | Modifications: none
+- Notes: rHR trending up (57→60) and HRV below recent average (52 vs ~58) — body absorbing 4 sessions in 5 days. Normal training fatigue, not concerning. Knees: no pain at rest today, improving trajectory from Mar 17/19. Protein tracking reviewed: irregular eating schedule, some days hit target easily, other days nowhere close. Needs structural anchors rather than overhaul. Gala tonight — planned heavy drinking. Tomorrow is rest/recovery day.
