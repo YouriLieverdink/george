@@ -1,5 +1,6 @@
 # Conversation Index
 <!-- newest first, one line per entry -->
+- 2026-03-20 12:47 | session | Done. Conversation logged and INDEX updated.
 - 2026-03-20 12:36 | chat | Rest day before gala. 5 dry days — first clean week. Asked about 7:00 wake rule after 3am bed: coach said 8:00–8:30, rule is for ordinary days. Saturday swim conditional on how he feels.
 - 2026-03-20 12:20 | session | No summary
 - 2026-03-20 12:12 | chat | Brief casual check-in on rest day. No training decisions — confirmed the day's plan (rest, gala prep) and previewed t...
