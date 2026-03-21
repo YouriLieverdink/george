@@ -1,5 +1,6 @@
 # Conversation Index
 <!-- newest first, one line per entry -->
+- 2026-03-21 13:00 | chat | Post-gala hangover recovery advice. Practical hydration, nutrition, rest plan. No training today. Tomorrow's run conditional on HRV bounce-back.
 - 2026-03-21 12:20 | checkin | ### Summary
 - 2026-03-20 12:57 | chat | Casual question about Txiki. Brief social exchange. Rest day, gala tonight.
 - 2026-03-20 12:36 | chat | Rest day before gala. 5 dry days — first clean week. Asked about 7:00 wake rule after 3am bed: coach said 8:00–8:30, rule is for ordinary days. Saturday swim conditional on how he feels.
