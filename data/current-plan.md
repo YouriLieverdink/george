@@ -93,3 +93,4 @@ Target: reach 30 km by ~May 3, then taper into the stacked May schedule. Uses ma
 
 - Week 1 (Mar 2–8): `data/archive/weekly/2026-W10.md`
 - Week 2 (Mar 9–15): `data/archive/weekly/2026-W11.md`
+- Week 3 (Mar 16–22): `data/archive/weekly/2026-W12.md`
