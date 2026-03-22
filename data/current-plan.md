@@ -27,14 +27,30 @@
 | Period | Weeks | Focus |
 |--------|-------|-------|
 | **Rebuild** (Mar 1 – Apr 12) | 1–6 | Consistency, base running, swim technique, hypertrophy-focused strength 2x/week (upper/lower split). Build to 4–5 sessions/week. |
-| **Marathon prep** (Apr 13 – May 31) | 7–13 | Long run progression toward 30–35 km, easy pacing practice, fueling rehearsal. Strength continues 2x/week (upper/lower) but volume drops as run volume climbs. Marathon on May 31. |
-| **Recovery + transition** (Jun 1 – Jun 14) | 14–15 | Post-marathon recovery. Reintroduce cycling volume. Continue swim. |
-| **70.3 Base** (Jun 15 – Aug 2) | 16–22 | 70.3 plan weeks 1–7 (adapted). Tri-specific base: swim/bike/run balance. Strength shifts to 2x/week full-body maintenance (2 sets per exercise). |
-| **70.3 Build** (Aug 3 – Sep 20) | 23–29 | 70.3 plan weeks 8–15. Threshold work, brick sessions, race-pace blocks. Strength 1–2x/week maintenance. |
-| **70.3 Peak + Taper** (Sep 21 – Oct 25) | 30–34 | 70.3 plan weeks 16–24 (compressed). Race simulation, volume reduction, race week. Strength 1x/week light maintenance only. |
+| **Marathon prep** (Apr 13 – May 31) | 7–13 | Long run progression (target 30 km by ~May 3), easy pacing practice, fueling rehearsal. Cycling volume ramps for Ardennes/Elfstedentocht. Strength continues 2x/week (upper/lower) but volume drops as run volume climbs. 70.3 plan starts May 11 — swim/bike structure used loosely alongside marathon focus. Marathon on May 31. |
+| **Recovery + transition** (Jun 1 – Jun 14) | 14–15 | Post-marathon recovery. Reintroduce cycling volume. Continue swim. (70.3 plan weeks 4–5.) |
+| **70.3 Base** (Jun 15 – Aug 2) | 16–22 | 70.3 plan weeks 6–12. Tri-specific base: swim/bike/run balance. Strength shifts to 2x/week full-body maintenance (2 sets per exercise). |
+| **70.3 Build** (Aug 3 – Sep 20) | 23–29 | 70.3 plan weeks 13–19. Threshold work, brick sessions, race-pace blocks. Strength 1–2x/week maintenance. |
+| **70.3 Peak + Taper** (Sep 21 – Oct 25) | 30–34 | 70.3 plan weeks 20–24. Race simulation, volume reduction, race week. Strength 1x/week light maintenance only. |
 | **70.3 Recovery** (Oct 26 – Nov 8) | 35–36 | Post-70.3 recovery. Easy running only, rebuild legs. No intensity. |
 | **Marathon sharpening** (Nov 9 – Dec 6) | 37–40 | Run-specific block: tempo runs, marathon-pace long runs, goal-pace rehearsal. Leverage 70.3 aerobic base. |
 | **Marathon taper + race** (Dec 7 – ~Dec 14) | 41 | Volume reduction, race week. Sub-4:00 marathon attempt (race or solo). |
+
+### Marathon Long Run Progression (Weeks 7–13)
+
+Target: reach 30 km by ~May 3, then taper into the stacked May schedule. Uses marathon-sub345.md long run structure loosely — paces adjusted to comfortable/easy (no sub-3:45 targets).
+
+| Week | Dates | Long Run Target | Notes |
+|------|-------|----------------|-------|
+| 7 | Apr 13–19 | 16–18 km | First marathon prep week |
+| 8 | Apr 20–26 | 20–22 km | First fueling practice session (>75 min) |
+| 9 | Apr 27 – May 3 | **28–30 km** | Longest run before marathon. 4 weeks out = textbook timing. Fueling rehearsal. |
+| 10 | May 4–10 | 12–15 km easy | Association 10k race May 9. Legs fresh for race effort. |
+| 11 | May 11–17 | No long run | Ardennes cycling trip May 14–17 (~310 km). Long ride substitution. |
+| 12 | May 18–24 | 15–18 km easy | Recovery week. Elfstedentocht May 25 (~240 km). |
+| 13 | May 25–31 | **Marathon** | Elfstedentocht Mon, recovery Tue–Sat, race Sun May 31. |
+
+*30 km is the target. If long runs are only at 12 km by mid-April, cap at 26–28 km — still sufficient for a comfortable B-race marathon finish.*
 
 ## Goals
 
