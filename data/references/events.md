@@ -18,8 +18,9 @@
 - **Date**: May 9, 2026
 - **Location**: TBD (association event)
 - **Distance**: Likely 10km (TBC)
-- **Priority**: C race
-- **Goal**: Enjoy with the association. Use as zone calibration — race effort to update running pace zones.
+- **Priority**: B race
+- **Target**: Sub-50 min (reach) / sub-55 min (realistic)
+- **Goal**: Race effort — push for a time. Also serves as zone calibration to update running pace zones.
 - **Note**: 22 days before Groningen marathon. Good sharpener/fitness check.
 
 ### Ardennes Cycling Trip (association)
