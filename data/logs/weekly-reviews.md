@@ -129,3 +129,77 @@ A genuine training week — the first since before Egypt. Four out of five plann
 
 1. How are the calves feeling today — fully clear, or any lingering tightness?
 2. The gala is Thursday — after that, any clean weekends before the birthday on the 28th?
+
+## Weekly Review — Week 3 — Mar 16–22, 2026
+
+### Summary
+
+Five of seven sessions completed in a week shaped by a Thursday gala. Four sessions landed in the first four days (upper strength, shin retest run, swim lesson, lower strength), then the gala wiped Friday's bike and Saturday's swim. Sunday's run closed the week well — knees clear, aerobic engine clearly ahead of structural readiness. Training load jumped from 63 to 104 as planned, but load spike ratio is severe on paper.
+
+### Load
+
+- Volume: 3h07m / 10.2 km run + 1.8 km swim (vs. Week 2: 2h17m / 3.8 km run + 1.2 km swim)
+- Training load: 104 (vs. Week 2: 63, +65%). Plan estimated ~115.
+- Key sessions completed: 5/7. Bike dropped Fri (gala), easy swim dropped Sat (hangover recovery).
+- Intensity distribution (runs only, excl. strength + beginner swim): Easy ~42% / Moderate ~46% / Hard ~12% (phase target: 80-85/10-15/≤5) **FLAG: massive deviation** — confounded by Mar 17 off-plan sprint (191 HR) and uncalibrated Z2 ceiling (146 bpm too conservative). Zone data unreliable until threshold test.
+- CTL/ATL/TSB: 5.2 / 11.3 / -6.1. CTL rising steadily from near-zero.
+
+### Readiness
+
+- Sleep: scores 89→46→73→83→69→28→77 (avg 66). Two poor nights: Tue (late social, no alcohol) and Sat (gala). Best: Mon 89, Thu 83.
+- HRV: 59→49→58→58→52→22→64. Gala crash Sat (22), fast bounce-back Sun (64). Same alcohol→crash→recover pattern as Weeks 1–2.
+- rHR: 55→59→58→57→60→60→57. Mild mid-week rise (absorbing 4 sessions in 5 days), normalized Sunday.
+- Fatigue: HIGH only 1/7 days (Tue — sleep-driven, not training). AVG most days.
+- Soreness: LOW all week. Calf DOMS from Week 2 fully resolved.
+- Mood / Motivation: GOOD/HIGH Mon + Sun, OK/AVG Tue + Fri. No GRUMPY days.
+- Weight: no data. VO2 max: no data.
+- Injury: NONE all week. Left shin resolved. Bilateral knee instability cleared (Mar 22 run clean). Left shoulder improving.
+
+### Wins
+
+- Five sessions across three disciplines + strength — most diverse week since restart
+- All niggles improving: shin resolved, knee instability cleared, shoulder not limiting
+- First clean Mon–Fri (5 dry days) since tracking began — alcohol policy holding
+- Swim volume +48% (1.2→1.8 km) at lower RPE — form improving
+- Lower body strength progressed: goblet squat 18→22 kg, calf raises completed at 10 kg
+- Identity consistency: showed up for lower body on a low-energy day and was proud of it
+- Aerobic engine ahead of structural readiness — "had to hold back, believes 15 km was within reach"
+
+### Concerns
+
+- Exercises dropped on low-energy day (RDL forgotten, dead bug skipped). Second occurrence — watch pattern
+- Saturday swim lost to gala hangover. Every heavy drinking night = lost next-day session. Accepted trade-off.
+- Z2 ceiling (146) feels too low — second data point. Running zones need recalibration via 5k TT
+- Upper body session cut short (Mon) — gym crowded + time pressure. 2 exercises missed.
+
+### Overtraining Check
+
+- HRV 7d vs 30d: 51.7 vs 55.3 = **-6.5%** | rHR 7d vs 30d: 58.0 vs 56.7 = **+1.3 bpm**
+- Fatigue HIGH streak: 1 day | Key session hit rate: 5/5 completed sessions on target
+- Mood poor days (14d): 5 OK(3), 0 GRUMPY(4) | Classification: **none**
+- HRV dip explained by gala outlier (22). Excluding Sat: 7d avg 56.7 = at baseline. No training-driven fatigue signal.
+
+### Load Spike
+
+- This week: 104 / 3-week avg: 46 = ratio **2.26** — **ALERT**
+- Context: rebuilding from near-zero. W9 was vacation swims, W10 was illness restart, W11 was first real week. Absolute load 104 is still modest. Plan estimated ~115. No niggle escalation — all niggles improved. Ratio is mathematically alarming but clinically benign. Baseline will catch up within 1–2 weeks if load holds steady.
+
+### Adaptation Rules
+
+- No deload/extend/simplify/advance triggers met. CTL rising (5.2). Adherence 71% (missed sessions gala-driven, not fatigue). Fatigue not sustained. Key sessions on target. Readiness stable.
+- **Decision: continue as planned.** Hold load at or below 104 next week. Aggressive ramp worked — now let baseline catch up.
+
+### Adjustment for Next Week
+
+- Hold load steady: target ~90-105 (no increase)
+- Birthday party Mar 28 (Sat) — front-load Mon–Fri, rest/easy Sat–Sun
+- Priority: first cycling session (missed this week and last)
+- Continue single-leg stability work in lower body
+- Protein anchors discussion — now due
+- Zone calibration on roadmap — 5k TT ~mid-April
+- Left shoulder: retest bench — if persistent, switch to floor/incline press
+
+### Questions for the Athlete
+
+1. The Z2 ceiling keeps feeling too slow. Two data points now. Comfortable running by feel until the 5k TT in mid-April, or test sooner?
+2. Birthday party Saturday — how heavy, and what does Sunday look like? Need to plan around it.
