@@ -1,5 +1,6 @@
 # Conversation Index
 <!-- newest first, one line per entry -->
+- 2026-03-22 17:00 | chat | Macro timeline review through May. Corrected 70.3 plan week references. Agreed marathon long run progression targeting 30 km by ~May 3. Marathon plan used loosely for long run structure only. Athlete reports feeling strong — had to hold back on today's run, believes 15k is within reach.
 - 2026-03-22 16:04 | debrief | Easy Run 5.1 km/40 min, RPE 4/10. Knees clear. Z2 ceiling (146) feels too slow — second data point. Heat + 5 days off contributed. Threshold test needed to recalibrate.
 - 2026-03-22 10:18 | checkin | Post-gala Day 2. HRV bounced to 64. Readiness 85 GREEN. Easy run 40 min as planned. Knee monitoring on first run in 5 days.
 - 2026-03-21 13:00 | chat | Post-gala hangover recovery advice. Practical hydration, nutrition, rest plan. No training today. Tomorrow's run conditional on HRV bounce-back.
