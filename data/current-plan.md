@@ -13,7 +13,7 @@
 - **Target event:** IRONMAN 70.3 Greece
 - **Event date:** 2026-10-25
 - **Plan start date:** 2026-05-11 (original) — pre-base work starts now (March 1)
-- **Current week:** Week 3 (Mar 16–22)
+- **Current week:** Week 4 (Mar 23–29)
 - **Current phase:** Rebuild & Base Foundation
 
 ### Secondary: Marathon of Groningen
