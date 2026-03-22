@@ -80,6 +80,7 @@
 | 2026-03-16 | Week 3 moderate progression (~75-80 load target) | Load spike ratio 1.37 (FLAG) from Week 2 review — driven by low baseline, not excessive loading. Athlete requested progression, not a hold. Agreed: measured step up, not a hold. Gala on Thu Mar 20 shapes the week (rest Fri). |
 | 2026-03-16 | Athlete stopped all casual drinking | Only pre-planned dates remain. No more loose weeknight drinks. Motivated by feeling awful after + wanting to prioritize training. |
 | 2026-03-16 | Space lower body strength ≥48h from any run | Extreme calf DOMS (3+ days) from first lower body session cancelled Saturday's run. Until DOMS response normalizes, buffer runs from lower body days. |
+| 2026-03-22 | Association race upgraded to B race with sub-50 min 10k target | Athlete wants to push for a time. Sub-50 (reach) / sub-55 (realistic). Requires faster running ramp: build to 4 runs/week by Week 5-6, introduce uptempo work ~Week 6, 5k TT mid-April for zone calibration. Race also serves as threshold test. Condition: any injury signal → listen, no exceptions. |
 
 ## Previous Weeks
 
