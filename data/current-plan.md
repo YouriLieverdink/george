@@ -71,18 +71,7 @@ Target: reach 30 km by ~May 3, then taper into the stacked May schedule. Uses ma
 
 ## This Week
 
-### Week 3 — Rebuild — Mar 16–22, 2026
-
-**Rationale:** Moderate-to-aggressive progression from Week 2 (63 → ~115 estimated load). Athlete requested no cap on load increase — respecting the momentum. 7 sessions across all three disciplines plus strength. First bike of the rebuild. Self-directed swim practice added alongside the Wednesday lesson. Front-loaded strength Mon-Thu around Friday gala evening. Saturday swim and Sunday run are conditional on post-gala recovery.
-
-**Key focus areas:**
-- Shin retest under running load (Tuesday) — final gate before clearing it
-- Shoulder retest on bench press (Monday) — bottom position under load
-- First cycling session of the rebuild (Friday)
-- Calf raises at 10 kg, not 15 (Thursday)
-- All run zones HR-based (estimated, uncalibrated). Swim RPE-only (no CSS).
-
-**Synced to intervals.icu:** 2026-03-16 to 2026-03-22, folder: George's Plan
+*Pending — run `/coach:plan` to generate Week 4 (Mar 23–29).*
 
 ## Decisions & Agreements
 
