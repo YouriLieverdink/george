@@ -74,9 +74,9 @@ Target: reach 30 km by ~May 3, then taper into the stacked May schedule. Uses ma
 
 ### Week 4 Rationale (Mar 23–29)
 
-Progressive step up from Week 3 (104 load). First cycling session of the rebuild — Ardennes trip 7 weeks out. Birthday party Saturday shapes the week: training front-loaded Mon–Fri, run Saturday morning before the party, rest Sunday. Athlete requested longer sessions than initially proposed (+15 min on both runs, bike extended to 60 min). Estimated load ~145-155 — above the 10-15% guideline but athlete-accepted with clear pull-back rule if anything doesn't feel right.
+Progressive step up from Week 3 (104 load). First cycling session of the rebuild — Ardennes trip 7 weeks out. Birthday party Saturday shapes the week: training front-loaded Mon–Fri, run Saturday morning before the party, rest Sunday. Athlete requested longer sessions than initially proposed (+15 min on both runs, bike extended to 60 min). Athlete later added a 3rd run on Wednesday evening (30 min easy, after swim lesson) — stepping toward the 4 runs/week target for the 10k race. Estimated load revised to ~165-175. Pull-back rule remains: anything feels off, we cut before we add.
 
-**Key focuses:** First bike of rebuild (Fri). Shoulder bench press retest — 3rd data point (Tue). Saturday 60 min run — longest planned run of rebuild. Lower body ≥48h spacing maintained (Thu→Sat).
+**Key focuses:** First bike of rebuild (Fri). Shoulder bench press retest — 3rd data point (Tue). Saturday 60 min run — longest planned run of rebuild. 3rd weekly run added Wed PM. Lower body ≥48h spacing maintained (Thu→Sat).
 
 **Zone targets:** Running HR+RPE (uncalibrated). Cycling HR (no power meter). Swim RPE (instructor-led). 5k TT for zone calibration stays on roadmap for mid-April.
 
