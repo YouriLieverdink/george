@@ -97,6 +97,8 @@ Target: reach 30 km by ~May 3, then taper into the stacked May schedule. Uses ma
 | 2026-03-16 | Athlete stopped all casual drinking | Only pre-planned dates remain. No more loose weeknight drinks. Motivated by feeling awful after + wanting to prioritize training. |
 | 2026-03-16 | Space lower body strength ≥48h from any run | Extreme calf DOMS (3+ days) from first lower body session cancelled Saturday's run. Until DOMS response normalizes, buffer runs from lower body days. |
 | 2026-03-22 | Association race upgraded to B race with sub-50 min 10k target | Athlete wants to push for a time. Sub-50 (reach) / sub-55 (realistic). Requires faster running ramp: build to 4 runs/week by Week 5-6, introduce uptempo work ~Week 6, 5k TT mid-April for zone calibration. Race also serves as threshold test. Condition: any injury signal → listen, no exceptions. |
+| 2026-03-22 | Marathon plan (marathon-sub345.md) used loosely for long run progression only | Cherry-pick the long run build-up structure and taper pattern. Skip sub-3:45 paces — all long runs at easy/comfortable effort. Target 30 km by ~May 3 (Week 9), then manage the stacked May schedule (10k race, Ardennes, Elfstedentocht, marathon). 70.3 plan week references corrected in macro timeline. |
+| 2026-03-22 | 70.3 plan week mapping corrected | 70.3 plan weeks 1–5 overlap with marathon prep + recovery (May 11 – Jun 14). Proper tri-specific work begins at plan week 6 (Jun 15). Previous references (weeks 1–7, 8–15, 16–24) were off — now corrected to weeks 6–12, 13–19, 20–24. |
 
 ## Previous Weeks
 
