@@ -1,5 +1,6 @@
 # Conversation Index
 <!-- newest first, one line per entry -->
+- 2026-03-22 21:00 | plan | Week 4 plan generated and synced to ICU. 6 sessions: 2 runs (50+60 min), upper+lower strength, swim lesson, first bike (60 min). Athlete requested longer sessions than proposed — load ~145-155 (above guideline, accepted). Birthday party Sat → run moved to Sat AM, rest Sun.
 - 2026-03-22 19:00 | review | Week 3 review. 5/7 sessions (104 load, +65%). Load spike 2.26 ALERT — benign given rebuild. All niggles resolved. Alcohol policy validated. Hold load ≤104 next week. Zone recalibration needed.
 - 2026-03-22 17:00 | chat | Macro timeline review through May. Corrected 70.3 plan week references. Agreed marathon long run progression targeting 30 km by ~May 3. Marathon plan used loosely for long run structure only. Athlete reports feeling strong — had to hold back on today's run, believes 15k is within reach.
 - 2026-03-22 16:04 | debrief | Easy Run 5.1 km/40 min, RPE 4/10. Knees clear. Z2 ceiling (146) feels too slow — second data point. Heat + 5 days off contributed. Threshold test needed to recalibrate.
