@@ -1,5 +1,6 @@
 # Daily Log Index
 <!-- newest first, one line per day -->
+- 2026-03-22 | Easy Run 40 min. Readiness 85 GREEN
 - 2026-03-20 | Rest day (bike dropped yesterday — gala evening). Readiness 74
 - 2026-03-19 | RPE 5/10
 - 2026-03-18 | RPE 4/10
