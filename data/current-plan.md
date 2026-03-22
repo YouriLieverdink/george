@@ -15,6 +15,7 @@
 - **Plan start date:** 2026-05-11 (original) — pre-base work starts now (March 1)
 - **Current week:** Week 4 (Mar 23–29)
 - **Current phase:** Rebuild & Base Foundation
+- **Synced to intervals.icu:** 2026-03-23 to 2026-03-29, folder: George's Plan
 
 ### Secondary: Marathon of Groningen
 - **Reference plan:** marathon-sub345.md (used loosely — not following the sub-3:45 targets)
