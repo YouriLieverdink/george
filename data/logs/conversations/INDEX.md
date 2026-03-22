@@ -1,5 +1,6 @@
 # Conversation Index
 <!-- newest first, one line per entry -->
+- 2026-03-22 10:18 | checkin | Post-gala Day 2. HRV bounced to 64. Readiness 85 GREEN. Easy run 40 min as planned. Knee monitoring on first run in 5 days.
 - 2026-03-21 13:00 | chat | Post-gala hangover recovery advice. Practical hydration, nutrition, rest plan. No training today. Tomorrow's run conditional on HRV bounce-back.
 - 2026-03-21 12:20 | checkin | ### Summary
 - 2026-03-20 12:57 | chat | Casual question about Txiki. Brief social exchange. Rest day, gala tonight.
