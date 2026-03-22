@@ -55,7 +55,7 @@
 -->
 
 - ~~**2026-03-09 (resolved 2026-03-17):** Left shin — resolved. Ran 42 min on Mar 17 with one brief moment that cleared immediately. Cleared from follow-up.~~
-- **2026-03-17 (updated 2026-03-22):** Bilateral knee instability — first occurrence during 42 min run (Mar 17). Re-observed during split squats Mar 19: "feeling work in knees" but not pain. **Mar 22: Clear on 40 min easy run.** Improving trajectory across both running and loaded single-leg work. Continue single-leg work. If recurrence, reassess.
+- ~~**2026-03-17 (resolved 2026-03-22):** Bilateral knee instability — first occurrence during 42 min run (Mar 17). Re-observed during split squats Mar 19: "feeling work in knees" but not pain. Mar 22: Clear on 40 min easy run. Improving trajectory. Resolved — continue single-leg work for prevention.~~
 - **2026-03-10 (updated 2026-03-22):** Left shoulder — retested on bench press Mar 16: "feel it a little still, but not limiting." Mar 19 lower body: no issues. Improving trajectory. Next retest on bench press in Week 4 — if persistent, switch to floor press or incline press.
 - **2026-03-16 (updated 2026-03-22):** Protein tracking — reviewed. Irregular eating pattern confirmed: some days hit target, other days far off. Root cause is chaotic meal schedule + no macro awareness, not lack of willingness. Next step: discuss practical protein anchors (go-to high-protein breakfast/snack defaults) — now due (deferred from gala weekend). Supplementation question deferred until anchors are in place.
 - **2026-03-22:** Week 4 load cap — hold at or below 104 (Week 3 actual). Load spike ratio 2.26 ALERT — mathematically alarming but clinically benign given rebuild from near-zero. Let baseline catch up by holding steady. Space lower body ≥48h from runs.
